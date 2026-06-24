@@ -197,7 +197,7 @@ All 18 ethics dimensions were assessed per entry by:
 
 ## Repository Context
 
-This dataset was created to support a PhD literature review examining the ethics gap in honeypot research. The central research question is:
+This dataset was created to support a literature review examining the ethics gap in honeypot research. The central research question is:
 
 > *To what extent do existing honeypot systems — both in academic research and open-source practice — address ethical dimensions such as IRB oversight, informed consent, data governance, and responsible deception?*
 
