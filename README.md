@@ -160,10 +160,10 @@ The notebook contains **24 self-contained analysis cells** covering:
 
 Based on the full dataset of 238 entries:
 
-- **IRB / Ethics committee**: mentioned in fewer than 5% of all entries — nearly universally absent across both scientific papers and open-source tools
+- **IRB / Ethics committee**: mentioned in fewer than 5% of all entries - nearly universally absent across both scientific papers and open-source tools
 - **Consent model**: documented (Explicit or Implicit) in fewer than 10% of scientific papers and 0% of open-source tools
 - **Data minimization**: discussed in fewer than 15% of scientific papers, 0% of tools
-- **Deception ethics**: only a small minority of scientific papers frame deception beyond a purely technical mechanism — no open-source tools do
+- **Deception ethics**: only a small minority of scientific papers frame deception beyond a purely technical mechanism - no open-source tools do
 - **High data sensitivity** (keystrokes, medical data, ICS protocol data, credentials): present in ~25% of all entries, without corresponding governance documentation
 - **Dominant domain**: IT (82%), followed by ICS (8%) and CPS (7%)
 - **Most common interaction level**: Low (69%), Medium (17%), High (11%)
@@ -199,7 +199,7 @@ All 18 ethics dimensions were assessed per entry by:
 
 This dataset was created to support a literature review examining the ethics gap in honeypot research. The central research question is:
 
-> *To what extent do existing honeypot systems — both in academic research and open-source practice — address ethical dimensions such as IRB oversight, informed consent, data governance, and responsible deception?*
+> *To what extent do existing honeypot systems - both in academic research and open-source practice - address ethical dimensions such as IRB oversight, informed consent, data governance, and responsible deception?*
 
 The dataset supports the development of an ethics framework for honeypot deployment in critical infrastructure contexts, with particular focus on space and satellite systems (HoneySat).
 
