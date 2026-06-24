@@ -1,6 +1,6 @@
 # Honeypot Ethics Review Dataset
 
-A systematic ethics analysis dataset for honeypot systems, combining peer-reviewed scientific papers and open-source honeypot tools. Created as part of a PhD literature review on honeypot ethics, with a focus on critical infrastructure and space/satellite systems.
+A systematic ethics analysis dataset for honeypot systems, combining peer-reviewed scientific papers and open-source honeypot tools. Created as part of a literature review on honeypot ethics, with a focus on cybersecurity.
 
 ---
 
