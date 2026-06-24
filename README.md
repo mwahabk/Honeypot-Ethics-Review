@@ -104,7 +104,7 @@ All `*_justification` columns contain direct quotes or precise references to the
 ### Requirements
 
 ```bash
-pip install pandas jupyter
+pip install -r requirements.txt
 ```
 
 ### Run the analysis script
