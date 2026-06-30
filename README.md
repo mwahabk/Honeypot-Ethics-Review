@@ -12,9 +12,9 @@ The dataset covers two source types:
 
 | Source | Count | Description |
 |---|---|---|
-| **Scientific** | 38 | Peer-reviewed papers proposing actual honeypot systems |
+| **Scientific** | 37 | Peer-reviewed papers proposing actual honeypot systems |
 | **Non-Scientific** | 200 | Open-source honeypot tools from the [awesome-honeypots](https://github.com/paralax/awesome-honeypots) list and [Honeynet Project](https://www.honeynet.org/projects/) |
-| **Total** | **238** | |
+| **Total** | **237** | |
 
 ---
 
