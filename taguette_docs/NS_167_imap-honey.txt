@@ -1,0 +1,50 @@
+ENTRY 167 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: imap-honey
+LINK: https://github.com/yvesago/imap-honey
+PLATFORM: GitHub
+STARS: 26
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; IMAP and SMTP honeypot written in Golang.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Email credentials (personal data) captured without governance; no IRB.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: IMAP and SMTP honeypot written in Golang logging email service attacks.
+
+[INTERACTION LEVEL]
+Evidence: Emulates IMAP and SMTP services; logs credential and access attempts.
+
+[THREAT MODEL]
+Value: Automated credential stuffing bots targeting email service logins.
+Evidence: README describes IMAP and SMTP emulation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; email credentials captured.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard email service ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Email credential pairs captured; email addresses are personal data under GDPR.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

@@ -1,0 +1,50 @@
+ENTRY 176 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Cowrie
+LINK: https://github.com/cowrie/cowrie
+PLATFORM: GitHub
+STARS: 6.4k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + dedicated docs.cowrie.org confirmed. Best documented SSH honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; most widely deployed SSH honeypot with no ethics governance despite scale of deployment and data collection.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Industry-standard SSH and Telnet medium-interaction honeypot with comprehensive external documentation.
+
+[INTERACTION LEVEL]
+Evidence: Medium-interaction: fake filesystem, shell emulation, and session replay; docs.cowrie.org provides full documentation.
+
+[THREAT MODEL]
+Value: SSH brute-force bots, IoT malware, and advanced attackers performing post-exploitation.
+Evidence: README + /docs folder + comprehensive docs.cowrie.org external documentation.
+
+[DATA TYPES COLLECTED]
+Evidence: docs.cowrie.org documents comprehensive logging including session replay files.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard and alternate ports; documented in docs.cowrie.org.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full shell session data, credentials, and malware downloads captured; medium sensitivity.
+
+[RELEVANCE TO PROJECT]
+Evidence: Cowrie as the industry-standard honeypot without governance is the strongest SSH honeypot case study for our framework.

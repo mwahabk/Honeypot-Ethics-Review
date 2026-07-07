@@ -1,0 +1,50 @@
+ENTRY 159 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Yet Another Fake Honeypot (YAFH)
+LINK: https://github.com/fnzv/YAFH
+PLATFORM: GitHub
+STARS: 10
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH and Telnet honeypot in Go emulating Cisco router login.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Go-based SSH and Telnet honeypot emulating a Cisco router login interface.
+
+[INTERACTION LEVEL]
+Evidence: Emulates Cisco router SSH/Telnet login; logs credential attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting Cisco network device credentials via SSH and Telnet.
+Evidence: README describes Cisco router login emulation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH and Telnet ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt metadata; no real router access.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

@@ -1,0 +1,50 @@
+ENTRY 124 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: CitrixHoneypot
+LINK: https://github.com/MalwareTech/CitrixHoneypot
+PLATFORM: GitHub
+STARS: 119
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with setup; detects Citrix ADC CVE-2019-19781 scans.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; CVE-specific honeypot.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot detecting exploitation of Citrix ADC/Gateway CVE-2019-19781 (Shitrix).
+
+[INTERACTION LEVEL]
+Evidence: Emulates vulnerable Citrix endpoint; logs CVE-specific exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers exploiting CVE-2019-19781 in Citrix NetScaler ADC and Gateway.
+Evidence: README describes Citrix ADC vulnerability emulation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Exploit payload metadata; no real Citrix access.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

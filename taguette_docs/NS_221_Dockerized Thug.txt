@@ -1,0 +1,53 @@
+ENTRY 221 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Dockerized Thug
+LINK: https://hub.docker.com/r/honeynet/thug/
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Docker Hub page only; Dockerized Thug honeyclient for analyzing malicious web content.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; outbound connections to malicious servers create exposure risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; honeyclient exposure to malicious servers not discussed; Docker Hub only documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Dockerized Thug honeyclient for analyzing malicious web content; Docker Hub page only.
+
+[INTERACTION LEVEL]
+Evidence: High-interaction honeyclient: executes real JavaScript in browser emulator to detect malicious web content.
+
+[THREAT MODEL]
+Value: Malicious web servers serving drive-by download attacks, exploit kits, and browser exploits.
+Evidence: Docker Hub page only; Thug documentation at buffer/thug GitHub.
+
+[DATA TYPES COLLECTED]
+Evidence: High-interaction browser emulation captures full malicious content.
+
+[PROTOCOLS & PORTS]
+Evidence: Client honeypot making outbound connections to malicious web servers.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Malicious web content captured; medium sensitivity — honeyclient makes outbound connections to attacker-controlled servers.
+
+[CONTAINMENT & HARM]
+Evidence: Honeyclient connects to malicious servers — exposure of honeyclient IP to attackers.
+
+[RELEVANCE TO PROJECT]
+Evidence: Client honeypot paradigm has limited direct applicability to HoneySat.

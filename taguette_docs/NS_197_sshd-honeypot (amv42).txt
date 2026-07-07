@@ -1,0 +1,50 @@
+ENTRY 197 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: sshd-honeypot (amv42)
+LINK: https://github.com/amv42/sshd-honeypot
+PLATFORM: GitHub
+STARS: 28
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; modified OpenSSH daemon that forwards commands to Cowrie.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; uses real OpenSSH daemon higher authenticity but no governance documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Modified OpenSSH daemon forwarding commands to Cowrie for realistic interaction.
+
+[INTERACTION LEVEL]
+Evidence: Uses real OpenSSH daemon modified to forward to Cowrie backend; more realistic than emulation.
+
+[THREAT MODEL]
+Value: Advanced SSH attackers who can detect simple honeypots.
+Evidence: README describes modified OpenSSH + Cowrie forwarding.
+
+[DATA TYPES COLLECTED]
+Evidence: Real OpenSSH daemon captures full session before forwarding to Cowrie.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full SSH session capture via real OpenSSH; medium sensitivity.
+
+[RELEVANCE TO PROJECT]
+Evidence: Using real protocol implementation for honeypot authenticity is directly relevant to HoneySat design.

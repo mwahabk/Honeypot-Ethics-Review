@@ -1,0 +1,50 @@
+ENTRY 075 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Tanner
+LINK: https://github.com/mushorg/tanner
+PLATFORM: GitHub
+STARS: 231
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + external readthedocs link. Evaluates SNARE events.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Honeynet Project tool with no governance documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Backend evaluation engine for SNARE web honeypot; Honeynet Project.
+
+[INTERACTION LEVEL]
+Evidence: Processes SNARE captured requests to generate realistic attack responses.
+
+[THREAT MODEL]
+Value: Same as SNARE: web attackers probing cloned web applications.
+Evidence: Extensive README and readthedocs document Tanner evaluation logic.
+
+[DATA TYPES COLLECTED]
+Evidence: Docs describe storing all attack session data.
+
+[PROTOCOLS & PORTS]
+Evidence: Tanner operates as internal API receiving data from SNARE.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Processed attack session data; no real user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: Automated attacker evaluation pipeline relevant to HoneySat intelligence processing.

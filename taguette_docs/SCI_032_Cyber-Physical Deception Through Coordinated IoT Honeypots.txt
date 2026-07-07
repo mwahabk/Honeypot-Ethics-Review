@@ -1,0 +1,84 @@
+ENTRY 032 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Cyber-Physical Deception Through Coordinated IoT Honeypots
+LINK: https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-815-guan.pdf
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Honeypot isolation implied; physical process emulated synthetically (no real IoT devices attached to physical processes); Prolog rule-based dependency enforcement ensures consistent fake state.
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: No IRB; no consent model; no data governance; no legal/jurisdiction discussion despite real-world deployment. Dual-use risk of coordinated deception infrastructure not acknowledged.
+Deployment: Yes (real-world IoT attacker deployment)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: The paper proposes a Cyber-Physical Deception System (CPDS) that coordinates multiple IoT honeypots to mimic cyber-physical dependencies among IoT devices, making honeypots undetectable by cross-layer attackers. It is explicitly a honeypot design and deployment paper for IoT/CPS environments.
+
+[INTERACTION LEVEL]
+Evidence: CPDS coordinates multiple honeypots with modeled vulnerabilities and physical/network dependency rules. Attackers can interact with services and receive consistent cross-layer responses  higher than low-interaction but not full system access, making this medium interaction.
+
+[THREAT MODEL]
+Value: IoT device attackers operating across both cyber (network exploitation) and physical (device state verification) domains, capable of detecting inconsistencies among honeypots through multi-source attacks.
+Evidence: Abstract: "attackers can easily detect inconsistencies among the honeypots after launching attacks from multiple sources, spanning both cyber and physical domains, to verify device status."
+
+[IRB / ETHICS COMMITTEE]
+Evidence: No mention of IRB, ethics committee, institutional approval, or human subjects protocol in any section of the paper.
+
+[CONSENT MODEL]
+Evidence: Honeypots are deployed facing real-world attackers. No consent or disclosure mechanism is described. Attackers are treated implicitly as adversaries whose interactions are logged without notification.
+
+[DATA TYPES COLLECTED]
+Evidence: Paper describes collecting and analyzing "attack traces" to model device vulnerabilities. CVE identifiers (CVE-2020-12109, CVE-2021-44402, CVE-2018-3928, CVE-2019-3949, CVE-2020-35577) are referenced as attack data collected.
+
+[PROTOCOLS & PORTS]
+Evidence: Related work section references U-POT (UPnP protocol), and the system emulates protocol-level responses for various IoT device types. Specific ports depend on emulated device class.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Data includes attacker IPs and CVE-specific exploit traces. No personal benign user data is described. Medium sensitivity given identifiable attacker network metadata and potential cross-domain device state information.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No mention of data minimization, IP anonymization, or selective logging in any section.
+
+[DATA RETENTION POLICY]
+Evidence: No data retention policy, deletion timeline, or archival policy mentioned in the paper.
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: No dataset release or public trace sharing is described in the paper.
+
+[JURISDICTION / LEGAL]
+Evidence: No jurisdiction analysis, GDPR compliance discussion, or legal framing appears in any section of the paper despite deployment facing real-world IoT attackers.
+
+[CONTAINMENT & HARM]
+Evidence: The system models physical dependencies as Prolog rules and coordinates honeypot responses to ensure cross-layer consistency real physical processes are not connected, preventing actual harm. Containment is technical by design.
+
+[DECEPTION FRAMING]
+Evidence: Deception is discussed entirely as a technical coordination problem ("cross-layer consistency," "cyber-physical dependency emulation"). No ethical framing of deception, attacker engagement, or dual-use considerations appears.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No researcher responsibility statements, ethical guidelines, or responsible disclosure discussion appear anywhere in the paper.
+
+[ETHICAL GAPS]
+Value: No IRB; no consent model; no data governance; no legal/jurisdiction discussion despite real-world deployment. Dual-use risk of coordinated deception infrastructure not acknowledged.
+Evidence: No ethics section exists. Despite deployment facing real-world IoT attackers with logging of attacker IPs and CVE exploit attempts, there is no discussion of data protection, responsible disclosure, or regulatory compliance.
+
+[RELEVANCE TO PROJECT]
+Evidence: CPDS addresses precisely the problem HoneySat faces: maintaining cross-layer consistency in a cyber-physical honeypot to prevent detection. The absence of ethical governance mirrors the gap our framework targets. Published at USENIX Security 2025 high-impact, recent, directly relevant.
+
+[DEPLOYMENT]
+Value: Yes (real-world IoT attacker deployment)
+Evidence: The system is designed to face real-world IoT attackers and collects actual attack traces and CVE exploit data. The paper describes deployment against real attacker traffic, not just controlled lab evaluation.

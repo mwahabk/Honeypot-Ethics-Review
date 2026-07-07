@@ -1,0 +1,50 @@
+ENTRY 107 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: rdppot
+LINK: https://github.com/kryptoslogic/rdppot
+PLATFORM: GitHub
+STARS: 72
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; RDP honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction RDP honeypot logging connection and credential attempts.
+
+[INTERACTION LEVEL]
+Evidence: Emulates RDP login without full session; logs credential attempts.
+
+[THREAT MODEL]
+Value: Automated RDP brute-force attackers.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard RDP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

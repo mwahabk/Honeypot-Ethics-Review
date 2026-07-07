@@ -1,0 +1,50 @@
+ENTRY 121 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SCADA honeynet
+LINK: https://scadahoneynet.sourceforge.net/
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge project page; outdated/minimal documentation.
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; outdated project; minimal documentation limits ethics assessment.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: SourceForge-hosted SCADA honeypot project; outdated/minimal documentation.
+
+[INTERACTION LEVEL]
+Evidence: Basic SCADA service emulation; project appears abandoned.
+
+[THREAT MODEL]
+Value: Generic SCADA attackers.
+Evidence: External SourceForge page only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: ICS/SCADA domain implies high sensitivity; specific data types not documented.
+
+[RELEVANCE TO PROJECT]
+Evidence: Early ICS honeypot without governance provides baseline for our framework.

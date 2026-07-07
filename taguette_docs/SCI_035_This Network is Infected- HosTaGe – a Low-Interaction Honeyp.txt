@@ -1,0 +1,84 @@
+ENTRY 035 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: This Network is Infected: HosTaGe – a Low-Interaction Honeypot for Mobile Devices
+LINK: https://dl.acm.org/doi/10.1145/2516760.2516763
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Source code released as open-source Android app (GitHub: aau-network-security/HosTaGe)
+Jurisdiction / Legal: Not discussed
+Containment & Harm: App isolation within Android OS; honeypot runs as separate application without interfering with normal phone functions
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: No IRB; no ethics section; deploys honeypot on personal mobile devices that may be carried into private spaces, novel privacy risk dimension not addressed; personal device IP and presence exposed to potential attackers.
+Deployment: Yes (deployed on mobile devices in real wireless networks)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Abstract: "This paper envisions portable honeypots on mobile devices that aim on the fast detection of malicious networks and thus boost the security awareness of users and presents the prototype HosTaGe, a low-interaction honeypot implemented for the Android OS." Explicitly proposes, designs, and implements a new honeypot (HosTaGe) as primary contribution.
+
+[INTERACTION LEVEL]
+Evidence: Abstract: "HosTaGe, a low-interaction honeypot implemented for the Android OS." Simulates services (FTP, SSH) at low-interaction level. All incoming connections are considered malicious and logged.
+
+[THREAT MODEL]
+Value: Malware and automated attackers propagating through wireless networks; users unknowingly connecting to malicious access points in public spaces (airports, hotels).
+Evidence: Introduction: "people tend to utilize unknown, in terms of trustworthiness, wireless networks in their daily life. They connect to these networks, e.g., airports, without knowledge of whether they are safe or infected with actively propagating malware."
+
+[IRB / ETHICS COMMITTEE]
+Evidence: No mention of IRB, ethics committee, or institutional approval in the paper.
+
+[CONSENT MODEL]
+Evidence: No consent model. The honeypot passively logs all incoming connection attempts on the mobile device. Attackers are treated as adversaries without any notification.
+
+[DATA TYPES COLLECTED]
+Evidence: HosTaGe description: "As any incoming connections are considered malicious, all subsequent communication with HosTaGe is logged, for further analysis." Services emulated include FTP and SSH.
+
+[PROTOCOLS & PORTS]
+Evidence: HosTaGe emulates multiple services (FTP, SSH) on standard ports. All standard protocol ports exposed on the device's wireless network interface.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Captures incoming network connection attempts on a mobile device. No personal user data beyond attacker IPs and protocol data. Low sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No data minimization discussed.
+
+[DATA RETENTION POLICY]
+Evidence: No retention policy mentioned.
+
+[DATA SHARING]
+Value: Source code released as open-source Android app (GitHub: aau-network-security/HosTaGe)
+Evidence: HosTaGe is released as an open-source Android application available for community download and deployment.
+
+[JURISDICTION / LEGAL]
+Evidence: No legal framework discussion. Published at a 2013 workshop; pre-GDPR era, but no privacy discussion of any kind.
+
+[CONTAINMENT & HARM]
+Evidence: The honeypot runs as a standalone Android application. Android OS provides baseline isolation from other apps. The honeypot has no access to personal user data on the device.
+
+[DECEPTION FRAMING]
+Evidence: No ethical framing of deception. Portable mobile honeypot concept presented purely as a security mechanism without discussing ethical implications of luring attackers on personal devices.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No ethical guidelines, responsible disclosure, or researcher responsibility discussed.
+
+[ETHICAL GAPS]
+Value: No IRB; no ethics section; deploys honeypot on personal mobile devices that may be carried into private spaces, novel privacy risk dimension not addressed; personal device IP and presence exposed to potential attackers.
+Evidence: The use of a personal mobile device as a honeypot on unknown wireless networks creates a novel risk: the device owner's network presence is exposed to potential attackers. If attackers scan back or identify the honeypot operator, the personal device may become a target. This user-risk dimension is not addressed.
+
+[RELEVANCE TO PROJECT]
+Evidence: HosTaGe is the foundational work in this professor's honeypot research line. The absence of any ethical framework for personal device honeypot deployment particularly the risk to the device owner is a gap directly relevant to HoneySat operator safety considerations.
+
+[DEPLOYMENT]
+Value: Yes (deployed on mobile devices in real wireless networks)
+Evidence: The paper describes real-world deployment of HosTaGe on mobile devices connecting to unknown wireless networks, collecting real attack data from malicious access points.

@@ -1,0 +1,87 @@
+ENTRY 014 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyWin: High-Interaction Windows Honeypot in Enterprise Environment
+LINK: https://arxiv.org/abs/2505.00465
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Network isolation and backups
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Abstract: "Windows operating systems (OS) are ubiquitous in enterprise Information Technology (IT)..."
+
+[INTERACTION LEVEL]
+Evidence: Section 2.2: The setup includes "real systems instead of low-interaction implementation... Having real systems as high-interaction honeypots maximizes the attack surface and allows full access to the underlying system"
+
+[THREAT MODEL]
+Value: Enterprise-focused attackers
+Evidence: Section 2.1: "We assume that the attacker has access... by scanning the Internet... identifies the exposed services (e.g., RDP port 3389). The attacker then... attempts to authenticate"
+
+[IRB / ETHICS COMMITTEE]
+Evidence: Pages 1–13: A review of the entire paper confirms no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol"
+
+[CONSENT MODEL]
+Evidence: Section 4: The system was "deployed... live in the wild for 34 days" where it received "5.79 million unsolicited connections". Attackers interact without any notification or consent mechanism
+
+[DATA TYPES COLLECTED]
+Evidence: Section 2.2: "it is essential to capture all incoming network traffic... capture the outgoing network traffic... Host logs provide fine-grained visibility". Section 2.3 mentions collecting "Sysmon logs"
+
+[PROTOCOLS & PORTS]
+Evidence: Section 2.3: "we have opened RDP (i.e. Port 3389) and SSH (i.e. Port 22)... whereas HTTPS (i.e. Port 443) is open for access to the administrator dashboard". Section 4.5 reports an "SMTP brute-force bot attack"
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section 1 (Abstract): The system captured "1.24 million login attempts" and "successfully harvested 1,250 SMTP credentials"
+. Capturing plaintext credentials and real-world interaction behavior is classified as high sensitivity
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section 1 (Abstract): The paper prioritizes "comprehensive network traffic capturing" and "host-based logging". No section discusses limiting data capture or anonymization
+
+[DATA RETENTION POLICY]
+Evidence: Section 2.2: Discusses "Network Traffic and Log Backup" to "minimize the risk of losing such invaluable data", but no deletion timeline or storage policy is provided.
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Section 7 (Conclusions): While the paper provides detailed analysis of harvested credentials and geolocations, it does not provide a public link to the raw dataset or captured malware
+
+[JURISDICTION / LEGAL]
+Evidence: Section 4.1: Incoming connections were identified from the "United States and Philippines"....., Russia, and Germany
+, but there is no analysis of GDPR or legal compliance for international data capture.
+
+[CONTAINMENT & HARM]
+Evidence: Section 2.3: A "Firewall & Router" is used where "outgoing connections from the HPN are blocked by default" to manage risk.
+Section 2.2 notes a backup server with "not have an Internet connection"
+
+[DECEPTION FRAMING]
+Evidence: Section 2.2: Deception is used to "deceive the attackers into believing that they are navigating a real corporate network environment". Section 3 focuses on "mimicking a realistic enterprise environment"
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section 2.2: Responsibility is framed as a technical requirement to "gather valuable intelligence on the behavior of the attacker" while preventing them from "affecting the system and network"
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: The paper follows the "ethics-by-containment" model where technical isolation replaces normative reasoning. There is no discussion of consent, legal framing, or formal ethics oversight.
+
+[RELEVANCE TO PROJECT]
+Evidence: Illustrates "ethics-by-design through isolation" by using a "Firewall & Router" and "Backup Network" to prevent harm. It provides a clear case of increasing realism through the use of "real systems" and "Windows 11 endpoints" without the proportional evolution in ethical governance (like an IRB) found in HoneySat
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Section 4: "We have deployed the HoneyWin system live in the wild for 34 days from 22 August 2024 to 25 September 2024"

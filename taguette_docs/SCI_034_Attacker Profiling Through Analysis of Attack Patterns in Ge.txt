@@ -1,0 +1,84 @@
+ENTRY 034 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Attacker Profiling Through Analysis of Attack Patterns in Geographically Distributed Honeypots
+LINK: https://arxiv.org/abs/2305.01346
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Dataset publicly released
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Passive monitoring only; VPS isolation in cloud provider infrastructure; no active services to cause collateral harm
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: Public release of 265,423 attacker IP addresses without anonymization may violate GDPR (IP addresses are personal data in the EU). No IRB. No consent model. No legal analysis despite multi-jurisdictional deployment and data collection. Dataset published openly in Data in Brief.
+Deployment: Yes (8 geographically distributed public internet deployments)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Abstract: "This paper examines attack patterns in a large public dataset of geographically distributed honeypots by answering methodological questions and creating behavioural profiles of attackers." The paper deploys 8 real honeypots across 8 global cities (Amsterdam, Bangalore, Frankfurt, London, New York, San Francisco, Singapore, Toronto) for 40 days and uses the CTU Hornet 40 dataset created by the authors. This is an actual honeypot deployment and analysis paper.
+
+[INTERACTION LEVEL]
+Evidence: Section 3 (Dataset): "Each Linux-based VPS was configured to act as a passive honeypot without any service, receiving attacks without running any honeypot software." The honeypots are passive, they receive and log network traffic without any simulated services or interaction with attackers. This is lower than low-interaction as there is no service emulation.
+
+[THREAT MODEL]
+Value: All types of real-world internet attackers: automated bots, IoT botnets, brute-force scripts, and targeted human attackers. Section 5.5 defines four profiles: Casual Focused (73.26%), Casual Explorer (2.7%), Driven Focused (15.74%), and Driven Explorer (8.3%).
+Evidence: Section 5.1: "54.87% of the total attackers originate from Asia, 16.84% from Europe, and 15.01% from North America." Section 5.5: "Of the total attacker, 8.3% can be profiled as driven explorer attackers...responsible for 37.4% of the total attacks."
+
+[IRB / ETHICS COMMITTEE]
+Evidence: No mention of IRB, ethics committee, or institutional approval anywhere in the paper. The paper is framed as a measurement and analysis study using existing public data.
+
+[CONSENT MODEL]
+Evidence: The honeypots are passive network sensors. No services are offered, no interaction occurs, and there is no mechanism for consent or notification. Attackers are implicitly treated as adversaries whose traffic is logged without any disclosure.
+
+[DATA TYPES COLLECTED]
+Evidence: Section 3 (Dataset): "The dataset contains 4,747,081 attacks, performed by 265,423 unique attackers, to 8 geographically-distributed honeypots, during 40 days." Section 4: "Attack: an attack is defined as a network flow whose destination IP address matches one of the IPs of the honeypots. Attacker: an attacker is defined as the source IP address in an attack."
+
+[PROTOCOLS & PORTS]
+Evidence: Section 3: "Each Linux-based VPS was configured to act as a passive honeypot without any service." Section 4.3: "This question refers to services of the TCP and UDP protocols since other protocols do not have services." The honeypots capture all incoming traffic on any port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Section 4.1.1 acknowledges that "the IP address of a country may not be related to the country itself" and discusses proxies and Tor. IP addresses are collected and analysed as attacker identifiers, these are personal data under GDPR. No anonymization is described. Medium sensitivity: no credentials or commands collected (passive honeypot), but 265,423 unique attacker IPs are logged.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No discussion of data minimization, IP anonymization, or filtering. All network flow data including source IPs is retained and analysed.
+
+[DATA RETENTION POLICY]
+Evidence: No data retention policy or deletion timeline mentioned. The dataset (CTU Hornet 40) was published publicly: Reference [28]: "Veronica Valeros and Sebastian Garcia. Hornet 40: Network dataset of geographically placed honeypots. Data in Brief, 40:107795, 2022."
+
+[DATA SHARING]
+Value: Dataset publicly released
+Evidence: Section 3 references [28]: "CTU Hornet 40 dataset." The dataset containing 4.7M attacks and 265K unique attacker IPs was published in Data in Brief journal and is publicly available. No mention of anonymization before release.
+
+[JURISDICTION / LEGAL]
+Evidence: No jurisdiction analysis, GDPR compliance discussion, or legal framework mentioned despite collecting and publicly releasing IP address data for 265,423 individuals (attackers) across multiple continents and jurisdictions (Section 5.1: Amsterdam, Bangalore, Frankfurt, London, New York, San Francisco, Singapore, Toronto).
+
+[CONTAINMENT & HARM]
+Evidence: Section 3: "Eight Virtual Private Servers (VPS) were rented in the same VPS provider. Each Linux-based VPS was configured to act as a passive honeypot without any service." The passive nature limits harm potential since no interactions occur. VPS cloud isolation provides technical containment.
+
+[DECEPTION FRAMING]
+Evidence: The paper is entirely a measurement and analysis study. The concept of deception is not discussed, the honeypots are passive sensors, and the paper focuses on statistical profiles of attackers rather than deception design.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No researcher responsibility statements, ethical guidelines, or data governance discussion appear. The acknowledgements mention Czech Republic government funding but no ethics committee oversight.
+
+[ETHICAL GAPS]
+Value: Public release of 265,423 attacker IP addresses without anonymization may violate GDPR (IP addresses are personal data in the EU). No IRB. No consent model. No legal analysis despite multi-jurisdictional deployment and data collection. Dataset published openly in Data in Brief.
+Evidence: Section 3 and Reference [28]: The CTU Hornet 40 dataset including source IP addresses of attackers was published in a peer-reviewed journal. Given that honeypots were deployed in Amsterdam and Frankfurt (EU jurisdictions), collecting and publishing attacker IP addresses without anonymization may constitute personal data processing under GDPR Art. 4(1). No legal compliance discussion appears in the paper.
+
+[RELEVANCE TO PROJECT]
+Evidence: Section 9 (Conclusions): "Analysis indicates that as few as two distributed honeypots can be useful in helping organisations identify the most aggressive and driven attackers." This finding is directly applicable to HoneySat architecture decisions. The absence of any GDPR or legal compliance discussion despite EU-based deployments and public IP release directly motivates the legal pillar of our ethics framework.
+
+[DEPLOYMENT]
+Value: Yes (8 geographically distributed public internet deployments)
+Evidence: Section 3: "Eight Virtual Private Servers (VPS) were rented in the same VPS provider [DigitalOcean]...in eight cities: Amsterdam, Bangalore, Frankfurt, London, New York, San Francisco, Singapore, and Toronto." The honeypots were deployed on public internet-facing VPS servers for 40 days (April 23 to June 1, 2021), collecting 4.7M real attacks from 265K unique IPs.

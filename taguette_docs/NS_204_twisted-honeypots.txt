@@ -1,0 +1,50 @@
+ENTRY 204 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: twisted-honeypots
+LINK: https://github.com/lanjelot/twisted-honeypots
+PLATFORM: GitHub
+STARS: 87
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH, FTP and Telnet honeypots based on Python Twisted framework.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH, FTP, and Telnet honeypots based on Python Twisted framework.
+
+[INTERACTION LEVEL]
+Evidence: Twisted-based multi-service honeypot covering SSH, FTP, and Telnet.
+
+[THREAT MODEL]
+Value: Generic internet automated scanners targeting SSH, FTP, and Telnet.
+Evidence: README describes Twisted-based implementation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard ports for all three protocols.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential metadata across three protocols.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

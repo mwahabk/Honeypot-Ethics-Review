@@ -1,0 +1,50 @@
+ENTRY 081 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: wordpot
+LINK: https://github.com/gbrindisi/wordpot
+PLATFORM: GitHub
+STARS: 184
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with usage; WordPress honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: WordPress honeypot detecting scans, plugin/theme enumeration, and login brute-forcing.
+
+[INTERACTION LEVEL]
+Evidence: Emulates WordPress detecting plugin, theme, and login scan patterns.
+
+[THREAT MODEL]
+Value: Automated scanners performing WordPress enumeration and credential brute-force.
+Evidence: README describes detection scope.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Scan patterns and credential metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

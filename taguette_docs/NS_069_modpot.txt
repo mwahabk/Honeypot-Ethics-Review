@@ -1,0 +1,50 @@
+ENTRY 069 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: modpot
+LINK: https://github.com/referefref/modpot
+PLATFORM: GitHub
+STARS: 63
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with setup and usage; modular web honeypot in Golang.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; modular architecture with no governance per module.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Modular web honeypot supporting multiple vulnerability plugins.
+
+[INTERACTION LEVEL]
+Evidence: Modular architecture emulating various web vulnerabilities via plugins.
+
+[THREAT MODEL]
+Value: Automated web scanners targeting a range of web vulnerabilities.
+Evidence: README describes modular plugin architecture.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Attack payloads per vulnerability module.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

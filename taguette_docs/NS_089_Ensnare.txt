@@ -1,0 +1,50 @@
+ENTRY 089 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Ensnare
+LINK: https://github.com/ahoernecke/ensnare
+PLATFORM: GitHub
+STARS: 68
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with setup; Ruby-based honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Ruby-based web application honeypot using token-based traps and form injection.
+
+[INTERACTION LEVEL]
+Evidence: Injects honeytokens and trap endpoints; logs attacker interactions.
+
+[THREAT MODEL]
+Value: Automated web scanners and targeted attackers probing web applications.
+Evidence: README describes honeytoken injection mechanism.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Token interaction metadata and IP addresses.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

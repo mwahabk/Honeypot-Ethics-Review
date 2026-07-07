@@ -1,0 +1,50 @@
+ENTRY 110 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Tom's Honeypot
+LINK: https://github.com/inguardians/toms_honeypot
+PLATFORM: GitHub
+STARS: 26
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; simple multi-service honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Simple multi-service honeypot for basic network deception and attacker logging.
+
+[INTERACTION LEVEL]
+Evidence: Minimal service emulation across multiple ports; logs connection attempts.
+
+[THREAT MODEL]
+Value: Generic internet automated scanners.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

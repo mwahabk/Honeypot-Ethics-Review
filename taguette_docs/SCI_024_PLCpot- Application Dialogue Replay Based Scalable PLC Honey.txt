@@ -1,0 +1,85 @@
+ENTRY 024 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: PLCpot: Application Dialogue Replay Based Scalable PLC Honeypot for Industrial Control 
+Systems
+LINK: https://dl.acm.org/doi/10.1145/3716550.3722032
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Replay-based emulation
+Deception Framing: Dialogue replay realism
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Experimental (Lab/VM)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract: Explicitly focuses on "Programmable Logic Controllers (PLCs)," which are "essential components of industrial control systems (ICS)"
+
+[INTERACTION LEVEL]
+Evidence: Section 3.3/3.3.1: Classified as "Medium" interaction because it uses "packet replay techniques" and delivers responses "without executing corresponding actions," acting as a protocol-level proxy rather than a full system simulation
+
+[THREAT MODEL]
+Value: PLC-targeted attacks
+Evidence: Section 5.2: Targets adversaries performing "control logic injection," "reconnaissance (control logic theft)," and "brute force authentication"
+
+[IRB / ETHICS COMMITTEE]
+Evidence: There is no mention of an Institutional Review Board or ethical committee approval, despite federal funding from the "National Science Foundation"
+
+[CONSENT MODEL]
+Evidence: Sections 3.3.2 & 4.3: The system uses a "Data Storage" module to capture all interactions from adversaries who are "deceive attacker" without being notified of the decoy
+
+[DATA TYPES COLLECTED]
+Evidence: Sections 3.3.2 & 4.3/5.3: Specifically records "all communication" in a Data Storage module, including "attacker’s password hash" and "control logic binaries"
+
+[PROTOCOLS & PORTS]
+Evidence: Section 3.3.1: The framework emulates Modbus/TCP on "Port 502" for the Modicon M221 and uses replay to handle other proprietary protocols like PCCC
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section 5.3: Captures high-sensitivity artifacts like "attacker’s password hash" and malicious "control logic binary" for threat intelligence and forensic analysis
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section 3.3: The paper emphasizes preserving "all communication" for forensic analysis and does not mention any filtering or anonymization practices
+
+[DATA RETENTION POLICY]
+Evidence: Section 3.3: While the architecture includes a "Data Storage" module, the paper provides no policy on storage duration or data deletion
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Unlike other sources, the text does not provide a GitHub link or public dataset repository for the framework’s code or collected logs
+
+[JURISDICTION / LEGAL]
+Evidence: Despite gathering sensitive threat intelligence, the paper contains no discussion of legal compliance, jurisdiction, or international data laws
+
+[CONTAINMENT & HARM]
+Evidence: Section 6: Safety is achieved technically because the system "is not connected to a real physical system" and lacks "real-time operational dynamics" that could cause harm
+
+[DECEPTION FRAMING]
+Evidence: Section 3.3.2 and 5: Deception is framed as a technical goal to "mimic a real PLC" and "deceive attackers convincingly" through protocol-level accuracy
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Sections 1 & 7: Responsibility is framed as a contribution to "threat intelligence" and the security community through a "scalable" emulation approach
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Reflects the project’s meta-finding of an "ethics-by-containment" model; it collects sensitive credentials without IRB oversight or a data governance policy
+
+[RELEVANCE TO PROJECT]
+Evidence: Sec. 7: Primary example of prioritizing "realism" and application functionalities over normative ethical considerations
+
+[DEPLOYMENT]
+Value: Experimental (Lab/VM)
+Evidence: Sections 4.1 & 5: Evaluation was conducted using "Ubuntu 18 VM" and "Windows 10 VM" in a controlled laboratory environment for a case study

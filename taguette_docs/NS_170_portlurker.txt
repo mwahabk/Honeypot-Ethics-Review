@@ -1,0 +1,50 @@
+ENTRY 170 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: portlurker
+LINK: https://github.com/bartnv/portlurker
+PLATFORM: GitHub
+STARS: 36
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; port listener in Rust with protocol guessing and safe string display.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Port listener honeypot in Rust with protocol guessing and safe string display.
+
+[INTERACTION LEVEL]
+Evidence: Listens on configured ports; attempts to identify protocol from initial payload.
+
+[THREAT MODEL]
+Value: Generic internet automated port scanners.
+Evidence: README describes Rust implementation with protocol guessing.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Configurable port listener.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection payloads and metadata; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

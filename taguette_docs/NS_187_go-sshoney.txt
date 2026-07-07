@@ -1,0 +1,50 @@
+ENTRY 187 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: go-sshoney
+LINK: https://github.com/ashmckenzie/go-sshoney
+PLATFORM: GitHub
+STARS: 34
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH honeypot written in Go.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH honeypot written in Go logging brute-force attempts.
+
+[INTERACTION LEVEL]
+Evidence: Simple Go SSH honeypot logging credential attempts.
+
+[THREAT MODEL]
+Value: Automated SSH brute-force bots.
+Evidence: README only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

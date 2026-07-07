@@ -1,0 +1,50 @@
+ENTRY 152 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Hontel
+LINK: https://github.com/stamparm/hontel
+PLATFORM: GitHub
+STARS: 163
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Telnet honeypot written in Python.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal Telnet honeypot.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python Telnet honeypot logging brute-force and Telnet exploitation attempts.
+
+[INTERACTION LEVEL]
+Evidence: Emulates Telnet service; logs credential and command attempts.
+
+[THREAT MODEL]
+Value: Automated Telnet brute-force bots and IoT malware (Mirai) targeting Telnet.
+Evidence: README describes Telnet honeypot functionality.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard Telnet port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential and command logs; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

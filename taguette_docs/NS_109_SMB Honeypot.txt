@@ -1,0 +1,50 @@
+ENTRY 109 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SMB Honeypot
+LINK: https://github.com/rosehgal/HoneySMB
+PLATFORM: GitHub
+STARS: 50
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; SMB honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SMB honeypot detecting attacks against Windows file sharing; relevant for ransomware detection.
+
+[INTERACTION LEVEL]
+Evidence: Emulates SMB service to log exploitation attempts including EternalBlue-type attacks.
+
+[THREAT MODEL]
+Value: Ransomware operators, worms (WannaCry), and lateral movement attacks using SMB.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SMB port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SMB protocol metadata and exploit payloads; no real file system.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

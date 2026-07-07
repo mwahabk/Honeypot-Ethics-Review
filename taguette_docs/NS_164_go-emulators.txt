@@ -1,0 +1,50 @@
+ENTRY 164 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: go-emulators
+LINK: https://github.com/kingtuna/go-emulators
+PLATFORM: GitHub
+STARS: 11
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Go rewrite of C honeypot service emulators.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Go rewrite of C honeypot service emulators.
+
+[INTERACTION LEVEL]
+Evidence: Reimplements classic C honeypot service emulators in Go.
+
+[THREAT MODEL]
+Value: Generic internet automated scanners.
+Evidence: README only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Service emulation metadata.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

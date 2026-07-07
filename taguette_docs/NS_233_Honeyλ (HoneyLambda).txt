@@ -1,0 +1,58 @@
+ENTRY 233 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeyλ (HoneyLambda)
+LINK: https://github.com/0x4D31/honeylambda
+PLATFORM: GitHub
+STARS: 526
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; serverless URL honeytoken creator on AWS Lambda and API Gateway.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Data processed via AWS Lambda and API Gateway (third-party cloud)
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: AWS cloud data processing without documented governance; no IRB.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Serverless URL honeytoken creator using AWS Lambda and API Gateway.
+
+[INTERACTION LEVEL]
+Evidence: Creates URL honeytokens hosted on AWS Lambda; logs attacker access to deceptive URLs.
+
+[THREAT MODEL]
+Value: Attackers accessing planted URL honeytokens in documents, emails, or systems.
+Evidence: README describes AWS Lambda + API Gateway honeytoken architecture.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes logging token access events.
+
+[PROTOCOLS & PORTS]
+Evidence: AWS API Gateway endpoints.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Token access metadata; no personal user data.
+
+[DATA SHARING]
+Value: Data processed via AWS Lambda and API Gateway (third-party cloud)
+Evidence: AWS cloud infrastructure processes all token access data.
+
+[ETHICAL GAPS]
+Value: AWS cloud data processing without documented governance; no IRB.
+Evidence: Third-party AWS infrastructure processes token access data without documented governance.
+
+[RELEVANCE TO PROJECT]
+Evidence: Serverless honeytoken design relevant to scalable HoneySat honeytoken infrastructure.

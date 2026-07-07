@@ -1,0 +1,50 @@
+ENTRY 095 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeypot-camera
+LINK: https://github.com/alexbredo/honeypot-camera
+PLATFORM: GitHub
+STARS: 53
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; camera honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; IoT camera honeypot with no ethics documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: IP camera honeypot emulating RTSP and HTTP camera interfaces.
+
+[INTERACTION LEVEL]
+Evidence: Simulates IP camera services (RTSP, HTTP); logs access and control attempts.
+
+[THREAT MODEL]
+Value: IoT scanners and attackers targeting IP cameras for surveillance or botnet recruitment.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard IP camera ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Access attempt metadata; no real video feeds.
+
+[RELEVANCE TO PROJECT]
+Evidence: Physical sensor deception dimension relevant to HoneySat.

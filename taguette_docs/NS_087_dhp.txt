@@ -1,0 +1,50 @@
+ENTRY 087 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: dhp
+LINK: https://github.com/ciscocsirt/dhp
+PLATFORM: GitHub
+STARS: 33
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; Cisco CSIRT honeypot proxy.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Cisco CSIRT origin with no public ethics governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Cisco CSIRT Docker-based honeypot for network threat intelligence collection.
+
+[INTERACTION LEVEL]
+Evidence: Logs incoming connections; minimal service emulation; Docker-based.
+
+[THREAT MODEL]
+Value: Generic internet attackers and automated scanners.
+Evidence: README describes Cisco CSIRT origin and Docker deployment.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

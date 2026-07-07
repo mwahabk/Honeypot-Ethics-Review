@@ -1,0 +1,50 @@
+ENTRY 072 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: shockpot
+LINK: https://github.com/pwnlandia/shockpot
+PLATFORM: GitHub
+STARS: 55
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with setup; Shellshock exploit detection honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; CVE-specific honeypot.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot for detecting Shellshock (CVE-2014-6271) exploitation via HTTP.
+
+[INTERACTION LEVEL]
+Evidence: Emulates vulnerable bash CGI endpoint; logs Shellshock payloads.
+
+[THREAT MODEL]
+Value: Attackers exploiting Shellshock vulnerability in CGI-enabled web servers.
+Evidence: README describes Shellshock emulation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Exploit payloads only; no real system access.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

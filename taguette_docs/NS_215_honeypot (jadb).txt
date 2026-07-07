@@ -1,0 +1,54 @@
+ENTRY 215 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeypot (jadb)
+LINK: https://github.com/jadb/honeypot
+PLATFORM: GitHub
+STARS: 2
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; unofficial PHP SDK for Project Honey Pot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Data queried from Project Honey Pot external service
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; external API integration; Project Honey Pot data privacy policies not referenced.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Unofficial PHP SDK for Project Honey Pot interfaces with the Project Honey Pot API.
+
+[INTERACTION LEVEL]
+Evidence: PHP client library for Project Honey Pot; not a standalone honeypot but a service integration.
+
+[THREAT MODEL]
+Value: Generic spam and web bot operators captured by Project Honey Pot infrastructure.
+Evidence: README describes PHP SDK for Project Honey Pot.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; SDK queries external Project Honey Pot data.
+
+[PROTOCOLS & PORTS]
+Evidence: External API integration.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IP reputation queries; no personal user data directly collected.
+
+[DATA SHARING]
+Value: Data queried from Project Honey Pot external service
+Evidence: SDK integrates with external Project Honey Pot threat intelligence.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

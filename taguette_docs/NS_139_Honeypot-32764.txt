@@ -1,0 +1,50 @@
+ENTRY 139 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeypot-32764
+LINK: https://github.com/knalli/honeypot-for-tcp-32764
+PLATFORM: GitHub
+STARS: 19
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; CoffeeScript honeypot for router backdoor on TCP 32764.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal CVE-specific router honeypot.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: CoffeeScript honeypot emulating the TCP 32764 router backdoor vulnerability.
+
+[INTERACTION LEVEL]
+Evidence: Emulates the router backdoor on TCP 32764; logs connection and exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers exploiting the TCP 32764 router backdoor vulnerability (Sercomm/Linksys/Cisco routers).
+Evidence: README describes TCP 32764 backdoor emulation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Non-standard router backdoor port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Protocol interaction metadata; no real router access.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

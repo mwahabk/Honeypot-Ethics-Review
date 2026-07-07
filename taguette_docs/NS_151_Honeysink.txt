@@ -1,0 +1,57 @@
+ENTRY 151 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeysink
+LINK: http://www.honeynet.org/node/773
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Honeynet Project page only; no GitHub repo; open source network sinkhole.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; sinkhole receives traffic from victim machines — victim data privacy not addressed.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; receives victim machine traffic without victim notification or consent; Honeynet Project tool with no ethics documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Open-source network sinkhole for redirecting and logging malicious traffic; Honeynet Project.
+
+[INTERACTION LEVEL]
+Evidence: Network sinkhole capturing malicious traffic redirected from infected hosts.
+
+[THREAT MODEL]
+Value: Malware C2 traffic and infected hosts redirected to the sinkhole.
+Evidence: Honeynet Project page documents sinkhole concept.
+
+[DATA TYPES COLLECTED]
+Evidence: Honeynet Project page describes capturing malicious traffic from infected hosts.
+
+[PROTOCOLS & PORTS]
+Evidence: Network-level sinkhole; accepts any redirected traffic.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Botnet C2 traffic and infected host data; medium sensitivity  may include identifying information from victim machines.
+
+[CONTAINMENT & HARM]
+Evidence: Traffic from infected victim machines may include personal data not addressed in documentation.
+
+[ETHICAL GAPS]
+Value: No IRB; receives victim machine traffic without victim notification or consent; Honeynet Project tool with no ethics documentation.
+Evidence: Sinkholing victim traffic without victim awareness raises data privacy concerns not discussed.
+
+[RELEVANCE TO PROJECT]
+Evidence: Victim traffic capture without consent is relevant to HoneySat ethics framework.

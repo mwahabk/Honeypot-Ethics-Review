@@ -1,0 +1,50 @@
+ENTRY 052 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Google Hack Honeypot
+LINK: https://ghh.sourceforge.net/
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: SourceForge website with documentation; no GitHub README available.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; outdated project; no modern ethics governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Web honeypot detecting Google-assisted reconnaissance against web applications.
+
+[INTERACTION LEVEL]
+Evidence: Presents deceptive web pages to detect Google dorking-based attackers.
+
+[THREAT MODEL]
+Value: Attackers using Google search to identify vulnerable web targets.
+Evidence: External SourceForge documentation describes design.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Web request metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

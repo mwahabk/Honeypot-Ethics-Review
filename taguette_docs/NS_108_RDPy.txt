@@ -1,0 +1,50 @@
+ENTRY 108 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: RDPy
+LINK: https://github.com/citronneur/rdpy
+PLATFORM: GitHub
+STARS: 1.7k
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with usage; Python RDP honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; full RDP implementation with no data governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python RDP protocol stack implementation and honeypot; captures RDP sessions.
+
+[INTERACTION LEVEL]
+Evidence: Implements full RDP protocol stack allowing more complete session interaction.
+
+[THREAT MODEL]
+Value: Attackers using RDP for remote access, lateral movement, or malware deployment.
+Evidence: README describes Python RDP implementation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; full RDP protocol implies session logging.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard RDP port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full RDP session data may include sensitive attacker activity.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

@@ -1,0 +1,94 @@
+ENTRY 010 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Dynamic Honeypot Conversion for Enhanced IoT Security
+LINK: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5079213
+
+─── ASSESSED VALUES ───
+Domain: IoT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Isolation and State Management
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit (Technical safety)
+Ethical Gaps: Ethics-by-Design without formal governance
+Deployment: Experimental / controlled
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IoT
+Evidence: Page 1: The title and abstract focus exclusively on the "Internet of Things (IoT)"
+
+[INTERACTION LEVEL]
+Evidence: Page 3: The authors argue that "high-interaction honeypots... are impractical for widespread use in IoT". They advocate for a system that balances "realistic interaction" while controlling risk, which aligns with their definition of Medium-interaction
+
+[THREAT MODEL]
+Value: IoT malware, automated attacks, and opportunistic attackers
+Evidence: Page 5: The model assumes an attacker "capable of launching various attacks targeting IoT nodes," including "volumetric attacks, protocol attacks, and application-layer attacks"
+
+[IRB / ETHICS COMMITTEE]
+Evidence: Pages 1–15: There is no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol" in the entire paper.
+
+[CONSENT MODEL]
+Evidence: Page 5: The attacker operates under the limitation that they "cannot determine whether a node is a honeypot before interaction" and remain "unaware of the system’s dynamic conversion capability," implying data is collected without their knowledge or consent
+
+[DATA TYPES COLLECTED]
+Evidence: Page 7: The system records security events defined by Equation (21) as: "e = (timestamp, event type, node id, data)," where 'data' represents the interaction content
+
+[PROTOCOLS & PORTS]
+Evidence: Page 8:
+The CICDDoS2019 dataset provides diverse attack patterns
+relevant to IoT environments: volumetric attacks (UDP flood,
+DNS amplification), protocol attacks (SYN flood, ICMP flood),
+and application-layer attacks (HTTP flood, Slowloris).
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Categorized as Medium because the recorded "data" variable captures specific attack payloads and interaction behaviors from the CICDDoS2019 dataset rather than personal human identifiers or user credentials
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Page 5:
+The paper does not mention the "minimization principle" or filtering specific data fields; instead, it focuses on "Evidence Preservation" through immutable logging
+
+[DATA RETENTION POLICY]
+Evidence: Page 2:
+While the blockchain component ensures "immutable records" of conversion events and attacks, there is no discussion of a deletion timeline or storage expiration policy
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Page 8:
+The authors provide a GitHub link for the implementation source code, but they do not mention a public release for the raw interaction traces or attacker logs
+
+[JURISDICTION / LEGAL]
+Evidence: There is no analysis of GDPR, legal compliance for node conversion, or jurisdictional considerations for the deployment
+
+[CONTAINMENT & HARM]
+Evidence: The system initiates a (Page 2) "rapid isolation protocol" and transitions nodes through specific phases (normal→isolating→converting→operational) to (Page 4) "maintain network stability and prevent data loss"
+
+[DECEPTION FRAMING]
+Evidence: Page 2:
+	
+Deception is treated as a functional requirement to provide "greater flexibility and resource efficiency" and realistic interaction in defense
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit (Technical safety)
+Evidence: Page 5:
+Responsibility is implicit through the system's "Network Resilience" constraints, which mandate a "minimum 40% normal node availability" to ensure legitimate network functionality during attacks
+
+[ETHICAL GAPS]
+Value: Ethics-by-Design without formal governance
+Evidence: Like the vast majority of papers in the study, it relies on technical containment (isolation protocols and state machines) as a substitute for formal ethical discussion or IRB oversight
+
+[RELEVANCE TO PROJECT]
+Evidence: BHICS is a primary example of the "technology-driven ethical lag." It uses a sophisticated Digital Twin concept (converting real nodes into high-fidelity decoys) but lacks the IRB oversight found in HoneySat
+
+[DEPLOYMENT]
+Value: Experimental / controlled
+Evidence: Section 5.4 describes an experimental setup that "simulates an IoT network comprising 100 nodes," while Section 7.5 lists "implementing a real-world testbed" as a "future research priority"

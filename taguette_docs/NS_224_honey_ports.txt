@@ -1,0 +1,50 @@
+ENTRY 224 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honey_ports
+LINK: https://github.com/run41/honey_ports
+PLATFORM: GitHub
+STARS: 9
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; simple Docker-deployed honeypot to detect port scanning.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Simple Docker-deployed honeypot to detect port scanning activity.
+
+[INTERACTION LEVEL]
+Evidence: Minimal Docker honeypot logging port scanning connections.
+
+[THREAT MODEL]
+Value: Automated port scanners and network reconnaissance tools.
+Evidence: README only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Configurable ports for scan detection.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Scan metadata; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

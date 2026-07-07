@@ -1,0 +1,54 @@
+ENTRY 041 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Elastic honey
+LINK: https://github.com/jordan-wright/elastichoney
+PLATFORM: GitHub
+STARS: 191
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README present; links to blog post for more details. Binary releases available.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Results shared via blog post
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; public blog post shares attack data without anonymization discussion.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Elasticsearch honeypot with blog post describing real-world attacker data capture.
+
+[INTERACTION LEVEL]
+Evidence: Emulates Elasticsearch API; companion blog post describes real captured attack data.
+
+[THREAT MODEL]
+Value: Automated scanners probing for exposed Elasticsearch clusters.
+Evidence: README links to blog post describing real captured attack data.
+
+[DATA TYPES COLLECTED]
+Evidence: README/blog describes capturing real attacker queries.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard Elasticsearch port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Request metadata and attacker-supplied queries only.
+
+[DATA SHARING]
+Value: Results shared via blog post
+Evidence: Blog post at jordan-wright.com describes attack patterns observed.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

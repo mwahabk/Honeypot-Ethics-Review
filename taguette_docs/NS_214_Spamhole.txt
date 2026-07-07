@@ -1,0 +1,50 @@
+ENTRY 214 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Spamhole
+LINK: http://www.spamhole.net/
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Website-only spam trap for harvesters; no code repo.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; website-only tool with no code repository.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Website-only spam trap for email harvesters; no code repository.
+
+[INTERACTION LEVEL]
+Evidence: Web-based email harvester trap; website is the only documentation.
+
+[THREAT MODEL]
+Value: Email harvesting bots scanning web pages for email addresses.
+Evidence: Website-only spam trap; no code repository.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Harvester access metadata; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

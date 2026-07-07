@@ -1,0 +1,50 @@
+ENTRY 129 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Masscanned
+LINK: https://github.com/ivre/masscanned
+PLATFORM: GitHub
+STARS: 138
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /docs folder + external IVRE documentation. Comprehensive network responder.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; full-port coverage without governance for scale of collection.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction network honeypot by IVRE project with /docs folder documentation.
+
+[INTERACTION LEVEL]
+Evidence: Accepts connections on all ports; logs connection metadata; supports multiple backend connectors.
+
+[THREAT MODEL]
+Value: Internet-wide scanners and automated attackers across all network ports.
+Evidence: README and /docs folder describe architecture; IVRE project integration.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Designed for full port coverage.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

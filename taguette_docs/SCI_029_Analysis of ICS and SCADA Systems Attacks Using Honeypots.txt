@@ -1,0 +1,96 @@
+ENTRY 029 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Analysis of ICS and SCADA Systems Attacks Using Honeypots
+LINK: https://www.mdpi.com/1999-5903/15/7/241
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Shared upon request
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Technical isolation
+Deception Framing: Technical defensive monitoring
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract:
+Explicitly targets "Supervisory control and data acquisition (SCADA)" and "industrial control systems (ICS)"
+
+[INTERACTION LEVEL]
+Evidence: Introduction:
+The authors state: "For this paper, a low-interaction honeypot will be employed" to simulate PLCs and OT protocols
+
+[THREAT MODEL]
+Value: ICS/SCADA attackers
+Evidence: Abstract:
+Focuses on identifying "potential malicious tampering within a SCADA device network" and determining threats against ICS/SCADA systems
+
+[IRB / ETHICS COMMITTEE]
+Evidence: A complete review of the text confirms no mention of Institutional Review Board (IRB) or ethical committee oversight
+
+[CONSENT MODEL]
+Evidence: Section I/VI:
+The systems are "assigned public IP addresses" to "luring attackers into a controlled environment" where they are monitored unknowingly
+
+[DATA TYPES COLLECTED]
+Evidence: Section VII, Table 9:
+Collects logs for "HTTP, SNMP, Modbus, BACnet, and S7Comm" including over 2,000 unique attacker IP addresses
+
+[PROTOCOLS & PORTS]
+Evidence: Section 6.2:
+Specifically configured to listen on TCP ports "80", "502", and "102" to mimic Siemens S7-200 and S7-300 PLCs
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Abstract, Section 6.1, & Section 7 : The researchers collected real-world interaction logs from over 2000 unique attacker IP addresses(Table 9) targeting industrial protocols such as "Modbus, BACnet, and S7Comm"
+. The paper defines this data as essential for the "early detection of potential malicious tampering" and for determining "threats against ICS/SCADA networks"
+. The high sensitivity of these captures is underscored by the authors' decision to forward the logs to the "MISP Threat Intelligence platform" to analyze "attackers’ behaviors, locations, and goals" regarding "critical infrastructure"
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Pages 2: The experiment was configured to collect and analyze "logs... from day one to the last day" (45 days) to determine targeted protocols, with no stated policy on filtering or reducing the volume of collected personal or metadata
+
+[DATA RETENTION POLICY]
+Evidence: Page 2:
+Mentions logs were "collected from servers"... "for 45 days" but provides no policy on storage duration or deletion
+
+[DATA SHARING]
+Value: Shared upon request
+Evidence: Data Availability Statement (Page 15): The authors state that "Data in this research paper will be shared upon request made to the corresponding author," rather than being released in a public repository.
+
+[JURISDICTION / LEGAL]
+Evidence: Table 9:
+Despite collecting data from attackers in diverse jurisdictions including "China", "France", and "Egypt", the paper contains no analysis of legal compliance, GDPR, or cross-border data transfer regulations
+
+[CONTAINMENT & HARM]
+Evidence: Page 2: Safety is justified through a "controlled environment" and an isolated honeypot environment that simulates a target to monitor behavior without having a physical system connection to real-world industrial infrastructure
+
+[DECEPTION FRAMING]
+Evidence: Page 5: Deception is framed as an engineering tool to "identify and study their enemies" and learn how to "defend against these attacks" through the use of traps
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Pages 15: Responsibility is framed as a contribution to "threat intelligence" collection and the improvement of security for "actual ICS/SCADA systems" by identifying new attack techniques
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: The paper exemplifies the project's meta-finding of a "structural ethical vacuum," as it captures and geolocates thousands of IPs without any formal ethical reasoning, IRB oversight, or data governance framework
+
+[RELEVANCE TO PROJECT]
+Evidence: Page 1/2: This paper serves as a primary example of the ethics-by-containment model, where technical safety (isolation) is treated as the sole substitute for normative ethical reasoning. 
+Unlike HoneySat, which explicitly discusses avoiding harm to satellites, this research focuses purely on the technical goal of identifying "malicious tampering"
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Section VI:
+Deployed for "45 days" on virtual machines "assigned public IP addresses from one of the service providers"

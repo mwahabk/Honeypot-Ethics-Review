@@ -1,0 +1,50 @@
+ENTRY 191 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: hnypots-agent
+LINK: https://github.com/joshrendek/hnypots-agent
+PLATFORM: GitHub
+STARS: 40
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH server in Go logging username/password combination attempts.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal credential logger.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Go SSH server logging username/password combination attempts.
+
+[INTERACTION LEVEL]
+Evidence: SSH honeypot focused on credential capture; logs all authentication attempts.
+
+[THREAT MODEL]
+Value: Automated SSH credential stuffing bots.
+Evidence: README only.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes credential capture.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential pairs captured; low sensitivity.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

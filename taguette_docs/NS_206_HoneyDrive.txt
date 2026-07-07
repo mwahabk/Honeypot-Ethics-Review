@@ -1,0 +1,33 @@
+ENTRY 206 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyDrive
+LINK: http://bruteforcelab.com/honeydrive
+PLATFORM: Irrelevant
+STARS: 
+DOC LEVEL: None
+TOOL DESCRIPTION: None
+
+─── ASSESSED VALUES ───
+Domain: Other
+Interaction Level: Not available
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Not available
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Not available
+Researcher Responsibility: Not documented
+Ethical Gaps: Repository not found; no ethics analysis possible.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: Other
+Evidence: Repository/link not found; documentation not available.
+
+[RELEVANCE TO PROJECT]
+Evidence: Not assessable.

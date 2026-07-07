@@ -1,0 +1,54 @@
+ENTRY 117 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeydet
+LINK: https://github.com/referefref/honeydet
+PLATFORM: GitHub
+STARS: 110
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with usage; signature-based honeypot detector in Go.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Not applicable
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Dual-use: actively helps attackers avoid honeypots; no ethics discussion of offensive capability.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Signature-based honeypot detection tool identifying 20+ honeypot types from network responses.
+
+[INTERACTION LEVEL]
+Evidence: Honeypot detection tool; not a honeypot itself.
+
+[THREAT MODEL]
+Value: Attackers and red teamers fingerprinting networks to identify and avoid honeypots.
+Evidence: README describes 20+ honeypot fingerprinting signatures.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Detection scan results; no attacker data collected.
+
+[ETHICAL GAPS]
+Value: Dual-use: actively helps attackers avoid honeypots; no ethics discussion of offensive capability.
+Evidence: README does not address offensive use of honeypot detection for attack evasion.
+
+[RELEVANCE TO PROJECT]
+Evidence: Automated honeypot detection for 20+ systems is a key finding motivating our ethics framework.

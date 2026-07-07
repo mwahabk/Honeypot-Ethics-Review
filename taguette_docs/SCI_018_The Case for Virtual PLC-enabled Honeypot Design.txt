@@ -1,0 +1,96 @@
+ENTRY 018 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: The Case for Virtual PLC-enabled Honeypot Design
+LINK: https://ieeexplore.ieee.org/document/10190640/
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Virtualization and Docker isolation
+Deception Framing: Explicit technical realism
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Yes (Internet-facing Proxy)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract: Focuses on "Programmable logic controllers (PLCs)," which are "essential components of Industrial Control System (ICS)". The case study involves "traffic light applications"
+
+[INTERACTION LEVEL]
+Evidence: Section 1 / 4.1.1: PLCHoney is designed for "engaged interaction" by funneling aggressive activity (like writing coils and registers) to a "consolidated OpenPLC and process simulation",. It is explicitly framed as an improvement over existing high-interaction models like HoneyPLC
+
+[THREAT MODEL]
+Value: ICS attackers targeting PLCs
+Evidence: Section 1/3.1/Page 2: Targets attackers who exploit PLCs to "gather attacker information and attack tactics"
+. It specifically monitors those performing "Device Enumeration," "overwriting or injection attacks," and "data injection"
+
+[IRB / ETHICS COMMITTEE]
+Evidence: A review of the entire paper confirms no mention of an "Institutional Review Board," "ethics committee," or human subject protocols
+
+[CONSENT MODEL]
+Evidence: Section 3.1 / Page 2: The system is designed to "deceive attackers into believing a real PLC... is behind".
+It was exposed to the Internet to "attract internet requests," assuming interaction is attacker-initiated without disclosure
+
+[DATA TYPES COLLECTED]
+Evidence: Section 3.4 / Abstract: The engine applies analysis to "identify the source IP information of the attackers"
+. It records "requests for memory layout discovery," "PLC I/O status," and "interaction logs"
+
+[PROTOCOLS & PORTS]
+Evidence: Section 3.1 / 4.1 / 4.1.2: Specifically handles "Modbus function code 43" on "port 502",. 
+It also supports "S7comm, DNP3, etc."
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section 3.4: "requests for memory layout discovery," "input/output data of the PLC," and "reading and writing coils and registers". 
+It monitors the "dynamic behavior of the physical process simulator," which represents physical-world effects.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section 3.4: The system is designed to "receive log files from all the other components" to analyze "requests for memory layout discovery, input/output data of the PLC, and dynamic behavior of the physical process simulator"
+. Section 4.1.2 and 4.2.1 confirm that the system records "52 requests for TCP port connections" and uses a "logger to record runtime behavior" in JSON and TSV formats
+. There is no mention in the text of limiting, filtering, or redacting any of the collected interaction data.
+
+[DATA RETENTION POLICY]
+Evidence: Section 4.2.1: Mentions that a "logger" records behavior in JSON and TSV formats for offline analysis, but provides no timeline for deletion or storage expiration
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Page 2:
+While the authors mention they "generated a dataset," they do not specify a public release or sharing policy for the raw attacker logs or malware traces in the text
+
+[JURISDICTION / LEGAL]
+Evidence: Section 4.1.2: Deployed the system on the internet to attract "52 requests for TCP port connections," but provides no analysis of legal jurisdiction, GDPR, or data protection compliance
+
+[CONTAINMENT & HARM]
+Evidence: Section 3.2: Uses "“soft PLCs” in Docker containers" to prevent "irreversible firmware and memory corruption". 
+Virtualization is used to ensure no real physical process manipulation occurs
+
+[DECEPTION FRAMING]
+Evidence: Section 3.1: Deception is framed as a technical goal to "deceive attackers into believing a real PLC from a specific brand is behind" and to provide Page 2: "better interactions" through simulated plant behavior
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section 1: Defensive intent is framed as "identifying and moderating potential attacks". 
+Researcher responsibility is achieved via "safety via virtualization" to avoid disrupting real infrastructure
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Represents the "ethics-by-containment" model. There is no explicit ethical discussion; instead, ethics are "assumed through virtual design" and technical isolation
+
+[RELEVANCE TO PROJECT]
+Evidence: Section 3.3: Serves as a primary example of ethics-by-containment. 
+It creates a high-fidelity Digital Twin using a "Physical Process Simulator" to record the "dynamic behavior" of traffic light timing sequences without disrupting real infrastructure.
+Unlike HoneySat, it lacks formal IRB oversight, confirming that technical safety via virtualization is used as a total substitute for normative reasoning.
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing Proxy)
+Evidence: Section 4.1.2: "Our proxy was set up on the internet and run for 2 days" to attract and handle Modbus requests

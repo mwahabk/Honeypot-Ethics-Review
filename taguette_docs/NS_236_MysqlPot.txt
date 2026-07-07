@@ -1,0 +1,50 @@
+ENTRY 236 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MysqlPot
+LINK: https://github.com/schmalle/MysqlPot
+PLATFORM: GitHub
+STARS: 22
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; MySQL honeypot, very early stage. Missing from original Database section.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal early-stage tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Early-stage MySQL honeypot from the database section; minimal README documentation.
+
+[INTERACTION LEVEL]
+Evidence: Very early stage MySQL honeypot; logs connection and authentication attempts.
+
+[THREAT MODEL]
+Value: Automated MySQL credential brute-force bots.
+Evidence: README only; very early stage tool.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard MySQL port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

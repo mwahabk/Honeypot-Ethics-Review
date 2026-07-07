@@ -1,0 +1,50 @@
+ENTRY 104 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MICROS honeypot
+LINK: https://github.com/Cymmetria/micros_honeypot
+PLATFORM: GitHub
+STARS: 17
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; low interaction Oracle MICROS honeypot for CVE-2018-2636.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; POS payment system honeypot with no ethics discussion; Cymmetria commercial origin.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction honeypot simulating Oracle MICROS Point-of-Sale system.
+
+[INTERACTION LEVEL]
+Evidence: Emulates Oracle MICROS POS interface; logs exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting Oracle MICROS POS systems for payment data or backdoor access.
+Evidence: README describes MICROS POS emulation by Cymmetria.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Proprietary Oracle MICROS network protocol.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Targets payment system context; POS implies potential payment sensitivity.
+
+[RELEVANCE TO PROJECT]
+Evidence: Payment system critical infrastructure context relevant to ethics framework for CPS honeypots.

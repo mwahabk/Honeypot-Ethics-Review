@@ -1,0 +1,50 @@
+ENTRY 098 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeytrap
+LINK: https://github.com/honeytrap/honeytrap
+PLATFORM: GitHub
+STARS: 1.3k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + external documentation links. Feature-rich honeytrap.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; dynamic port binding captures all traffic without targeted governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Go-based multi-service honeypot with extensive docs; modular sensor and dynamic port binding.
+
+[INTERACTION LEVEL]
+Evidence: Supports dynamic port binding and modular service emulation; interacts with multiple protocols.
+
+[THREAT MODEL]
+Value: Diverse internet attackers; honeytrap dynamically opens ports to capture any traffic.
+Evidence: README and external docs.honeytrap.io describe architecture.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; dynamic port binding means any traffic is captured.
+
+[PROTOCOLS & PORTS]
+Evidence: README describes dynamic port binding architecture.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection payloads across all ports; no real service backends.
+
+[RELEVANCE TO PROJECT]
+Evidence: Universal port capture design relevant to HoneySat ground station traffic monitoring.

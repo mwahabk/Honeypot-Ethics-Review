@@ -1,0 +1,50 @@
+ENTRY 220 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Docker honeynet
+LINK: https://github.com/sreinhardt/Docker-Honeynet
+PLATFORM: GitHub
+STARS: 22
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Docker configs and build scripts for multiple honeynet tools.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; deployment utility with no governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Docker configuration and build scripts for multiple honeynet tools; deployment utility.
+
+[INTERACTION LEVEL]
+Evidence: Docker build scripts bundling multiple honeynet tools; README only.
+
+[THREAT MODEL]
+Value: Depends on deployed honeynet tools.
+Evidence: README describes Docker-based honeynet deployment scripts.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Deployment tool; data collection depends on deployed honeynet tools.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

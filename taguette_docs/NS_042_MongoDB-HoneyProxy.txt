@@ -1,0 +1,57 @@
+ENTRY 042 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MongoDB-HoneyProxy
+LINK: https://github.com/Plazmaz/MongoDB-HoneyProxy
+PLATFORM: GitHub
+STARS: 93
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README with usage; no additional docs.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; proxy to real backend is a containment gap.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGH RISK: proxies to real MongoDB backend; real data may be exposed to attackers; no IRB; no containment guidance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: MongoDB honeypot proxy; proxies traffic to real MongoDB backend raising containment concerns.
+
+[INTERACTION LEVEL]
+Evidence: Operates as MITM proxy between attacker and potentially real MongoDB backend; higher risk than pure emulation.
+
+[THREAT MODEL]
+Value: Attackers targeting exposed MongoDB instances for data exfiltration or ransomware.
+Evidence: Not documented; inferred from proxy architecture.
+
+[DATA TYPES COLLECTED]
+Evidence: Proxy architecture means real backend data may be exposed to attacker queries.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard MongoDB port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Proxy to real backend risks exposing actual database contents; high sensitivity.
+
+[CONTAINMENT & HARM]
+Evidence: README does not address risk of real data exposure through proxy.
+
+[ETHICAL GAPS]
+Value: HIGH RISK: proxies to real MongoDB backend; real data may be exposed to attackers; no IRB; no containment guidance.
+Evidence: README does not address the serious risk of using a real database backend.
+
+[RELEVANCE TO PROJECT]
+Evidence: Containment failure scenario relevant to space honeypot design.

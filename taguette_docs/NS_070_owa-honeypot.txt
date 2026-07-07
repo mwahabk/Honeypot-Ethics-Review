@@ -1,0 +1,57 @@
+ENTRY 070 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: owa-honeypot
+LINK: https://github.com/joda32/owa-honeypot
+PLATFORM: GitHub
+STARS: 70
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; Flask-based Outlook Web honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; email address logging not discussed from privacy perspective.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Logs email addresses as usernames personal data under GDPR; no data governance; no IRB.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Flask-based Outlook Web Access honeypot logging credential brute-force against fake OWA pages.
+
+[INTERACTION LEVEL]
+Evidence: Emulates OWA login page; logs credential attempts.
+
+[THREAT MODEL]
+Value: Attackers brute-forcing Office 365 / Outlook Web Access credentials.
+Evidence: README describes OWA emulation.
+
+[DATA TYPES COLLECTED]
+Evidence: Email addresses as usernames may constitute personal data.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Email addresses (usernames) logged alongside passwords; email addresses are personal data under GDPR.
+
+[CONTAINMENT & HARM]
+Evidence: Email addresses are personal identifiers requiring data protection consideration.
+
+[ETHICAL GAPS]
+Value: Logs email addresses as usernames personal data under GDPR; no data governance; no IRB.
+Evidence: Email addresses as personal identifiers requiring data protection.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

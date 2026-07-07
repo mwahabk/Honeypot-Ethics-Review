@@ -1,0 +1,54 @@
+ENTRY 157 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: TelnetHoney
+LINK: https://github.com/balte/TelnetHoney
+PLATFORM: GitHub
+STARS: 2
+DOC LEVEL: None
+TOOL DESCRIPTION: No README confirmed; C# simple Telnet honeypot with no documentation.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; no documentation at all ethics assessment not possible.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Simple C# Telnet honeypot with no documentation.
+
+[INTERACTION LEVEL]
+Evidence: Minimal Telnet service emulation; no README or documentation available.
+
+[THREAT MODEL]
+Value: Automated Telnet scanners.
+Evidence: No README; no documentation available.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard Telnet port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection metadata only.
+
+[ETHICAL GAPS]
+Value: No IRB; no documentation at all ethics assessment not possible.
+Evidence: No documentation to assess.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

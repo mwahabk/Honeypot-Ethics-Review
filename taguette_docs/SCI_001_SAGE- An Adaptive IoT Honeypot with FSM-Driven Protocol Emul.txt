@@ -1,0 +1,126 @@
+ENTRY 001 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SAGE: An Adaptive IoT Honeypot with FSM-Driven Protocol Emulation and GraphRAG-Powered
+LINK: https://dl.acm.org/doi/10.1145/3769011
+
+─── ASSESSED VALUES ───
+Domain: Industrial IoT (IIoT)
+Interaction Level: Hybrid
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Protocol emulation and isolation implied (Containerized & Isolated)
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: AI-generated deception without ethical discussion
+Deployment: Yes (Public Internet Deployment)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: Industrial IoT (IIoT)
+Evidence: In Table 1 of the paper it says IIoT
+
+[INTERACTION LEVEL]
+Evidence: Page 5 says "This section introduces SAGE (State-Aware Graph-Enhanced Honeypot), a hybrid IoT honeypot framework"
+
+[THREAT MODEL]
+Value: Real-world ICS/IIoT attackers (automated + human)
+Evidence: Page 29: 
+“1,750 unique attackers identified.” 
+“12,320 interactions recorded.” 
+“Ladder Logic upload attempts”
+“SZL ID reconnaissance behavior”
+
+[IRB / ETHICS COMMITTEE]
+Evidence: No section mentioning:
+IRB
+Ethics committee
+Institutional approval
+Human subject protocol
+
+[CONSENT MODEL]
+Evidence: Page 27:
+Public IP deployment without authentication barriers
+No mention of consent or disclosure anywhere in the paper
+
+[DATA TYPES COLLECTED]
+Evidence: Page 29:
+“1,750 unique attackers identified” (implies IP logging) 
+“12,320 interactions recorded” 
+“state transitions logged”
+
+[PROTOCOLS & PORTS]
+Evidence: Section 4.1: The implementation focuses on the "S7comm protocol" and explicitly specifies operation over "TCP port 102".
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: The system captures adversarial request-response interactions and logs attacker behavior. While no personal user data is mentioned, it involves real-world adversarial telemetry and potentially identifiable network metadata. No anonymization or governance mechanisms are described.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No mention of:
+Anonymization
+Hashing IPs
+Limiting storage scope
+Redacting sensitive logs
+
+[DATA RETENTION POLICY]
+Evidence: No statement about:
+Storage duration
+Deletion timeline
+Secure archival
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: No dataset release link.
+No mention of sharing attacker logs.
+
+[JURISDICTION / LEGAL]
+Evidence: Page 27:
+Despite:
+Global cloud deployment 
+Public IPv4 exposure 
+No legal discussion or jurisdiction analysis appears in any section.
+
+[CONTAINMENT & HARM]
+Evidence: Page 27:
+“containerized Ubuntu 20.04 environment” 
+Emulated S7-300/400 PLC (no real PLC attached) 
+No physical process integration described
+This suggests technical containment.
+
+[DECEPTION FRAMING]
+Evidence: Deception discussed as “deception robustness,” “adversary engagement,” 
+and “fingerprinting risks” (Abstract; Conclusion). No ethical or governance 
+discussion of deception appears in the paper.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: The paper does not include ethics, privacy compliance, anonymization, IRB approval, or responsible disclosure discussion.
+
+Absent - no statements like “we consider ethical implications” or “we adhere to IRB”.
+
+[ETHICAL GAPS]
+Value: AI-generated deception without ethical discussion
+Evidence: Page 29:
+Five-month live Internet deployment 
+1,750 real attacker IPs logged
+No IRB or ethics approval mentioned (entire paper)
+No data governance policy (entire paper)
+AI-driven adaptive deception without ethical reflection
+
+[RELEVANCE TO PROJECT]
+Evidence: The paper demonstrates AI-driven adaptive deception and dynamic interaction with adversaries but does not address governance or dual-use implications, reinforcing the need for an ethical risk framework in adaptive honeypot systems.
+
+[DEPLOYMENT]
+Value: Yes (Public Internet Deployment)
+Evidence: Page 27:
+“Both honeypots were deployed in a containerized Ubuntu 20.04 environment, with public IP exposure to facilitate real-world adversarial interactions.” 
+“deployed on public IPv4 addresses without geoIP filtering or access control restrictions” 
+Page 29:
+“During the five-month deployment…”

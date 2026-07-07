@@ -1,0 +1,50 @@
+ENTRY 102 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeyprint
+LINK: https://github.com/glaslos/honeyprint
+PLATFORM: GitHub
+STARS: 21
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; printer honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Printer honeypot emulating network printer interfaces to log printer-targeting attacks.
+
+[INTERACTION LEVEL]
+Evidence: Emulates network printer protocols (IPP, LPD); logs access attempts.
+
+[THREAT MODEL]
+Value: Attackers and scanners targeting network printers.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard printer ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Printer protocol request metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

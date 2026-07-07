@@ -1,0 +1,53 @@
+ENTRY 143 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: T-Pot
+LINK: https://github.com/telekom-security/tpotce
+PLATFORM: GitHub
+STARS: 9.3k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README only but very extensive; all-in-one multi-honeypot platform by Telekom Security.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; large-scale data aggregation with no governance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; large-scale multi-honeypot aggregation without governance; Telekom Security origin with no public ethics documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: All-in-one multi-honeypot platform by Telekom Security bundling 20+ honeypots with ELK stack visualization.
+
+[INTERACTION LEVEL]
+Evidence: Deploys and manages 20+ low-interaction honeypots simultaneously; extensive README documents all bundled tools.
+
+[THREAT MODEL]
+Value: Internet-wide attackers across all protocols covered by bundled honeypots (SSH, HTTP, FTP, ICS, IoT, and more).
+Evidence: Extensive README documents all bundled honeypot types and ELK visualization setup.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes comprehensive data collection across all bundled honeypots.
+
+[PROTOCOLS & PORTS]
+Evidence: All ports of all 20+ bundled honeypots exposed simultaneously.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Large-scale aggregated data from 20+ honeypots; credentials, payloads, and malware captured at scale.
+
+[CONTAINMENT & HARM]
+Evidence: 20+ honeypots running simultaneously without any data governance framework.
+
+[RELEVANCE TO PROJECT]
+Evidence: Multi-honeypot platform aggregating data at scale without governance is a primary motivation for our framework.

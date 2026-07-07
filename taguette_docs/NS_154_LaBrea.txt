@@ -1,0 +1,50 @@
+ENTRY 154 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: LaBrea
+LINK: http://labrea.sourceforge.net/labrea-info.html
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge only; abandoned project; takes over unused IP addresses to trap worms and hackers.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; abandoned project; actively traps automated scanners without operator notification.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Network tarpit taking over unused IP addresses to trap and slow down worms and port scanners.
+
+[INTERACTION LEVEL]
+Evidence: Takes over unused IPs and responds slowly to trap automated scanners; SourceForge only.
+
+[THREAT MODEL]
+Value: Internet worms and automated port scanners targeting unused IP ranges.
+Evidence: SourceForge page documents tarpit concept.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Responds to all ports on claimed unused IPs.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Scanner metadata; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

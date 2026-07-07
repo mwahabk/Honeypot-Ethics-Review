@@ -1,0 +1,99 @@
+ENTRY 015 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Response Generation Honeypot With Antidetection Capabilities for IoT Botnet Lifecycle Detection
+LINK: https://ieeexplore.ieee.org/document/10772168/
+
+─── ASSESSED VALUES ───
+Domain: IoT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Virtual isolation
+Deception Framing: Explicit technical deception
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Experimental
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IoT
+Evidence: Title: Focuses on "IoT Botnet Lifecycle Detection." Section I: Addresses "the security of smart terminals in edge computing... including botnets"
+
+[INTERACTION LEVEL]
+Evidence: Abstract: The system provides "tailored responses to deceive potential attackers" by simulating real devices. Section I: It uses GANs to generate "interactive response data... significantly enhancing the honeypots’ ability to trap attackers"
+
+[THREAT MODEL]
+Value: IoT botnets (Scanning to Attack phases)
+Evidence: Abstract: Targets the "botnet scanning and propagation phases". Section III: Classifies the lifecycle into "scanning phase, propagation phase, and attack phase"
+
+[IRB / ETHICS COMMITTEE]
+Evidence: Pages 1–16: A review of the entire manuscript confirms no mention of an "Institutional Review Board," "ethics committee," or human subject protocols
+
+[CONSENT MODEL]
+Evidence: Section I: The system is designed to "trap attackers"
+ and "deceive potential attackers"
+ who interact with the decoy unaware of its nature.
+
+[DATA TYPES COLLECTED]
+Evidence: Table V: HTTP, DNS, DHCP, Telnet, SSL, and SSH
+Section V-B-1 "(MQTT), constrained application protocol (CoAP), hypertext transfer protocol (HTTP), secure shell (SSH).", and Telnet.
+
+Section V-B-1 (Stage c) describes "Malware Deployment,". Figures 8 and 9 "malware loading phase" and "malware execution phase".
+
+Section III: defines the "Attack phase" as being "coordinated by remotely controlling the infected devices through a command and control (C&C) server".
+Section V-B-1 (Stage d) provides a technical example of this, describing the "Heartbeat" phase...
+
+[PROTOCOLS & PORTS]
+Evidence: Table V / Section V-B: Lists protocols used for training/testing including HTTP, DNS, DHCP, Telnet, SSL, SSH. 
+
+Section V-B-1: Explicitly mentions evaluating MQTT, CoAP, HTTP, and SSH
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section V-B-1: Records "username and password" (Stage b), "load[s] malware" (Stage c), and maintains a "heartbeat connection" via a "command and control (C&C) server" (Stage e). Per Table 9, this interaction depth represents the "maximum data collection depth" for AI honeypots.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section IV-A: The paper emphasizes using simulated traffic to help honeypots become "more attractive... thereby attracting more attackers and accumulating a substantial amount of information". There is no discussion of limiting or filtering data
+
+[DATA RETENTION POLICY]
+Evidence: Section IV-A: The structural schematic (Fig. 3) includes a "Data storage" component
+, but the text provides no deletion timeline or storage expiration policy.
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Data Availability Statement: Public datasets were used for training, but raw interaction data or captured malware is only available "from the corresponding author upon reasonable request"
+
+[JURISDICTION / LEGAL]
+Evidence: Section V-A-1: The authors utilized a "virtual environment using the VMWare platform" for experiments and do not address legal compliance or jurisdictional boundaries
+
+[CONTAINMENT & HARM]
+Evidence: Section I / Section IV: The researchers built a "virtual testbed" using the "VMWare platform" to protect devices and networks while conducting experiments
+
+[DECEPTION FRAMING]
+Evidence: Abstract / Section II: Deception is treated as a functional goal to "effectively simulate real IoT devices" and provide "antidetection capabilities" against fingerprinting
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section IV: Defensive intent is emphasized to "safeguarding IoT devices" from botnet infections, though no formal responsibility statement exists
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Section I, Section IV, and Section V-A-1: 
+The system utilizes GANs to generate deceptive responses while relying solely on a "virtual testbed" and the "VMWare platform" for safety. The paper contains no mention of an IRB, legal analysis, or dual-use discussion
+. This follows the project's meta-pattern where "technical safety (containment) replaces normative reasoning"
+
+[RELEVANCE TO PROJECT]
+Evidence: Abstract and Section IV: 
+Demonstrates the "technology-driven ethical lag" by using GANs to create responses that are "indistinguishable from real samples" to "trap attackers". 
+Unlike HoneySat, which implemented formal IRB governance, this paper bypasses all formal ethical oversight while achieving "maximum data collection depth" [Table 9].
+
+[DEPLOYMENT]
+Value: Experimental
+Evidence: Abstract: The authors "created a controlled experimental environment to assess its ability". Section V-A-1: Deployment was restricted to a "virtual environment using the VMWare platform"

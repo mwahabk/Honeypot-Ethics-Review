@@ -1,0 +1,50 @@
+ENTRY 079 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyPress
+LINK: https://github.com/kungfuguapo/HoneyPress
+PLATFORM: GitHub
+STARS: 8
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; Python-based WordPress honeypot in Docker.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python-based WordPress login honeypot logging brute-force attempts.
+
+[INTERACTION LEVEL]
+Evidence: Emulates WordPress login; logs credential attempts.
+
+[THREAT MODEL]
+Value: Automated WordPress credential brute-forcers.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

@@ -1,0 +1,50 @@
+ENTRY 046 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: sticky_elephant
+LINK: https://github.com/betheroot/sticky_elephant
+PLATFORM: GitHub
+STARS: 12
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; medium interaction postgresql honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; medium interaction not accompanied by additional ethics consideration.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Medium-interaction PostgreSQL honeypot capturing deeper query interaction.
+
+[INTERACTION LEVEL]
+Evidence: Allows limited SQL query interaction beyond credential capture.
+
+[THREAT MODEL]
+Value: Attackers probing PostgreSQL for data exfiltration or privilege escalation.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard PostgreSQL port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SQL queries and credentials from attackers; no real data exposed.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

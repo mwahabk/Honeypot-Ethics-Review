@@ -1,0 +1,50 @@
+ENTRY 209 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Mailoney
+LINK: https://github.com/phin3has/mailoney
+PLATFORM: GitHub
+STARS: 283
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SMTP honeypot written in Python.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Email addresses (personal data) captured without governance; no IRB.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SMTP honeypot in Python logging email spam relay and credential attempts.
+
+[INTERACTION LEVEL]
+Evidence: Emulates SMTP server; logs relay and authentication attempts.
+
+[THREAT MODEL]
+Value: Spam relayers and email system attackers.
+Evidence: README only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; SMTP interaction may include email content.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SMTP port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Email content and addresses captured; email addresses are personal data under GDPR.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

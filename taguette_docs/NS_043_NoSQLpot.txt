@@ -1,0 +1,50 @@
+ENTRY 043 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: NoSQLpot
+LINK: https://github.com/torque59/nosqlpot
+PLATFORM: GitHub
+STARS: 103
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with brief description and usage.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: NoSQL honeypot emulating multiple NoSQL database interfaces.
+
+[INTERACTION LEVEL]
+Evidence: Emulates NoSQL interfaces (Redis, MongoDB, CouchDB); logs incoming requests.
+
+[THREAT MODEL]
+Value: Automated scanners targeting exposed NoSQL databases.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Inferred from NoSQL protocol support.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Query metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

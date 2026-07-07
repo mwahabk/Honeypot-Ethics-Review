@@ -1,0 +1,121 @@
+ENTRY 002 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyIoT: Adaptive High-Interaction Honeypot for IoT Devices Through Reinforcement Learning
+LINK: https://arxiv.org/abs/2305.06430
+
+─── ASSESSED VALUES ───
+Domain: IoT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: Not discussed
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Malware shared with VirusTotal
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Sandbox and isolation implied (AWS VM isolation)
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: Intentional attacker engagement optimization without ethics discussion
+Deployment: Yes (Public Internet Deployment)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IoT
+Evidence: In abstract, it is mentioned " To address these problems,
+we develop an adaptive high-interaction honeypot for IoT devices, called HoneyIoT."
+
+[INTERACTION LEVEL]
+Evidence: In abstract, it is mentioned "we develop an adaptive high-interaction honeypot for IoT devices, called HoneyIoT."
+
+[THREAT MODEL]
+Value: IoT malware and attackers
+Evidence: Page 2: "mislead attackers into uploading malware"
+Page 3: “collect malware from the attacker’s command and control server”
+
+[IRB / ETHICS COMMITTEE]
+Evidence: No mention of: IRB, Ethics committee, Institutional review, Consent approval
+
+[CONSENT MODEL]
+Evidence: There is no discussion of: Attacker awareness, Consent, Disclosure
+
+[DATA TYPES COLLECTED]
+Evidence: Page 4: “maintains the log traces”
+Page 8: 
+“interaction log contains information such as attacker’s IP address, request packets…”
+“collect malware”
+“upload to VirusTotal”
+
+[PROTOCOLS & PORTS]
+Evidence: Section 5.1: 
+Specifically identifies opening ports "HTTP port 80, HTTPS port 443, RTSP port
+554 and RTMP port 1935" to emulate IoT cameras, as well as device-specific ports for routers and plugs
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section 5.1 & 5.2.1: Collects "malicious code" and "vulnerability exploitation" data, including 467 malware samples from 29,467 attack sessions
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No mention of:
+Minimization principle
+Selective logging
+Privacy filtering
+
+[DATA RETENTION POLICY]
+Evidence: No retention timeline described.
+
+[DATA SHARING]
+Value: Malware shared with VirusTotal
+Evidence: Page 8:
+" The malware sample is uploaded
+to VirusTotal[29] for malware classification and analysis."
+
+[JURISDICTION / LEGAL]
+Evidence: Page 9 mentioned,They deploy on AWS across US/France/Japan.
+No mention of:
+GDPR
+Legal compliance
+Cross-border data transfer laws
+
+[CONTAINMENT & HARM]
+Evidence: Page 4: “crawler in a sandbox”, “virtual machine running on AWS”
+Page 1: “monitored and controlled environment”
+
+So containment exists technically.
+
+[DECEPTION FRAMING]
+Evidence: Entire framing is:
+Maximize malware upload
+Optimize deception
+Increase engagement
+
+No ethical discussion of deception.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No statement like:
+“We consider ethical implications”
+“We mitigate harm”
+“We follow responsible research practices”
+
+[ETHICAL GAPS]
+Value: Intentional attacker engagement optimization without ethics discussion
+Evidence: Page 6:
+“If the attacker uploads malware, we assign a large positive reward.”
+This is explicit attacker engagement optimization.
+
+No ethics section.
+
+[RELEVANCE TO PROJECT]
+Evidence: This paper:
+Maximizes deception success -> “HoneyIoT can effectively bypass the pre-attack checks and mislead the attackers into uploading malware.” (Abstract)
+Encourages malware upload -> "we add a positive intermediate reward. If the attacker uploads malware, we
+assign a large positive reward to this session" (Page 6)
+Uses reinforcement learning to optimize attacker manipulation -> “…leverage reinforcement learning algorithms to select the proper responses” (Page 5)
+
+[DEPLOYMENT]
+Value: Yes (Public Internet Deployment)
+Evidence: Abstract says, “HoneyIoT has been deployed on the public Internet.”
+Page 4 mentioned, “deployed on AWS”

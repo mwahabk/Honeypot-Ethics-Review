@@ -1,0 +1,92 @@
+ENTRY 017 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: NeuPot: A Neural Network-Based Honeypot for Detecting Cyber Threats in Industrial Control 
+Systems
+LINK: https://ieeexplore.ieee.org/document/10032823/
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High?
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Simulated environment
+Deception Framing: Technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Yes (Cloud-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract/Page 3: Specifically targets "industrial control systems (ICSs)" and utilizes the "Modbus protocol (widely used in ICS)" to simulate protected devices
+
+[INTERACTION LEVEL]
+Evidence: Section I: The system implements a "complete Modbus protocol service" and uses a "neural network-based" forecast model to generate dynamic responses that "match particular ICS scenarios"
+. The authors explicitly frame NeuPot as an improvement over existing "high-interaction honeypots" (such as HosTaGe) by replacing static templates with "intelligent agent" behavior that reflects real-time changes in "physical process parameters"
+
+[THREAT MODEL]
+Value: ICS attackers and anomaly-based threats
+Evidence: Page 5: Designed to identify "known and unknown Modbus attacks" such as Section I: "denial of service (DoS) [9], reconnaissance (Recon)[10],[11],[12], command injection(CMNI) [9], and fuzzing"
+
+[IRB / ETHICS COMMITTEE]
+Evidence: A review of the manuscript confirms there is "no mention of an 'Institutional Review Board,' 'ethics committee,' or human subject protocols"
+
+[CONSENT MODEL]
+Evidence: Section III-A: The honeypot "can reply to all request messages using the Modbus protocol" and is exposed to the public to lure and interact with attackers without prior consent
+
+[DATA TYPES COLLECTED]
+Evidence: Section III-A: Utilizes Tshark to "capture all Modbus attack traffic" and the server records "basic information (IP, port, location, attack time, etc.) on the attackers".
+
+[PROTOCOLS & PORTS]
+Evidence: Section III-A: The honeypot node "opens the default port 502 of the Modbus protocol (widely used in ICS) to interact with attackers"
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section III-A / Table III: Captures "command injection (CMNI)" attempts and "malicious traffic" from real-world attackers.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section I: Mentions the honeypot "should include a separate module to deal with the malicious traffic it has captured instead of simply storing" it, but provides no policy on minimizing the data collected
+
+[DATA RETENTION POLICY]
+Evidence: Section III-A: Features a "Data storage" module in the schematic (Fig. 1), but the text contains "no statement about: Storage duration, Deletion timeline, or Secure archival"
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: While results are discussed, there is no mention of a public release for the captured "Modbus attack traffic" or session logs
+
+[JURISDICTION / LEGAL]
+Evidence: Section IV-C: The system was "deploy Neupot on a Tencent cloud server in Shanghai, China," but the paper lacks any analysis of GDPR, legal compliance, or cross-border data transfer laws
+
+[CONTAINMENT & HARM]
+Evidence: Abstract / III-A: Ensures safety by being an "industrial agent" that interacts "without constant communication with the ICS," meaning there is no real physical process manipulation
+
+[DECEPTION FRAMING]
+Evidence: Section III-A: Deception is framed as a technical goal to "improve honeypot interaction" and generate responses that "match particular ICS scenarios" to fool sophisticated attackers
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section I: Defensive intent is prioritized to "safeguard ICSs" and improve the "malicious traffic identification capabilities" of defensive tools
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Section I, III-A, and IV-C: The paper proposes an "intelligent agent" utilizing a "neural network-based ICS honeypot scheme" and a "seq2seq time-series forecast model" to simulate physical processes
+. Despite a six-month live deployment on a "Tencent cloud server in Shanghai, China" that captured "7183 Modbus attacks," the manuscript contains "no explicit ethics discussion" and "AI model training ethics [are] not addressed"
+. This represents the "technology-driven ethical lag" identified in the project, where advanced AI is deployed in a live environment without IRB oversight or AI-specific ethical reflection.
+
+[RELEVANCE TO PROJECT]
+Evidence: Section I and III-A: NeuPot demonstrates how technical safety (simulation) replaces normative reasoning. 
+
+The authors justify the safety of their "intelligent agent" by stating it can respond to attackers "without constant communication with the ICS" to ensure "ICS integrity and security". 
+This is a primary example of the "ethics-by-containment" model, where technical isolation and simulation are treated as sufficient substitutes for formal ethical governance while using AI to maximize deception realism
+
+[DEPLOYMENT]
+Value: Yes (Cloud-facing)
+Evidence: facing)
+Section IV-C: "we had to deploy Neupot on a Tencent cloud server in Shanghai, China" and observed it for six months, receiving 7,183 Modbus attacks

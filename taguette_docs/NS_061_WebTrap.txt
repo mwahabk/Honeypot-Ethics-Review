@@ -1,0 +1,50 @@
+ENTRY 061 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: WebTrap
+LINK: https://github.com/IllusiveNetworks-Labs/WebTrap
+PLATFORM: GitHub
+STARS: 69
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with brief setup; deceptive webpage honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; commercial-origin tool with no public ethics governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Illusive Networks deceptive web page honeypot creating convincing fake pages.
+
+[INTERACTION LEVEL]
+Evidence: Creates deceptive web pages mimicking real applications to detect attacker access.
+
+[THREAT MODEL]
+Value: Targeted attackers and automated scanners probing web surfaces.
+Evidence: README describes deceptive web page generation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Web browsing behavior metadata; no real user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

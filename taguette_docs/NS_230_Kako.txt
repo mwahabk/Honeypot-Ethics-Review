@@ -1,0 +1,50 @@
+ENTRY 230 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Kako
+LINK: https://github.com/darkarnium/kako
+PLATFORM: GitHub
+STARS: 29
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; IoT honeypot framework for embedded device vulnerabilities.
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; IoT embedded device honeypot with no ethics documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: IoT honeypot framework for embedded device vulnerability emulation.
+
+[INTERACTION LEVEL]
+Evidence: Emulates embedded IoT device vulnerabilities; logs exploitation attempts.
+
+[THREAT MODEL]
+Value: IoT malware and automated scanners exploiting embedded device vulnerabilities.
+Evidence: README describes IoT embedded device honeypot framework.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: IoT-specific protocol ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IoT protocol interaction metadata.
+
+[RELEVANCE TO PROJECT]
+Evidence: Embedded IoT device emulation ethics relevant to satellite subsystem honeypot design.

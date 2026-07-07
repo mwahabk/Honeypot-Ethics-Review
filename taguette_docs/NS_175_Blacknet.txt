@@ -1,0 +1,54 @@
+ENTRY 175 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Blacknet
+LINK: https://github.com/morian/blacknet
+PLATFORM: GitHub
+STARS: 25
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; multi-head SSH honeypot with MySQL backend.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; centralized credential database without access control or governance documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Multi-head SSH honeypot with MySQL backend for centralized credential storage.
+
+[INTERACTION LEVEL]
+Evidence: SSH honeypot with MySQL backend storing all captured credentials centrally.
+
+[THREAT MODEL]
+Value: Automated SSH brute-force bots and credential stuffing tools.
+Evidence: README describes multi-head SSH design with MySQL backend.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes credential storage in MySQL backend.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: SSH credential pairs stored in database; medium sensitivity; database storage without governance.
+
+[ETHICAL GAPS]
+Value: No IRB; centralized credential database without access control or governance documentation.
+Evidence: MySQL credential storage without documented access control, encryption, or retention policy.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

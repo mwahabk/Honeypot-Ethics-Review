@@ -1,0 +1,50 @@
+ENTRY 184 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Kojoney
+LINK: http://kojoney.sourceforge.net
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge-hosted project; no GitHub repo — external site is the only documentation.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; outdated SourceForge project.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH honeypot hosted on SourceForge; external site is only documentation.
+
+[INTERACTION LEVEL]
+Evidence: Low-interaction SSH honeypot; SourceForge-hosted project only.
+
+[THREAT MODEL]
+Value: Automated SSH brute-force bots.
+Evidence: SourceForge external site only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

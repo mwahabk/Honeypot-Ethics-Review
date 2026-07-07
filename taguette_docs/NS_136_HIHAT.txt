@@ -1,0 +1,57 @@
+ENTRY 136 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HIHAT
+LINK: https://hihat.sourceforge.net/
+PLATFORM: Website
+STARS: 
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge project page only; outdated tool, limited docs.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; CRITICAL converting real website to honeypot may expose real user data to attackers.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: CRITICAL: converting a real website to honeypot without user notification may expose real user data; no IRB; no ethics; no user consent; abandoned outdated project.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SourceForge tool converting existing websites into high-interaction honeypots using PHP wrappers.
+
+[INTERACTION LEVEL]
+Evidence: Converts a real PHP website into a honeypot wrapping all interactions; full web application interaction.
+
+[THREAT MODEL]
+Value: Attackers targeting web applications who interact with a fully functional website-turned-honeypot.
+Evidence: Not documented; SourceForge documentation only.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; website conversion implies capturing all interactions.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Full website interaction captured — may include form submissions and uploads; if on live site, real user data at risk.
+
+[CONTAINMENT & HARM]
+Evidence: If deployed on live site, HIHAT captures real user interactions without distinguishing from attacker traffic.
+
+[ETHICAL GAPS]
+Value: CRITICAL: converting a real website to honeypot without user notification may expose real user data; no IRB; no ethics; no user consent; abandoned outdated project.
+Evidence: Website-to-honeypot conversion without user consent is a serious ethical concern not addressed.
+
+[RELEVANCE TO PROJECT]
+Evidence: Real user data exposure risk from website honeypot conversion is a critical case study.

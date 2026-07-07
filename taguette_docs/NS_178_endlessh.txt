@@ -1,0 +1,50 @@
+ENTRY 178 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: endlessh
+LINK: https://github.com/skeeto/endlessh
+PLATFORM: GitHub
+STARS: 8.5k
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH tarpit that sends an endless banner.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; tarpit approach creates resource waste for connecting bots active harm dimension not discussed.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH tarpit sending endless random banner data to trap and waste attacker resources.
+
+[INTERACTION LEVEL]
+Evidence: Sends infinitely slow SSH banner to trap automated SSH scanners; no real SSH emulation.
+
+[THREAT MODEL]
+Value: Automated SSH scanners and brute-force bots.
+Evidence: README describes SSH tarpit mechanism.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: SSH port; configurable.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IP addresses and timing metadata; no credentials or content captured.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

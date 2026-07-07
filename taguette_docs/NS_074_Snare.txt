@@ -1,0 +1,54 @@
+ENTRY 074 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Snare
+LINK: https://github.com/mushorg/snare
+PLATFORM: GitHub
+STARS: 479
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder; links to readthedocs external docs. Successor to Glastopf.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; website cloning raises copyright and terms-of-service questions not addressed.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Web application honeypot cloning real websites as deceptive honeypots; Honeynet Project.
+
+[INTERACTION LEVEL]
+Evidence: Clones real web applications for realistic honeypots; interactions processed by Tanner backend.
+
+[THREAT MODEL]
+Value: Advanced web attackers probing for SQL injection, XSS, LFI/RFI in real-looking applications.
+Evidence: Extensive README and readthedocs describe attack classification and Tanner integration.
+
+[DATA TYPES COLLECTED]
+Evidence: README and docs describe capturing full attacker interaction for Tanner analysis.
+
+[PROTOCOLS & PORTS]
+Evidence: Documented in README.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Full attack interaction logs; no real web application data exposed.
+
+[ETHICAL GAPS]
+Value: No IRB; website cloning raises copyright and terms-of-service questions not addressed.
+Evidence: Cloning real websites as honeypots without owner consent is a legal concern not discussed.
+
+[RELEVANCE TO PROJECT]
+Evidence: Website cloning parallels satellite system emulation for honeypot purposes.

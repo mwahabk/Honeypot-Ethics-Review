@@ -1,0 +1,50 @@
+ENTRY 234 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: dcept
+LINK: https://github.com/secureworks/dcept
+PLATFORM: GitHub
+STARS: 504
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + external SecureWorks blog post; Active Directory honeytoken deployment tool.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Active Directory honeytoken deployment by commercial vendor (SecureWorks) with no ethics documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Active Directory honeytoken deployment tool generating fake Kerberos tickets; SecureWorks.
+
+[INTERACTION LEVEL]
+Evidence: Deploys fake Active Directory credentials as honeytokens to detect credential theft and lateral movement.
+
+[THREAT MODEL]
+Value: Advanced attackers stealing and using Active Directory credentials in enterprise environments.
+Evidence: README and external SecureWorks blog post document AD honeytoken deployment.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes honeytoken trigger logging via Active Directory monitoring.
+
+[PROTOCOLS & PORTS]
+Evidence: Active Directory authentication protocol ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Active Directory authentication events; enterprise credential usage data; medium sensitivity.
+
+[RELEVANCE TO PROJECT]
+Evidence: AD credential honeytoken strategy applicable to HoneySat ground segment authentication deception.

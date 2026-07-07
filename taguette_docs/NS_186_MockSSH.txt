@@ -1,0 +1,50 @@
+ENTRY 186 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MockSSH
+LINK: https://github.com/ncouture/MockSSH
+PLATFORM: GitHub
+STARS: 130
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; mock SSH server defining custom commands using Python and Twisted.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Mock SSH server using Python and Twisted allowing custom command definition.
+
+[INTERACTION LEVEL]
+Evidence: Emulates SSH server with user-defined command responses; useful for testing and honeypot customisation.
+
+[THREAT MODEL]
+Value: Automated SSH scanners and attackers executing shell commands.
+Evidence: README describes Twisted-based mock SSH with custom commands.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SSH credential and command metadata.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

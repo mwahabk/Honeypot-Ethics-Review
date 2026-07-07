@@ -1,0 +1,54 @@
+ENTRY 219 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Droidbox
+LINK: https://github.com/pjlantz/droidbox
+PLATFORM: GitHub
+STARS: 800
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Android dynamic analysis sandbox; GitHub mirror of original Google Code project.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Android sandbox captures sensitive API calls (SMS, contacts, location) without governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Android dynamic analysis sandbox for analyzing Android malware behavior.
+
+[INTERACTION LEVEL]
+Evidence: High-interaction: runs Android malware in real Android VM/emulator for full behavioral analysis.
+
+[THREAT MODEL]
+Value: Android malware researchers; captures malware executing in full Android environment.
+Evidence: README describes Android dynamic analysis sandbox.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes comprehensive Android sandbox logging.
+
+[PROTOCOLS & PORTS]
+Evidence: Android application APIs; not network-port based.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Android malware behavior including SMS/call API access captured; medium sensitivity.
+
+[ETHICAL GAPS]
+Value: No IRB; Android sandbox captures sensitive API calls (SMS, contacts, location) without governance.
+Evidence: Android malware may attempt to access personal data APIs; sandbox captures these access attempts.
+
+[RELEVANCE TO PROJECT]
+Evidence: Android-specific tool; no direct HoneySat relevance.

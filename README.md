@@ -195,6 +195,14 @@ All 18 ethics dimensions were assessed per entry by:
 
 ---
 
+## Qualitative Coding
+
+The `taguette_docs/` folder contains 238 plain-text documents (one per dataset entry) used for qualitative open coding in Taguette.
+
+The `taguette_codebook.csv` file contains the initial codebook with 71 open codes identifying recurring ethical concepts across the dataset.
+
+---
+
 ## Repository Context
 
 This dataset was created to support a literature review examining the ethics gap in honeypot research. The central research question is:

@@ -1,0 +1,50 @@
+ENTRY 222 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Dockerpot
+LINK: https://github.com/mrschyte/dockerpot
+PLATFORM: GitHub
+STARS: 152
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + external blog post; Docker-based SSH honeypot running each session in a container.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; high-interaction per-session containers without governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Docker-based SSH honeypot running each attacker session in a separate container; blog post.
+
+[INTERACTION LEVEL]
+Evidence: High-interaction: each SSH session runs in isolated Docker container allowing full attacker interaction.
+
+[THREAT MODEL]
+Value: Advanced SSH attackers who probe for real system access; automated scanners.
+Evidence: README and external blog post document per-session Docker container design.
+
+[DATA TYPES COLLECTED]
+Evidence: Per-session container captures complete session data.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full SSH session per container; medium sensitivity — isolated to attacker-only data.
+
+[RELEVANCE TO PROJECT]
+Evidence: Container-per-session design relevant to HoneySat isolated command session management.

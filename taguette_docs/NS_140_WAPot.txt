@@ -1,0 +1,50 @@
+ENTRY 140 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: WAPot
+LINK: https://github.com/lcashdol/WAPot
+PLATFORM: GitHub
+STARS: 21
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; home router traffic observation honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal router honeypot.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Home router traffic observation honeypot for detecting attacks on CPE/router interfaces.
+
+[INTERACTION LEVEL]
+Evidence: Observes and logs traffic targeting home router management interfaces.
+
+[THREAT MODEL]
+Value: Automated scanners and attackers probing home router management ports.
+Evidence: README describes home router traffic observation.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Common home router management ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Router probe metadata; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

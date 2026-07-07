@@ -1,0 +1,53 @@
+ENTRY 122 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: gridpot
+LINK: https://github.com/sk4ld/gridpot
+PLATFORM: GitHub
+STARS: 61
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; electric grid honeypot combining conpot and gridlabd.
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no guidance isolating simulated grid from real infrastructure.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGHEST RISK: electric grid honeypot  no IRB; no ethics; no isolation guidance; power grid is critical national infrastructure; could provide adversaries realistic grid attack training data.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Electric power grid honeypot combining GridLAB-D power simulation with Conpot ICS emulation.
+
+[INTERACTION LEVEL]
+Evidence: Combines GridLAB-D power grid simulation with Conpot; simulates realistic electric grid behavior.
+
+[THREAT MODEL]
+Value: Nation-state actors and APT groups targeting electric power grid infrastructure.
+Evidence: README describes GridLAB-D + Conpot integration.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented; inferred from GridLAB-D/Conpot architecture.
+
+[PROTOCOLS & PORTS]
+Evidence: Inferred from architecture.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Electric power grid simulation data is highly sensitive — reveals grid topology and attack patterns against critical national infrastructure.
+
+[CONTAINMENT & HARM]
+Evidence: No guidance preventing gridpot from being confused with real grid components.
+
+[RELEVANCE TO PROJECT]
+Evidence: Electric grid honeypot without any ethics governance is THE closest analogy to HoneySat.

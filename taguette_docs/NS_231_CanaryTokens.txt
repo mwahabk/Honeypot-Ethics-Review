@@ -1,0 +1,58 @@
+ENTRY 231 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: CanaryTokens
+LINK: https://github.com/thinkst/canarytokens
+PLATFORM: GitHub
+STARS: 2.1k
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + GitHub Wiki confirmed + live demo at canarytokens.org.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Access data sent to canarytokens.org cloud service
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Token access data sent to Thinkst cloud without documented privacy policy for token-triggered attacker data; no IRB.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeytoken platform creating and tracking deceptive tokens that alert when accessed; Thinkst.
+
+[INTERACTION LEVEL]
+Evidence: Creates various honeytoken types (URLs, emails, documents) that log access without real interaction.
+
+[THREAT MODEL]
+Value: Attackers accessing documents, URLs, or credentials planted as honeytokens in target environments.
+Evidence: README + GitHub Wiki + live demo at canarytokens.org confirmed.
+
+[DATA TYPES COLLECTED]
+Evidence: canartokens.org and Wiki describe access data captured when tokens are triggered.
+
+[PROTOCOLS & PORTS]
+Evidence: HTTPS callbacks to canarytokens.org server.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: IP addresses, browser fingerprints, and geographic data captured on token access; medium sensitivity.
+
+[DATA SHARING]
+Value: Access data sent to canarytokens.org cloud service
+Evidence: All token trigger data sent to Thinkst canarytokens.org cloud infrastructure.
+
+[ETHICAL GAPS]
+Value: Token access data sent to Thinkst cloud without documented privacy policy for token-triggered attacker data; no IRB.
+Evidence: Third-party cloud data processing without documented governance.
+
+[RELEVANCE TO PROJECT]
+Evidence: CanaryTokens cloud-based honeytoken architecture directly applicable to HoneySat honeytoken deployment ethics.

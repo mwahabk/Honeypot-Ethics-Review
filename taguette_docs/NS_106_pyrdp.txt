@@ -1,0 +1,57 @@
+ENTRY 106 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: pyrdp
+LINK: https://github.com/gosecure/pyrdp
+PLATFORM: GitHub
+STARS: 1.8k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs + external readthedocs link; RDP MITM honeypot, well-documented.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; MITM to real backend creates serious containment risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGHEST RISK: captures keystrokes, clipboard, video may record sensitive personal data; MITM proxy risks real data exposure; no IRB; no data governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python RDP MITM tool and honeypot capturing full RDP sessions including keystrokes and screenshots.
+
+[INTERACTION LEVEL]
+Evidence: Full high-interaction RDP MITM: captures keystrokes, clipboard, screenshots/video of attacker sessions; may connect to real backend.
+
+[THREAT MODEL]
+Value: Targeted attackers using RDP for lateral movement or access; malware operators accessing systems via RDP.
+Evidence: README and /docs folder document MITM architecture and full session capture.
+
+[DATA TYPES COLLECTED]
+Evidence: README explicitly documents keylogger, screenshot, and clipboard logging capabilities.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard RDP port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Captures keystrokes, clipboard, screenshots — may capture passwords, personal data, or sensitive content; highest sensitivity in this list.
+
+[CONTAINMENT & HARM]
+Evidence: No guidance on preventing real system access through MITM proxy.
+
+[ETHICAL GAPS]
+Value: HIGHEST RISK: captures keystrokes, clipboard, video may record sensitive personal data; MITM proxy risks real data exposure; no IRB; no data governance.
+Evidence: README documents capabilities without any ethical governance framework.
+
+[RELEVANCE TO PROJECT]
+Evidence: Maximum-risk case study: demonstrates high-interaction honeypots require the most rigorous governance.

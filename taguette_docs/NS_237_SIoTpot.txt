@@ -1,0 +1,88 @@
+ENTRY 237 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SIoTpot
+LINK: https://github.com/HalfDeadPie/SIoTpot
+PLATFORM: GitHub
+STARS: 9
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README.rst only but detailed; Master's Thesis IoT honeypot for Z-Wave protocol using SDR (RTL-SDR + HackRF One); supports passive and interactive modes.
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not documented
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Partial passive mode provides containment; interactive mode actively transmits on live Z-Wave frequency
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGH RISK: records legitimate Z-Wave communication from real physical devices without their owners' consent; active transmission on live radio frequency may interfere with real smart home devices; no radio frequency regulatory compliance discussion; no IRB; CPS physical-layer deception not ethically framed.
+Deployment: Not documented; designed for deployment in real Z-Wave network environments
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: Z-Wave is a wireless protocol used in smart home and IoT cyber-physical systems (smart sensors, switches, locks, thermostats). SIoTpot targets the physical wireless layer of CPS/IoT infrastructure — clearly CPS domain.
+
+[INTERACTION LEVEL]
+Evidence: README describes two modes: (1) passive monitoring (listens only) and (2) interactive mode — "transmit simulated communication to lure attackers." The interactive mode actively transmits Z-Wave frames to deceive attackers, which goes beyond passive low-interaction logging.
+
+[THREAT MODEL]
+Value: Attackers targeting Z-Wave IoT infrastructure (smart home devices, industrial sensors); both passive eavesdroppers and active attackers attempting to enumerate or compromise Z-Wave networks.
+Evidence: README Abstract: "The motivation of this thesis was to create a device that can collect information about IoT traffic, detect potential attackers, and act as a decoy that complicates attackers to discover and hack real deployed IoT devices, such as sensors, switches."
+
+[IRB / ETHICS COMMITTEE]
+Evidence: Master's Thesis implementation with no mention of IRB, ethics committee, or institutional approval beyond academic thesis context.
+
+[CONSENT MODEL]
+Evidence: No consent mechanism documented. The honeypot passively monitors and actively transmits on the Z-Wave frequency without notification to legitimate Z-Wave network participants or potential attackers.
+
+[DATA TYPES COLLECTED]
+Evidence: README describes: "records legitimate communication in order to create system of decoys" and stores records at configurable paths. Configuration file shows records_path, networks_path, logging_path, and alerts_path — four distinct data stores.
+
+[PROTOCOLS & PORTS]
+Evidence: README configuration: "freq = 868420000" — Z-Wave European frequency 868.42 MHz. Uses RTL-SDR dongle for reception and HackRF One for transmission. This is a radio-frequency protocol, not a TCP/IP service — unique in this dataset.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Z-Wave network topology data (HOME-ID, device node IDs, communication patterns) reveals the physical layout and behaviour of real smart home/IoT devices. Recording "legitimate communication" from real Z-Wave devices captures the actual behaviour of deployed physical devices — high sensitivity in CPS context.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No data minimization strategy discussed. The honeypot records all Z-Wave frames and stores four categories of data (records, networks, logs, alerts) without any documented filtering or minimization.
+
+[DATA RETENTION POLICY]
+Evidence: No retention policy documented. README describes a reset subcommand ("siotpot reset") that deletes all persistent data, but no policy on when or how often this should be used.
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: No dataset release, public data sharing, or external submission mentioned. Source code is open-source (BSD-2-Clause); no attack dataset released.
+
+[JURISDICTION / LEGAL]
+Evidence: No legal framework, jurisdiction analysis, or radio frequency regulatory compliance discussed despite operating on a licensed radio frequency (868.42 MHz Z-Wave band) which has regulatory requirements in different countries.
+
+[CONTAINMENT & HARM]
+Evidence: README notes: "It is not recommended to use this tool as only protection of Z-Wave networks!" The interactive mode (siotpot run HOME-ID) transmits Z-Wave frames on the live radio frequency — this could interfere with real Z-Wave devices in range. No containment guidance for managing radio interference.
+
+[DECEPTION FRAMING]
+Evidence: Deception is framed as a technical mechanism only: "act as a decoy that complicates attackers to discover and hack real deployed IoT devices." No ethical framing of actively transmitting deceptive signals on a live radio frequency.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: No researcher responsibility statements, ethical guidelines, responsible disclosure, or dual-use discussion. The thesis README does not address the risk of radio interference to legitimate Z-Wave devices.
+
+[ETHICAL GAPS]
+Value: HIGH RISK: records legitimate Z-Wave communication from real physical devices without their owners' consent; active transmission on live radio frequency may interfere with real smart home devices; no radio frequency regulatory compliance discussion; no IRB; CPS physical-layer deception not ethically framed.
+Evidence: The honeypot operates in the physical wireless domain — it records real Z-Wave frames from legitimate smart home devices without homeowner consent. The interactive mode actively transmits radio signals that could disrupt real Z-Wave devices (lights, locks, thermostats) in range. Radio transmission on 868.42 MHz is regulated in most jurisdictions; no compliance discussion appears in the thesis.
+
+[RELEVANCE TO PROJECT]
+Evidence: SIoTpot operates on Z-Wave radio (868 MHz); HoneySat operates on satellite radio frequencies. Both share: (1) physical-layer radio deception, (2) recording legitimate CPS communication without device owner consent, (3) active signal transmission that could disrupt real infrastructure, (4) complete absence of ethical governance. SIoTpot is the single most compelling non-ICS case study for the CPS ethics pillar of our framework.
+
+[DEPLOYMENT]
+Value: Not documented; designed for deployment in real Z-Wave network environments
+Evidence: README describes deployment within a real Z-Wave network (requires real HOME-ID, uses real RTL-SDR and HackRF hardware). Testing was done using a single transmitter on a notebook — physical deployment facing real Z-Wave signals.

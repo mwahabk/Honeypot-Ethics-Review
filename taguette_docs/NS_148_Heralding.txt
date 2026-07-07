@@ -1,0 +1,54 @@
+ENTRY 148 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Heralding
+LINK: https://github.com/johnnykv/heralding
+PLATFORM: GitHub
+STARS: 392
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; credentials-catching honeypot supporting SSH, FTP, Telnet, HTTP, IMAP, POP3.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; multi-protocol credential capture at scale without data governance documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Credentials-catching honeypot supporting SSH, FTP, Telnet, HTTP, IMAP, POP3, SMTP, and VNC.
+
+[INTERACTION LEVEL]
+Evidence: Low-interaction multi-protocol honeypot capturing credentials across 8+ protocols.
+
+[THREAT MODEL]
+Value: Automated credential stuffing bots and brute-force tools targeting multiple services simultaneously.
+Evidence: README documents all supported protocols and credential capture functionality.
+
+[DATA TYPES COLLECTED]
+Evidence: README explicitly describes credential-catching as the primary purpose.
+
+[PROTOCOLS & PORTS]
+Evidence: Documented in README.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captures credential pairs (username/password) across 8+ protocols; medium sensitivity.
+
+[ETHICAL GAPS]
+Value: No IRB; multi-protocol credential capture at scale without data governance documentation.
+Evidence: Credential capture across 8+ protocols without any retention or deletion policy.
+
+[RELEVANCE TO PROJECT]
+Evidence: Credential capture ethics across multiple protocols relevant to satellite command authentication honeypot.

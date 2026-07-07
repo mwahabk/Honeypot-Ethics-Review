@@ -1,0 +1,50 @@
+ENTRY 065 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: drupo
+LINK: https://github.com/d1str0/drupot
+PLATFORM: GitHub
+STARS: 58
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; Drupal honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Drupal CMS honeypot emulating vulnerable Drupal installation.
+
+[INTERACTION LEVEL]
+Evidence: Emulates Drupal web application; logs exploitation attempts.
+
+[THREAT MODEL]
+Value: Automated scanners targeting Drupal CMS vulnerabilities.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Attack payloads only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

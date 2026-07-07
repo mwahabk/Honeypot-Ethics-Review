@@ -1,0 +1,90 @@
+ENTRY 016 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: ICS Honeypot Interactions: A Latitudinal Study
+LINK: https://ieeexplore.ieee.org/document/10386497/
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Aggregated / Dataset
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Virtualization / Isolation
+Deception Framing: Technical and observational
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract / Section II: The study focuses on "Industrial Control Systems (ICSs)" and "Operational Technology (OT) components" like PLCs and HMIs
+
+[INTERACTION LEVEL]
+Evidence: Section I: Defines HoneyICS as a "high-interaction, physics-aware, scalable, and extensible honeynet" that emulates PLC registers and physical processes
+
+[THREAT MODEL]
+Value: Real-world attackers (IT and ICS)
+Evidence: Section I / Section VII: Analyzes "both IT interactions and ICS interactions" from actors ranging from simple bots to "knowledgeable and sophisticated" ICS-specific attackers
+
+[IRB / ETHICS COMMITTEE]
+Evidence: A review of the manuscript confirms no mention of an "Institutional Review Board," "ethics committee," or human subject protocols
+
+[CONSENT MODEL]
+Evidence: Page 1: The honeynet was "exposed on the Internet" to "decoy attackers away from the real system," with interaction being attacker-initiated without prior notice
+
+[DATA TYPES COLLECTED]
+Evidence: Section III-A / V-A: Records "source IP," "system calls," "kernel functions," "PLC registers," and "malware binaries dropped into the virtual environment"
+
+[PROTOCOLS & PORTS]
+Evidence: Section III-B states, "Each emulated PLC runs a Modbus/TCP service on port 502 and a webserver on port 8080...."
+HMI Ports: Table II
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section I / III-A: Records highly sensitive data including "PLC registers storing the current state of inputs... and outputs," raw malware binaries, and attacker IP addresses
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section IV: Focuses on "capturing these interactions as a whole" to understand attacker goals. No mention of filtering or limiting the scope of data collection is present
+
+[DATA RETENTION POLICY]
+Evidence: Section III-A: States that information is "The information gathered
+by the probes is stored in an Elastichsearch [27] data storage.
+," but provides no deletion timeline or storage expiration policy
+
+[DATA SHARING]
+Value: Aggregated / Dataset
+Evidence: Section V-A: The authors provide a link to their dataset on GitHub: "https://github.com/fras3c/ICS-Honeypot-Dataset"
+
+[JURISDICTION / LEGAL]
+Evidence: Section III-B: Deployed on IP addresses across the "Italian Academic Consortium GARR," but lacks any analysis of legal compliance or data protection laws (e.g., GDPR)
+
+[CONTAINMENT & HARM]
+Evidence: Section III-B: Uses "Docker containers" and a "VPN" to redirect traffic from public IPs to a centralized host, isolating the honeynet from real industrial plants
+
+[DECEPTION FRAMING]
+Evidence: Section III: Deception is used to "better deceive the attacker" through "physics-awareness" to study interaction patterns and improve security
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section I: Defensive intent is framed as "silently observing and studying such attacks... to prevent/mitigate new cyber-physical attacks in the future"
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Section III-B: The study involves a real-world deployment "exposed on the Internet for three months". There is no mention of an IRB, ethics committee, or legal jurisdiction analysis anywhere in the paper.
+Section I/III-AThe system collects high-sensitivity data, including "PLC registers storing the current state of inputs... and outputs" and "malware binaries dropped into the virtual environment"
+.
+
+[RELEVANCE TO PROJECT]
+Evidence: Section III-B: The paper illustrates the "ethics-by-containment" model by relying on "Docker container[s]" and a "VPN" to redirect traffic to a centralized host for isolation. 
+This technical isolation is treated as a sufficient substitute for normative ethical reasoning despite the risks associated with a live public deployment [Table 11].
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Section III-B/VIII: "The honeynet instance has been deployed on four contiguous IP addresses... exposed on the Internet for three months"

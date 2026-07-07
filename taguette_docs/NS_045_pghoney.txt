@@ -1,0 +1,50 @@
+ENTRY 045 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: pghoney
+LINK: https://github.com/betheroot/pghoney
+PLATFORM: GitHub
+STARS: 20
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; low interaction Postgres honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal documentation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction PostgreSQL honeypot logging connection and credential brute-force.
+
+[INTERACTION LEVEL]
+Evidence: Emulates PostgreSQL login sequence; logs credentials.
+
+[THREAT MODEL]
+Value: Automated scanners targeting exposed PostgreSQL instances.
+Evidence: Not documented.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard PostgreSQL port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt metadata only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

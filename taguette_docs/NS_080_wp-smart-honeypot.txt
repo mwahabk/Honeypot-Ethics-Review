@@ -1,0 +1,50 @@
+ENTRY 080 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: wp-smart-honeypot
+LINK: https://github.com/freak3dot/wp-smart-honeypot
+PLATFORM: GitHub
+STARS: 29
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; WordPress plugin honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal spam protection tool.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: WordPress plugin implementing honeypot fields for comment and registration spam prevention.
+
+[INTERACTION LEVEL]
+Evidence: Injects hidden form fields into WordPress forms to trap spam bots.
+
+[THREAT MODEL]
+Value: Automated spam bots submitting WordPress forms.
+Evidence: README describes plugin architecture.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Spam content from bots only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

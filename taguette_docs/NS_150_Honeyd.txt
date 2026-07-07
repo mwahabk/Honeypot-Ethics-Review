@@ -1,0 +1,50 @@
+ENTRY 150 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeyd
+LINK: https://github.com/DataSoft/Honeyd
+PLATFORM: GitHub
+STARS: 13
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + external honeyd.org website; virtual honeypots daemon creating virtual hosts on a network.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; foundational honeypot with no governance documentation despite widespread use.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Virtual honeypots daemon creating multiple virtual hosts on a network; foundational honeypot framework.
+
+[INTERACTION LEVEL]
+Evidence: Creates virtual network hosts with configurable services; README and external honeyd.org document usage.
+
+[THREAT MODEL]
+Value: Network-level attackers and automated scanners targeting entire subnet ranges.
+Evidence: README and external honeyd.org website describe virtual host creation.
+
+[DATA TYPES COLLECTED]
+Evidence: README and honeyd.org document network-level data capture.
+
+[PROTOCOLS & PORTS]
+Evidence: Virtual hosts on any configured IP/port range.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Network connection metadata; no personal user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: Honeyd virtual host concept is the architectural basis for space asset honeypot emulation design.

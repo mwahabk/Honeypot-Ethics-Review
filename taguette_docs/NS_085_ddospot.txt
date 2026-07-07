@@ -1,0 +1,54 @@
+ENTRY 085 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: ddospot
+LINK: https://github.com/aelth/ddospot
+PLATFORM: GitHub
+STARS: 64
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with usage; NTP/DNS/SSDP/Chargen UDP amplification DDoS honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; DDoS honeypot could be misused as actual amplification reflector if misconfigured.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Multi-protocol honeypot detecting DDoS amplification attacks using NTP, DNS, SSDP, CharGEN.
+
+[INTERACTION LEVEL]
+Evidence: Emulates amplification-vulnerable services; logs attack sources and request patterns.
+
+[THREAT MODEL]
+Value: DDoS amplification operators probing for open NTP, DNS, SSDP reflectors.
+Evidence: README describes multi-protocol DDoS amplification detection.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: README lists supported DDoS amplification protocols.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Amplification request metadata; no personal user data.
+
+[ETHICAL GAPS]
+Value: No IRB; DDoS honeypot could be misused as actual amplification reflector if misconfigured.
+Evidence: Risk of misconfiguration as real amplifier not addressed.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

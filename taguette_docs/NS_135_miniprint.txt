@@ -1,0 +1,57 @@
+ENTRY 135 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: miniprint
+LINK: https://github.com/sa7mon/miniprint
+PLATFORM: GitHub
+STARS: 202
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with setup and usage; medium interaction printer honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no guidance on handling submitted print content.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; printer honeypot capturing submitted print content without governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Medium-interaction network printer honeypot logging print job submissions and exploitation.
+
+[INTERACTION LEVEL]
+Evidence: Accepts print jobs and printer commands with medium interaction; README documents setup.
+
+[THREAT MODEL]
+Value: Attackers targeting network printers for data exfiltration, persistence, or lateral movement.
+Evidence: README with setup documentation.
+
+[DATA TYPES COLLECTED]
+Evidence: Print job submissions may contain document content.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard printer ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Print job contents may include sensitive documents.
+
+[CONTAINMENT & HARM]
+Evidence: Submitted print jobs may contain sensitive content.
+
+[ETHICAL GAPS]
+Value: No IRB; printer honeypot capturing submitted print content without governance.
+Evidence: Print job content governance not addressed.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

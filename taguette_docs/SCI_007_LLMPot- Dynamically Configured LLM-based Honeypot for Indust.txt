@@ -1,0 +1,174 @@
+ENTRY 007 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: LLMPot: Dynamically Configured LLM-based Honeypot for Industrial Protocol and Physical 
+Process Emulation
+LINK: https://arxiv.org/abs/2405.05999
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High
+IRB Mentioned: No
+Consent Model: Implicit
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Yes
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Logical containment through emulation of physical processes
+Deception Framing: Strong deception using LLM-generated
+Researcher Responsibility: Not explicit
+Ethical Gaps: No discussion of consent, manipulation, or AI-specific ethical risks
+Deployment: Real-world experimental deployment
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract:
+" In this paper, we propose LLMPot, a novel
+approach for designing honeypots in ICS networks"
+
+[INTERACTION LEVEL]
+Evidence: “LLMPot … Multi … 6+ physical processes” (Table 5)
+“The high interactivity of attackers further proves the realism of the developed LLMPot” (Page 14)
+
+[THREAT MODEL]
+Value: Advanced ICS attackers targeting PLCs and industrial protocols
+Evidence: Section 9.2:
+interaction traffic… "valid Modbus requests”
+attackers interacted… "using the Modbus protocol”
+Page14: “code injection attempts (SQL, LDAP, etc.)”
+Page13: login credentials...“brute force attacks”
+
+[IRB / ETHICS COMMITTEE]
+Evidence: Page13: “captures login credentials attempted during brute force attacks”
+No mention of:
+real users
+personal identity
+user accounts
+
+[CONSENT MODEL]
+Evidence: Section 9.2:
+"We exposed the developed LLMPot honeypot to the internet to monitor network activities"
+
+No consent taken
+Attackers interact unknowingly
+
+[DATA TYPES COLLECTED]
+Evidence: Page13:
+“captures login credentials attempted”
+“records incoming and outgoing Modbus server traffic”
+“logs detailed information… IP addresses, web pages visited, timing of requests and responses”
+“1891… valid Modbus requests”
+“produce valid Modbus responses”
+
+[PROTOCOLS & PORTS]
+Evidence: Section 4 & 9.1: (Page 13)
+Explicitly mentions "cloning" protocols like Modbus on port 502 and S7comm on port 102, while routing web traffic on port 80
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Page 13:
+"It also captures login credentials attempted during brute
+force attacks and records incoming and outgoing Modbus
+server traffic."
+
+ICS commands → can impact real-world systems (if misused)
+Credentials → sensitive attacker data
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Data is broadly collected, not minimized
+No mention of:
+necessity principle
+minimization strategy
+filtering
+
+[DATA RETENTION POLICY]
+Evidence: Page13:
+"we employ MongoDB [37] with the Beanie ODM [13] for
+robust data management."
+
+No mention of:
+how long data is stored
+deletion policies
+anonymization after collection
+
+[DATA SHARING]
+Value: Yes
+Evidence: Page14:
+"The source code, models, and datasets are open source
+at https://github.com/momalab/LLMPot."
+
+[JURISDICTION / LEGAL]
+Evidence: No: 
+GDPR
+data protection laws
+cross-border data collection
+legality of logging attacker data
+Even though: (Section 9.2)
+“connection attempts from unique IP addresses”
+“IP addresses… recorded”
+
+No legal awareness is shown.
+
+[CONTAINMENT & HARM]
+Evidence: Page 13:
+“emulate the honeypot’s TCP/IP stack using Honeyd”
+“virtual hosts managed by Honeyd”
+“Docker containers… host both the website and the protocol emulation”
+“emulate… physical processes”
+
+[DECEPTION FRAMING]
+Evidence: Page 13: 
+“produce… valid Modbus responses”
+Page 14:
+“camouflages as a legitimate device”
+“not labeled as a honeypot by Shodan”
+“high interactivity… proves the realism”
+
+realism + valid responses + camouflage = deception
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not explicit
+Evidence: No statements like:
+
+“we ensure ethical use”
+“we follow guidelines”
+“responsible deployment”
+
+Only technical goals:
+Page13: “used for ICS threat detection and analysis”
+Conclusion: “platform… researchers can use”
+
+[ETHICAL GAPS]
+Value: No discussion of consent, manipulation, or AI-specific ethical risks
+Evidence: Entire paper reviewed -> no mention of:
+consent
+manipulation
+AI risks
+ethics frameworks
+
+Page 13:
+“captures login credentials”
+“records IP addresses”
+
+Still no ethical discussion.
+
+[RELEVANCE TO PROJECT]
+Evidence: Conclusion:
+“LLMs can be used for ICS threat detection and analysis”
+“produce… valid Modbus responses”
+“exposed… to the internet”
+Page13: “real-time interaction”
+
+AND absence of:
+ethics
+consent
+legal discussion
+
+[DEPLOYMENT]
+Value: Real-world experimental deployment
+Evidence: Section 9.2:
+"We exposed the developed LLMPot honeypot to the
+internet to monitor network activities. Over two months"

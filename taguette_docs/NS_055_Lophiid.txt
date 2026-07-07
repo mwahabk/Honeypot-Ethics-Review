@@ -1,0 +1,50 @@
+ENTRY 055 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Lophiid
+LINK: https://github.com/mrheinen/lophiid/
+PLATFORM: GitHub
+STARS: 27
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /docs folder present; distributed web application honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; distributed architecture increases data aggregation without governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Distributed web honeypot with backend infrastructure for collecting and analyzing web attacks.
+
+[INTERACTION LEVEL]
+Evidence: Supports distributed deployment with centralized logging; /docs folder describes architecture.
+
+[THREAT MODEL]
+Value: Automated web vulnerability scanners, exploit kits, and targeted web attackers.
+Evidence: README and /docs folder describe distributed architecture.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Attack payloads and IP metadata; no real user data.
+
+[RELEVANCE TO PROJECT]
+Evidence: Distributed deployment model applicable to space-ground honeypot networks.

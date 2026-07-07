@@ -1,0 +1,50 @@
+ENTRY 044 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: mysql-honeypotd
+LINK: https://github.com/sjinks/mysql-honeypotd
+PLATFORM: GitHub
+STARS: 37
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with build instructions; low interaction MySQL honeypot in C.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; daemon-based deployment with no governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction MySQL honeypot daemon logging connection and credential brute-force.
+
+[INTERACTION LEVEL]
+Evidence: Listens on MySQL port and logs metadata; no real MySQL functionality beyond handshake.
+
+[THREAT MODEL]
+Value: Automated scanners and brute-force bots targeting MySQL port 3306.
+Evidence: Not documented; inferred from README.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard MySQL port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt logs only.
+
+[RELEVANCE TO PROJECT]
+Evidence: No HoneySat/CPS relevance.

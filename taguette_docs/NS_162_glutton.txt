@@ -1,0 +1,50 @@
+ENTRY 162 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: glutton
+LINK: https://github.com/mushorg/glutton
+PLATFORM: GitHub
+STARS: 305
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; generic low-interaction protocol-agnostic honeypot using iptables/TPROXY.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; protocol-agnostic capture of all traffic without targeted governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Generic low-interaction protocol-agnostic honeypot using iptables/TPROXY; Honeynet Project.
+
+[INTERACTION LEVEL]
+Evidence: Protocol-agnostic honeypot capturing any TCP/UDP traffic via transparent proxy.
+
+[THREAT MODEL]
+Value: Internet-wide attackers using any protocol; captures all traffic transparently.
+Evidence: README describes TPROXY-based transparent protocol capture.
+
+[DATA TYPES COLLECTED]
+Evidence: Protocol-agnostic capture means all traffic content is logged.
+
+[PROTOCOLS & PORTS]
+Evidence: TPROXY captures all traffic without port restriction.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Raw protocol payloads captured; no personal user data beyond attacker traffic.
+
+[RELEVANCE TO PROJECT]
+Evidence: TPROXY transparent capture design relevant to HoneySat ground station traffic capture architecture.

@@ -1,0 +1,126 @@
+ENTRY 005 - SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: LLM Honeypot: Leveraging Large Language Models as Advanced Interactive Honeypot Systems
+LINK: https://arxiv.org/abs/2409.08234
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: interactive engagement described
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Logical containment.
+Deception Framing: Strong deception
+Researcher Responsibility: Not discussed.
+Ethical Gaps: Raises unaddressed concerns about manipulation, consent, and AI deception
+Deployment: Experimental evaluation / possible live deployment
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: “In the realm of cybersecurity, honeypots have proven to be a valuable tool…” - Introduction
+
+[INTERACTION LEVEL]
+Evidence: “honeypots… lure and interact with attackers…” - Abstract/Introduction
+“…a honeypot capable of sophisticated engagement with attackers.” - Abstract
+
+[THREAT MODEL]
+Value: Human attackers engaging in interactive sessions
+Evidence: “…capturing responses in a controlled environment and saving these interactions as logs.” - Data Collection section
+
+[IRB / ETHICS COMMITTEE]
+Evidence: No section contains any of these phrases:
+
+“IRB”
+“ethics board”
+“human subject protocol”
+
+[CONSENT MODEL]
+Evidence: No section mentions:
+
+“consent”
+“informed”
+“notification”
+“attacker awareness”
+
+[DATA TYPES COLLECTED]
+Evidence: " logs of every command along with the generated responses by the model" - Custom SSH Server Wrapper section
+"the attacker initiates a connection and sends commands" - Page 4
+
+[PROTOCOLS & PORTS]
+Evidence: Section III-A & III-B: The framework integrates an "SSH server" and uses a custom port for evaluation, demonstrated as "ssh -T -p 2222"
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: “collecting the IP addresses of incoming SSH connections, username-password pairs (for authentication), and logs of every command” - Custom SSH Server Wrapper section
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No section mentions:
+
+“minimization”
+“anonymization”
+“filtering”
+
+[DATA RETENTION POLICY]
+Evidence: No section contains:
+
+“retention”
+“storage duration”
+“deletion policy”
+“archival policy”
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: It only mentions where the model is published:
+
+“The final model, fine-tuned to respond like a honeypot server, … is publicly accessible on Huggingface and GitHub.” - Model Selection section
+
+[JURISDICTION / LEGAL]
+Evidence: No section contains:
+
+“GDPR”
+“legal compliance”
+“jurisdiction”
+“law”
+“privacy regulation”
+
+[CONTAINMENT & HARM]
+Evidence: “…capturing data on attacker behavior for cybersecurity analysis.” - Interactive LLM-Honeypot Framework
+“…simulate realistic interactions with potential attackers” - Page 3
+
+Although not described as “containment” in a formal safety context, the architecture contains attackers within a decoy environment that does not affect real systems.
+
+[DECEPTION FRAMING]
+Evidence: “…creating realistic and interactive honeypot systems using Large Language Models.” - Abstract
+“…fine-tuned… to mimic a Linux server.” - Methodology
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed.
+Evidence: no explicit statements like:
+
+“we adhere to ethical guidelines”
+“we consider ethical implications”
+“IRB approval was obtained”
+“responsible disclosure”
+
+[ETHICAL GAPS]
+Value: Raises unaddressed concerns about manipulation, consent, and AI deception
+Evidence: explicitly says:
+
+“honeypots… lure and interact with attackers… providing cybersecurity professionals with a powerful tool…” - Abstract
+
+[RELEVANCE TO PROJECT]
+Evidence: “creating realistic and interactive honeypot systems using Large Language Models” - abstract
+“FineTuning (SFT) on a pre-trained language model,
+enhancing its ability to mimic a Linux server.” page 2
+“engage attackers in a realistic manner” - page 4
+
+[DEPLOYMENT]
+Value: Experimental evaluation / possible live deployment
+Evidence: "Evaluation through similarity metrics and live deployment" - abstract

@@ -1,0 +1,50 @@
+ENTRY 048 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Cloud Active Defense
+LINK: https://github.com/SAP/cloud-active-defense?tab=readme-ov-file
+PLATFORM: GitHub
+STARS: 106
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /docs folder + external docs links; well documented SAP project.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+IRB Mentioned: No
+Consent Model: None
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; enterprise tool with no public ethics governance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SAP-developed cloud honeypot for enterprise web application deception.
+
+[INTERACTION LEVEL]
+Evidence: Injects deceptive tokens into web responses; logs attacker interactions with decoy assets.
+
+[THREAT MODEL]
+Value: Attackers targeting SAP cloud environments and enterprise web applications.
+Evidence: Not documented; inferred from SAP project scope.
+
+[DATA TYPES COLLECTED]
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Web request metadata and token interaction logs.
+
+[RELEVANCE TO PROJECT]
+Evidence: No direct HoneySat relevance.
