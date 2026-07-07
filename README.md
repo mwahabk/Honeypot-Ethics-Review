@@ -22,8 +22,14 @@ The dataset covers two source types:
 
 ```
 Honeypot-Ethics-Review/
-├── honeypot_ethics_dataset.csv     # Unified dataset (238 rows × 50 columns)
-├── honeypot_ethics_analysis.ipynb  # Jupyter Notebook — 24-cell step-by-step analysis
+├── honeypot_ethics_dataset.csv         # Unified dataset (238 rows × 50 columns)
+├── honeypot_ethics_analysis.ipynb      # Jupyter Notebook — 24-cell step-by-step analysis
+├── honeypot_ethics_analysis_test.ipynb # Test notebook
+├── taguette_codebook.csv               # Codebook with 71 open codes for qualitative coding
+├── taguette_docs/                      # 238 plain-text documents for Taguette coding
+│   ├── SCI_001 to SCI_037              # Scientific honeypot papers (37 files)
+│   └── NS_038 to NS_238                # Non-scientific open-source tools (201 files)
+├── requirements.txt
 └── README.md
 ```
 
