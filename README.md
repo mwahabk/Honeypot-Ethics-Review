@@ -13,8 +13,8 @@ The dataset covers two source types:
 | Source | Count | Description |
 |---|---|---|
 | **Scientific** | 37 | Peer-reviewed papers proposing actual honeypot systems |
-| **Non-Scientific** | 200 | Open-source honeypot tools from the [awesome-honeypots](https://github.com/paralax/awesome-honeypots) list and [Honeynet Project](https://www.honeynet.org/projects/) |
-| **Total** | **237** | |
+| **Non-Scientific** | 201 | Open-source honeypot tools from the [awesome-honeypots](https://github.com/paralax/awesome-honeypots) list and [Honeynet Project](https://www.honeynet.org/projects/) |
+| **Total** | **238** | |
 
 ---
 
@@ -83,6 +83,30 @@ Each of the 18 dimensions below has a **value column** and a **justification col
 | No external deployment | `no_external_deployment` | Yes / No / Not documented |
 
 All `*_justification` columns contain direct quotes or precise references to the source material (page numbers, sections, or README content).
+
+---
+## Qualitative Coding
+
+The `taguette_docs/` folder contains 238 plain-text documents, one per dataset entry, prepared for qualitative open coding in [Taguette](https://www.taguette.org). Each document contains the assessed values for context and the full justification text for each of the 18 ethical dimensions as the coding target.
+
+The `taguette_codebook.csv` file contains the initial codebook with **71 open codes** identifying recurring ethical concepts across the dataset. The codes are organised around the following concept groups:
+
+| Group | Example Codes |
+|---|---|
+| IRB / Oversight | `IRB-Absent`, `IRB-Present` |
+| Consent | `Consent-None`, `Consent-Implicit`, `Attacker-Notification` |
+| Data Collection | `Credential-Collection`, `Session-Recording`, `Malware-Capture`, `ICS-Data-Capture`, `Medical-Data-Risk` |
+| Data Governance | `Data-Retention-Absent`, `Data-Minimization-Absent`, `Data-Sharing-Third-Party` |
+| Privacy | `GDPR-Concern`, `IP-Address-Privacy`, `Consumer-Privacy` |
+| Legal & Jurisdiction | `Jurisdiction-Absent`, `Radio-Frequency-Regulation`, `Terms-of-Service` |
+| Containment & Harm | `Containment-Gap`, `Real-Backend-Risk`, `Physical-Domain-Risk`, `Third-Party-Harm` |
+| Deception Ethics | `Deception-Technical-Only`, `Active-Deception`, `LLM-Deception`, `Dual-Use-Risk` |
+| Researcher Responsibility | `Researcher-Responsibility-Absent`, `Responsible-Disclosure` |
+| AI & Automation | `LLM-Third-Party-API`, `AI-Governance-Absent`, `Technology-Driven-Ethical-Lag` |
+| Deployment Context | `Internet-Facing-Deployment`, `Critical-Infrastructure-Deployment`, `Consumer-Distribution` |
+| Threat Intelligence | `Threat-Intel-Sharing`, `Threat-Intel-No-Governance`, `Victim-Data-Risk` |
+| Ethics-by-Containment | `Ethics-by-Containment`, `No-Ethical-Framing` |
+| Domain-Specific | `ICS-Ethics`, `Healthcare-Ethics`, `Space-Ethics`, `IoT-Ethics` |
 
 ---
 
@@ -192,16 +216,6 @@ All 18 ethics dimensions were assessed per entry by:
 1. Reading the full paper (for scientific entries) or README/documentation (for tools)
 2. Recording the value (e.g., `Yes` / `No` / `Not discussed`)
 3. Recording the justification with direct quotes or section/page references
-
----
-
-## Qualitative Coding
-
-The `taguette_docs/` folder contains 238 plain-text documents (one per dataset entry) used for qualitative open coding in Taguette.
-
-The `taguette_codebook.csv` file contains the initial codebook with 71 open codes identifying recurring ethical concepts across the dataset.
-
----
 
 ## Repository Context
 
