@@ -1,0 +1,102 @@
+ENTRY 239 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HosTaGe (Honeypot-To-Go)
+LINK: https://github.com/aau-network-security/HosTaGe
+PLATFORM: GitHub
+STARS: 98
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + GitHub Wiki + external Play Store listing + GSoC 2020 project blog confirmed. Mature, actively maintained low-interaction mobile honeypot; the implementation/tool behind the HosTaGe research paper (Vasilomanolakis et al., SPSM@CCS 2013); has evolved far beyond the original paper to emulate 16 protocols (AMQP, COAP, ECHO, FTP, HTTP, HTTPS, MySQL, MQTT, Modbus, S7comm, SNMP, SIP, SMB, SSH, SMTP, Telnet) including ICS protocols (Modbus, S7comm).
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Malware and automated attackers propagating through wireless networks; targets mobile devices connecting to untrusted/malicious WiFi networks at locations like airports, hotels, and public hotspots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, protocol interaction logs across 16 protocols, malware propagation attempts, network metadata, GSoC threat feed data (HPFeeds)
+Protocols & Ports: AMQP, COAP, ECHO, FTP (21), HTTP (80), HTTPS (443), MySQL (3306), MQTT (1883), Modbus (502), S7comm (102), SNMP (161), SIP (5060), SMB (445), SSH (22), SMTP (25), Telnet (23)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not documented
+Data Sharing: Threat data shared via HPFeeds (gated, application-based access)
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Runs as isolated Android application; does not have elevated system privileges beyond standard app sandboxing
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Public Google Play Store distribution to general consumers without any documented privacy policy, consent flow, or data handling disclosure; gated HPFeeds access has informal "internal review" with no published criteria; multi-protocol ICS emulation (Modbus, S7comm) on a consumer mobile app raises dual-use concerns not addressed.
+Relevance to Project: VERY HIGH relevance: this is the live, actively-maintained implementation behind the HosTaGe scientific paper already in the Scientific Honeypots sheet (Vasilomanolakis et al., SPSM@CCS 2013, dl.acm.org/doi/10.1145/2516760.2516763). Directly demonstrates the gap between a paper's stated ethics (none) and the real-world deployment scale of the resulting public app (98 GitHub stars, Play Store distribution, GSoC 2020 backing, 8 years of continued development).
+Deployment: Yes — public Google Play Store app installed by general consumers on personal mobile devices connecting to real-world wireless networks globally
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: HosTaGe is primarily an IT network threat detection honeypot deployed on Android mobile devices to detect malware propagating over WiFi networks via standard IT protocols (SSH, FTP, HTTP, SMB, SMTP, Telnet, SIP, etc.). The "mobile" in its description refers to the deployment platform (Android), not the security domain. ICS protocol support (Modbus, S7comm) was added later as an extension but is not the primary design purpose. Classification follows the same convention used for T-Pot and other multi-protocol IT honeypots in this dataset.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: README describes HosTaGe as "lightweight, low-interaction, portable, and generic honeypot for mobile devices." Emulates 16 protocols at a low-interaction service-banner level rather than full protocol stacks.
+
+[THREAT MODEL]
+Value: Malware and automated attackers propagating through wireless networks; targets mobile devices connecting to untrusted/malicious WiFi networks at locations like airports, hotels, and public hotspots.
+Evidence: README: "HosTaGe is a lightweight, low-interaction, portable, and generic honeypot for mobile devices that aims on the detection of malicious, wireless network environments. As most malware propagate over the network via specific protocols, a low-interaction honeypot located at a mobile device can check wireless networks for actively propagating malware."
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No mention of IRB, ethics committee, or institutional approval anywhere in the README, Wiki, or release notes despite being an actively maintained academic/GSoC-backed project with continuous development since 2013.
+
+[CONSENT MODEL]
+Value: None
+Evidence: No consent model documented. The honeypot passively monitors wireless networks the mobile device connects to, with no notification to network operators or other devices on the same network.
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, protocol interaction logs across 16 protocols, malware propagation attempts, network metadata, GSoC threat feed data (HPFeeds)
+Evidence: README describes multi-protocol emulation (AMQP, COAP, ECHO, FTP, HTTP, HTTPS, MySQL, MQTT, Modbus, S7comm, SNMP, SIP, SMB, SSH, SMTP, Telnet) and an HPFeeds threat intelligence sharing mechanism: "To access the hpfeeds from hostage please send an access request... Please note that access to the hpfeeds repository is provided only after an internal review."
+
+[PROTOCOLS & PORTS]
+Value: AMQP, COAP, ECHO, FTP (21), HTTP (80), HTTPS (443), MySQL (3306), MQTT (1883), Modbus (502), S7comm (102), SNMP (161), SIP (5060), SMB (445), SSH (22), SMTP (25), Telnet (23)
+Evidence: README explicitly lists all 16 emulated protocols including both IT protocols and ICS protocols (Modbus, S7comm).
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captures network-level attack data across 16 protocols including ICS protocols; deployed on personal mobile devices carried into various wireless environments, creating a unique personal-device privacy dimension not present in server-based honeypots.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No data minimization strategy documented despite collecting data across 16 simultaneous protocols on a personal mobile device.
+
+[DATA RETENTION POLICY]
+Value: Not documented
+Evidence: No data retention policy documented in README, Wiki, or release notes.
+
+[DATA SHARING]
+Value: Threat data shared via HPFeeds (gated, application-based access)
+Evidence: README: "access to the hpfeeds repository is provided only after an internal review" — this is the only entry in the dataset with a documented (if informal) access-control gate on data sharing, though no public policy document defines the review criteria.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: No jurisdiction, GDPR, or legal compliance discussion despite the app being distributed publicly via Google Play Store to general consumers who install it on personal devices connecting to real-world wireless networks worldwide.
+
+[CONTAINMENT & HARM]
+Value: Runs as isolated Android application; does not have elevated system privileges beyond standard app sandboxing
+Evidence: Android OS application sandboxing provides baseline isolation; no further containment architecture documented for the multi-protocol emulation engine.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Deception described only as a technical detection mechanism ("aims on the detection of malicious, wireless network environments"); no ethical discussion of using a consumer-facing Play Store app to passively probe and log wireless network behavior.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: No researcher responsibility statements, ethical guidelines, or responsible disclosure policy. Multiple named researchers and mentors are listed (Vasilomanolakis, Karuppayah, Fischer, Mühlhäuser, Garcia Cordero) but none of the documentation addresses ethical oversight of public app distribution.
+
+[ETHICAL GAPS]
+Value: Public Google Play Store distribution to general consumers without any documented privacy policy, consent flow, or data handling disclosure; gated HPFeeds access has informal "internal review" with no published criteria; multi-protocol ICS emulation (Modbus, S7comm) on a consumer mobile app raises dual-use concerns not addressed.
+Evidence: This is the only tool in the dataset publicly distributed via an app store (Google Play) directly to general consumers rather than security practitioners; consumer-facing distribution without a privacy policy or consent flow is a distinct ethical gap from research-lab or GitHub-only honeypots.
+
+[RELEVANCE TO PROJECT]
+Value: VERY HIGH relevance: this is the live, actively-maintained implementation behind the HosTaGe scientific paper already in the Scientific Honeypots sheet (Vasilomanolakis et al., SPSM@CCS 2013, dl.acm.org/doi/10.1145/2516760.2516763). Directly demonstrates the gap between a paper's stated ethics (none) and the real-world deployment scale of the resulting public app (98 GitHub stars, Play Store distribution, GSoC 2020 backing, 8 years of continued development).
+Evidence: Same research group (Vasilomanolakis, Karuppayah, Fischer, Mühlhäuser) authored both the original 2013 paper and three follow-on papers listed in the repo README (SIN 2014, IEEE CNS 2015 "nuclear power plant" ICS honeypot, NOMS 2016) — all describing the same evolving HosTaGe codebase. This pairing of scientific paper + maintained public tool is the strongest direct evidence in the dataset that a documented academic honeypot, once productized, has not gained any ethics governance despite a decade of real-world public deployment.
+
+[DEPLOYMENT]
+Value: Yes — public Google Play Store app installed by general consumers on personal mobile devices connecting to real-world wireless networks globally
+Evidence: README: "The stable release of HosTaGe can be installed from Google Play Store." This is public, consumer-facing, internet/wireless-facing deployment at global scale, not a controlled lab or testbed.

@@ -1,0 +1,102 @@
+ENTRY 229 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SentryPeer
+LINK: https://github.com/SentryPeer/SentryPeer
+PLATFORM: GitHub
+STARS: 209
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + external API reference docs confirmed at docs.sentrypeer.com; P2P SIP honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: VoIP toll fraud attackers and automated SIP scanners targeting telecommunications infrastructure.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SIP INVITE/REGISTER requests, dialed numbers, P2P shared threat data
+Protocols & Ports: SIP (5060 UDP/TCP)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: P2P shared threat intelligence among SentryPeer nodes
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: P2P data sharing of attacker SIP data without documented privacy governance; no IRB.
+Relevance to Project: Moderate relevance; P2P distributed threat sharing model applicable to HoneySat distributed ground segment honeypot network.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: P2P SIP/VoIP honeypot with external API reference documentation at docs.sentrypeer.com.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: P2P distributed SIP honeypot logging VoIP attack attempts; API docs at docs.sentrypeer.com.
+
+[THREAT MODEL]
+Value: VoIP toll fraud attackers and automated SIP scanners targeting telecommunications infrastructure.
+Evidence: README and external API docs at docs.sentrypeer.com confirmed.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SIP INVITE/REGISTER requests, dialed numbers, P2P shared threat data
+Evidence: API docs describe P2P data sharing of captured SIP attack data.
+
+[PROTOCOLS & PORTS]
+Value: SIP (5060 UDP/TCP)
+Evidence: Standard SIP port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: P2P shared attacker IP data and dialed numbers; dialed numbers may reveal target patterns; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: P2P shared threat intelligence among SentryPeer nodes
+Evidence: API docs describe P2P threat data sharing model.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: P2P data sharing of attacker SIP data without documented privacy governance; no IRB.
+Evidence: P2P threat sharing without documented anonymization or governance.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; P2P distributed threat sharing model applicable to HoneySat distributed ground segment honeypot network.
+Evidence: P2P threat intelligence sharing is directly applicable to multi-node HoneySat honeypot coordination.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

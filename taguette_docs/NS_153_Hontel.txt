@@ -1,0 +1,102 @@
+ENTRY 153 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Hontel
+LINK: https://github.com/stamparm/hontel
+PLATFORM: GitHub
+STARS: 163
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Telnet honeypot written in Python.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated Telnet brute-force bots and IoT malware (Mirai) targeting Telnet.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, Telnet credentials, commands issued
+Protocols & Ports: Telnet (23)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal Telnet honeypot.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python Telnet honeypot logging brute-force and Telnet exploitation attempts.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates Telnet service; logs credential and command attempts.
+
+[THREAT MODEL]
+Value: Automated Telnet brute-force bots and IoT malware (Mirai) targeting Telnet.
+Evidence: README describes Telnet honeypot functionality.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, Telnet credentials, commands issued
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Telnet (23)
+Evidence: Standard Telnet port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential and command logs; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal Telnet honeypot.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

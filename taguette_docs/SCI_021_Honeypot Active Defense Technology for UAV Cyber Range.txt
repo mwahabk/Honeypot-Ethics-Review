@@ -1,4 +1,4 @@
-ENTRY 021 - SCIENTIFIC
+ENTRY 021 — SCIENTIFIC
 ======================================================================
 NAME / IDENTIFIER: Honeypot Active Defense Technology for UAV Cyber Range
 LINK: https://ieeexplore.ieee.org/document/10054946/
@@ -6,17 +6,21 @@ LINK: https://ieeexplore.ieee.org/document/10054946/
 ─── ASSESSED VALUES ───
 Domain: UAV
 Interaction Level: High
+Threat Model: UAV system attacks in training scenarios
 IRB Mentioned: No
 Consent Model: None
+Data Types Collected: Attacker IPs, protocol types, and attack data
+Protocols & Ports: MAVLink, HTTP (80), FTP, Telnet - plus SNMP mentioned in conclusion
 Data Sensitivity: Medium
 Data Minimization: Not discussed
 Data Retention Policy: Not discussed
 Data Sharing: Not mentioned
 Jurisdiction / Legal: Not discussed
 Containment & Harm: Cyber range isolation  (No live UAV systems)
-Deception Framing: Training-oriented deception
+Deception Framing: Purely technical
 Researcher Responsibility: Implicit
 Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: RL-based coordination case study
 Deployment: No (Cyber Range only)
 
 ─── JUSTIFICATION TEXT (for coding) ───
@@ -26,6 +30,7 @@ Value: UAV
 Evidence: Section I: Targets "Unmanned Aerial Vehicles (UAV)" which are identified as "computer-controlled agents" providing services for "smart cities"
 
 [INTERACTION LEVEL]
+Value: High
 Evidence: Section II-B: The system changes the "simulated state of the UAV in real time according to the instructions issued by the attacker" so they get the "same results as the real UAV," which is intended to "improve the interaction". It specifically emulates the "MAVLink protocol" to improve interaction
 
 [THREAT MODEL]
@@ -33,20 +38,23 @@ Value: UAV system attacks in training scenarios
 Evidence: Focuses on "network communication attack" risks such as "GPS deception," and "SQL injection" within a "UAV cyber range" designed for "attack and defense drill"
 
 [IRB / ETHICS COMMITTEE]
+Value: No
 Evidence: A review of the entire manuscript confirms no mention of an Institutional Review Board or ethics committee
 
 [CONSENT MODEL]
+Value: None
 Evidence: Section I:
 	
 The study is conducted within a "semi-physical simulation UAV network security test range"
 . It is treated as an internal training resource rather than a public deployment requiring consent
 
 [DATA TYPES COLLECTED]
+Value: Attacker IPs, protocol types, and attack data
 Evidence: Table 1 (UAV-HFish data format) explicitly lists fields for "remote (IP of Attacker)," "data_type (Attack Protocol Type)," and "data (Attack Data)" recorded in a JSON structure
 
 [PROTOCOLS & PORTS]
-Evidence: Figure 1:
-The system monitors "MAVLink protocol port 1244" and emulates "TCP/80" (IIS Web server) and "TCP/21" (FTP) to attract attackers
+Value: MAVLink, HTTP (80), FTP, Telnet - plus SNMP mentioned in conclusion
+Evidence: Table 2 lists four simulated protocols with experiment counts: MAVLink (2), FTP (12), Telnet (8), HTTP (6). Conclusion additionally states the strategy "has a higher success rate and better effect on objects such as MAVLink, FTP document transfer protocol, Telnet remote login, HTTP hypertext transfer protocol, and SNMP" - SNMP is mentioned only here, not in the Table 2 experimental counts.
 
 [DATA SENSITIVITY]
 Value: Medium
@@ -58,6 +66,7 @@ Value: Not discussed
 Evidence: There is no mention of filtering, anonymizing, or limiting the scope of the "attack data" captured
 
 [DATA RETENTION POLICY]
+Value: Not discussed
 Evidence: Section II-C: Mentions saving data in a "local log" before pushing it to a server, but provides no statement on storage duration or deletion
 
 [DATA SHARING]
@@ -65,13 +74,18 @@ Value: Not mentioned
 Evidence: While the authors use "Table 1" to show the data structure, they do not mention a public release of the dataset or logs
 
 [JURISDICTION / LEGAL]
+Value: Not discussed
 Evidence: The paper focuses on the RL-based "active defense model" and contains no analysis of legal jurisdiction or data protection laws
 
 [CONTAINMENT & HARM]
+Value: Cyber range isolation  (No live UAV systems)
 Evidence: Section I: Technical safety is ensured because the system is part of a "UAV network security test range" using "semi-physical simulation" rather than live flight systems
 
 [DECEPTION FRAMING]
-Evidence: Section I & II-B: The authors define the essence of UAV information security as a "network attack and defense drill" [13:5, 19]. Unlike papers that frame deception purely as a technical defense, this paper frames it as a tool to "disturb and deceive attackers" specifically within a "semi-physical simulation UAV network security test range" [13:5]. The deception is a core component of the drill used to "realize the research on UAV information security" and prove whether the range can be "effectively used for UAV security defense"
+Value: Purely technical
+Evidence: Section I & II-B: The authors define the essence of UAV information security as a "network attack and defense drill". Unlike papers that frame deception purely as a technical defense, this paper frames it as a tool to "disturb and deceive attackers" specifically within a "semi-physical simulation UAV network security test range". The deception is a core component of the drill used to "realize the research on UAV information security" and prove whether the range can be "effectively used for UAV security defense"
+
+Section II-C: The honeypot also uses concrete technical deception mechanisms intentionally implanted exploitable vulnerabilities, including "weak passwords and SQL injection in the login interface of the ground control station monitoring system," to attract attackers.
 
 [RESEARCHER RESPONSIBILITY]
 Value: Implicit
@@ -83,6 +97,7 @@ Evidence: Abstract/Page 5:
 There is no mention of an IRB or discussion of the ethics of using "reinforcement learning" to "maximize the decoy of the attacker"
 
 [RELEVANCE TO PROJECT]
+Value: RL-based coordination case study
 Evidence: Abstract/Section II-B: A primary example of the project's Digital Twin parameter, using "reinforcement learning" to maximize deception realism by emulating real-time UAV states and the "MAVLink protocol". It illustrates the technology-driven ethical lag defined in our framework: while it achieves high technical depth, it lacks the IRB oversight or explicit ethical acknowledgment found in HoneySat. This reinforces the project's critical meta-finding that Technical safety (simulation) replaces normative reasoning
 
 [DEPLOYMENT]

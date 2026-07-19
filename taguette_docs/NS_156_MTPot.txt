@@ -1,0 +1,102 @@
+ENTRY 156 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MTPot
+LINK: https://github.com/Cymmetria/MTPot
+PLATFORM: GitHub
+STARS: 108
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; open source Telnet honeypot focused on Mirai malware detection.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Mirai botnet and derivative IoT malware scanning for Telnet-accessible devices.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, Telnet credentials (default device credentials), malware download commands
+Protocols & Ports: Telnet (23)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Mirai botnet detection honeypot by commercial vendor (Cymmetria) with no ethics documentation.
+Relevance to Project: Moderate relevance; IoT botnet (Mirai) detection ethics applicable to HoneySat CPS/IoT threat model.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Open-source Telnet honeypot by Cymmetria focused on Mirai IoT botnet malware detection.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates Telnet service to attract and log Mirai botnet recruitment attempts.
+
+[THREAT MODEL]
+Value: Mirai botnet and derivative IoT malware scanning for Telnet-accessible devices.
+Evidence: README describes Mirai-focused Telnet honeypot.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, Telnet credentials (default device credentials), malware download commands
+Evidence: README describes capturing Mirai credential brute-force and malware download attempts.
+
+[PROTOCOLS & PORTS]
+Value: Telnet (23)
+Evidence: Standard Telnet port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captures Mirai-style malware download commands and default credentials; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; Mirai botnet detection honeypot by commercial vendor (Cymmetria) with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; IoT botnet (Mirai) detection ethics applicable to HoneySat CPS/IoT threat model.
+Evidence: Mirai-targeting honeypot ethics relevant to space/ground IoT attack surface.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

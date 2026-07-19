@@ -1,0 +1,102 @@
+ENTRY 083 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Python-Honeypot
+LINK: https://github.com/OWASP/Python-Honeypot
+PLATFORM: GitHub
+STARS: 478
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + external OWASP wiki links. Well-documented OWASP project.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Broad range of automated and human attackers targeting multiple protocols simultaneously.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, protocol interaction logs across all services, credentials, commands
+Protocols & Ports: SSH (22), FTP (21), HTTP (80), SMTP (25) and others configurable
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; broad multi-service collection without governance; OWASP community use at scale.
+Relevance to Project: Moderate relevance; multi-protocol honeypot architecture applicable to HoneySat multi-signal emulation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: OWASP Python-based multi-service honeypot with extensive documentation and active community.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Supports multiple protocol emulations (SSH, FTP, HTTP, SMTP, etc.); OWASP project.
+
+[THREAT MODEL]
+Value: Broad range of automated and human attackers targeting multiple protocols simultaneously.
+Evidence: README, GitHub Wiki, and OWASP documentation describe multi-protocol architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, protocol interaction logs across all services, credentials, commands
+Evidence: Not documented; multi-protocol logging implies broad data collection.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), FTP (21), HTTP (80), SMTP (25) and others configurable
+Evidence: README and Wiki describe multi-protocol configuration.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Multi-protocol interaction logs; no real user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; broad multi-service collection without governance; OWASP community use at scale.
+Evidence: OWASP deployment at scale without governance documentation.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; multi-protocol honeypot architecture applicable to HoneySat multi-signal emulation.
+Evidence: Multi-protocol approach applicable to satellite ground station honeypot.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

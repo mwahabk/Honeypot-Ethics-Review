@@ -1,0 +1,102 @@
+ENTRY 033 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: LLM in the Shell: Generative Honeypots
+LINK: https://arxiv.org/abs/2309.00155
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Human attackers capable of distinguishing real Linux shell from a fake one; SSH brute-force attackers and skilled human penetration testers who can fingerprint traditional honeypots.
+IRB Mentioned: No
+Consent Model: Mixed
+Data Types Collected: SSH session commands, shell interaction logs, command outputs, attacker behaviour during evaluation
+Protocols & Ports: SSH (Port 22)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Source code and prompts released publicly
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Controlled evaluation with consenting cybersecurity researchers; no real attacker deployment described in this paper
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: Uses cloud-based OpenAI API (GPT-3.5-turbo-16k), all shell interaction data is sent to a third-party API, raising data privacy concerns not addressed. No ethics section. No IRB. No discussion of potential misuse (an attacker could use the same LLM shell spoofing against defenders). No privacy policy for session data.
+Relevance to Project: Highly relevant to HoneySat and Ethics framework: demonstrates LLM-based adaptive honeypot design which is directly applicable to space/satellite honeypot scenarios requiring dynamic, realistic responses. The OpenAI API dependency and the absence of any data governance framework make this a key case study in the need for ethical guidelines for AI-powered honeypots.
+Deployment: Controlled evaluation only (not deployed in the wild)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Abstract: "This work introduces shelLM, a dynamic and realistic software honeypot based on Large Language Models that generates Linux-like shell output." The paper explicitly proposes, implements, and evaluates a new honeypot named shelLM. The paper is in the "Honeypots" category of cybersecurity research.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: The shelLM honeypot allows real interactive SSH sessions where human attackers execute actual Linux commands and receive dynamic LLM-generated responses. This is above low-interaction (which only emulates services) but not full high-interaction (no real OS access). Evaluation section: "12 human participants tested shelLM" and "Participants executed 226 commands associated with package management, file system management, network operations, system information, and file management."
+
+[THREAT MODEL]
+Value: Human attackers capable of distinguishing real Linux shell from a fake one; SSH brute-force attackers and skilled human penetration testers who can fingerprint traditional honeypots.
+Evidence: Abstract: "most of them lack the required realism to engage and fool human attackers long-term." Evaluation: "We evaluated the realism of each command by conducting an experiment with human attackers who needed to say if the answer from the honeypot was fake or not."
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No mention of IRB, ethics committee, or institutional approval anywhere in the paper. The paper is entirely technically framed.
+
+[CONSENT MODEL]
+Value: Mixed
+Evidence: The evaluation uses cybersecurity researchers as human participants who knowingly interact with the honeypot. Abstract: "The evaluation was done by asking cybersecurity researchers to use the honeypot and give feedback." This implies informed participation in the evaluation. However, real-world attacker consent is not discussed.
+
+Section 4: The 12 evaluation participants gave explicit informed consent - "We contacted 12 participants by email, gave them unique users and passwords" and were told they were testing a honeypot. However, the honeypot's intended real-world use against actual attackers (Section 7, future work: "deploying it in the wild") involves no attacker consent.
+
+[DATA TYPES COLLECTED]
+Value: SSH session commands, shell interaction logs, command outputs, attacker behaviour during evaluation
+Evidence: Evaluation section: "Participants executed 226 commands associated with package management, file system management, network operations, system information, and file management." The system logs all commands and responses through the SSH session.
+
+Section 3.3: "Attackers are identified by their IP addresses and login usernames, so upon reconnection, the same attacker can continue the interaction in the same state." The complete content of each session is saved to an external file and reused as context for that attacker's future sessions meaning attacker IP addresses and usernames are also collected and persisted, not just commands.
+
+[PROTOCOLS & PORTS]
+Value: SSH (Port 22)
+Evidence: Paper describes: "SSH to allow secure access by the participants." The honeypot runs as an SSH server, so all interaction is over SSH port 22.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: The evaluation uses cybersecurity researchers in a controlled study, and no personal user data is collected. The commands logged are shell commands (ls, ping, wget, etc.) which carry low sensitivity. No identifiable attacker data from real-world deployment is described.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No discussion of data minimization, log retention, or privacy filtering of the evaluation session data.
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: No data retention policy or storage timeline mentioned in any section of the paper.
+
+[DATA SHARING]
+Value: Source code and prompts released publicly
+Evidence: arXiv abstract: "The source code and prompts for replicating the experiments have been publicly available." The shelLM code is open source, enabling replication. No raw session log dataset is released.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: No jurisdiction analysis, privacy law compliance, or legal framework is discussed despite the system using OpenAI API (cloud-based data processing) for generating responses.
+
+[CONTAINMENT & HARM]
+Value: Controlled evaluation with consenting cybersecurity researchers; no real attacker deployment described in this paper
+Evidence: Evaluation section: "Each participant was randomly assigned a unique honeypot instance." The evaluation is structured as a controlled user study, not a live internet deployment. The honeypot is isolated per participant and session-based.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: The entire paper is technically framed. Deception is discussed only as a design goal: Abstract: "most of them lack the required realism to engage and fool human attackers long-term." No ethical dimension of using deception on real attackers is discussed.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No researcher responsibility statements, ethical guidelines, responsible disclosure, or dual-use discussion appear in the paper.
+
+[ETHICAL GAPS]
+Value: Uses cloud-based OpenAI API (GPT-3.5-turbo-16k), all shell interaction data is sent to a third-party API, raising data privacy concerns not addressed. No ethics section. No IRB. No discussion of potential misuse (an attacker could use the same LLM shell spoofing against defenders). No privacy policy for session data.
+Evidence: Paper section on system design: "OpenAI API for GPT-3.5-turbo-16k." Every attacker command and honeypot response is transmitted to OpenAI's cloud API, creating a third-party data processing relationship. No discussion of GDPR compliance, data processing agreements, or privacy implications of sending potentially sensitive attacker interaction data to a commercial API.
+
+[RELEVANCE TO PROJECT]
+Value: Highly relevant to HoneySat and Ethics framework: demonstrates LLM-based adaptive honeypot design which is directly applicable to space/satellite honeypot scenarios requiring dynamic, realistic responses. The OpenAI API dependency and the absence of any data governance framework make this a key case study in the need for ethical guidelines for AI-powered honeypots.
+Evidence: The shelLM design using LLMs to generate credible, adaptive responses to attackers  directly parallels approaches being considered for HoneySat to deceive sophisticated nation-state attackers. The complete absence of ethics discussion despite using third-party cloud AI for processing attacker interactions reinforces the gap our framework addresses.
+
+[DEPLOYMENT]
+Value: Controlled evaluation only (not deployed in the wild)
+Evidence: The paper describes a controlled user study with 12 cybersecurity researcher participants. Evaluation section: "Each participant was randomly assigned a unique honeypot instance." No live internet-facing deployment is reported in this paper. The shelLM system uses SSH for the evaluation but no public IP exposure or real attacker capture is described.

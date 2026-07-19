@@ -1,0 +1,102 @@
+ENTRY 149 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Heralding
+LINK: https://github.com/johnnykv/heralding
+PLATFORM: GitHub
+STARS: 392
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; credentials-catching honeypot supporting SSH, FTP, Telnet, HTTP, IMAP, POP3.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated credential stuffing bots and brute-force tools targeting multiple services simultaneously.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, usernames, passwords across all supported protocols
+Protocols & Ports: SSH (22), FTP (21), Telnet (23), HTTP (80), IMAP (143), POP3 (110), SMTP (25), VNC (5900)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; multi-protocol credential capture at scale without data governance documentation.
+Relevance to Project: Moderate relevance; multi-protocol credential honeypot directly applicable to HoneySat command authentication logging design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Credentials-catching honeypot supporting SSH, FTP, Telnet, HTTP, IMAP, POP3, SMTP, and VNC.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Low-interaction multi-protocol honeypot capturing credentials across 8+ protocols.
+
+[THREAT MODEL]
+Value: Automated credential stuffing bots and brute-force tools targeting multiple services simultaneously.
+Evidence: README documents all supported protocols and credential capture functionality.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, usernames, passwords across all supported protocols
+Evidence: README explicitly describes credential-catching as the primary purpose.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), FTP (21), Telnet (23), HTTP (80), IMAP (143), POP3 (110), SMTP (25), VNC (5900)
+Evidence: Documented in README.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captures credential pairs (username/password) across 8+ protocols; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; multi-protocol credential capture at scale without data governance documentation.
+Evidence: Credential capture across 8+ protocols without any retention or deletion policy.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; multi-protocol credential honeypot directly applicable to HoneySat command authentication logging design.
+Evidence: Credential capture ethics across multiple protocols relevant to satellite command authentication honeypot.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

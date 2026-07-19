@@ -1,0 +1,143 @@
+ENTRY 004 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyPLC: A Next-Generation Honeypot for Industrial Control Systems
+LINK: https://dl.acm.org/doi/10.1145/3372297.3423356
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High
+Threat Model: ICS attackers
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: ICS command interactions, protocol traffic
+Protocols & Ports: S7comm (102), HTTP (80), SNMP (161)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Source code publicly available (GitHub: sefcom/honeyplc); no raw attack dataset or interaction logs released
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Strong isolation to prevent physical impact
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: Ethics embedded as safety, not explicitly discussed
+Relevance to Project: Demonstrates technical containment and controlled deployment
+Deployment: Yes (Public Internet Deployment)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract: “Industrial Control Systems (ICS) provide management and control capabilities for mission-critical utilities…”
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Page 2: “we present HoneyPLC, a high-interaction honeypot …”
+
+[THREAT MODEL]
+Value: ICS attackers
+Evidence: Abstract:
+“cyberattacks that are designed to disrupt their operation”
+
+And experiments confirm that:
+
+external Internet attackers
+reconnaissance tools
+PLCinject interactions
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No IRB, no ethics board, no human subjects discussion appears anywhere in the paper.
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: There is no consent statement, just Internet-facing honeypots.
+
+There is no phrase like:
+
+"informed consent"
+
+“attackers are notified”
+
+[DATA TYPES COLLECTED]
+Value: ICS command interactions, protocol traffic
+Evidence: Page 5:
+“maintains all logs produced by our S7comm servers, the SNMP agent and the HTTP server”
+Section 4.5:
+“public IP address of the attacker”
+“memory block ID”
+“ladder logic programs that get injected”
+
+[PROTOCOLS & PORTS]
+Value: S7comm (102), HTTP (80), SNMP (161)
+Evidence: Section 4.3: Explicitly emulates "S7comm protocol over TCP port 102," "SNMP... over UDP port 161," and "HTTP quests" (typically Port 80)
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: They collect:
+
+IP addresses
+Attack commands
+Ladder logic uploads
+Network interactions against a critical ICS target
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: There is no specific mention of:
+
+selective logging
+filtering out sensitive fields
+anonymization
+minimizing data capture
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Nowhere in the text does the paper describe:
+
+how long logs are kept
+retention timelines
+deletion procedures
+
+[DATA SHARING]
+Value: Source code publicly available (GitHub: sefcom/honeyplc); no raw attack dataset or interaction logs released
+Evidence: Page 2 states:
+“HoneyPLC and all our experimental results are available online.”
+
+
+But No release logs or interaction traces to the public.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: “Deployment locations (AWS EC2, Internet-exposed) and ICS relevance (Siemens, ABB, Allen-Bradley PLCs) are described (Secs. 5.5, 5.7), but the paper does not discuss legal compliance, data protection, or jurisdictional considerations.”
+
+[CONTAINMENT & HARM]
+Value: Strong isolation to prevent physical impact
+Evidence: Section 4:
+“introducing low-to-moderate levels of risk as well as low maintenance costs.”
+
+Although it doesn’t literally say “we ensure safety,” the design avoids physical PLC hardware and runs in controlled environments. So the justification holds.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: The paper does not discuss ethics or philosophical aspects of deception. It discusses methodological and technical deception:
+
+Section 5:
+“HoneyPLC is designed to effectively
+deceive attackers into believing that they are dealing with real
+PLCs”
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: The paper does not include any explicit statements about researcher responsibility, ethical oversight, or governance.
+
+[ETHICAL GAPS]
+Value: Ethics embedded as safety, not explicitly discussed
+Evidence: The paper only mentions technical containment (avoiding real PLC hardware, controlled environment). There is no explicit ethical discussion, so this column should say: “No explicit ethics discussion; safety measures are technical”
+
+[RELEVANCE TO PROJECT]
+Value: Demonstrates technical containment and controlled deployment
+Evidence: HoneySat / Digital Twin can adopt similar risk mitigation and containment strategies in experiments, but must explicitly include ethical governance, which HoneyPLC lacks.
+
+[DEPLOYMENT]
+Value: Yes (Public Internet Deployment)
+Evidence: Abstract:
+"We deployed HoneyPLC on Amazon AWS and recorded a large amount of interesting interactions over the Internet"

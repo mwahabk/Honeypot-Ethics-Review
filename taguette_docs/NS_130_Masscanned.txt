@@ -1,0 +1,102 @@
+ENTRY 130 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Masscanned
+LINK: https://github.com/ivre/masscanned
+PLATFORM: GitHub
+STARS: 138
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /docs folder + external IVRE documentation. Comprehensive network responder.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Internet-wide scanners and automated attackers across all network ports.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, connection timestamps, destination ports, protocol banners
+Protocols & Ports: All TCP/UDP ports
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; full-port coverage without governance for scale of collection.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction network honeypot by IVRE project with /docs folder documentation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Accepts connections on all ports; logs connection metadata; supports multiple backend connectors.
+
+[THREAT MODEL]
+Value: Internet-wide scanners and automated attackers across all network ports.
+Evidence: README and /docs folder describe architecture; IVRE project integration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, connection timestamps, destination ports, protocol banners
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: All TCP/UDP ports
+Evidence: Designed for full port coverage.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection metadata only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; full-port coverage without governance for scale of collection.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

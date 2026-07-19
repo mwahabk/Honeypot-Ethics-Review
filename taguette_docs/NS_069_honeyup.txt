@@ -1,0 +1,102 @@
+ENTRY 069 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeyup
+LINK: https://github.com/mrcbax/honeyup
+PLATFORM: GitHub
+STARS: 29
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; uploader honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers testing for arbitrary file upload vulnerabilities.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, uploaded file content (potentially malware)
+Protocols & Ports: HTTP (configured)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no malware handling guidance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Receives live malware uploads with no documented safe handling procedure; no IRB.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Upload endpoint honeypot logging malware and file upload attempts.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Accepts file uploads from attackers; logs and stores submitted files.
+
+[THREAT MODEL]
+Value: Attackers testing for arbitrary file upload vulnerabilities.
+Evidence: Not documented.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, uploaded file content (potentially malware)
+Evidence: Not documented; uploaded files may include live malware.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (configured)
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Uploaded files may contain live malware — containment concern.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no malware handling guidance.
+Evidence: README does not address safe handling of malware uploaded to honeypot.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Receives live malware uploads with no documented safe handling procedure; no IRB.
+Evidence: Malware containment gap not addressed.
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

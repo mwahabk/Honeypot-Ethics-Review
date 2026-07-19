@@ -1,0 +1,102 @@
+ENTRY 180 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HonSSH
+LINK: https://github.com/tnich/honssh
+PLATFORM: GitHub
+STARS: 373
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH MITM honeypot logging all communications.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Targeted attackers using SSH for remote access and post-exploitation.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Full SSH session data, keystrokes, commands, file transfers, attacker IPs, credentials
+Protocols & Ports: SSH (22)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; MITM to real backend creates data exposure risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: High-interaction SSH MITM with no data governance; real backend exposure risk; no IRB.
+Relevance to Project: HIGH relevance to HoneySat ethics: SSH MITM with full session capture parallels HoneySat command channel interception design same ethics risks as pyrdp.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH MITM honeypot logging all SSH communications between attacker and backend.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: High-interaction SSH MITM: relays sessions to real or emulated backend while logging all traffic.
+
+[THREAT MODEL]
+Value: Targeted attackers using SSH for remote access and post-exploitation.
+Evidence: README describes SSH MITM logging architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Full SSH session data, keystrokes, commands, file transfers, attacker IPs, credentials
+Evidence: README describes logging all SSH communications via MITM.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Full SSH session capture including keystrokes and file transfers; high sensitivity if proxied to real backend.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; MITM to real backend creates data exposure risk.
+Evidence: MITM architecture risks exposing real backend data if operator connects real system.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: High-interaction SSH MITM with no data governance; real backend exposure risk; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat ethics: SSH MITM with full session capture parallels HoneySat command channel interception design same ethics risks as pyrdp.
+Evidence: Full-session SSH MITM is a key design pattern for HoneySat command channel honeypot.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

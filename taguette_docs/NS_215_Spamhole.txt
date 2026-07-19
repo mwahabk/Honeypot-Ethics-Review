@@ -1,0 +1,101 @@
+ENTRY 215 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Spamhole
+LINK: http://www.spamhole.net/
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Website-only spam trap for harvesters; no code repo.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Email harvesting bots scanning web pages for email addresses.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Harvester IP addresses, access patterns to honeypot email addresses
+Protocols & Ports: HTTP (80)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; website-only tool with no code repository.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Website-only spam trap for email harvesters; no code repository.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Web-based email harvester trap; website is the only documentation.
+
+[THREAT MODEL]
+Value: Email harvesting bots scanning web pages for email addresses.
+Evidence: Website-only spam trap; no code repository.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Harvester IP addresses, access patterns to honeypot email addresses
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80)
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Harvester access metadata; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; website-only tool with no code repository.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

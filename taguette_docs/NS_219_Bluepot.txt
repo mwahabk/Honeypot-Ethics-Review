@@ -1,0 +1,102 @@
+ENTRY 219 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Bluepot
+LINK: https://github.com/andrewmichaelsmith/bluepot
+PLATFORM: GitHub
+STARS: 274
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Java-based Bluetooth honeypot detecting BlueBugging and BlueSnarfing.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers exploiting Bluetooth vulnerabilities (BlueBugging, BlueSnarfing) for unauthorized access.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker Bluetooth device identifiers, connection attempts, data access attempts
+Protocols & Ports: Bluetooth (RFCOMM channels)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Bluetooth MAC addresses are personal data under GDPR; no data governance; no IRB; physical proximity deployment raises unique privacy concerns.
+Relevance to Project: Moderate relevance; Bluetooth honeypot raises physical-proximity deception ethics analogous to HoneySat physical interface deception.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Java-based Bluetooth honeypot detecting BlueBugging and BlueSnarfing attacks.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates Bluetooth services to detect mobile Bluetooth attacks.
+
+[THREAT MODEL]
+Value: Attackers exploiting Bluetooth vulnerabilities (BlueBugging, BlueSnarfing) for unauthorized access.
+Evidence: README describes Bluetooth honeypot functionality.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker Bluetooth device identifiers, connection attempts, data access attempts
+Evidence: Not documented; Bluetooth device IDs may be personal data.
+
+[PROTOCOLS & PORTS]
+Value: Bluetooth (RFCOMM channels)
+Evidence: Bluetooth radio; no IP network port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Bluetooth device identifiers (MAC addresses) are personal data under GDPR; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Bluetooth MAC addresses are personal data under GDPR; no data governance; no IRB; physical proximity deployment raises unique privacy concerns.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Bluetooth honeypot raises physical-proximity deception ethics analogous to HoneySat physical interface deception.
+Evidence: Physical-domain honeypot design raises unique ethics questions applicable to HoneySat hardware interface honeypots.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

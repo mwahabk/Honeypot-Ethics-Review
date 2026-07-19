@@ -1,0 +1,102 @@
+ENTRY 200 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: sshForShits
+LINK: https://github.com/traetox/sshForShits
+PLATFORM: GitHub
+STARS: 39
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + links to companion web frontend (sshForShitsGooey); high interaction SSH honeypot framework.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Advanced SSH attackers performing post-exploitation in real system environment.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Full SSH session data, keystrokes, commands, file transfers, attacker IPs, credentials
+Protocols & Ports: SSH (22)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; high-interaction design without documented containment.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: High-interaction SSH with no governance; backend isolation not documented; no IRB.
+Relevance to Project: Moderate relevance; high-interaction SSH honeypot ethics applicable to HoneySat command channel design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: High-interaction SSH honeypot framework with companion web frontend (sshForShitsGooey).
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: High-interaction SSH framework; attacker sessions forwarded to real or containerized backend.
+
+[THREAT MODEL]
+Value: Advanced SSH attackers performing post-exploitation in real system environment.
+Evidence: README and linked sshForShitsGooey web frontend document high-interaction design.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Full SSH session data, keystrokes, commands, file transfers, attacker IPs, credentials
+Evidence: High-interaction design captures full session data.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Full SSH session capture; high sensitivity if proxied to real backend.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; high-interaction design without documented containment.
+Evidence: No guidance on backend isolation for high-interaction SSH sessions.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: High-interaction SSH with no governance; backend isolation not documented; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; high-interaction SSH honeypot ethics applicable to HoneySat command channel design.
+Evidence: High-interaction design raises same ethics concerns as pyrdp for satellite command systems.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 145 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: beelzebub
+LINK: https://github.com/mariocandela/beelzebub
+PLATFORM: GitHub
+STARS: 2k
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + white paper PDF linked from README; LLM-powered low-code honeypot framework.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Advanced attackers who can detect static honeypot responses; automated scanners.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, service interaction logs, LLM-generated interaction data
+Protocols & Ports: SSH (22), HTTP (80), and others configurable
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; LLM backend processes attacker data via third-party API.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; LLM API third-party data processing not governed; same concern as galah and shelLM.
+Relevance to Project: HIGH relevance; LLM-based honeypot directly comparable to galah, shelLM, and OHRA key cluster for LLM honeypot ethics pillar in framework.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: LLM-powered low-code honeypot framework with white paper documentation.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Medium-interaction: LLM generates dynamic responses across configurable services; white paper documents architecture.
+
+[THREAT MODEL]
+Value: Advanced attackers who can detect static honeypot responses; automated scanners.
+Evidence: README and linked white paper PDF describe LLM-based honeypot architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, service interaction logs, LLM-generated interaction data
+Evidence: White paper describes full interaction capture.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), HTTP (80), and others configurable
+Evidence: Configurable service ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full interaction logs; LLM API may process attacker data via third-party cloud.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; LLM backend processes attacker data via third-party API.
+Evidence: LLM integration creates third-party data processing concern not addressed in documentation.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; LLM API third-party data processing not governed; same concern as galah and shelLM.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance; LLM-based honeypot directly comparable to galah, shelLM, and OHRA key cluster for LLM honeypot ethics pillar in framework.
+Evidence: Third-party LLM API dependency pattern is the most significant emerging ethics gap in modern honeypot design.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

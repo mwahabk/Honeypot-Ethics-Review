@@ -1,0 +1,102 @@
+ENTRY 162 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: fapro
+LINK: https://github.com/fofapro/fapro
+PLATFORM: GitHub
+STARS: 1.6k
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README only but detailed; Fake Protocol Server supporting 20+ protocols with FAQ section inline.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Internet-wide automated scanners across all major protocols.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, protocol interaction logs across 20+ emulated services
+Protocols & Ports: SSH (22), HTTP (80), FTP (21), MySQL (3306), Redis (6379), and 15+ more
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; 20+ protocol coverage without governance documentation.
+Relevance to Project: HIGH relevance to HoneySat: 20+ protocol support in a single binary is the most technically efficient architecture for multi-signal space honeypot emulation.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Fake Protocol Server supporting 20+ protocols in a single Go binary; detailed README with FAQ.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Low-interaction multi-protocol server emulating 20+ protocols with configurable responses.
+
+[THREAT MODEL]
+Value: Internet-wide automated scanners across all major protocols.
+Evidence: Detailed README with protocol list, configuration guide, and FAQ section.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, protocol interaction logs across 20+ emulated services
+Evidence: README documents comprehensive protocol coverage.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), HTTP (80), FTP (21), MySQL (3306), Redis (6379), and 15+ more
+Evidence: README lists all 20+ supported protocols.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Multi-protocol interaction metadata; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; 20+ protocol coverage without governance documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat: 20+ protocol support in a single binary is the most technically efficient architecture for multi-signal space honeypot emulation.
+Evidence: Single-binary multi-protocol design directly applicable to HoneySat resource-constrained deployment.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

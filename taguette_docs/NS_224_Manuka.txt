@@ -1,0 +1,102 @@
+ENTRY 224 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Manuka
+LINK: https://github.com/andrewmichaelsmith/manuka
+PLATFORM: GitHub
+STARS: 26
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Docker-based honeypot combining Dionaea and Kippo.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Malware bots and SSH attackers; covers both malware propagation and credential brute-force.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Malware binaries (Dionaea), SSH credentials and sessions (Kippo)
+Protocols & Ports: SMB (445), HTTP (80), FTP (21) Dionaea; SSH (22) Kippo
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; combined malware and credential capture without governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Docker-based honeypot combining Dionaea malware collection and Kippo SSH honeypot.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Bundles Dionaea and Kippo in Docker for combined malware collection and SSH interaction.
+
+[THREAT MODEL]
+Value: Malware bots and SSH attackers; covers both malware propagation and credential brute-force.
+Evidence: README describes Dionaea + Kippo Docker combination.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Malware binaries (Dionaea), SSH credentials and sessions (Kippo)
+Evidence: Combined data collection from both Dionaea and Kippo components.
+
+[PROTOCOLS & PORTS]
+Value: SMB (445), HTTP (80), FTP (21) Dionaea; SSH (22) Kippo
+Evidence: Combined ports from both honeypots.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Malware and SSH credential data combined; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; combined malware and credential capture without governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

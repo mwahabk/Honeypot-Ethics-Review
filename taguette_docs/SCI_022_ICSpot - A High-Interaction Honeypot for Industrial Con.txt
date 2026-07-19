@@ -1,0 +1,107 @@
+ENTRY 022 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: ICSpot: A High-Interaction Honeypot for Industrial Control Systems
+LINK: https://ieeexplore.ieee.org/document/9851732/
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High
+Threat Model: Advanced ICS attackers targeting industrial protocols
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: IPs, protocol traffic, and injected programs
+Protocols & Ports: HTTP (80, 8000), S7comm (102), SNMP (161), Modbus (502)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Physics-aware emulation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: No explicit ethics section, Ethics assumed via isolation
+Relevance to Project: Classic ethics-by-containment case
+Deployment: Yes (Public Internet)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Explicitly targets "Industrial Control Systems (ICSs)" and emulates a "Siemens Simatic S7-300" PLC (Abstract, Sec. III-A).
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Section I:
+Defined as a "High-Interaction ICS honeypot" because it simulates all services and allows deep engagement with the emulated system
+
+[THREAT MODEL]
+Value: Advanced ICS attackers targeting industrial protocols
+Evidence: Section IV-B/Page 3:
+Targets adversaries who perform "systemic network crawling" to identify and interact with industrial protocols like "S7comm and Modbus"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A full review of the paper confirms no mention of an Institutional Review Board or ethical committee oversight
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Section I:
+The honeypot was exposed via "AWS" and a local "IXP" where attackers interacted unknowingly with the "public IP exposure"
+
+[DATA TYPES COLLECTED]
+Value: IPs, protocol traffic, and injected programs
+Evidence: Records "IP addresses of the main attackers," "logging," and "programs injected by attackers" (malware) via a dedicated Logging module (Sec. III-C, III-D, IV-A, Fig. 1).
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80, 8000), S7comm (102), SNMP (161), Modbus (502)
+Evidence: Specifically, it implements a copy of the "Siemens Simatic S7-300 website on port 80" and a custom industrial HMI on "port 8000" via HTTP
+. It leverages the "snap7 library" to deploy an S7comm server on port "102 TCP" and a python-based agent for SNMP device monitoring on port "161 UDP". 
+Finally, the system implements the Modbus/TCP protocol on port "502", which is identified and analyzed alongside other services for capturing adversarial interactions in the experimental results
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Captures interaction "log" and "loaded programs captures" from critical industrial protocols, which could impact physical infrastructure if misused (Sec. III-D, Fig. 1).
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No mention of filtering, hashing IPs, or limiting the scope of captured interaction logs (Full Paper).
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Mentions interactions are "recorded, stored, and processed," but provides no policy on storage duration or deletion (Sec. III-A).
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Footnote 1: "The source code of the honeypot is available on Github, github.com/ftrole/ICSpot." No raw interaction logs or captured malware/injected programs are released - only the honeypot's source code itself.
+
+Additionally, attacker IP addresses were submitted to GreyNoise, a third-party commercial threat intelligence company, for classification and diagnosis via API access (Section IV-B: "we leveraged GreyNoise... Greynoise is a company that collects, labels, and diagnoses data and provides access to such information to users via API"), with no privacy policy or data-sharing agreement discussion.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Honeypot IPs were "announced worldwide," yet there is no discussion of GDPR, legal compliance, or jurisdiction (Sec. IV-A).
+
+[CONTAINMENT & HARM]
+Value: Physics-aware emulation
+Evidence: Uses "Virtual Machine" isolation and "process adjustment" within a MiniCPS simulation to prevent real physical impact (Sec. III-A, III-B, Fig. 1).
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Deception is framed as a technical engineering requirement to achieve high-fidelity interaction by mimicking "both the network and the physical process"
+. Beyond just human adversaries, the authors explicitly design the system to "fool the Siemens Step7 Manager proprietary software" so it cannot detect the honeypot, thereby ensuring it remains a realistic "building block" for gathering threat intelligence.
+[Sections I & III-C]
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Framed through the provision of a "building block" for researchers and a safety-focused design via simulation (Sec. V).
+
+[ETHICAL GAPS]
+Value: No explicit ethics section, Ethics assumed via isolation
+Evidence: Tracks "2185 different IPs" and collects injected malware without IRB oversight or legal/data governance framing (Sec. IV-A).
+
+[RELEVANCE TO PROJECT]
+Value: Classic ethics-by-containment case
+Evidence: A primary example of the "Digital Twin" parameter where "physical process interaction" simulation is used as a substitute for normative ethical reasoning (Abstract, Sec. I).
+
+[DEPLOYMENT]
+Value: Yes (Public Internet)
+Evidence: Instances were installed and exposed for one month on an "AWS EC2 virtual machine" and a local "IXP" (Sec. IV).

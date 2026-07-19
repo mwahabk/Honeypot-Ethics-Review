@@ -1,0 +1,101 @@
+ENTRY 104 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Lyrebird
+LINK: https://hub.docker.com/r/lyrebird/honeypot-base/
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Docker Hub page only; no GitHub README accessible.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic internet automated scanners.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Service interaction data; exact types not documented
+Protocols & Ports: Not documented
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; no GitHub repository; minimal documentation limits ethics assessment.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Docker Hub-distributed multi-service honeypot; documentation via Docker Hub only.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Docker-containerized service emulation; interaction depth not documented.
+
+[THREAT MODEL]
+Value: Generic internet automated scanners.
+Evidence: Docker Hub page is the only documentation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Service interaction data; exact types not documented
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Not documented
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Interaction metadata; exact scope not documented.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; no GitHub repository; minimal documentation limits ethics assessment.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

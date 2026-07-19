@@ -1,0 +1,102 @@
+ENTRY 121 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: GasPot
+LINK: https://github.com/sjhilt/GasPot
+PLATFORM: GitHub
+STARS: 146
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with overview; simulates Veeder Root Guardian AST gastation system.
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+Threat Model: Attackers targeting fuel distribution infrastructure via internet-exposed management interfaces.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, Guardian AST protocol queries, fuel level queries
+Protocols & Ports: Guardian AST (10001)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; fuel infrastructure honeypot with no ethics; nation-state attacks on energy infrastructure not addressed.
+Relevance to Project: HIGH relevance to HoneySat and ICS ethics: fuel infrastructure honeypot directly parallels space infrastructure both are critical national infrastructure.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Honeypot simulating Veeder-Root Guardian AST gas tank monitoring systems.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates gas tank monitoring protocol; logs attacks targeting fuel infrastructure.
+
+[THREAT MODEL]
+Value: Attackers targeting fuel distribution infrastructure via internet-exposed management interfaces.
+Evidence: README describes Veeder-Root Guardian AST emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, Guardian AST protocol queries, fuel level queries
+Evidence: Not documented; inferred from honeypot purpose.
+
+[PROTOCOLS & PORTS]
+Value: Guardian AST (10001)
+Evidence: Guardian AST protocol port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Fuel infrastructure monitoring — highly sensitive critical infrastructure; real data would reveal attack patterns against energy infrastructure.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; fuel infrastructure honeypot with no ethics; nation-state attacks on energy infrastructure not addressed.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat and ICS ethics: fuel infrastructure honeypot directly parallels space infrastructure both are critical national infrastructure.
+Evidence: GasPot demonstrates honeypots deployed in critical national infrastructure without any ethics governance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

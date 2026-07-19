@@ -1,0 +1,102 @@
+ENTRY 039 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Delilah
+LINK: https://github.com/SecurityTW/delilah
+PLATFORM: GitHub
+STARS: 25
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README covers install, config, and usage. No wiki content, no /docs folder.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic automated scanners brute-forcing MySQL credentials.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, usernames, passwords attempted
+Protocols & Ports: MySQL (3306)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; no ethics section; no data governance.
+Relevance to Project: Low relevance; basic credential honeypot.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Database honeypot targeting generic credential theft; no ICS/CPS/Space/CAV involvement.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates MySQL login interface to log credential attempts; purely passive logging.
+
+[THREAT MODEL]
+Value: Generic automated scanners brute-forcing MySQL credentials.
+Evidence: Not documented; inferred from honeypot function.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, usernames, passwords attempted
+Evidence: Not documented; inferred from function.
+
+[PROTOCOLS & PORTS]
+Value: MySQL (3306)
+Evidence: Standard MySQL port; inferred.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credentials logged are attacker-supplied; no real user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; no ethics section; no data governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance; basic credential honeypot.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

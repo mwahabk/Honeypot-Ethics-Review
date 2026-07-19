@@ -1,0 +1,102 @@
+ENTRY 113 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: troje
+LINK: https://github.com/dutchcoders/troje/
+PLATFORM: GitHub
+STARS: 45
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; honeypot running each connection in separate LXC container.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Sophisticated attackers who detect simple emulation; automated malware seeking real system access.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, full shell session logs, commands executed, files created/modified in container
+Protocols & Ports: SSH (22) or configured service port
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; container isolation mitigates but does not eliminate risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; high-interaction container sessions with no governance; container escape not addressed.
+Relevance to Project: Moderate relevance; per-session container architecture applicable to HoneySat isolated session design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot running each attacker session in a separate Docker container for isolation and realism.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Each attacker session runs in a dedicated Docker container full system access within contained environment.
+
+[THREAT MODEL]
+Value: Sophisticated attackers who detect simple emulation; automated malware seeking real system access.
+Evidence: README describes per-session Docker container architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, full shell session logs, commands executed, files created/modified in container
+Evidence: Container architecture enables full session capture.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22) or configured service port
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full shell session in container; commands and files captured; medium sensitivity for attacker-only data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; container isolation mitigates but does not eliminate risk.
+Evidence: Docker provides process isolation but no malware escape prevention guidance.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; high-interaction container sessions with no governance; container escape not addressed.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; per-session container architecture applicable to HoneySat isolated session design.
+Evidence: Container-per-session isolation model relevant to HoneySat attacker containment strategy.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

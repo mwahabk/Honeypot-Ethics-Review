@@ -1,0 +1,107 @@
+ENTRY 025 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: LLMHoney: A Real-Time SSH Honeypot with Large Language Model-Driven Dynamic Response 
+Generation
+LINK: https://arxiv.org/abs/2509.01463
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Sophisticated interactive attackers and post-compromise adversaries
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: IPs, credentials, and commands
+Protocols & Ports: SSH (Configurable; e.g., Port 8022)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Emulated sandbox
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: AI-amplified deception / Ethics-by-Containment case study
+Deployment: Experimental (Lab)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Abstract & Sec. VIII: Targets "SSH honeypot" and emulates a "Linux shell environment" to engage attackers
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Sec. I & II: Aimed at providing a "high-interaction" experience without running a real OS, comparing itself to Cowrie, which is a "medium-interaction" SSH honeypot
+
+[THREAT MODEL]
+Value: Sophisticated interactive attackers and post-compromise adversaries
+Evidence: Sections I, VI-A, and VII-A:
+LLMHoney is designed to engage "sophisticated attackers" who manually interact with the shell environment
+. It specifically targets adversaries who execute "unexpected commands" or "uncommon flags" (such as docker or specific ls variations) and perform "sequential operations" that require high-fidelity, dynamic responses to prevent the attacker from realizing they are in a decoy
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A complete review of the paper confirms there is no mention of an Institutional Review Board (IRB) or ethical committee oversight
+
+[CONSENT MODEL]
+Value: None
+Evidence: Section VII-B: "All experiments occurred in controlled laboratory conditions without real attacker interaction." Section IV-B: the only commands run against the honeypot were a researcher-curated "CSV of 138 Linux commands" used for benchmarking (commands.csv), not real attacker sessions.
+
+[DATA TYPES COLLECTED]
+Value: IPs, credentials, and commands
+Evidence: Sec. III-E: Records "client IP/port," "Every authentication attempt and shell command," and the "LLM’s responses"
+
+[PROTOCOLS & PORTS]
+Value: SSH (Configurable; e.g., Port 8022)
+Evidence: Sections III-A and III-B: The framework utilizes the "AsyncSSH" library on top of asyncio to open a TCP listener that handles the "SSH handshake (key exchange, and encryption)".
+ The specific port is defined within the system's "Configuration Module" via a config.ini file, which allows the researcher to set a custom "TCP port for SSH", such as the Port "8022" used in the study's examples.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Section III-E: "Every authentication attempt and shell command" and "The LLM's responses" are logged.
+Section IV-B: "We made a CSV of 138 Linux commands spanning file, system, network, package, and utility categories. Each row in commands.csv provides: command: the exact CLI invocation. expected_output: the ground-truth response from a real shell."
+Section VII-B: "All experiments occurred in controlled laboratory conditions without real attacker interaction."
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Sec. III-E/Abstract: Emphasizes recording "Every... shell command" and interaction to "collect richer threat intelligence," with no mention of filtering or anonymization
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Sec. III-E: Logs are stored in an "on-disk database (honeypot_sessions.db)," but the paper provides no policy on storage duration or data deletion
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Section IV-A / Full Paper: While evaluating the system against "138 Linux commands," there is no specific mention of a public dataset release or open-source repository for the raw logs.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Despite deploying a system to capture real-time attacker data, there is no discussion of legal compliance, GDPR, or jurisdictional authority
+
+[CONTAINMENT & HARM]
+Value: Emulated sandbox
+Evidence: Sec. VI-D: Safety is achieved because the "attacker is actually sandboxed—they cannot break out... there is no real shell, just the simulation"
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Sections I, V, and IX: Deception is framed as a technical goal to overcome "fingerprinting" by providing "dynamic response generation for arbitrary commands" that traditional, static systems like Cowrie cannot handle
+. The authors explicitly quantify the success of this deception using linguistic similarity metrics (BLEU-4, Cosine, and Jaro-Winkler scores) to measure how "convincingly" the AI-generated outputs mimic the ground-truth responses of an authentic Linux shell
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Abstract / Sec IX: Responsibility is framed as a contribution to gathering "threat intelligence" and moving toward "autonomous defense" through AI-driven security
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: zero discussion of the ethics of manipulating humans via AI, AI agency, or a formal data governance policy
+
+[RELEVANCE TO PROJECT]
+Value: AI-amplified deception / Ethics-by-Containment case study
+Evidence: Sections VI-A, VI-D, and IX: This paper serves as a primary case study for the ethics-by-containment framework, representing the project's technology-driven ethical lag finding. 
+It utilizes generative AI to reach high levels of deception realism while operating in a structural ethical vacuum specifically lacking IRB oversight and data governance policies. 
+The authors explicitly rely on technical isolation "sandbox" as the sole substitute for normative ethical reasoning, which confirms the project's meta-finding on the field's dominant paradigm.
+
+[DEPLOYMENT]
+Value: Experimental (Lab)
+Evidence: Sec. IV-A & VII: Evaluation was conducted in "controlled laboratory conditions" on a "non-public interface," though the authors plan real-world deployment

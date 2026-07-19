@@ -1,0 +1,102 @@
+ENTRY 223 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Dockerpot
+LINK: https://github.com/mrschyte/dockerpot
+PLATFORM: GitHub
+STARS: 152
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + external blog post; Docker-based SSH honeypot running each session in a container.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Advanced SSH attackers who probe for real system access; automated scanners.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Full SSH session data per container, attacker IPs, credentials, all executed commands
+Protocols & Ports: SSH (22)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; high-interaction per-session containers without governance.
+Relevance to Project: Moderate relevance; per-session container isolation applicable to HoneySat attacker session containment.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Docker-based SSH honeypot running each attacker session in a separate container; blog post.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: High-interaction: each SSH session runs in isolated Docker container allowing full attacker interaction.
+
+[THREAT MODEL]
+Value: Advanced SSH attackers who probe for real system access; automated scanners.
+Evidence: README and external blog post document per-session Docker container design.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Full SSH session data per container, attacker IPs, credentials, all executed commands
+Evidence: Per-session container captures complete session data.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full SSH session per container; medium sensitivity — isolated to attacker-only data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; high-interaction per-session containers without governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; per-session container isolation applicable to HoneySat attacker session containment.
+Evidence: Container-per-session design relevant to HoneySat isolated command session management.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

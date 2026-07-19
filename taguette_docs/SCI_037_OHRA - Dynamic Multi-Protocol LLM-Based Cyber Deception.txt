@@ -1,0 +1,100 @@
+ENTRY 037 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: OHRA: Dynamic Multi-Protocol LLM-Based Cyber Deception
+LINK: https://dl.acm.org/doi/10.1007/978-3-032-14782-0_7
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Automated attackers sending malware commands; sophisticated attackers capable of fingerprinting traditional static honeypots; multi-protocol attackers spanning SSH, Telnet, HTTP simultaneously.
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: Session interaction logs, attacker commands, LLM response quality scores, protocol connection statistics per protocol, returning connection patterns
+Protocols & Ports: SSH (22), Telnet (23), HTTP (80), FTP (21), SMTP (25), SNMP (161), IPP (631)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Open source code publicly released (GitLab: gitlab.gbar.dtu.dk/cyber-deception/ohra)
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Modular protocol services with independent logging; session memory and prompt control prevent LLM fingerprinting; "Revealing outputs" defined and monitored as a metric
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: No IRB; no ethics section; all attacker interaction data transmitted to third-party LLM API providers same third-party data processing concern as shelLM; no GDPR compliance or data processing agreement discussion.
+Relevance to Project: Highly relevant to HoneySat ethics framework: OHRA represents current state-of-the-art in multi-protocol LLM-based honeypot design. The 7-protocol unified LLM architecture directly addresses the scalability challenge HoneySat faces when emulating multiple satellite communication protocols. Third-party LLM API dependency creates a specific ethical pillar our framework must address.
+Deployment: Yes (real-world internet deployment)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Abstract: "We introduce OHRA, a modular, extensible LLM-driven honeypot that supports multiple protocols (SSH, Telnet, HTTP, FTP, SMTP, SNMP, IPP) and can integrate different LLM providers." Explicitly proposes and evaluates a new multi-protocol LLM-based honeypot as primary contribution.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Abstract: "SSH, Telnet, and HTTP are fully interactive, while FTP, SMTP, IPP, and SNMP are currently implemented in partial form." Three protocols offer full LLM-generated interactive sessions; four are partial. Sits above scripted low-interaction but below full OS access - Medium.
+
+[THREAT MODEL]
+Value: Automated attackers sending malware commands; sophisticated attackers capable of fingerprinting traditional static honeypots; multi-protocol attackers spanning SSH, Telnet, HTTP simultaneously.
+Evidence: Abstract: "We evaluate OHRA against Cowrie and a recent LLM-based honeypot using curated malware commands and a real-world Internet deployment." "OHRA is among the first honeypots to demonstrate a unified LLM-based architecture across several protocols."
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No mention of IRB, ethics committee, or institutional approval.
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Real-world internet deployment faces real attackers without consent. Controlled evaluation uses pre-defined attacker command sets (implicit researcher awareness but no formal consent from research participants described).
+
+[DATA TYPES COLLECTED]
+Value: Session interaction logs, attacker commands, LLM response quality scores, protocol connection statistics per protocol, returning connection patterns
+Evidence: Table 3: "Insights from real-world deployment across seven protocols" including unique and returning connections. LLM response quality evaluated via combined realism and latency metrics.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), Telnet (23), HTTP (80), FTP (21), SMTP (25), SNMP (161), IPP (631)
+Evidence: Protocol selection based on nmap-services file filtered by open-frequency ≥0.05 covers the most commonly internet-exposed services. Seven protocols supported.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Real-world deployment logs attacker IPs and protocol interaction data. No personal user data beyond security-relevant attacker metadata. Low sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No data minimization discussed.
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: No retention policy mentioned.
+
+[DATA SHARING]
+Value: Open source code publicly released (GitLab: gitlab.gbar.dtu.dk/cyber-deception/ohra)
+Evidence: Section 1 (Contributions): "Open source code for both the honeypot itself as well as all our experimental setup." Footnote 2 gives the link: https://gitlab.gbar.dtu.dk/cyber-deception/ohra
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: No legal framework discussed despite real-world internet deployment and routing attacker interaction data through external LLM API providers.
+
+[CONTAINMENT & HARM]
+Value: Modular protocol services with independent logging; session memory and prompt control prevent LLM fingerprinting; "Revealing outputs" defined and monitored as a metric
+Evidence: Paper defines: "Revealing outputs are defined as honeypot responses that directly exposed the use of an LLM." Active countermeasures against fingerprinting are designed in. Each protocol service runs independently with isolated logging.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: No ethical discussion. Deception framed entirely as a technical goal: "generate realistic, context-aware responses with less configuration effort."
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No ethical guidelines, responsible disclosure, or dual-use discussion.
+
+[ETHICAL GAPS]
+Value: No IRB; no ethics section; all attacker interaction data transmitted to third-party LLM API providers same third-party data processing concern as shelLM; no GDPR compliance or data processing agreement discussion.
+Evidence: The configurable LLM backend ("can integrate different LLM providers") means all attacker commands and session data are transmitted to whichever external LLM API the operator selects. No data processing agreement, privacy policy, or GDPR compliance discussion is included despite this constituting third-party processing of security-sensitive interaction data from real internet attackers.
+
+[RELEVANCE TO PROJECT]
+Value: Highly relevant to HoneySat ethics framework: OHRA represents current state-of-the-art in multi-protocol LLM-based honeypot design. The 7-protocol unified LLM architecture directly addresses the scalability challenge HoneySat faces when emulating multiple satellite communication protocols. Third-party LLM API dependency creates a specific ethical pillar our framework must address.
+Evidence: OHRA's configurable multi-protocol architecture (7 protocols in one framework) and LLM-based response generation are the most technically advanced published approaches applicable to HoneySat. The absence of any governance for LLM provider selection and data processing directly motivates a dedicated "AI-honeypot governance" section in our ethics framework.
+
+[DEPLOYMENT]
+Value: Yes (real-world internet deployment)
+Evidence: Abstract: "We evaluate OHRA against Cowrie and a recent LLM-based honeypot using curated malware commands and a real-world Internet deployment." Table 3 confirms real deployment data across 7 protocols.
+
+Section 5 (Conclusion): "Through evaluations using malware commands and a four-week real-world deployment, OHRA demonstrated its ability to convincingly simulate SSH, Telnet, and HTTP interactions." Table 3 reports per-protocol connection insights across all seven protocols.

@@ -1,0 +1,102 @@
+ENTRY 196 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: ssh-auth-logger
+LINK: https://github.com/JustinAzoff/ssh-auth-logger
+PLATFORM: GitHub
+STARS: 27
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; low/zero interaction SSH authentication logging honeypot in Go.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated SSH brute-force bots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SSH usernames, passwords
+Protocols & Ports: SSH (22)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal credential logger.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low/zero-interaction SSH authentication logging honeypot in Go.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Logs only SSH authentication attempts; minimal interaction beyond credential capture.
+
+[THREAT MODEL]
+Value: Automated SSH brute-force bots.
+Evidence: README describes zero-interaction auth logging.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SSH usernames, passwords
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential metadata only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal credential logger.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

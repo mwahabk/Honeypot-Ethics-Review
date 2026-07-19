@@ -1,0 +1,102 @@
+ENTRY 054 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HellPot
+LINK: https://github.com/yunginnanet/HellPot
+PLATFORM: GitHub
+STARS: 1.1k
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with config/usage details; honeypot targeting bots/crawlers.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated web crawlers, content scrapers, vulnerability scanners.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Bot IP addresses, User-Agent strings, HTTP request paths
+Protocols & Ports: HTTP (80, 8080 or configured)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; tarpit creates denial-of-service for connecting bots active harm dimension not discussed.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: HTTP honeypot/tarpit serving infinitely large responses to trap bots.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Serves endless HTTP responses to slow down or crash bots; logs crawler IPs.
+
+[THREAT MODEL]
+Value: Automated web crawlers, content scrapers, vulnerability scanners.
+Evidence: README describes tarpit mechanism.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Bot IP addresses, User-Agent strings, HTTP request paths
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80, 8080 or configured)
+Evidence: README documents port configuration.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Bot IP addresses and request metadata.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; tarpit creates denial-of-service for connecting bots active harm dimension not discussed.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

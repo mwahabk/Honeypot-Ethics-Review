@@ -1,0 +1,102 @@
+ENTRY 129 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Log4Pot
+LINK: https://github.com/thomaspatzke/Log4Pot
+PLATFORM: GitHub
+STARS: 93
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with setup and usage; Log4Shell exploit detection honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers exploiting Log4Shell RCE vulnerability across all internet-facing services.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, JNDI injection payloads, callback server addresses, exploit chains
+Protocols & Ports: HTTP (80, 8080, 443 and others)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Callback infrastructure (attacker C2 addresses) exposed
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; captures attacker infrastructure data usable for counter-operations dual-use not addressed.
+Relevance to Project: Moderate relevance; Log4Shell honeypot demonstrates CVE-specific rapid deployment applicable to HoneySat emergency response.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot specifically detecting Log4Shell (CVE-2021-44228) JNDI injection exploitation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Logs JNDI injection payloads in HTTP headers; detects Log4j exploitation pattern.
+
+[THREAT MODEL]
+Value: Attackers exploiting Log4Shell RCE vulnerability across all internet-facing services.
+Evidence: README describes Log4Shell detection and JNDI payload logging.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, JNDI injection payloads, callback server addresses, exploit chains
+Evidence: README describes capturing attacker callback infrastructure.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80, 8080, 443 and others)
+Evidence: Multiple ports for JNDI injection in headers.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: JNDI payloads reveal attacker infrastructure (callback servers); medium sensitivity for threat intelligence.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: Callback infrastructure (attacker C2 addresses) exposed
+Evidence: README describes capturing attacker callback servers.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; captures attacker infrastructure data usable for counter-operations dual-use not addressed.
+Evidence: Attacker infrastructure captured without responsible disclosure governance.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Log4Shell honeypot demonstrates CVE-specific rapid deployment applicable to HoneySat emergency response.
+Evidence: Rapid CVE-specific honeypot deployment model relevant to HoneySat threat response posture.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

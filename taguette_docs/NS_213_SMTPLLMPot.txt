@@ -1,0 +1,102 @@
+ENTRY 213 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SMTPLLMPot
+LINK: https://github.com/referefref/SMTPLLMPot
+PLATFORM: GitHub
+STARS: 7
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; super simple SMTP honeypot using GPT-3.5.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: SMTP relay scanners and spam bots; aims to fool more sophisticated email attackers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SMTP commands, email interaction data processed by GPT-3.5
+Protocols & Ports: SMTP (25)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; all interaction data sent to OpenAI API.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: LLM API third-party data processing without governance; same concern as galah/beelzebub; no IRB.
+Relevance to Project: Moderate relevance; LLM SMTP honeypot part of the LLM honeypot cluster (galah, shelLM, OHRA, beelzebub, SMTPLLMPot) with shared third-party API governance gap.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SMTP honeypot using GPT-3.5 to generate realistic email server responses.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: LLM-powered SMTP honeypot generating dynamic email server responses via GPT-3.5.
+
+[THREAT MODEL]
+Value: SMTP relay scanners and spam bots; aims to fool more sophisticated email attackers.
+Evidence: README describes GPT-3.5 integration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SMTP commands, email interaction data processed by GPT-3.5
+Evidence: All SMTP interaction sent to OpenAI GPT-3.5 API.
+
+[PROTOCOLS & PORTS]
+Value: SMTP (25)
+Evidence: Standard SMTP port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: All attacker SMTP interaction sent to OpenAI third-party API; data governance not discussed.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; all interaction data sent to OpenAI API.
+Evidence: GPT-3.5 integration means all SMTP attacker data processed by external cloud API without governance.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: LLM API third-party data processing without governance; same concern as galah/beelzebub; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; LLM SMTP honeypot part of the LLM honeypot cluster (galah, shelLM, OHRA, beelzebub, SMTPLLMPot) with shared third-party API governance gap.
+Evidence: Reinforces the LLM honeypot ethics pattern of third-party API data processing without governance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

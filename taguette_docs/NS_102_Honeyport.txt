@@ -1,0 +1,102 @@
+ENTRY 102 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeyport
+LINK: https://github.com/securitygeneration/Honeyport
+PLATFORM: GitHub
+STARS: 47
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; simple honeyport in Bash/Python.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated port scanners and attackers probing unused network ports.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses (added to iptables blacklist)
+Protocols & Ports: Configurable ports
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Automatically blacklists IPs  active response with no false-positive discussion; no IRB.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Simple Bash-based honeyport script blocking IPs that connect to watched ports via iptables.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Listens on configured ports; automatically blacklists connecting IPs via iptables.
+
+[THREAT MODEL]
+Value: Automated port scanners and attackers probing unused network ports.
+Evidence: Not documented.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses (added to iptables blacklist)
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Configurable ports
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IP address logs only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Automatically blacklists IPs  active response with no false-positive discussion; no IRB.
+Evidence: Automated blocking may cause collateral blocking of legitimate scanning tools.
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 097 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeypot-ftp
+LINK: https://github.com/alexbredo/honeypot-ftp
+PLATFORM: GitHub
+STARS: 34
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; FTP honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated scanners brute-forcing FTP credentials or probing for anonymous access.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, usernames, passwords, FTP commands
+Protocols & Ports: FTP (21)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Simple FTP honeypot logging credential and file access attempts.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates FTP server; logs credentials and command attempts.
+
+[THREAT MODEL]
+Value: Automated scanners brute-forcing FTP credentials or probing for anonymous access.
+Evidence: Not documented.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, usernames, passwords, FTP commands
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: FTP (21)
+Evidence: Standard FTP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: FTP credential and command logs; no real file system access.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

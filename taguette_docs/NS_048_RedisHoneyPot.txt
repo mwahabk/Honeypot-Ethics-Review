@@ -1,0 +1,102 @@
+ENTRY 048 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: RedisHoneyPot
+LINK: https://github.com/cypwnpwnsocute/RedisHoneyPot
+PLATFORM: GitHub
+STARS: 25
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only with brief usage; Redis protocol honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated scanners targeting exposed Redis instances.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, Redis commands issued
+Protocols & Ports: Redis (6379)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; no ethics section.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Redis honeypot logging unauthorized access attempts.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates Redis protocol; logs commands and connection attempts.
+
+[THREAT MODEL]
+Value: Automated scanners targeting exposed Redis instances.
+Evidence: Not documented.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, Redis commands issued
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Redis (6379)
+Evidence: Standard Redis port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Redis command logs from attackers.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; no ethics section.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

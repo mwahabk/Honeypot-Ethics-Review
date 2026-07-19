@@ -1,0 +1,197 @@
+ENTRY 003 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: SweetCam: an IP Camera Honeypot
+LINK: https://dl.acm.org/doi/abs/10.1145/3605758.3623495
+
+─── ASSESSED VALUES ───
+Domain: IoT
+Interaction Level: Medium
+Threat Model: IoT malware and attackers
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: Malware behavior, attack traffic:
+
+Attacker IPs
+Command logs
+Malware download attempts
+Protocol logs
+Protocols & Ports: HTTP (80), RTSP (554), SSH (22)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Emulation and isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit (safe emulation)
+Ethical Gaps: No explicit ethics or privacy discussion
+Relevance to Project: Demonstrates containment-based ethical justification
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IoT
+Evidence: Abstract:
+
+“The utilization of the Internet of Things (IoT) as an attack surface is nowadays a fact.”
+
+Paper focuses on:
+
+“IP cameras”
+“IoT devices”
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Abstract:
+
+“we propose an open-source medium interaction IP camera honeypot”
+
+[THREAT MODEL]
+Value: IoT malware and attackers
+Evidence: Introduction:
+“IP cameras face numerous threats…”
+Section 4.2:
+“identify common Internet scanners (e.g., Shodan)”
+
+SSH section 3.3:
+“attackers target SSH to control the IP camera for vicious usages, like being part of the botnet”
+“a botnet named RapperBot…”
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No section in the paper mentions IRB, ethics committee, or institutional approval.
+
+The paper is entirely technical.
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Section 4.1:
+
+“ports 554 (RTSP), 80 (HTTP), and 22 (SSH) are open and exposed to the Internet.”
+
+No section discusses consent or notification.
+
+[DATA TYPES COLLECTED]
+Value: Malware behavior, attack traffic:
+
+Attacker IPs
+Command logs
+Malware download attempts
+Protocol logs
+Evidence: Section 3:
+“logging system for recording the traces of attackers”
+
+Section 4.1:
+“All the logs are stored…”
+
+
+Abstract:
+“5,924 unique IPs”
+
+Section 4.2:
+“131,656 entries recorded in the commands”
+“7,133 entries contain curl commands”
+“download a distributed denial-of-service (DDoS) attack script”
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80), RTSP (554), SSH (22)
+Evidence: Section 4.1: "To mimic the behavior of a
+real IoT camera, ports 554 (RTSP), 80 (HTTP), and 22 (SSH)"
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: “5,924 unique IPs”
+“131,656 entries recorded in the commands”
+
+No personal benign user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No section discusses data minimization, filtering, or anonymization of logs.
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Section 4.1:
+“All the logs are stored…”
+
+But nowhere mentions:
+
+Retention period
+
+Deletion timeline
+
+Storage policy
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: (Page 5):
+They mention malware downloads:
+“download a distributed denial-of-service (DDoS) attack script”
+
+But they do NOT say:
+They publish malware
+They share dataset
+They release traces
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Section 4.1:
+They deployed in:
+“Brazil, South Africa, and Japan”
+
+But nowhere mention:
+GDPR
+Legal compliance
+Cross-border issues
+
+[CONTAINMENT & HARM]
+Value: Emulation and isolation
+Evidence: Section 3.4:
+“Each of the services will run as a separate Docker Container.”
+Page 6:
+“it is better to replay synthetic or fake videos instead.”
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Conclusion:
+"we aim to extend SweetCam with a more heterogeneous user interface to provide better feedback for the adversaries
+and increase the deception."
+
+No ethical framing of deception.
+Only technical improvement.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit (safe emulation)
+Evidence: Section 4.3 notes that SweetCam “avoids the real device cost by using fake video and also fulfills the requirements for attacker interaction.”
+
+[ETHICAL GAPS]
+Value: No explicit ethics or privacy discussion
+Evidence: Abstract:
+“5,924 unique IPs”
+Page 5:
+“131,656 entries recorded in the commands”
+“download a DDoS attack script”
+
+There is:
+No privacy section
+No data governance
+No ethical discussion
+
+[RELEVANCE TO PROJECT]
+Value: Demonstrates containment-based ethical justification
+Evidence: Page 6:
+“it is better to replay synthetic or fake videos instead.”
+Section 3.4:
+“Each of the services will run as a separate Docker Container.”
+
+They explicitly avoid real device privacy exposure.
+They choose fake media to reduce harm.
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Section 4.1:
+
+“ports 554 (RTSP), 80 (HTTP), and 22 (SSH) are open and exposed to the Internet.”
+
+“deployed on the Azure cloud in Brazil, South Africa, and Japan”

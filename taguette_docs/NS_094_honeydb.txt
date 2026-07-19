@@ -1,0 +1,101 @@
+ENTRY 094 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeydb
+LINK: https://honeydb.io/honeydb_agents
+PLATFORM: Website
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: External website with documentation; no GitHub README.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic internet attackers captured by distributed sensor network.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, connection metadata, protocol data from distributed sensors
+Protocols & Ports: Multiple protocols depending on sensor configuration
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Data shared via public API
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Aggregates attacker IP data via public API with no documented anonymization or governance.
+Relevance to Project: Moderate relevance; distributed sensor aggregation with public sharing has direct HoneySat parallels.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Threat intelligence platform collecting data from distributed honeypot sensor network.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Agents collect network traffic from deployed sensors; data aggregated centrally.
+
+[THREAT MODEL]
+Value: Generic internet attackers captured by distributed sensor network.
+Evidence: External website documents sensor deployment and API access.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, connection metadata, protocol data from distributed sensors
+Evidence: External website describes aggregated threat intelligence data.
+
+[PROTOCOLS & PORTS]
+Value: Multiple protocols depending on sensor configuration
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Aggregated from many sensors; attacker IP data pooled without documented anonymization.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: Data shared via public API
+Evidence: HoneyDB provides public threat intelligence API access.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Aggregates attacker IP data via public API with no documented anonymization or governance.
+Evidence: Public IP data sharing from distributed honeypots without documented governance.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; distributed sensor aggregation with public sharing has direct HoneySat parallels.
+Evidence: Data aggregation and sharing model relevant to HoneySat threat intelligence pipeline.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

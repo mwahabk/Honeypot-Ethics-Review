@@ -1,0 +1,101 @@
+ENTRY 228 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Artemnesia VoIP
+LINK: http://artemisa.sourceforge.net
+PLATFORM: Website
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /doc folder (HTML docs) + external SourceForge documentation site; VoIP/SIP honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: VoIP attackers targeting SIP infrastructure for toll fraud, eavesdropping, or denial of service.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SIP protocol messages, INVITE/REGISTER requests, VoIP call attempts
+Protocols & Ports: SIP (5060 UDP/TCP)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; VoIP/SIP honeypot with no ethics documentation.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: VoIP/SIP honeypot with README, /doc folder, and external SourceForge documentation site.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Low-interaction SIP honeypot logging VoIP attack attempts; documented in /doc folder and external site.
+
+[THREAT MODEL]
+Value: VoIP attackers targeting SIP infrastructure for toll fraud, eavesdropping, or denial of service.
+Evidence: README + /doc folder HTML docs + external SourceForge documentation site confirmed.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SIP protocol messages, INVITE/REGISTER requests, VoIP call attempts
+Evidence: Not documented; SIP protocol interaction logs.
+
+[PROTOCOLS & PORTS]
+Value: SIP (5060 UDP/TCP)
+Evidence: Standard SIP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SIP protocol metadata; no real voice communication captured.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; VoIP/SIP honeypot with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

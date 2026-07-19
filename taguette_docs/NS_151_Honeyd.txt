@@ -1,0 +1,102 @@
+ENTRY 151 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeyd
+LINK: https://github.com/DataSoft/Honeyd
+PLATFORM: GitHub
+STARS: 13
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + external honeyd.org website; virtual honeypots daemon creating virtual hosts on a network.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Network-level attackers and automated scanners targeting entire subnet ranges.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, network connection logs to virtual hosts, protocol interactions
+Protocols & Ports: Configurable (all protocols/ports per virtual host)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; foundational honeypot with no governance documentation despite widespread use.
+Relevance to Project: Moderate relevance; Honeyd virtual host architecture is the foundational design for many modern honeypots including HoneySat analogues.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Virtual honeypots daemon creating multiple virtual hosts on a network; foundational honeypot framework.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Creates virtual network hosts with configurable services; README and external honeyd.org document usage.
+
+[THREAT MODEL]
+Value: Network-level attackers and automated scanners targeting entire subnet ranges.
+Evidence: README and external honeyd.org website describe virtual host creation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, network connection logs to virtual hosts, protocol interactions
+Evidence: README and honeyd.org document network-level data capture.
+
+[PROTOCOLS & PORTS]
+Value: Configurable (all protocols/ports per virtual host)
+Evidence: Virtual hosts on any configured IP/port range.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Network connection metadata; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; foundational honeypot with no governance documentation despite widespread use.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Honeyd virtual host architecture is the foundational design for many modern honeypots including HoneySat analogues.
+Evidence: Honeyd virtual host concept is the architectural basis for space asset honeypot emulation design.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

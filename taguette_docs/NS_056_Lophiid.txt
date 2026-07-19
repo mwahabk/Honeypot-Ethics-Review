@@ -1,0 +1,102 @@
+ENTRY 056 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Lophiid
+LINK: https://github.com/mrheinen/lophiid/
+PLATFORM: GitHub
+STARS: 27
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /docs folder present; distributed web application honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Automated web vulnerability scanners, exploit kits, and targeted web attackers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, HTTP requests, exploit payloads, malware download URLs
+Protocols & Ports: HTTP/HTTPS (80, 443)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; distributed architecture increases data aggregation without governance.
+Relevance to Project: Low relevance; distributed architecture methodology relevant to HoneySat multi-node design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Distributed web honeypot with backend infrastructure for collecting and analyzing web attacks.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Supports distributed deployment with centralized logging; /docs folder describes architecture.
+
+[THREAT MODEL]
+Value: Automated web vulnerability scanners, exploit kits, and targeted web attackers.
+Evidence: README and /docs folder describe distributed architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, HTTP requests, exploit payloads, malware download URLs
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Attack payloads and IP metadata; no real user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; distributed architecture increases data aggregation without governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance; distributed architecture methodology relevant to HoneySat multi-node design.
+Evidence: Distributed deployment model applicable to space-ground honeypot networks.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

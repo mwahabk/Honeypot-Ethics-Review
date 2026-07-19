@@ -1,0 +1,102 @@
+ENTRY 146 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Amun
+LINK: zeroq/amun: Amun Honeypot · GitHub
+PLATFORM: GitHub
+STARS: 63
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + external SourceForge site; first Python low-interaction honeypot following Nepenthes concepts.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated malware and worms scanning for vulnerable services.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Malware binaries captured, attacker IPs, exploit payloads, shellcode
+Protocols & Ports: SMB (445), HTTP (80), FTP (21), and others
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no malware safe handling guidance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; captures live malware without safe handling documentation.
+Relevance to Project: Low relevance; early Python honeypot; historical interest only.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: First Python low-interaction honeypot following Nepenthes concepts; captures malware via service vulnerability emulation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Low-interaction Python honeypot emulating vulnerable services to attract and capture malware.
+
+[THREAT MODEL]
+Value: Automated malware and worms scanning for vulnerable services.
+Evidence: README and external SourceForge site describe Nepenthes-inspired design.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Malware binaries captured, attacker IPs, exploit payloads, shellcode
+Evidence: README describes malware capture functionality.
+
+[PROTOCOLS & PORTS]
+Value: SMB (445), HTTP (80), FTP (21), and others
+Evidence: Multiple protocol emulation similar to Nepenthes.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captured malware binaries are live malicious code; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no malware safe handling guidance.
+Evidence: Malware capture without documented safe storage or disposal.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; captures live malware without safe handling documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance; early Python honeypot; historical interest only.
+Evidence: No direct HoneySat relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

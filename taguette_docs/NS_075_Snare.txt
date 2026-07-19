@@ -1,0 +1,102 @@
+ENTRY 075 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Snare
+LINK: https://github.com/mushorg/snare
+PLATFORM: GitHub
+STARS: 479
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder; links to readthedocs external docs. Successor to Glastopf.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Advanced web attackers probing for SQL injection, XSS, LFI/RFI in real-looking applications.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, full HTTP interaction logs, attack payloads, SQL injection and file access attempts
+Protocols & Ports: HTTP (80, 8080)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; website cloning raises copyright and terms-of-service questions not addressed.
+Relevance to Project: Moderate relevance; Snare/Tanner web deception architecture; website cloning ethics applicable to HoneySat.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Web application honeypot cloning real websites as deceptive honeypots; Honeynet Project.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Clones real web applications for realistic honeypots; interactions processed by Tanner backend.
+
+[THREAT MODEL]
+Value: Advanced web attackers probing for SQL injection, XSS, LFI/RFI in real-looking applications.
+Evidence: Extensive README and readthedocs describe attack classification and Tanner integration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, full HTTP interaction logs, attack payloads, SQL injection and file access attempts
+Evidence: README and docs describe capturing full attacker interaction for Tanner analysis.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80, 8080)
+Evidence: Documented in README.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Full attack interaction logs; no real web application data exposed.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; website cloning raises copyright and terms-of-service questions not addressed.
+Evidence: Cloning real websites as honeypots without owner consent is a legal concern not discussed.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Snare/Tanner web deception architecture; website cloning ethics applicable to HoneySat.
+Evidence: Website cloning parallels satellite system emulation for honeypot purposes.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

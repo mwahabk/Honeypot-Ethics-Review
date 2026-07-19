@@ -1,0 +1,113 @@
+ENTRY 011 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyICS: A High-interaction Physics-aware Honeynet for Industrial Control Systems
+LINK: https://dl.acm.org/doi/10.1145/3600160.3604984
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: High
+Threat Model: Advanced ICS attackers
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: Traffic, system calls, and physical state data
+Protocols & Ports: Modbus (502), HTTP (9090), DNP3
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Physics-aware simulation and isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Ethics-by-containment
+Relevance to Project: Physics-aware Digital Twin example
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Title: "HoneyICS: A High-interaction Physics-aware Honeynet for Industrial Control Systems"
+. Section 1: "They represent the backbone of Critical Infrastructures... such as electric power distribution, nuclear power generation, and water supply"
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Abstract: "We propose HoneyICS, a high-interaction, physics-aware, scalable, and extensible honeynet for ICSs"
+
+[THREAT MODEL]
+Value: Advanced ICS attackers
+Evidence: Section 3.3 (Attacker model): "Once she has gained access, the attacker may fingerprint the target PLCs... attempt to read and write PLC memory registers and upload and execute a malicious PLC user program"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Pages 1–10: A review of the entire paper
+ reveals no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol."
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Section 5.2: Data is collected from "external actors" on the Internet without notification or consent
+
+[DATA TYPES COLLECTED]
+Value: Traffic, system calls, and physical state data
+Evidence: Section 3.1: It collects "logs of network interactions" and "logs of system events capturing how attackers interact with the OS"
+. Section 4.2.2: Probes collect "network traffic, system calls... and any changes to the filesystem"
+
+[PROTOCOLS & PORTS]
+Value: Modbus (502), HTTP (9090), DNP3
+Evidence: Section 2: "TCP/IP coordinators and workers listen and receive Modbus data via port 502"
+. Section 4.2.2: "ScadaBR’s web interface is available on port 9090"
+. Section 7: "our framework can also support the industrial protocol DNP3"
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section 3.3: The system allows for the capture of "PLC memory registers" and the "upload and execute a malicious PLC user program"
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section 3.1: The paper prioritizes the opposite, aiming to "collect a rich set of data about the behavior exhibited by attackers"
+. There is no mention of the minimization principle.
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Section 4.2.5: "All information gathered by the probes is stored in an Elastichsearch [8] data storage for further processing."
+No section defines a deletion timeline or storage limit
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: No statement anywhere in the paper (Sections 1–7, Discussion, Conclusion, Acknowledgments) regarding public release of the HoneyICS implementation, source code, or the raw attack traces/malware collected during the three-month GARR deployment. The paper only references pre-existing third-party open-source tools used in the implementation (Honeyd, OpenPLC, ScadaBR).
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Section 5: The system was exposed on an "Italian Academic network"
+, but the paper contains no analysis of legal jurisdiction, GDPR, or regulatory compliance
+
+[CONTAINMENT & HARM]
+Value: Physics-aware simulation and isolation
+Evidence: Section 3.1: "physics-awareness is a crucial ingredient
+to realize convincing and deceiving ICS honeypots; this means
+the attacker should receive consistent feed" to avoid real damage
+. Section 4.2.4: Uses proxies to isolate components and "avoid lateral movements"
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Section 3.1: Framing is purely functional, stating interaction levels are "essential to deceive attackers"
+. Section 4.2.1: "To deceive an attacker, network requests should be routed to the proper honeypot."
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section 7 (Discussion): "To address ethical concerns, the egress traffic was blocked on all ports... the scripts on the honeypots do not allow reaching cross-domain destinations"
+
+[ETHICAL GAPS]
+Value: Ethics-by-containment
+Evidence: No explicit ethical framework or IRB discussion; Ethics addressed indirectly via safety and containment.
+The paper relies on technical fixes (like egress blocking) rather than normative reasoning. (section 7)
+
+[RELEVANCE TO PROJECT]
+Value: Physics-aware Digital Twin example
+Evidence: Section 1: It is a "physics-aware... honeynet"
+. Section 3.1: It creates a realistic environment where attackers receive "consistent feedback from a (possibly simulated) manipulated physical process," effectively serving as a high-fidelity Digital Twin
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Section 1 (Abstract): "We deployed our honeynet on the Internet and conducted experiments"
+. Section 5.2: "Our honeynet was exposed to the Internet for a period of three months"

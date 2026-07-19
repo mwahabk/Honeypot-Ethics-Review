@@ -1,0 +1,102 @@
+ENTRY 132 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: NOVA
+LINK: https://github.com/DataSoft/Nova
+PLATFORM: GitHub
+STARS: 81
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + /docs folder + external documentation; full honeyd-based honeypot suite.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Internal network attackers performing lateral movement and network reconnaissance.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, network reconnaissance data, connection attempts to decoy hosts
+Protocols & Ports: Multiple protocols and ports (internal network decoy hosts)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; internal network deployment without user/employee notification monitors internal traffic without disclosure.
+Relevance to Project: Moderate relevance; internal network decoy architecture applicable to HoneySat ground segment deception design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: NOVA creates decoy hosts in internal networks for intrusion detection.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Deploys multiple fake hosts with realistic traffic simulation; medium interaction for network deception.
+
+[THREAT MODEL]
+Value: Internal network attackers performing lateral movement and network reconnaissance.
+Evidence: README and /docs folder describe decoy host architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, network reconnaissance data, connection attempts to decoy hosts
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Multiple protocols and ports (internal network decoy hosts)
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Internal network reconnaissance data; medium sensitivity given enterprise deployment context.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; internal network deployment without user/employee notification monitors internal traffic without disclosure.
+Evidence: NOVA in enterprise networks may monitor employee traffic without notification.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; internal network decoy architecture applicable to HoneySat ground segment deception design.
+Evidence: Internal network deception applicable to space operations ground segment security.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

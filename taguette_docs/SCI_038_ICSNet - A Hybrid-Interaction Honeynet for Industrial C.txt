@@ -1,0 +1,99 @@
+ENTRY 038 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: ICSNet: A Hybrid-Interaction Honeynet for Industrial Control Systems
+LINK: https://dl.acm.org/doi/10.1145/3690134.3694813
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Hybrid
+Threat Model: ICS attackers performing recon (Nmap/Shodan), then Modbus commands to damage physical process
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker interaction logs (design goal only - no real data collected)
+Protocols & Ports: Modbus TCP (502), HTTP (80), IEC-104 (2404), SNMP (161), ENIP/EtherNet-IP (2222)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Open source (anonymized 4open.science link)
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Physical process isolated from attacker via network topology; Honeyd/Mininet virtual isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: Structural Ethical Vacuum (lab-only)
+Relevance to Project: Highly relevant - HoneyPLC lineage, physical-process fidelity
+Deployment: No (Lab/Experimental only)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract: "a hybrid-interaction honeynet that improves on the state of the art of ICS honeynets"; targets "electrical grid and water treatment plants"
+
+[INTERACTION LEVEL]
+Value: Hybrid
+Evidence: Section 2.1/3.3: "To the best of our knowledge, ICSNet is the first hybrid-interaction honeynet in the literature." Combines low-interaction (Honeyd scripts) and high-interaction (physical process sim)
+
+[THREAT MODEL]
+Value: ICS attackers performing recon (Nmap/Shodan), then Modbus commands to damage physical process
+Evidence: Section 3.1: "the attacker starts a reconnaissance using port scan tools such as Nmap... send a malicious Modbus command to the PLC to change one of the registers. This would damage the industrial control system operation."
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No mention of IRB, ethics committee, or approval anywhere
+
+[CONSENT MODEL]
+Value: None
+Evidence: No real attackers - all evaluation is researcher-conducted (Nmap/Nikto scans in isolated 2-host lab). No deployment against real attackers
+
+[DATA TYPES COLLECTED]
+Value: Attacker interaction logs (design goal only - no real data collected)
+Evidence: Section 3.1: "We design ICSNet to log all the attacker's interactions." But evaluation used only researcher-run recon tools, no real attacker data
+
+[PROTOCOLS & PORTS]
+Value: Modbus TCP (502), HTTP (80), IEC-104 (2404), SNMP (161), ENIP/EtherNet-IP (2222)
+Evidence: Section 3.6: "we... supported the following five ICS network protocols: Modbus TCP, HTTP, IEC-104, SNMP, and ENIP"
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Section 4:
+Lab-only evaluation, no real attacker/production data. Two Ubuntu 20.04 hosts, no internet exposure
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: No mention
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: No mention
+
+[DATA SHARING]
+Value: Open source (anonymized 4open.science link)
+Evidence: Contribution 3: "we make our implementation open source... ICSNet is available online" → https://anonymous.4open.science/r/ics-virtual-testbed-766D
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: No legal/GDPR discussion
+
+[CONTAINMENT & HARM]
+Value: Physical process isolated from attacker via network topology; Honeyd/Mininet virtual isolation
+Evidence: Section 3.7: physical simulation node "isolated from any possible interaction from the attacker... to which the attacker has no direct access"
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Framed entirely around fingerprint fidelity/deceiving Nmap; no ethical discussion
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No researcher responsibility or dual-use discussion
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum (lab-only)
+Evidence: No IRB, consent, or legal discussion. However, no real-world exposure means low actual risk. Dual-use note: open-source ICS honeynet code with 12 real device fingerprints could help attackers fingerprint/evade - not acknowledged
+
+[RELEVANCE TO PROJECT]
+Value: Highly relevant - HoneyPLC lineage, physical-process fidelity
+Evidence: Same authors as HoneyPLC (paper 4). Advanced digital-twin-style physical simulation directly relevant to CPS/HoneySat framework. Section 4.4: "Factory I/O allows designers to create essentially digital twins"
+
+[DEPLOYMENT]
+Value: No (Lab/Experimental only)
+Evidence: Section 4: "Our environment includes two hosts running Ubuntu 20.04. The first host runs ICSNet, and the second host runs Nmap. Both hosts are connected to the [same] network without any router in between." No internet deployment

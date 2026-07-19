@@ -1,0 +1,102 @@
+ENTRY 231 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Kako
+LINK: https://github.com/darkarnium/kako
+PLATFORM: GitHub
+STARS: 29
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; IoT honeypot framework for embedded device vulnerabilities.
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Low
+Threat Model: IoT malware and automated scanners exploiting embedded device vulnerabilities.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, exploitation payloads, device interaction data
+Protocols & Ports: Device-dependent (IoT protocols)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; IoT embedded device honeypot with no ethics documentation.
+Relevance to Project: Moderate relevance; IoT embedded device honeypot ethics applicable to HoneySat CPS/IoT ethics pillar.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: IoT honeypot framework for embedded device vulnerability emulation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates embedded IoT device vulnerabilities; logs exploitation attempts.
+
+[THREAT MODEL]
+Value: IoT malware and automated scanners exploiting embedded device vulnerabilities.
+Evidence: README describes IoT embedded device honeypot framework.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, exploitation payloads, device interaction data
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Device-dependent (IoT protocols)
+Evidence: IoT-specific protocol ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IoT protocol interaction metadata.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; IoT embedded device honeypot with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; IoT embedded device honeypot ethics applicable to HoneySat CPS/IoT ethics pillar.
+Evidence: Embedded IoT device emulation ethics relevant to satellite subsystem honeypot design.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

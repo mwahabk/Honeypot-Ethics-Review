@@ -1,0 +1,101 @@
+ENTRY 206 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: DShield Web Honeypot Project
+LINK: https://sites.google.com/site/webhoneypotsite/
+PLATFORM: Not Found
+DOC LEVEL: None
+TOOL DESCRIPTION: None
+
+─── ASSESSED VALUES ───
+Domain: Other
+Interaction Level: Not available
+Threat Model: Not available
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Not available
+Protocols & Ports: Not available
+Data Sensitivity: Not available
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Not available
+Researcher Responsibility: Not documented
+Ethical Gaps: Repository not found; no ethics analysis possible.
+Relevance to Project: Not assessable; repository unavailable.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: Other
+Evidence: Repository/link not found; documentation not available.
+
+[INTERACTION LEVEL]
+Value: Not available
+Evidence: Not documented
+
+[THREAT MODEL]
+Value: Not available
+Evidence: Not documented
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Not available
+Evidence: Not documented
+
+[PROTOCOLS & PORTS]
+Value: Not available
+Evidence: Not documented
+
+[DATA SENSITIVITY]
+Value: Not available
+Evidence: Not documented
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Not available
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Repository not found; no ethics analysis possible.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Not assessable; repository unavailable.
+Evidence: Not assessable.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

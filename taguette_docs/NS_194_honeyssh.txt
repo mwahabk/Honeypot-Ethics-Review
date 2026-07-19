@@ -1,0 +1,102 @@
+ENTRY 194 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeyssh
+LINK: https://github.com/ppacher/honeyssh
+PLATFORM: GitHub
+STARS: 14
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; credential-dumping SSH honeypot with statistics HTTP API.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated SSH brute-force bots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SSH credentials exposed via HTTP API
+Protocols & Ports: SSH (22), HTTP (API port)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; HTTP API exposing credentials without access control documentation.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Exposes captured credentials via unsecured HTTP API; no IRB; credential data access control not documented.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Credential-dumping SSH honeypot with statistics HTTP API.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: SSH honeypot exposing captured credentials via an HTTP statistics API.
+
+[THREAT MODEL]
+Value: Automated SSH brute-force bots.
+Evidence: README describes credential capture and statistics API.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SSH credentials exposed via HTTP API
+Evidence: README describes HTTP API exposing captured statistics.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), HTTP (API port)
+Evidence: SSH honeypot with companion HTTP API.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captured credentials exposed via HTTP API — access control for API not documented; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; HTTP API exposing credentials without access control documentation.
+Evidence: Credentials exposed via HTTP API without documented authentication or access control.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Exposes captured credentials via unsecured HTTP API; no IRB; credential data access control not documented.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 144 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: T-Pot
+LINK: https://github.com/telekom-security/tpotce
+PLATFORM: GitHub
+STARS: 9.3k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README only but very extensive; all-in-one multi-honeypot platform by Telekom Security.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Internet-wide attackers across all protocols covered by bundled honeypots (SSH, HTTP, FTP, ICS, IoT, and more).
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Aggregated attacker IPs, credentials, payloads, and logs from 20+ honeypot types simultaneously
+Protocols & Ports: SSH (22), HTTP (80), FTP (21), Telnet (23), and 15+ more from bundled honeypots
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; large-scale data aggregation with no governance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; large-scale multi-honeypot aggregation without governance; Telekom Security origin with no public ethics documentation.
+Relevance to Project: HIGH relevance to HoneySat ethics: T-Pot demonstrates the largest-scale open-source honeypot deployment without any governance key case study for ethics framework scope and scale.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: All-in-one multi-honeypot platform by Telekom Security bundling 20+ honeypots with ELK stack visualization.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Deploys and manages 20+ low-interaction honeypots simultaneously; extensive README documents all bundled tools.
+
+[THREAT MODEL]
+Value: Internet-wide attackers across all protocols covered by bundled honeypots (SSH, HTTP, FTP, ICS, IoT, and more).
+Evidence: Extensive README documents all bundled honeypot types and ELK visualization setup.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Aggregated attacker IPs, credentials, payloads, and logs from 20+ honeypot types simultaneously
+Evidence: README describes comprehensive data collection across all bundled honeypots.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), HTTP (80), FTP (21), Telnet (23), and 15+ more from bundled honeypots
+Evidence: All ports of all 20+ bundled honeypots exposed simultaneously.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Large-scale aggregated data from 20+ honeypots; credentials, payloads, and malware captured at scale.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; large-scale data aggregation with no governance.
+Evidence: 20+ honeypots running simultaneously without any data governance framework.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; large-scale multi-honeypot aggregation without governance; Telekom Security origin with no public ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat ethics: T-Pot demonstrates the largest-scale open-source honeypot deployment without any governance key case study for ethics framework scope and scale.
+Evidence: Multi-honeypot platform aggregating data at scale without governance is a primary motivation for our framework.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

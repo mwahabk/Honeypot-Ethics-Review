@@ -1,0 +1,102 @@
+ENTRY 232 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: CanaryTokens
+LINK: https://github.com/thinkst/canarytokens
+PLATFORM: GitHub
+STARS: 2.1k
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + GitHub Wiki confirmed + live demo at canarytokens.org.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers accessing documents, URLs, or credentials planted as honeytokens in target environments.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, browser fingerprints, token access timestamps, geographic location data
+Protocols & Ports: HTTP/HTTPS (80, 443 token callbacks)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Access data sent to canarytokens.org cloud service
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Token access data sent to Thinkst cloud without documented privacy policy for token-triggered attacker data; no IRB.
+Relevance to Project: HIGH relevance to HoneySat ethics: CanaryTokens is the most widely used honeytoken platform its cloud data submission model and absence of privacy governance are key case studies for the honeytoken ethics pillar.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeytoken platform creating and tracking deceptive tokens that alert when accessed; Thinkst.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Creates various honeytoken types (URLs, emails, documents) that log access without real interaction.
+
+[THREAT MODEL]
+Value: Attackers accessing documents, URLs, or credentials planted as honeytokens in target environments.
+Evidence: README + GitHub Wiki + live demo at canarytokens.org confirmed.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, browser fingerprints, token access timestamps, geographic location data
+Evidence: canartokens.org and Wiki describe access data captured when tokens are triggered.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443 token callbacks)
+Evidence: HTTPS callbacks to canarytokens.org server.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: IP addresses, browser fingerprints, and geographic data captured on token access; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: Access data sent to canarytokens.org cloud service
+Evidence: All token trigger data sent to Thinkst canarytokens.org cloud infrastructure.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Token access data sent to Thinkst cloud without documented privacy policy for token-triggered attacker data; no IRB.
+Evidence: Third-party cloud data processing without documented governance.
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat ethics: CanaryTokens is the most widely used honeytoken platform its cloud data submission model and absence of privacy governance are key case studies for the honeytoken ethics pillar.
+Evidence: CanaryTokens cloud-based honeytoken architecture directly applicable to HoneySat honeytoken deployment ethics.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

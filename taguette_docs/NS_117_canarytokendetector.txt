@@ -1,0 +1,102 @@
+ENTRY 117 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: canarytokendetector
+LINK: https://github.com/referefref/canarytokendetector
+PLATFORM: GitHub
+STARS: 26
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with usage; tool for detecting Thinkst CanaryTokens.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Not applicable
+Threat Model: Security researchers and red team operators testing for CanaryToken presence.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Scan targets, CanaryToken indicators found
+Protocols & Ports: HTTP/HTTPS (token beacon channels)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Anti-honeypot tool dual-use concern (defenders detect honeytokens; attackers evade them); no IRB.
+Relevance to Project: Moderate relevance; anti-honeypot detection directly relevant to HoneySat evasion resistance design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Tool for detecting CanaryTokens deployed in systems — anti-honeypot detection utility.
+
+[INTERACTION LEVEL]
+Value: Not applicable
+Evidence: Honeypot detection tool; not a honeypot itself.
+
+[THREAT MODEL]
+Value: Security researchers and red team operators testing for CanaryToken presence.
+Evidence: README describes CanaryToken detection methodology.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Scan targets, CanaryToken indicators found
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (token beacon channels)
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Detection metadata; no attacker data collected.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Anti-honeypot tool dual-use concern (defenders detect honeytokens; attackers evade them); no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; anti-honeypot detection directly relevant to HoneySat evasion resistance design.
+Evidence: Honeypot detection evasion is a key design challenge for HoneySat.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

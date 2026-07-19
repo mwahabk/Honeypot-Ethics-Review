@@ -1,0 +1,102 @@
+ENTRY 202 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: sshhipot
+LINK: https://github.com/magisterquis/sshhipot
+PLATFORM: GitHub
+STARS: 174
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; high-interaction MitM SSH honeypot in Go.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Advanced SSH attackers; captures full session via transparent MITM proxy.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Full SSH session data, keystrokes, commands, file transfers, credentials, proxied backend traffic
+Protocols & Ports: SSH (22)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; MITM to real backend creates containment and data exposure risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: High-interaction SSH MITM with no governance; real backend exposure; same risk profile as HonSSH and pyrdp; no IRB.
+Relevance to Project: HIGH relevance to HoneySat ethics: SSH MITM pattern is directly applicable to satellite command channel honeypot design same data governance requirements as pyrdp.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: High-interaction MitM SSH honeypot in Go proxying to real backend.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: High-interaction SSH MITM: proxies full sessions to real backend; captures everything.
+
+[THREAT MODEL]
+Value: Advanced SSH attackers; captures full session via transparent MITM proxy.
+Evidence: README describes Go-based SSH MITM architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Full SSH session data, keystrokes, commands, file transfers, credentials, proxied backend traffic
+Evidence: MITM design captures complete session including proxied backend responses.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Full MITM session capture; real backend exposure risk; high sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; MITM to real backend creates containment and data exposure risk.
+Evidence: Real backend connection without documented isolation guidance.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: High-interaction SSH MITM with no governance; real backend exposure; same risk profile as HonSSH and pyrdp; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat ethics: SSH MITM pattern is directly applicable to satellite command channel honeypot design same data governance requirements as pyrdp.
+Evidence: MITM SSH honeypot ethics are directly applicable to HoneySat satellite command channel interception design.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

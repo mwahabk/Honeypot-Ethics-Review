@@ -1,0 +1,101 @@
+ENTRY 124 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: scada-honeynet
+LINK: https://dale-peterson.com/digital-bond-archives/
+PLATFORM: Irrelevant
+DOC LEVEL: None
+TOOL DESCRIPTION: Link points to irrelevant external blog archive, not a honeypot repository.
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Not available
+Threat Model: Not available
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Not available
+Protocols & Ports: Not available
+Data Sensitivity: Not available
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Not available
+Researcher Responsibility: Not documented
+Ethical Gaps: Link irrelevant; no ethics analysis possible.
+Relevance to Project: Not assessable.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Link points to irrelevant external content; documentation unavailable.
+
+[INTERACTION LEVEL]
+Value: Not available
+Evidence: Not documented
+
+[THREAT MODEL]
+Value: Not available
+Evidence: Not documented
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Not available
+Evidence: Not documented
+
+[PROTOCOLS & PORTS]
+Value: Not available
+Evidence: Not documented
+
+[DATA SENSITIVITY]
+Value: Not available
+Evidence: Not documented
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Not available
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Link irrelevant; no ethics analysis possible.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Not assessable.
+Evidence: Not assessable.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

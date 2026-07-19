@@ -1,0 +1,118 @@
+ENTRY 008 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneySat: A Network-based Satellite Honeypot Framework
+LINK: https://arxiv.org/abs/2505.24008
+
+─── ASSESSED VALUES ───
+Domain: Space
+Interaction Level: High
+Threat Model: Network-based attackers targeting satellite communication services
+IRB Mentioned: Yes
+Consent Model: Implicit
+Data Types Collected: Network traffic, Attack attempts, Protocol interaction data
+Protocols & Ports: Telnet (TCP 23), Web Interface (HTTP, TCP 80), VNC (TCP 5901), ZeroMQ (CSP Network raw packet access)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Source code and Dockerized artifact publicly released (Zenodo + GitHub); raw interaction logs not released
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Dual-layer sandboxing (Docker + VM)
+Deception Framing: Ethical Discussion
+Researcher Responsibility: Explicit (Focus on avoiding harm rather 
+than broader ethical theory)
+Ethical Gaps: No formal framework beyond harm prevention
+Relevance to Project: Strong example of implicit ethics plus brief explicit acknowledgment, Useful 
+contrast with papers that omit ethics sections entirely
+Deployment: Yes (Public Internet)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: Space
+Evidence: Page 1: The abstract explicitly identifies the domain as "satellites," specifically focusing on "Small Satellite (SmallSat)" and "CubeSat" missions
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Page 1: The authors define the system as a "high-interaction satellite honeypot framework" and compare it to others in Table I as a "High" interaction system
+
+[THREAT MODEL]
+Value: Network-based attackers targeting satellite communication services
+Evidence: Page 1: The framework is designed "to attract and analyze adversaries who attack space infrastructures over the Internet, a commonly observed threat vector"
+
+[IRB / ETHICS COMMITTEE]
+Value: Yes
+Evidence: Section IX explicitly states, "the survey protocol, and materials were submitted for review by our Institutional Review Board (IRB)"
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Page14: 
+For the deployment, the authors use "notice and warning" banners (authorized use only) rather than explicit consent, as "trespassers... do not have reasonable expectation of privacy"
+
+[DATA TYPES COLLECTED]
+Value: Network traffic, Attack attempts, Protocol interaction data
+Evidence: Page 5: The logging repository records "TM/TC traffic to and from the ground station software and the logging attempts received in the web interface"
+
+[PROTOCOLS & PORTS]
+Value: Telnet (TCP 23), Web Interface (HTTP, TCP 80), VNC (TCP 5901), ZeroMQ (CSP Network raw packet access)
+Evidence: Page10:
+D. Internet Interaction Experiment
+
+Page 7:
+We implemented a VNC
+server, a Telnet server, a Web server, and ZeroMQ-based
+access to the CSP Network"
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Page 3: The system captures "real-world adversarial interactions"
+ including "telecommands" (TC) that, if valid, allow an attacker to "fully take over the mission"
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Pages 1-14: While privacy for survey participants is addressed
+, there is no discussion of the "minimization principle" regarding the scope of adversarial data captured
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Page 7: The implementation uses a "MongoDB database
+ to aggregate and store logs," but no retention or deletion timeline is defined
+
+[DATA SHARING]
+Value: Source code and Dockerized artifact publicly released (Zenodo + GitHub); raw interaction logs not released
+Evidence: Page 2: While "source code and experimental results are available online", there is no specific mention of a public release policy for the raw interaction datasets
+
+Zenodo record confirms full artifact release at 
+https://doi.org/10.5281/zenodo.17871431
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Page 10: The paper mentions deployment in "Germany and the United States"
+ but does not include a legal analysis or mention of GDPR compliance
+
+[CONTAINMENT & HARM]
+Value: Dual-layer sandboxing (Docker + VM)
+Evidence: Page 14: Risk is mitigated by deploying "using two sandboxing layers (Docker containers and Virtual Machines (VMs)" on an isolated network segment
+
+[DECEPTION FRAMING]
+Value: Ethical Discussion
+Evidence: Page 4: Deception is justified as a technical design objective (DO-2)
+ and ethically as a necessary tool to "entice adversaries" while notifying them of authorized use only
+
+[RESEARCHER RESPONSIBILITY]
+Value: Explicit (Focus on avoiding harm rather 
+than broader ethical theory)
+Evidence: Section IX is entirely dedicated to "Ethical Considerations," specifically identifying stakeholders and outlining mitigation strategies for both participants and actors
+
+[ETHICAL GAPS]
+Value: No formal framework beyond harm prevention
+Evidence: Page 14: While it includes an ethics section, the paper lacks a "formal ethical framework" or discussion of "governance" and "legality" beyond immediate harm prevention
+
+[RELEVANCE TO PROJECT]
+Value: Strong example of implicit ethics plus brief explicit acknowledgment, Useful 
+contrast with papers that omit ethics sections entirely
+Evidence: Page 14: This is the only paper in the study that explicitly discusses IRB approval
+, providing the necessary contrast to the "ethical vacuum" found in the rest of the literature
+
+[DEPLOYMENT]
+Value: Yes (Public Internet)
+Evidence: Table 4: The authors "deployed five instances of HoneySat over the Internet" across on-premises servers in Chile and cloud servers in Germany and the USA

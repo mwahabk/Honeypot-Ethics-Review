@@ -1,0 +1,102 @@
+ENTRY 212 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Shiva
+LINK: https://github.com/shiva-spampot/shiva
+PLATFORM: GitHub
+STARS: 140
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + external PentestPartners blog post listed in awesome-honeypots README.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Spam relay bots targeting open SMTP relays.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Spam email content, sender IP addresses, SMTP commands
+Protocols & Ports: SMTP (25)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Spam honeypot with external PentestPartners blog post for setup guidance.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: SMTP spam honeypot capturing spam relay attempts; PentestPartners blog provides setup guide.
+
+[THREAT MODEL]
+Value: Spam relay bots targeting open SMTP relays.
+Evidence: README and external PentestPartners blog post.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Spam email content, sender IP addresses, SMTP commands
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: SMTP (25)
+Evidence: Standard SMTP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Spam content; no legitimate user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 216 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeypot (jadb)
+LINK: https://github.com/jadb/honeypot
+PLATFORM: GitHub
+STARS: 2
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; unofficial PHP SDK for Project Honey Pot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic spam and web bot operators captured by Project Honey Pot infrastructure.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: IP reputation data from Project Honey Pot API
+Protocols & Ports: HTTP (API calls to Project Honey Pot)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Data queried from Project Honey Pot external service
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; external API integration; Project Honey Pot data privacy policies not referenced.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Unofficial PHP SDK for Project Honey Pot interfaces with the Project Honey Pot API.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: PHP client library for Project Honey Pot; not a standalone honeypot but a service integration.
+
+[THREAT MODEL]
+Value: Generic spam and web bot operators captured by Project Honey Pot infrastructure.
+Evidence: README describes PHP SDK for Project Honey Pot.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: IP reputation data from Project Honey Pot API
+Evidence: Not documented; SDK queries external Project Honey Pot data.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (API calls to Project Honey Pot)
+Evidence: External API integration.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IP reputation queries; no personal user data directly collected.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: Data queried from Project Honey Pot external service
+Evidence: SDK integrates with external Project Honey Pot threat intelligence.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; external API integration; Project Honey Pot data privacy policies not referenced.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

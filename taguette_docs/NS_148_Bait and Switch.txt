@@ -1,0 +1,101 @@
+ENTRY 148 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Bait and Switch
+LINK: http://baitnswitch.sourceforge.net
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge page only; no GitHub repo; redirects hostile traffic to a honeypot mirroring production system.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Attackers targeting production systems whose traffic gets silently redirected to a honeypot mirror.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Full redirected traffic from real attackers targeting production systems
+Protocols & Ports: Production system ports (all ports mirrored)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; traffic redirection from production creates containment complexity.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; silent traffic redirection from production systems without user notification; SourceForge-only documentation.
+Relevance to Project: Moderate relevance; traffic redirection concept applicable to HoneySat ground-segment deception architecture.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Redirects hostile traffic to a honeypot mirroring the production system using iptables rules.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Medium-interaction: redirects real attacker traffic to honeypot mirror; more realistic than pure emulation.
+
+[THREAT MODEL]
+Value: Attackers targeting production systems whose traffic gets silently redirected to a honeypot mirror.
+Evidence: SourceForge page describes traffic redirection concept.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Full redirected traffic from real attackers targeting production systems
+Evidence: Redirected production-targeting traffic captured without attacker knowledge.
+
+[PROTOCOLS & PORTS]
+Value: Production system ports (all ports mirrored)
+Evidence: All ports of the mirrored production system.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full traffic to production mirror; may include authentication attempts against real service patterns.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; traffic redirection from production creates containment complexity.
+Evidence: Redirecting production traffic to honeypot raises questions about response integrity not discussed.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; silent traffic redirection from production systems without user notification; SourceForge-only documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; traffic redirection concept applicable to HoneySat ground-segment deception architecture.
+Evidence: Silent traffic redirection to honeypot mirror is relevant to HoneySat command traffic interception design.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

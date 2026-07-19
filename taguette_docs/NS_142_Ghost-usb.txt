@@ -1,0 +1,102 @@
+ENTRY 142 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Ghost-usb
+LINK: https://github.com/honeynet/ghost-usb-honeypot
+PLATFORM: GitHub
+STARS: 103
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README + GitHub Wiki confirmed (Usage, HowDoesItWork, Enumeration pages).
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: USB-spreading malware (worms that propagate via autorun on USB drives).
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Malware samples written to emulated USB, malware behavior logs, infection attempts
+Protocols & Ports: USB mass storage (emulated)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no malware safe handling guidance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Captures live USB malware with no safe handling guidance; no IRB.
+Relevance to Project: Moderate relevance; physical-vector honeypot (USB) raises containment ethics analogous to HoneySat physical interface honeypots.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot for detecting USB-spreading malware; emulates USB mass storage device to attract autorun-based malware.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Medium-interaction: emulates USB storage device; malware can write to emulated device; GitHub Wiki documents usage.
+
+[THREAT MODEL]
+Value: USB-spreading malware (worms that propagate via autorun on USB drives).
+Evidence: README and GitHub Wiki describe USB malware honeypot design.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Malware samples written to emulated USB, malware behavior logs, infection attempts
+Evidence: GitHub Wiki documents malware capture from USB emulation.
+
+[PROTOCOLS & PORTS]
+Value: USB mass storage (emulated)
+Evidence: Physical USB emulation; no network port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captured malware samples are live malicious code; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no malware safe handling guidance.
+Evidence: Live malware capture without documented safe handling procedure.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Captures live USB malware with no safe handling guidance; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; physical-vector honeypot (USB) raises containment ethics analogous to HoneySat physical interface honeypots.
+Evidence: Physical-vector deception relevant to HoneySat ground segment hardware interfaces.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

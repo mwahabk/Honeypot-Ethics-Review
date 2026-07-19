@@ -1,0 +1,102 @@
+ENTRY 076 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Tanner
+LINK: https://github.com/mushorg/tanner
+PLATFORM: GitHub
+STARS: 231
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + external readthedocs link. Evaluates SNARE events.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Same as SNARE: web attackers probing cloned web applications.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Full attacker session data from SNARE: IP addresses, payloads, session classifications
+Protocols & Ports: HTTP (internal API)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Honeynet Project tool with no governance documentation.
+Relevance to Project: Moderate relevance; Tanner evaluation architecture demonstrates automated attack classification for HoneySat response systems.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Backend evaluation engine for SNARE web honeypot; Honeynet Project.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Processes SNARE captured requests to generate realistic attack responses.
+
+[THREAT MODEL]
+Value: Same as SNARE: web attackers probing cloned web applications.
+Evidence: Extensive README and readthedocs document Tanner evaluation logic.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Full attacker session data from SNARE: IP addresses, payloads, session classifications
+Evidence: Docs describe storing all attack session data.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (internal API)
+Evidence: Tanner operates as internal API receiving data from SNARE.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Processed attack session data; no real user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; Honeynet Project tool with no governance documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Tanner evaluation architecture demonstrates automated attack classification for HoneySat response systems.
+Evidence: Automated attacker evaluation pipeline relevant to HoneySat intelligence processing.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 105 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MICROS honeypot
+LINK: https://github.com/Cymmetria/micros_honeypot
+PLATFORM: GitHub
+STARS: 17
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; low interaction Oracle MICROS honeypot for CVE-2018-2636.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers targeting Oracle MICROS POS systems for payment data or backdoor access.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, MICROS protocol interaction data
+Protocols & Ports: MICROS protocol (proprietary port)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; POS payment system honeypot with no ethics discussion; Cymmetria commercial origin.
+Relevance to Project: Moderate relevance; POS/payment system honeypot raises critical infrastructure ethics analogous to HoneySat.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction honeypot simulating Oracle MICROS Point-of-Sale system.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates Oracle MICROS POS interface; logs exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting Oracle MICROS POS systems for payment data or backdoor access.
+Evidence: README describes MICROS POS emulation by Cymmetria.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, MICROS protocol interaction data
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: MICROS protocol (proprietary port)
+Evidence: Proprietary Oracle MICROS network protocol.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Targets payment system context; POS implies potential payment sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; POS payment system honeypot with no ethics discussion; Cymmetria commercial origin.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; POS/payment system honeypot raises critical infrastructure ethics analogous to HoneySat.
+Evidence: Payment system critical infrastructure context relevant to ethics framework for CPS honeypots.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

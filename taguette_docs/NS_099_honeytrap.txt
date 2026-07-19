@@ -1,0 +1,102 @@
+ENTRY 099 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeytrap
+LINK: https://github.com/honeytrap/honeytrap
+PLATFORM: GitHub
+STARS: 1.3k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + external documentation links. Feature-rich honeytrap.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Diverse internet attackers; honeytrap dynamically opens ports to capture any traffic.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, full connection payloads across any port, protocol-specific data
+Protocols & Ports: Dynamic — binds any unoccupied TCP/UDP port
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; dynamic port binding captures all traffic without targeted governance.
+Relevance to Project: Moderate relevance; dynamic port-binding applicable to HoneySat full-spectrum signal capture concept.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Go-based multi-service honeypot with extensive docs; modular sensor and dynamic port binding.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Supports dynamic port binding and modular service emulation; interacts with multiple protocols.
+
+[THREAT MODEL]
+Value: Diverse internet attackers; honeytrap dynamically opens ports to capture any traffic.
+Evidence: README and external docs.honeytrap.io describe architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, full connection payloads across any port, protocol-specific data
+Evidence: Not documented; dynamic port binding means any traffic is captured.
+
+[PROTOCOLS & PORTS]
+Value: Dynamic — binds any unoccupied TCP/UDP port
+Evidence: README describes dynamic port binding architecture.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Connection payloads across all ports; no real service backends.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; dynamic port binding captures all traffic without targeted governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; dynamic port-binding applicable to HoneySat full-spectrum signal capture concept.
+Evidence: Universal port capture design relevant to HoneySat ground station traffic monitoring.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

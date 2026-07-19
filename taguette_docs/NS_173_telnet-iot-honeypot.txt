@@ -1,0 +1,102 @@
+ENTRY 173 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: telnet-iot-honeypot
+LINK: https://github.com/Phype/telnet-iot-honeypot
+PLATFORM: GitHub
+STARS: 314
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Python telnet honeypot for catching IoT botnet binaries.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Mirai and derivative IoT botnet malware targeting Telnet-accessible IoT devices.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, Telnet credentials, IoT malware binaries downloaded
+Protocols & Ports: Telnet (23)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no malware safe handling guidance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Captures live IoT malware with no safe handling procedure; no IRB.
+Relevance to Project: Moderate relevance; IoT botnet malware capture ethics applicable to CPS/IoT honeypot design adjacent to HoneySat.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python Telnet honeypot for catching IoT botnet binaries (Mirai and variants).
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates Telnet service to attract and capture IoT malware binaries.
+
+[THREAT MODEL]
+Value: Mirai and derivative IoT botnet malware targeting Telnet-accessible IoT devices.
+Evidence: README describes IoT malware capture via Telnet emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, Telnet credentials, IoT malware binaries downloaded
+Evidence: README describes capturing malware binaries from botnet recruitment.
+
+[PROTOCOLS & PORTS]
+Value: Telnet (23)
+Evidence: Standard Telnet port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Captures live IoT malware binaries; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no malware safe handling guidance.
+Evidence: Live malware capture without safe handling documentation.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Captures live IoT malware with no safe handling procedure; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; IoT botnet malware capture ethics applicable to CPS/IoT honeypot design adjacent to HoneySat.
+Evidence: IoT malware capture ethics relevant to ground-segment IoT security in space systems.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 230 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyThing
+LINK: https://github.com/omererdem/honeything
+PLATFORM: GitHub
+STARS: 128
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; TR-069/RomPager IoT honeypot; references ISCTurkey 2015 paper but no accessible URL.
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Low
+Threat Model: Attackers targeting consumer router TR-069 management interfaces for botnet recruitment or data theft.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, TR-069 SOAP messages, exploitation payloads
+Protocols & Ports: TR-069 (7547), HTTP (80)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; IoT/CPE management protocol honeypot with no ethics documentation.
+Relevance to Project: Moderate relevance; CPE management protocol honeypot relevant to IoT/CPS ethics dimension of HoneySat framework.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: TR-069/RomPager IoT honeypot targeting router/CPE management protocol attacks.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates TR-069 CPE management protocol and RomPager vulnerability; logs exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting consumer router TR-069 management interfaces for botnet recruitment or data theft.
+Evidence: README describes TR-069/RomPager emulation; references ISCTurkey 2015 paper.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, TR-069 SOAP messages, exploitation payloads
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: TR-069 (7547), HTTP (80)
+Evidence: TR-069 management port and HTTP.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Protocol interaction metadata; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; IoT/CPE management protocol honeypot with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; CPE management protocol honeypot relevant to IoT/CPS ethics dimension of HoneySat framework.
+Evidence: TR-069 management protocol honeypot ethics applicable to satellite ground equipment management interface deception.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

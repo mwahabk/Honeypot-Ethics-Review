@@ -1,0 +1,101 @@
+ENTRY 217 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: spamd
+LINK: https://man.openbsd.org/spamd
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: OpenBSD man page is the only documentation; spam-deferral daemon with greylisting and tarpitting.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Email spammers and automated SMTP relay bots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Spam sender IP addresses, SMTP connection metadata, greylisting data
+Protocols & Ports: SMTP (25)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; OpenBSD system tool with no ethics documentation.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: OpenBSD spam-deferral daemon with greylisting and tarpitting; OpenBSD man page documentation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: OpenBSD system daemon for spam deferral; not a traditional honeypot but listed in spam section.
+
+[THREAT MODEL]
+Value: Email spammers and automated SMTP relay bots.
+Evidence: OpenBSD man page is the documentation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Spam sender IP addresses, SMTP connection metadata, greylisting data
+Evidence: OpenBSD man page describes greylisting and tarpitting.
+
+[PROTOCOLS & PORTS]
+Value: SMTP (25)
+Evidence: Standard SMTP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SMTP connection metadata and greylisting data; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; OpenBSD system tool with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

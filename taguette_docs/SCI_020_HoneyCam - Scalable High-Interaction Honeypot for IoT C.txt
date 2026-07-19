@@ -1,0 +1,111 @@
+ENTRY 020 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyCam: Scalable High-Interaction Honeypot for IoT Cameras Based on 360-Degree Video
+LINK: https://ieeexplore.ieee.org/document/9947265/
+
+─── ASSESSED VALUES ───
+Domain: IoT
+Interaction Level: High
+Threat Model: IoT camera attackers and botnets
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: IPs, command interactions, and malware
+Protocols & Ports: HTTP (80/8080), RTSP (554), RTMP (1935), ONVIF (8000)
+Data Sensitivity: High
+Data Minimization: Yes (Partial)
+Data Retention Policy: Partial - backup location disclosed, no retention timeline
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Virtualization and prerecorded content.
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: Important case of privacy-sensitive honeypots
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IoT
+Evidence: Section I: Targets "Internet of Things (IoT) cameras" used in consumer, enterprise, and military settings like "home security" and "smart cities," which are categorized as Cyber-Physical Systems (CPS) in the project
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: The paper's title, abstract, and Section III heading all explicitly and repeatedly self-classify as "high-interaction": "Scalable High-Interaction Honeypot" (title), "scalable high-interaction IoT camera honeypot" (abstract), "HONEYCAM: A HIGH-INTERACTION IOT CAMERA HONEYPOT" (Section III heading). No ambiguity here - should be changed to match the paper's own unambiguous self-classification, consistent with how HoneyIoT and SweetCam were handled.
+
+[THREAT MODEL]
+Value: IoT camera attackers and botnets
+Evidence: Section III & IV-B: Targets attackers who "locate IoT cameras through port scanning tools" to "steal sensitive private data" or "install malware"
+. Deployment captured the "Mozi botnet"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A review of the manuscript confirms there is no mention of an Institutional Review Board, ethics committee, or human subject protocols
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Section I, IV-B, & IV-B-1: The researchers deployed HoneyCam across "Virginia, Tokyo and Paris" on the "public Internet" where it received "unsolicited connections from 24120 distinct remote IP addresses"
+. Because the authors provide no evidence of warning banners or disclosure, they rely on the "unsolicited" nature of the interaction to justify data collection without formal consent.
+
+[DATA TYPES COLLECTED]
+Value: IPs, command interactions, and malware
+Evidence: Section IV-A & IV-B-1: The system records "attacker information such as IP address, video watching time and camera control commands" and captured "Mozi malware executable"
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80/8080), RTSP (554), RTMP (1935), ONVIF (8000)
+Evidence: Section III-A-1: Specifically emulates a real IoT camera by opening ports 80, 8080, 8000, 554, and 1935 to support standard camera protocols
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section IV-B-1: Collects data from "24,120 distinct remote IP addresses" and analyzes "geographic location" and "attack traces" including specific botnet infection attempts
+
+[DATA MINIMIZATION]
+Value: Yes (Partial)
+Evidence: Section I & III: Uses "prerecord 360° video" instead of real cameras to avoid exposing "sensitive private data" of real surveillance environments while maintaining realism
+
+[DATA RETENTION POLICY]
+Value: Partial - backup location disclosed, no retention timeline
+Evidence: Section IV-B: "The attacker information and the network traffic of all three kinds of honeypots are collected and backed up in the backend server and Microsoft OneDrive." A backup destination (Microsoft OneDrive, a third-party consumer cloud service) is disclosed, but no deletion timeline, retention period, or data lifecycle policy is stated. No access control, governance, or privacy policy discussion accompanies this third-party storage.
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: While basic statistics are provided, there is no mention of a public release for the dataset or the captured malware traces
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Section IV-B:
+Despite deploying global nodes in "Virginia, Tokyo and Paris," there is no mention of GDPR, legal compliance, or jurisdiction
+
+[CONTAINMENT & HARM]
+Value: Virtualization and prerecorded content.
+Evidence: Section III-A: The system uses a "frontend honeypot" (virtual server) as a "decoy system" that is "isolated from real backend systems"
+. Harm and privacy violations are prevented by using "prerecord 360° video" instead of live cameras to avoid exposing sensitive private data of real surveillance environments (such as a house owner’s presence) while maintaining high-interaction realism for the attacker
+.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Section I & IV-B-2: Deception is a technical goal to "realistically emulates an IoT camera" and make attackers believe they are "interacting with a real camera"
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Sections I & II: Framing is purely defensive, focused on "improve the security of IoT camera systems" and using video as a "bait for deception",.
+ 
+By using pre-recorded 360° video, the authors technically mitigate the privacy risks of real camera deployment.
+ However, as identified in the project's meta-analysis, this represents the general pattern of "ethics-by-containment," where technical safety is used as a total substitute for formal ethical oversight or IRB involvement.
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Section IV-B-1: Represents the project's meta-finding where technical safety (simulated video) replaces normative reasoning. 
+Deploys against "24120" IPs without IRB or governance oversight.
+
+[RELEVANCE TO PROJECT]
+Value: Important case of privacy-sensitive honeypots
+Evidence: Key Digital Twin case study illustrating ethics-by-containment
+,
+. Unlike HoneySat, it lacks formal governance despite its high interaction
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Abstract & IV-B: The system was "deploying the system on the public Internet" 
+"AWS at three
+different locations (Virginia, Tokyo and Paris) for three months."

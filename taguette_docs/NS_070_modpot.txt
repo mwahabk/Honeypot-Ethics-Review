@@ -1,0 +1,102 @@
+ENTRY 070 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: modpot
+LINK: https://github.com/referefref/modpot
+PLATFORM: GitHub
+STARS: 63
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with setup and usage; modular web honeypot in Golang.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated web scanners targeting a range of web vulnerabilities.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, HTTP requests, exploit payloads per module
+Protocols & Ports: HTTP (configured)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; modular architecture with no governance per module.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Modular web honeypot supporting multiple vulnerability plugins.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Modular architecture emulating various web vulnerabilities via plugins.
+
+[THREAT MODEL]
+Value: Automated web scanners targeting a range of web vulnerabilities.
+Evidence: README describes modular plugin architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, HTTP requests, exploit payloads per module
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (configured)
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Attack payloads per vulnerability module.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; modular architecture with no governance per module.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

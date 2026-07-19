@@ -1,0 +1,102 @@
+ENTRY 119 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: kippo_detect
+LINK: https://github.com/andrew-morris/kippo_detect
+PLATFORM: GitHub
+STARS: 60
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; detects kippo SSH honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Not applicable
+Threat Model: Attackers testing SSH targets to determine if they are Kippo honeypots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: SSH target fingerprint data
+Protocols & Ports: SSH (22)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Enables attackers to evade Kippo deployments; no ethics discussion.
+Relevance to Project: Moderate relevance; Kippo fingerprinting demonstrates static honeypots are detectable motivates dynamic/LLM approaches for HoneySat.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Tool specifically detecting Kippo SSH honeypot deployments from attacker perspective.
+
+[INTERACTION LEVEL]
+Value: Not applicable
+Evidence: Honeypot detection tool; not a honeypot itself.
+
+[THREAT MODEL]
+Value: Attackers testing SSH targets to determine if they are Kippo honeypots.
+Evidence: README describes Kippo-specific detection method.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: SSH target fingerprint data
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SSH fingerprint metadata only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Enables attackers to evade Kippo deployments; no ethics discussion.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Kippo fingerprinting demonstrates static honeypots are detectable motivates dynamic/LLM approaches for HoneySat.
+Evidence: Static honeypot fingerprinting is a key challenge HoneySat must address.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

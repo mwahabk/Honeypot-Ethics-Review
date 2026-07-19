@@ -1,0 +1,102 @@
+ENTRY 055 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Laravel Application Honeypot
+LINK: https://github.com/msurguy/Honeypot
+PLATFORM: GitHub
+STARS: 437
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with Laravel install, config, and usage examples.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated spam bots targeting Laravel web applications.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Bot IP addresses, form submission content
+Protocols & Ports: HTTP/HTTPS (80, 443)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; narrow spam protection tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Laravel PHP honeypot package injecting fake form fields to detect spam bots.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Injects hidden honeypot fields into Laravel forms; blocks bot requests.
+
+[THREAT MODEL]
+Value: Automated spam bots targeting Laravel web applications.
+Evidence: README describes installation and configuration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Bot IP addresses, form submission content
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Spam bot interactions only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; narrow spam protection tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

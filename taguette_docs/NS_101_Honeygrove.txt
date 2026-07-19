@@ -1,0 +1,102 @@
+ENTRY 101 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeygrove
+LINK: https://github.com/UHH-ISS/honeygrove
+PLATFORM: GitHub
+STARS: 20
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with setup; multi-purpose Twisted-based honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic internet automated scanners.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, service interaction data
+Protocols & Ports: Configurable (SSH, Telnet, HTTP, and others)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Twisted framework multi-purpose honeypot with Kibana integration.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates multiple services; logs to Kibana-compatible backend.
+
+[THREAT MODEL]
+Value: Generic internet automated scanners.
+Evidence: README describes Twisted architecture and Kibana integration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, service interaction data
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Configurable (SSH, Telnet, HTTP, and others)
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Service interaction metadata.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

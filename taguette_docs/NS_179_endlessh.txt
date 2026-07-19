@@ -1,0 +1,102 @@
+ENTRY 179 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: endlessh
+LINK: https://github.com/skeeto/endlessh
+PLATFORM: GitHub
+STARS: 8.5k
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH tarpit that sends an endless banner.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated SSH scanners and brute-force bots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, connection timestamps, duration metrics
+Protocols & Ports: SSH (22 or configured)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; tarpit approach creates resource waste for connecting bots active harm dimension not discussed.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH tarpit sending endless random banner data to trap and waste attacker resources.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Sends infinitely slow SSH banner to trap automated SSH scanners; no real SSH emulation.
+
+[THREAT MODEL]
+Value: Automated SSH scanners and brute-force bots.
+Evidence: README describes SSH tarpit mechanism.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, connection timestamps, duration metrics
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22 or configured)
+Evidence: SSH port; configurable.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IP addresses and timing metadata; no credentials or content captured.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; tarpit approach creates resource waste for connecting bots active harm dimension not discussed.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

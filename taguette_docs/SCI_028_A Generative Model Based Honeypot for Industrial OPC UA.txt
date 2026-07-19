@@ -1,0 +1,108 @@
+ENTRY 028 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: A Generative Model Based Honeypot for Industrial OPC UA Communication
+LINK: https://arxiv.org/abs/2410.21574
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+Threat Model: OPC UA-targeted attackers
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: OPC UA requests & behavioral patterns
+Protocols & Ports: OPC UA (Port 4840)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Dataset published
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Technical isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: AI-Realism Case Study
+Deployment: Experimental / controlled
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract:
+The research focuses on "Operational Technology (OT)" and "Industrial Control Systems (ICS)" specifically within the context of "Industry 4.0" and discrete automation processes
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Section 7 (Conclusion): "the current implementation only allows the intruder to observe. As such, providing a higher level of interaction for the intruder is a necessary enhancement." Passive observation only, with zero read/write interaction, is the standard definition of low-interaction.
+
+[THREAT MODEL]
+Value: OPC UA-targeted attackers
+Evidence: Page 3, Section 2:
+The paper assumes a threat actor who has " gained access to the SCADA system" via the Internet and is attempting to interact with the "CPS located on the shop floor"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A complete review of the text confirms there is no mention of an Institutional Review Board (IRB) or ethical committee oversight regarding the study of attacker behavior .
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Section 2:
+One proposed deployment (Variant 1) is to "lure the attacker into interaction" by making the honeypot "easily noticeable" (e.g., by reducing security measures) so that any interaction triggers an alarm without the attacker's knowledge or consent
+
+[DATA TYPES COLLECTED]
+Value: OPC UA requests & behavioral patterns
+Evidence: Page 4, 6:
+The system captures "attacker behavior" by logging interactions with the replicated variables, which include "motor voltages," "actual yaw and pitch angles," and "angular velocities"
+
+[PROTOCOLS & PORTS]
+Value: OPC UA (Port 4840)
+Evidence: While the port number is not explicitly mentioned in the body text, Figure 3 (Page 6) provides visual confirmation through a screenshot of the "opcua-client-gui" interface [38:16]. The address field in the screenshot explicitly shows the client connected to "opc.tcp://localhost:4840", where 4840 is the standard default port for the OPC UA protocol [38:16]
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Section 3: the CPS is "a demonstrator with two fans mounted on a balancing beam, manufactured by Quanser", a lab hardware unit, not a real production system. Data consists of "motor voltages," "currents," and "angular velocities" recorded from this lab demonstrator (Section 4, Table 1), not real industrial process data. Section 7 confirms this is a "proof-of-concept" with no real intruder or live deployment ever occurring.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Page 8:
+The researchers focus on replicating as much of the state space as possible (specific "8 variables") to achieve realism, with no stated policy on filtering or limiting data collection
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: While the paper details how data is recorded and processed for the model, it contains no information regarding storage duration or a deletion policy .
+
+[DATA SHARING]
+Value: Dataset published
+Evidence: Page 4: (link in dataset heading)
+Unlike many papers in the field, the authors explicitly "publish a dataset for a cyclic industrial process" on GitHub to enable further research
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Despite being authored by researchers in Austria, the paper provides no discussion of legal compliance, GDPR, or the jurisdictional implications of deploying honeypots
+
+[CONTAINMENT & HARM]
+Value: Technical isolation
+Evidence: Page 4:
+Safety is managed by ensuring the honeypot is "isolated from the network in the production environment" and has no connection to real industrial process
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Page 2, 4:
+Deception is framed as the technical challenge of using "self-learning models" to "authentically mimic" the fast dynamics of discrete automation, measured by the "Root Mean Squared Error (RMSE)" of the generated trajectories
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Page 4:
+Responsibility is framed as a technical contribution to "strengthen the system’s security" and provide a baseline for "automated threat detection and response"
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Sections 1, 2: The paper utilizes "generative machine-learning models" to maximize deception realism for critical infrastructure while operating without formal ethical reflection, IRB oversight, or data governance policies
+
+[RELEVANCE TO PROJECT]
+Value: AI-Realism Case Study
+Evidence: Sections 1, 2, and 6: This paper serves as a primary example of the project's technology-driven ethical lag finding, where generative models are used to create Digital Twin-like replication of CPS hardware to increase deception depth. 
+The research illustrates the structural ethical vacuum identified in the meta-analysis specifically lacking the IRB review found in HoneySat despite capturing and publishing high-sensitivity industrial telemetry. It confirms the field's dominant ethics-by-containment paradigm, where technical safety is treated as a substitute for formal ethical governance
+
+[DEPLOYMENT]
+Value: Experimental / controlled
+Evidence: Sections 3: The system was implemented and tested on a "demonstrator with two fans" (Quanser Aero 2) in a controlled laboratory environment rather than a live production network

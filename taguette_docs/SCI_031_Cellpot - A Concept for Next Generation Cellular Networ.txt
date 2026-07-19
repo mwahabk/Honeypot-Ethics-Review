@@ -1,0 +1,98 @@
+ENTRY 031 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Cellpot: A Concept for Next Generation Cellular Network Honeypots
+LINK: https://www.ndss-symposium.org/wp-content/uploads/2017/09/02_1-paper_0.pdf
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Low
+Threat Model: Mobile network attackers using compromised smartphones to execute signaling DoS attacks, SMS spam, and mobile malware propagation against the cellular core network.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Signaling traffic, IMSI numbers, call history, SMS content, browsing history (conceptual)
+Protocols & Ports: SS7 signaling, IPSec VPN (TR-069), cellular radio (2G/3G/LTE)
+Data Sensitivity: High
+Data Minimization: No
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Partially discussed
+Containment & Harm: Architectural isolation of firmware and infrastructure environments; P2P network with master node control; IPSec encryption of core network communications.
+Deception Framing: Purely technical
+Researcher Responsibility: Not discussed
+Ethical Gaps: High privacy risk (IMSI/call/browsing data captured); no IRB; no consent model; no data governance; conceptual only, not tested, so harm is theoretical but design enables mass surveillance.
+Relevance to Project: Relevant to HoneySat/Ethics framework: demonstrates honeypot deployment in critical infrastructure (cellular network) with high-sensitivity personal data capture strong case study for ethical risk framework covering data governance and legal compliance in honeypots.
+Deployment: Conceptual/Not deployed
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: The paper proposes Cellpot, a novel honeypot concept deployed directly inside the cellular network on small cell (femtocell) base stations to detect and mitigate signaling attacks, SMS spam, and mobile malware. It is explicitly and specifically a honeypot design paper.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Cellpot is a low-interaction honeypot: it performs anomaly detection and traffic monitoring on signaling data, it does not allow full attacker control or deep interaction with core network functions.
+
+[THREAT MODEL]
+Value: Mobile network attackers using compromised smartphones to execute signaling DoS attacks, SMS spam, and mobile malware propagation against the cellular core network.
+Evidence: Section III (Threat Model): "we assume an attacker who has physical access to a femto- or small cell base station...The attackers possess one or more mobile devices which enables them to connect to the base station and create signaling traffic."
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: No section in the paper mentions IRB, ethics committee, institutional approval, or human subjects protocol. The paper is purely a technical/conceptual design.
+
+[CONSENT MODEL]
+Value: None
+Evidence: The paper does not discuss consent, attacker notification, or any form of disclosure. Concept paper with no mention of consent model.
+
+[DATA TYPES COLLECTED]
+Value: Signaling traffic, IMSI numbers, call history, SMS content, browsing history (conceptual)
+Evidence: Section V (Discussion: Legal Issues): "data collected by Cellpot can contain user's private information such as International Mobile Subscriber Identity (IMSI) number, call history, and even the browsing history etc."
+
+[PROTOCOLS & PORTS]
+Value: SS7 signaling, IPSec VPN (TR-069), cellular radio (2G/3G/LTE)
+Evidence: Section II and IV: Femtocell communicates via IPSec VPN through SeGW to core network. Monitors SS7 signaling channels and radio interface.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section V: The system can capture IMSI numbers, call history, SMS content, and browsing history highly sensitive personal identifiers. Paper acknowledges "private nature of this data could raise privacy concerns."
+
+[DATA MINIMIZATION]
+Value: No
+Evidence: Discussion: Legal Issues section states: "It is necessary to use certified anonymizing algorithms in the Cellpot." However, no specific anonymization scheme, algorithm, or implementation detail is provided anywhere in the paper, the requirement is acknowledged in principle but never designed or specified.
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: No retention policy or deletion timeline mentioned anywhere in the paper.
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: No dataset release, no public traces, no mention of data sharing with third parties beyond MNO.
+
+[JURISDICTION / LEGAL]
+Value: Partially discussed
+Evidence: Section V (Discussion): "The private nature of this data could raise privacy concerns in some countries." Authors note MNOs already provide lawful interception interfaces and store data per local laws, arguing Cellpot will not create legal issues but no detailed jurisdiction analysis.
+
+[CONTAINMENT & HARM]
+Value: Architectural isolation of firmware and infrastructure environments; P2P network with master node control; IPSec encryption of core network communications.
+Evidence: Section VI: Proposes partitioning femtocell into isolated Firmware Environment (FE) and Infrastructure Environment (IE) using a microkernel. "By isolating both environments we assure that rooted firmware can be controlled."
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: The paper discusses deception only in technical terms (small cells "act like honeypots" because their stronger signal lures devices). No ethical framing of deception is provided.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not discussed
+Evidence: No statements about researcher responsibility, ethical guidelines, responsible disclosure, or dual-use considerations appear in the paper.
+
+[ETHICAL GAPS]
+Value: High privacy risk (IMSI/call/browsing data captured); no IRB; no consent model; no data governance; conceptual only, not tested, so harm is theoretical but design enables mass surveillance.
+Evidence: Section V: Authors acknowledge sensitivity of IMSI, call history, and browsing data but dismiss legal concern by citing existing MNO lawful interception practices. No anonymization scheme proposed despite acknowledging "certified anonymizing algorithms" are necessary.
+
+[RELEVANCE TO PROJECT]
+Value: Relevant to HoneySat/Ethics framework: demonstrates honeypot deployment in critical infrastructure (cellular network) with high-sensitivity personal data capture strong case study for ethical risk framework covering data governance and legal compliance in honeypots.
+Evidence: Cellpot is designed for deployment inside live cellular networks capturing real user signaling data, directly analogous to HoneySat operating within critical infrastructure. The absence of IRB and data governance mirrors gaps our ethics framework aims to address.
+
+[DEPLOYMENT]
+Value: Conceptual/Not deployed
+Evidence: Paper explicitly states this is a "novel concept" and "practical software design." No deployment or experimental evaluation is described. The concept targets deployment inside live MNO cellular networks but no live deployment is reported.

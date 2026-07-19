@@ -1,0 +1,102 @@
+ENTRY 107 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: pyrdp
+LINK: https://github.com/gosecure/pyrdp
+PLATFORM: GitHub
+STARS: 1.8k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs + external readthedocs link; RDP MITM honeypot, well-documented.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Targeted attackers using RDP for lateral movement or access; malware operators accessing systems via RDP.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, full keystroke logs, clipboard contents, screenshots/video recordings, RDP credentials, pcap
+Protocols & Ports: RDP (3389)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; MITM to real backend creates serious containment risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGHEST RISK: captures keystrokes, clipboard, video may record sensitive personal data; MITM proxy risks real data exposure; no IRB; no data governance.
+Relevance to Project: HIGH relevance to HoneySat ethics: pyrdp is the most ethically complex tool in this batch full session capture with MITM represents maximum ethics risk, directly applicable to high-interaction satellite honeypot design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python RDP MITM tool and honeypot capturing full RDP sessions including keystrokes and screenshots.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Full high-interaction RDP MITM: captures keystrokes, clipboard, screenshots/video of attacker sessions; may connect to real backend.
+
+[THREAT MODEL]
+Value: Targeted attackers using RDP for lateral movement or access; malware operators accessing systems via RDP.
+Evidence: README and /docs folder document MITM architecture and full session capture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, full keystroke logs, clipboard contents, screenshots/video recordings, RDP credentials, pcap
+Evidence: README explicitly documents keylogger, screenshot, and clipboard logging capabilities.
+
+[PROTOCOLS & PORTS]
+Value: RDP (3389)
+Evidence: Standard RDP port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Captures keystrokes, clipboard, screenshots — may capture passwords, personal data, or sensitive content; highest sensitivity in this list.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; MITM to real backend creates serious containment risk.
+Evidence: No guidance on preventing real system access through MITM proxy.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: HIGHEST RISK: captures keystrokes, clipboard, video may record sensitive personal data; MITM proxy risks real data exposure; no IRB; no data governance.
+Evidence: README documents capabilities without any ethical governance framework.
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat ethics: pyrdp is the most ethically complex tool in this batch full session capture with MITM represents maximum ethics risk, directly applicable to high-interaction satellite honeypot design.
+Evidence: Maximum-risk case study: demonstrates high-interaction honeypots require the most rigorous governance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 096 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeypot-camera
+LINK: https://github.com/alexbredo/honeypot-camera
+PLATFORM: GitHub
+STARS: 53
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; camera honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: IoT scanners and attackers targeting IP cameras for surveillance or botnet recruitment.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, RTSP/HTTP access attempts, camera control commands
+Protocols & Ports: HTTP (80), RTSP (554)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; IoT camera honeypot with no ethics documentation.
+Relevance to Project: Moderate relevance; IP camera honeypot parallels SweetCam and raises physical-world deception questions analogous to HoneySat.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: IP camera honeypot emulating RTSP and HTTP camera interfaces.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Simulates IP camera services (RTSP, HTTP); logs access and control attempts.
+
+[THREAT MODEL]
+Value: IoT scanners and attackers targeting IP cameras for surveillance or botnet recruitment.
+Evidence: Not documented.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, RTSP/HTTP access attempts, camera control commands
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80), RTSP (554)
+Evidence: Standard IP camera ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Access attempt metadata; no real video feeds.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; IoT camera honeypot with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; IP camera honeypot parallels SweetCam and raises physical-world deception questions analogous to HoneySat.
+Evidence: Physical sensor deception dimension relevant to HoneySat.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

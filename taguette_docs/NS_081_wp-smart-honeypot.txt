@@ -1,0 +1,102 @@
+ENTRY 081 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: wp-smart-honeypot
+LINK: https://github.com/freak3dot/wp-smart-honeypot
+PLATFORM: GitHub
+STARS: 29
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; WordPress plugin honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated spam bots submitting WordPress forms.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Bot IP addresses, spam form submissions
+Protocols & Ports: HTTP/HTTPS (80, 443)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal spam protection tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: WordPress plugin implementing honeypot fields for comment and registration spam prevention.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Injects hidden form fields into WordPress forms to trap spam bots.
+
+[THREAT MODEL]
+Value: Automated spam bots submitting WordPress forms.
+Evidence: README describes plugin architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Bot IP addresses, spam form submissions
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Spam content from bots only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal spam protection tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

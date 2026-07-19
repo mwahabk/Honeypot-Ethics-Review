@@ -1,0 +1,102 @@
+ENTRY 177 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Cowrie
+LINK: https://github.com/cowrie/cowrie
+PLATFORM: GitHub
+STARS: 6.4k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + dedicated docs.cowrie.org confirmed. Best documented SSH honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: SSH brute-force bots, IoT malware, and advanced attackers performing post-exploitation.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SSH/Telnet credentials, all shell commands, malware downloads, session recordings (asciinema)
+Protocols & Ports: SSH (22, 2222), Telnet (23, 2223)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; most widely deployed SSH honeypot with no ethics governance despite scale of deployment and data collection.
+Relevance to Project: HIGH relevance to HoneySat ethics framework: Cowrie is the de facto standard SSH honeypot its complete absence of ethics governance despite global deployment and comprehensive session capture is the most prominent case study for the ethics gap.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Industry-standard SSH and Telnet medium-interaction honeypot with comprehensive external documentation.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Medium-interaction: fake filesystem, shell emulation, and session replay; docs.cowrie.org provides full documentation.
+
+[THREAT MODEL]
+Value: SSH brute-force bots, IoT malware, and advanced attackers performing post-exploitation.
+Evidence: README + /docs folder + comprehensive docs.cowrie.org external documentation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SSH/Telnet credentials, all shell commands, malware downloads, session recordings (asciinema)
+Evidence: docs.cowrie.org documents comprehensive logging including session replay files.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22, 2222), Telnet (23, 2223)
+Evidence: Standard and alternate ports; documented in docs.cowrie.org.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full shell session data, credentials, and malware downloads captured; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; most widely deployed SSH honeypot with no ethics governance despite scale of deployment and data collection.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to HoneySat ethics framework: Cowrie is the de facto standard SSH honeypot its complete absence of ethics governance despite global deployment and comprehensive session capture is the most prominent case study for the ethics gap.
+Evidence: Cowrie as the industry-standard honeypot without governance is the strongest SSH honeypot case study for our framework.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

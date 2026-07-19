@@ -1,0 +1,102 @@
+ENTRY 123 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: gridpot
+LINK: https://github.com/sk4ld/gridpot
+PLATFORM: GitHub
+STARS: 61
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; electric grid honeypot combining conpot and gridlabd.
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+Threat Model: Nation-state actors and APT groups targeting electric power grid infrastructure.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, ICS protocol commands targeting simulated grid (Modbus, DNP3), grid topology queries
+Protocols & Ports: Modbus (502), DNP3 (20000), Conpot protocol ports
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no guidance isolating simulated grid from real infrastructure.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGHEST RISK: electric grid honeypot  no IRB; no ethics; no isolation guidance; power grid is critical national infrastructure; could provide adversaries realistic grid attack training data.
+Relevance to Project: HIGHEST relevance to HoneySat ethics: gridpot is the most directly analogous to HoneySat both emulate critical national infrastructure. Complete absence of ethics governance is the strongest available case study for our framework.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Electric power grid honeypot combining GridLAB-D power simulation with Conpot ICS emulation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Combines GridLAB-D power grid simulation with Conpot; simulates realistic electric grid behavior.
+
+[THREAT MODEL]
+Value: Nation-state actors and APT groups targeting electric power grid infrastructure.
+Evidence: README describes GridLAB-D + Conpot integration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, ICS protocol commands targeting simulated grid (Modbus, DNP3), grid topology queries
+Evidence: Not documented; inferred from GridLAB-D/Conpot architecture.
+
+[PROTOCOLS & PORTS]
+Value: Modbus (502), DNP3 (20000), Conpot protocol ports
+Evidence: Inferred from architecture.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Electric power grid simulation data is highly sensitive — reveals grid topology and attack patterns against critical national infrastructure.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no guidance isolating simulated grid from real infrastructure.
+Evidence: No guidance preventing gridpot from being confused with real grid components.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: HIGHEST RISK: electric grid honeypot  no IRB; no ethics; no isolation guidance; power grid is critical national infrastructure; could provide adversaries realistic grid attack training data.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGHEST relevance to HoneySat ethics: gridpot is the most directly analogous to HoneySat both emulate critical national infrastructure. Complete absence of ethics governance is the strongest available case study for our framework.
+Evidence: Electric grid honeypot without any ethics governance is THE closest analogy to HoneySat.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

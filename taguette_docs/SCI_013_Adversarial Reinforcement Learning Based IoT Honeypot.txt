@@ -1,4 +1,4 @@
-ENTRY 013 - SCIENTIFIC
+ENTRY 013 — SCIENTIFIC
 ======================================================================
 NAME / IDENTIFIER: Adversarial Reinforcement Learning Based IoT Honeypot
 LINK: https://ieeexplore.ieee.org/document/11129792/
@@ -6,17 +6,21 @@ LINK: https://ieeexplore.ieee.org/document/11129792/
 ─── ASSESSED VALUES ───
 Domain: IoT
 Interaction Level: Medium
+Threat Model: Adaptive and non-stationary IoT attackers
 IRB Mentioned: No
-Consent Model: Implicit (attacker-initiated interaction with deployed honeypot)
+Consent Model: Implicit
+Data Types Collected: IPs, TCP requests, payloads (including plaintext passwords), and malware-download command strings
+Protocols & Ports: HTTP (80, 81, 554) - deployed honeypot listening ports; port 8080 used only during pre-deployment response-collection phase (Section III-A), not in the live honeypot
 Data Sensitivity: High
 Data Minimization: Not discussed
 Data Retention Policy: Not discussed
 Data Sharing: Not mentioned
 Jurisdiction / Legal: Not discussed
 Containment & Harm: Cloud-based isolation
-Deception Framing: Explicit technical deception
+Deception Framing: Purely technical
 Researcher Responsibility: Implicit
 Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: Example of AI-driven adaptive deception
 Deployment: Yes (Internet-facing cloud deployment)
 
 ─── JUSTIFICATION TEXT (for coding) ───
@@ -26,6 +30,7 @@ Value: IoT
 Evidence: Title: "Adversarial Reinforcement Learning based IoT Honeypot." Section I: Focuses on the security of "IoT terminals" and "IoT equipment"
 
 [INTERACTION LEVEL]
+Value: Medium
 Evidence: Although the authors claim the system is "high-interaction", it is categorized as Medium in the project's standardized taxonomy. The architecture relies on a "response database" and a Repeated-Update-Q-learning (RUQL) module to provide "high-fidelity responses" to attackers.
 
 [THREAT MODEL]
@@ -34,17 +39,22 @@ Evidence: Section II: The model addresses "non-stationary attack behaviors in Io
 Section I: "adjust their attack strategies based on the honeypot’s response"
 
 [IRB / ETHICS COMMITTEE]
+Value: No
 Evidence: A review of the entire paper confirms no mention of an "Institutional Review Board," "ethics committee," or "human subject protocols"
 
 [CONSENT MODEL]
+Value: Implicit
 Evidence: Section II: The system "aims to attract more attacks".  Attackers interact with a public-facing system without notification or consent
 
 [DATA TYPES COLLECTED]
-Evidence: Section III-A: System collects "IoT device TCP requests and IPs"
-. Table 6: Counts include "vulnerability exploitation" and "malicious scanning"
+Value: IPs, TCP requests, payloads (including plaintext passwords), and malware-download command strings
+Evidence: Table II, states S16 and S114 show captured attacker requests containing <password>asdf1234</password>. State S12 shows a captured Mozi botnet download command: wget+(...)/Mozi.m+-O+->/tmp/gpon80. No evidence the actual malware binary itself was downloaded/stored - only the request payload referencing it.
 
 [PROTOCOLS & PORTS]
-Evidence: Section III-A: The system collects "IoT device TCP requests". Section IV: Deployment involves opening "ports 80, 81, and 554" to simulate Hikvision cameras
+Value: HTTP (80, 81, 554) - deployed honeypot listening ports; port 8080 used only during pre-deployment response-collection phase (Section III-A), not in the live honeypot
+Evidence: Section III-A (data/response collection phase, pre-deployment): "A total of 42, 000 requests are sent to the commonly used open ports 80, 81, and 8080 of 2, 000 Hikvision camera IPs"
+
+Section IV (actual deployed honeypot): "To simulate the Hikvision camera, we open ports 80, 81, and 554"
 
 [DATA SENSITIVITY]
 Value: High
@@ -55,6 +65,7 @@ Value: Not discussed
 Evidence: Section IV: The authors highlight the "substantial volume of collected data"  rather than discussing the minimization of data capture
 
 [DATA RETENTION POLICY]
+Value: Not discussed
 Evidence: Section III-A: Data is stored in a "response database", but no deletion timeline or storage policy is mentioned
 
 [DATA SHARING]
@@ -63,12 +74,15 @@ Evidence: Page 5,6:
 While experimental Q-values and session lengths are shared, there is no mention of a public release for raw attack traces or malware.
 
 [JURISDICTION / LEGAL]
+Value: Not discussed
 Evidence: Section IV: The system was deployed across "six geographically diverse locations" — Beijing, Shanghai, Guangzhou, Frankfurt, Singapore, and Silicon Valley but contains no analysis of local laws or GDPR
 
 [CONTAINMENT & HARM]
-Evidence: Section IV: The honeypot is deployed on "Tencent Cloud server" instances. Containment is achieved technically through the lack of connection to "real IoT production systems"
+Value: Cloud-based isolation
+Evidence: Section IV: "We implement the proposed honeypot and deploy it on the Tencent Cloud server." No explicit isolation, sandboxing, or containment architecture is discussed anywhere in the paper, containment is inferred only from cloud hosting, not stated as a safety measure.
 
 [DECEPTION FRAMING]
+Value: Purely technical
 Evidence: Abstract: Honeypots are defined as "decoy systems deployed to entice attackers"
 . Section III-C: Focuses on providing a "real-time high-fidelity response" to maintain the decoy's credibility
 
@@ -78,9 +92,12 @@ Evidence: Responsibility is Implicit, as the authors focus entirely on the "defe
 
 [ETHICAL GAPS]
 Value: Structural Ethical Vacuum
-Evidence: Like the majority of AI-based papers, it has no IRB, no discussion of the ethics of collecting real IP data, and no data governance framework
+Evidence: Like the majority of AI-based papers, it has no IRB, no discussion of the ethics of collecting real IP data, and no data governance framework.
+
+Author affiliation: "C. He is with the Hangzhou Hikvision Digital Technology Co., Ltd." Section III-A: "We collect 2000 IP addresses tagged with Hikvision cameras... A total of 42,000 requests are sent to... 2,000 Hikvision camera IPs."
 
 [RELEVANCE TO PROJECT]
+Value: Example of AI-driven adaptive deception
 Evidence: Demonstrates the "technology-driven ethical lag". Unlike HoneySat, it uses RUQL to optimize attacker manipulation while bypassing all formal ethical governance
 
 [DEPLOYMENT]

@@ -1,0 +1,101 @@
+ENTRY 209 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Mail::SMTP::Honeypot
+LINK: https://metacpan.org/pod/release/MIKER/Mail-SMTP-Honeypot-0.11/Honeypot.pm
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: MetaCPAN POD page is the documentation; Perl module acting as spam sink on tertiary MX host.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Email spammers and spam relay bots targeting open SMTP relays.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Spam email content, sender IP addresses, SMTP interaction data
+Protocols & Ports: SMTP (25)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Perl SMTP honeypot module acting as spam sink on tertiary MX host; MetaCPAN documented.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: SMTP honeypot accepting and discarding spam; MetaCPAN POD documentation.
+
+[THREAT MODEL]
+Value: Email spammers and spam relay bots targeting open SMTP relays.
+Evidence: MetaCPAN POD page is the documentation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Spam email content, sender IP addresses, SMTP interaction data
+Evidence: Not documented; SMTP honeypot receives and discards spam email.
+
+[PROTOCOLS & PORTS]
+Value: SMTP (25)
+Evidence: Standard SMTP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Spam email metadata; no legitimate user data beyond spam content.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

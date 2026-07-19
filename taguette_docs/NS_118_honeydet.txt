@@ -1,0 +1,102 @@
+ENTRY 118 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeydet
+LINK: https://github.com/referefref/honeydet
+PLATFORM: GitHub
+STARS: 110
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with usage; signature-based honeypot detector in Go.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Not applicable
+Threat Model: Attackers and red teamers fingerprinting networks to identify and avoid honeypots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Target IP/hostname, detected honeypot type, fingerprint evidence
+Protocols & Ports: Multiple protocol ports (scans targets)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Dual-use: actively helps attackers avoid honeypots; no ethics discussion of offensive capability.
+Relevance to Project: HIGH relevance to ethics framework: demonstrates 20+ honeypot types are trivially fingerprint-detectable motivates ethics-aware design for HoneySat evasion resistance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Signature-based honeypot detection tool identifying 20+ honeypot types from network responses.
+
+[INTERACTION LEVEL]
+Value: Not applicable
+Evidence: Honeypot detection tool; not a honeypot itself.
+
+[THREAT MODEL]
+Value: Attackers and red teamers fingerprinting networks to identify and avoid honeypots.
+Evidence: README describes 20+ honeypot fingerprinting signatures.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Target IP/hostname, detected honeypot type, fingerprint evidence
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Multiple protocol ports (scans targets)
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Detection scan results; no attacker data collected.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Dual-use: actively helps attackers avoid honeypots; no ethics discussion of offensive capability.
+Evidence: README does not address offensive use of honeypot detection for attack evasion.
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to ethics framework: demonstrates 20+ honeypot types are trivially fingerprint-detectable motivates ethics-aware design for HoneySat evasion resistance.
+Evidence: Automated honeypot detection for 20+ systems is a key finding motivating our ethics framework.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 103 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeyprint
+LINK: https://github.com/glaslos/honeyprint
+PLATFORM: GitHub
+STARS: 21
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; printer honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers and scanners targeting network printers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, printer protocol requests
+Protocols & Ports: IPP (631), LPD (515)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Printer honeypot emulating network printer interfaces to log printer-targeting attacks.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates network printer protocols (IPP, LPD); logs access attempts.
+
+[THREAT MODEL]
+Value: Attackers and scanners targeting network printers.
+Evidence: Not documented.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, printer protocol requests
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: IPP (631), LPD (515)
+Evidence: Standard printer ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Printer protocol request metadata only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

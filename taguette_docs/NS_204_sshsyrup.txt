@@ -1,0 +1,102 @@
+ENTRY 204 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: sshsyrup
+LINK: https://github.com/mkishere/sshsyrup
+PLATFORM: GitHub
+STARS: 99
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README only but detailed; low-to-medium SSH honeypot capturing terminal activity to asciinema.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: SSH attackers performing post-exploitation; attackers interacting with fake shell.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SSH credentials, full terminal session recordings (asciinema format)
+Protocols & Ports: SSH (22)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; session recordings without data governance documentation.
+Relevance to Project: Moderate relevance; session recording design applicable to HoneySat command interaction logging.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-to-medium SSH honeypot capturing terminal activity to asciinema session recordings.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Captures full terminal sessions as asciinema recordings; medium interaction with session replay.
+
+[THREAT MODEL]
+Value: SSH attackers performing post-exploitation; attackers interacting with fake shell.
+Evidence: Detailed README documents asciinema session capture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SSH credentials, full terminal session recordings (asciinema format)
+Evidence: README documents asciinema session recording functionality.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full terminal session recordings; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; session recordings without data governance documentation.
+Evidence: Asciinema session recordings without retention policy.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; session recording design applicable to HoneySat command interaction logging.
+Evidence: Session replay capability relevant to HoneySat attacker behavior analysis.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

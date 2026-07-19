@@ -1,0 +1,102 @@
+ENTRY 093 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: honeycomb_plugins
+LINK: https://github.com/Cymmetria/honeycomb_plugins
+PLATFORM: GitHub
+STARS: 27
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; Cymmetria honeycomb plugin collection.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic internet attackers depending on plugin deployed.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Depends on plugin; typically IP addresses and protocol interaction data
+Protocols & Ports: Protocol-dependent per plugin
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; commercial platform plugin with no public ethics governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Plugin library for Cymmetria honeycomb deception platform.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Provides emulation plugins; individual plugins vary in interaction depth.
+
+[THREAT MODEL]
+Value: Generic internet attackers depending on plugin deployed.
+Evidence: README describes plugin architecture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Depends on plugin; typically IP addresses and protocol interaction data
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: Protocol-dependent per plugin
+Evidence: Not documented.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Plugin-dependent; typically low-sensitivity metadata.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; commercial platform plugin with no public ethics governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

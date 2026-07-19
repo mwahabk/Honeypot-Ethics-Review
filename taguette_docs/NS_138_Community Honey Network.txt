@@ -1,0 +1,102 @@
+ENTRY 138 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Community Honey Network
+LINK: https://github.com/CommunityHoneyNetwork/CHN-Server
+PLATFORM: GitHub
+STARS: 40
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + comprehensive readthedocs site confirmed (server install, honeypot deploy guides).
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Internet-wide automated scanners and attackers across all protocols covered by deployed honeypots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Aggregated attacker IPs, protocol connection logs from all deployed honeypots, threat intelligence feeds
+Protocols & Ports: Depends on deployed honeypot sensors (SSH, HTTP, FTP, and others)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; aggregates threat data at scale without governance documentation.
+Relevance to Project: Moderate relevance; distributed honeypot management platform architecture applicable to HoneySat multi-sensor network design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Multi-honeypot deployment and management platform; aggregates threat data from distributed sensors across IT networks.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Manages and deploys low-interaction honeypots; readthedocs documents server and sensor setup.
+
+[THREAT MODEL]
+Value: Internet-wide automated scanners and attackers across all protocols covered by deployed honeypots.
+Evidence: README and readthedocs describe distributed sensor deployment model.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Aggregated attacker IPs, protocol connection logs from all deployed honeypots, threat intelligence feeds
+Evidence: readthedocs documents data collection from deployed honeypot sensors.
+
+[PROTOCOLS & PORTS]
+Value: Depends on deployed honeypot sensors (SSH, HTTP, FTP, and others)
+Evidence: Sensor-dependent; readthedocs documents supported honeypot types.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Aggregated connection metadata from deployed sensors; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; aggregates threat data at scale without governance documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; distributed honeypot management platform architecture applicable to HoneySat multi-sensor network design.
+Evidence: Sensor aggregation model relevant to HoneySat ground-station honeypot network.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

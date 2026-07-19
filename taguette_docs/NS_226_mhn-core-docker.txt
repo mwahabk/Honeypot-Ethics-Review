@@ -1,0 +1,102 @@
+ENTRY 226 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: mhn-core-docker
+LINK: https://github.com/MattCarothers/mhn-core-docker
+PLATFORM: GitHub
+STARS: 35
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only but detailed; core MHN elements implemented in Docker.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic internet attackers captured by MHN-deployed sensors.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Aggregated sensor data from MHN deployment
+Protocols & Ports: Sensor-dependent
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; MHN Docker deployment with no governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Core Modern Honey Network elements implemented in Docker; detailed README.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Docker implementation of core MHN components with detailed README documentation.
+
+[THREAT MODEL]
+Value: Generic internet attackers captured by MHN-deployed sensors.
+Evidence: Detailed README documents Docker-based MHN core deployment.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Aggregated sensor data from MHN deployment
+Evidence: README describes MHN data aggregation architecture.
+
+[PROTOCOLS & PORTS]
+Value: Sensor-dependent
+Evidence: MHN sensor-dependent.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Aggregated sensor metadata.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; MHN Docker deployment with no governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,107 @@
+ENTRY 019 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: TwinPot: Digital Twin-assisted Honeypot for Cyber-Secure Smart Seaports
+LINK: https://arxiv.org/abs/2310.12880
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: Low
+Threat Model: Attacks on port infrastructure and CPS
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Port system interactions, CPS telemetry
+Protocols & Ports: UDP (confirmed); other "connectivity protocols" unspecified
+Data Sensitivity: Low
+Data Minimization: Yes (Partial)
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Digital Twin isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: Digital Twin honeypot concept relevant to framework, but untested against real attackers
+Deployment: No (Experimental)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: Abstract / Index Terms: Focuses on "Cyber-Physical Systems (CPS)" and "smart seaport" infrastructure
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Section III-A: TwinPot is described only as duplicating DT entities and performing "behavioral analysis" after an attack is detected - no shell access, command execution, or direct system interaction with attackers is described anywhere in the paper. The system functions as a detection/redirection mechanism rather than an engagement-focused honeypot, and since it was never deployed against real attackers (evaluated only on pre-existing datasets), no actual interactive engagement was ever tested.
+
+[THREAT MODEL]
+Value: Attacks on port infrastructure and CPS
+Evidence: Section III: The authors define the threat as "external traffic," which they refer to as "traffic from entities other than existing entities in the seaport, such as IoT devices on inbound cargo ships"
+. The system is designed so that "Twin-Pot" can "analyze the behaviors of attackers for external entity attacks in the seaport"
+ while its "entities deter external attackers from targeting the real entities"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A review of the manuscript confirms there is "no mention of an 'Institutional Review Board,' 'ethics committee,' or human subject protocols"
+
+[CONSENT MODEL]
+Value: None
+Evidence: No honeypot was ever deployed to interact with real attackers (Section IV: "we build an extensive smart seaport dataset for internal and external attacks using the MANSIM tool and two existing datasets"). All evaluation used pre-existing public datasets (Edge-IIoTset, SDSN) and synthetic MANSIM-generated ship data. Since no real attacker ever interacted with the system, the question of consent from attackers does not arise the way it does for internet-facing honeypots.
+
+[DATA TYPES COLLECTED]
+Value: Port system interactions, CPS telemetry
+Evidence: Section III-A, III-B, and IV: 
+The system is designed to "take data from the DT layer to a database periodically" and utilizes "twins gather all data from physical entities". Once an attack is detected, the system performs a "behavioral analysis of the attack" to "defines its characteristics". This includes "time-dependent ship motion data" (such as accelerations and velocities) and traffic from "connectivity protocols" (including HTTP, ICMP, TCP, and UDP)
+
+[PROTOCOLS & PORTS]
+Value: UDP (confirmed); other "connectivity protocols" unspecified
+Evidence: Section IV: paper only states Edge-IIoTset "includes fourteen attacks on connectivity protocols" (protocols not named) and SDSN "contains nine different DDoS UDP attack datasets" (UDP explicitly named) - specific protocol names beyond UDP are not enumerated in the TwinPot paper text itself.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: No real attacker or operational data was captured; the system relies entirely on synthetic MANSIM ship-motion data (Section IV) and the pre-existing, already-public Edge-IIoTset and SDSN datasets. No live seaport telemetry or real attacker interaction is involved.
+
+[DATA MINIMIZATION]
+Value: Yes (Partial)
+Evidence: Section III-A: The system uses "YANG models" to parse data and "remove critical data" before it is sent to the TwinPot entities to "give a real network sense" without exposing sensitive information
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Section III-A, B:
+The paper describes the technical destination of the data, stating the system will "take data from the DT layer to a database periodically"
+ and that twins "gather all data from physical entities"
+. However, there is no statement regarding storage duration, a deletion timeline, or secure archival policies for the logs collected in this database
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Section IV:
+While a "seaport dataset" was created for testing, the paper does not mention a public release of raw attacker traces or interaction logs
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: While the authors express awareness of the "primary concern" of cybersecurity for "seaport and maritime authorities"
+, the paper lacks any analysis of legal compliance, jurisdiction, or data protection laws (such as GDPR). The authors implement a technical solution to "parse data automatically... removing critical data using YANG models"
+, but this is framed as a technical requirement for "high-fidelity" simulation rather than a legal or regulatory necessity
+
+[CONTAINMENT & HARM]
+Value: Digital Twin isolation
+Evidence: Section III: Technical containment is achieved because "TwinPot’s entities keep the interest of attackers away from...." ensuring no interaction with live port systems occurs
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Section I / Abstract: Deception is framed as an engineering goal to "increase the complexity and simulation fidelity" and make decoys "more attractive to attackers"
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section III-A: Responsibility is framed as defensive intent—using the "behavioral analysis of the attack" to "improve the real-system attack detection mechanism"
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Represents the "ethics-by-containment" model where ethics are treated as a security engineering problem. There is no formal ethical framework or IRB oversight despite high interaction realism
+
+[RELEVANCE TO PROJECT]
+Value: Digital Twin honeypot concept relevant to framework, but untested against real attackers
+Evidence: Section III-A: TwinPot proposes using Digital Twin technology to increase honeypot "complexity and simulation fidelity" - directly relevant to the project's Digital Twin research parameter. However, since the system was never deployed against real-world attackers and was evaluated only on synthetic MANSIM data and pre-existing datasets (Edge-IIoTset, SDSN), it cannot serve as a case study for real-world ethics gaps (unlike HoneySat or HoneyPLC). Its relevance is conceptual/architectural rather than as an example of ethical practice or omission in live deployment.
+
+[DEPLOYMENT]
+Value: No (Experimental)
+Evidence: Conclusion: The system was evaluated using the "MANSIM tool and two existing datasets" in a simulated maritime environment rather than a live Internet-facing deployment

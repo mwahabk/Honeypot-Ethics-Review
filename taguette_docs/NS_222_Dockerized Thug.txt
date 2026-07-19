@@ -1,0 +1,101 @@
+ENTRY 222 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Dockerized Thug
+LINK: https://hub.docker.com/r/honeynet/thug/
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Docker Hub page only; Dockerized Thug honeyclient for analyzing malicious web content.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Malicious web servers serving drive-by download attacks, exploit kits, and browser exploits.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Malicious URLs visited, JavaScript execution logs, exploit payload captures, malware downloads
+Protocols & Ports: HTTP/HTTPS (80, 443) outbound to malicious servers
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; outbound connections to malicious servers create exposure risk.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; honeyclient exposure to malicious servers not discussed; Docker Hub only documentation.
+Relevance to Project: Low relevance to HoneySat; client-side honeypot concept differs from server-side honeypot design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Dockerized Thug honeyclient for analyzing malicious web content; Docker Hub page only.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: High-interaction honeyclient: executes real JavaScript in browser emulator to detect malicious web content.
+
+[THREAT MODEL]
+Value: Malicious web servers serving drive-by download attacks, exploit kits, and browser exploits.
+Evidence: Docker Hub page only; Thug documentation at buffer/thug GitHub.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Malicious URLs visited, JavaScript execution logs, exploit payload captures, malware downloads
+Evidence: High-interaction browser emulation captures full malicious content.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443) outbound to malicious servers
+Evidence: Client honeypot making outbound connections to malicious web servers.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Malicious web content captured; medium sensitivity — honeyclient makes outbound connections to attacker-controlled servers.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; outbound connections to malicious servers create exposure risk.
+Evidence: Honeyclient connects to malicious servers — exposure of honeyclient IP to attackers.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; honeyclient exposure to malicious servers not discussed; Docker Hub only documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance to HoneySat; client-side honeypot concept differs from server-side honeypot design.
+Evidence: Client honeypot paradigm has limited direct applicability to HoneySat.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

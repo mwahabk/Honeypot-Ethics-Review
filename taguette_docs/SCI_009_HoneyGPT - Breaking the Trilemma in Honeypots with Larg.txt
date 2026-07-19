@@ -1,0 +1,111 @@
+ENTRY 009 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HoneyGPT: Breaking the Trilemma in Honeypots with Large Language Models
+LINK: https://arxiv.org/abs/2406.01882
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Human attackers engaging in dialogue and commands
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: Conversational data, commands, attacker responses
+Protocols & Ports: SSH / Telnet
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Logical containment
+Deception Framing: Purely technical
+Researcher Responsibility: Minimal
+Ethical Gaps: 1. Major ethical concerns (manipulation, consent, AI agency) not addressed
+2. All attacker interaction data is transmitted to OpenAI's ChatGPT API - a third-party commercial service with no discussion of data governance, privacy implications, or terms-of-service compliance for this third-party processing"
+Relevance to Project: Critical case study for ethical risks of LLM honeypots
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Page 1: The work focuses on "Terminal honeypots," which are "a specialized type of honeypots for emulating real terminal systems"
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: HoneyGPT is a programmatic emulator that "repurposes the work of the Cowrie honeypot" for its protocol proxy".
+While it uses LLMs to simulate high-interaction results, the authors explicitly baseline it against Cowrie, which they define as a "medium-interaction" system
+
+[THREAT MODEL]
+Value: Human attackers engaging in dialogue and commands
+Evidence: Page 4: The system is designed for "Adversarial scenarios often involve attackers executing a series of malicious commands" and 
+Abstract: "bait unauthorized entities"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: There is no mention of an "Institutional Review Board," "ethics committee," or "human subject protocols" in the entire paper.
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Page 2: The authors explicitly "deploy HoneyGPT... on the Internet for three months" to engage with live attackers, capturing "more attack behaviors and longer interactions" without any mention of obtaining consent
+
+[DATA TYPES COLLECTED]
+Value: Conversational data, commands, attacker responses
+Evidence: Page 3: The Terminal Protocol Proxy "parses attackers’ commands" while the Prompt Manager "extracts the terminal output" and "maintaining the state of honeypot"
+
+[PROTOCOLS & PORTS]
+Value: SSH / Telnet
+Evidence: Section IV: The system uses a "Terminal Protocol Proxy" that "repurposes the work of the Cowrie honeypot" to parse attacker commands (Cowrie typically handles ports 22/23)
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Page 2: The system maintains "dynamic memory during interactions" and "long-dialogue response tasks," which involve high-fidelity logs of human-adversary interactions
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Page4: No mention of the "minimization principle"; the focus is instead on "Memory Pruning" to handle context length limits for better interaction
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Page 5: "Memory Maintenance" is discussed strictly in the context of "managing the prompt’s length" rather than a formal retention or deletion policy for stored interaction logs
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: Page 2: While "baseline evaluation" and P1: "field evaluation" results are discussed, there is no mention of a public link to the interaction traces or conversational datasets
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Page 2: The paper mentions deployment "on the Internet for three months" but contains no analysis of "GDPR," "legal compliance," or jurisdictional awareness
+
+[CONTAINMENT & HARM]
+Value: Logical containment
+Evidence: Page3: The framework "transforms the conventional ”requestresponse” message interaction (based on terminal protocols)
+into a ”question-answer” text interaction (via ChatGPT API)"
+effectively isolating the attacker's impact within the LLM's simulated environment
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Page 6: Deception is central to the design, aiming to "expertly balances authenticity with the objective of enticing attackers into prolonged interactions"
+
+[RESEARCHER RESPONSIBILITY]
+Value: Minimal
+Evidence: The authors discuss 
+Page9: "security analysis features" and a P10: "paradigm shift" for threat intelligence, but do not provide a formal ethical responsibility statement
+
+[ETHICAL GAPS]
+Value: 1. Major ethical concerns (manipulation, consent, AI agency) not addressed
+2. All attacker interaction data is transmitted to OpenAI's ChatGPT API - a third-party commercial service with no discussion of data governance, privacy implications, or terms-of-service compliance for this third-party processing"
+Evidence: Page 11: The paper acknowledges technical "limitations" such as "Prompt-based Attacks" and "Overfitting," but ignores the human-centric ethical risks of AI-driven manipulation and the lack of informed consent
+
+Section IV: "HoneyGPT transforms the conventional ”requestresponse” message interaction (based on terminal protocols)
+into a ”question-answer” text interaction (via ChatGPT API)."
+
+[RELEVANCE TO PROJECT]
+Value: Critical case study for ethical risks of LLM honeypots
+Evidence: Critical case study for the "technology-driven ethical lag" and the "structural ethical vacuum." While HoneyGPT solves the technical "trilemma" using LLMs to create a high-fidelity digital twin of a terminal
+, it lacks the IRB oversight and ethical governance found in HoneySat
+. It serves as the primary example of why a new Ethical Framework is mandatory for AI-driven systems that interact with humans in the wild without consent
+.
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Page 2: "We deploy HoneyGPT and Cowire, which is a programmatic honeypot, on the Internet for three months"

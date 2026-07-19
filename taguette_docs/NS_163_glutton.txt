@@ -1,0 +1,102 @@
+ENTRY 163 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: glutton
+LINK: https://github.com/mushorg/glutton
+PLATFORM: GitHub
+STARS: 305
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; generic low-interaction protocol-agnostic honeypot using iptables/TPROXY.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Internet-wide attackers using any protocol; captures all traffic transparently.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, full raw TCP/UDP payloads across any protocol
+Protocols & Ports: All TCP/UDP ports (transparent proxy)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; protocol-agnostic capture of all traffic without targeted governance.
+Relevance to Project: Moderate relevance; protocol-agnostic transparent capture applicable to HoneySat full-spectrum signal monitoring.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Generic low-interaction protocol-agnostic honeypot using iptables/TPROXY; Honeynet Project.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Protocol-agnostic honeypot capturing any TCP/UDP traffic via transparent proxy.
+
+[THREAT MODEL]
+Value: Internet-wide attackers using any protocol; captures all traffic transparently.
+Evidence: README describes TPROXY-based transparent protocol capture.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, full raw TCP/UDP payloads across any protocol
+Evidence: Protocol-agnostic capture means all traffic content is logged.
+
+[PROTOCOLS & PORTS]
+Value: All TCP/UDP ports (transparent proxy)
+Evidence: TPROXY captures all traffic without port restriction.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Raw protocol payloads captured; no personal user data beyond attacker traffic.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; protocol-agnostic capture of all traffic without targeted governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; protocol-agnostic transparent capture applicable to HoneySat full-spectrum signal monitoring.
+Evidence: TPROXY transparent capture design relevant to HoneySat ground station traffic capture architecture.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

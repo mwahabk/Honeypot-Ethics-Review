@@ -1,0 +1,102 @@
+ENTRY 233 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeybits
+LINK: https://github.com/0x4D31/honeybits
+PLATFORM: GitHub
+STARS: 277
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; PoC tool to spread breadcrumbs and honeytokens across systems.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Advanced attackers performing lateral movement who interact with planted deceptive artifacts.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, honeytoken access events, lateral movement behavior
+Protocols & Ports: HTTP/HTTPS (token callbacks); system-dependent
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; honeytoken deployment across production systems without user notification.
+Relevance to Project: Moderate relevance; honeytoken breadcrumb deployment ethics directly applicable to HoneySat satellite system deception design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: PoC tool to spread breadcrumbs and honeytokens across systems to detect lateral movement.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Deploys deceptive honeytokens and fake credentials across systems as lateral movement detectors.
+
+[THREAT MODEL]
+Value: Advanced attackers performing lateral movement who interact with planted deceptive artifacts.
+Evidence: README describes honeytoken deployment across multiple system types.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, honeytoken access events, lateral movement behavior
+Evidence: README describes detecting attacker interaction with planted tokens.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (token callbacks); system-dependent
+Evidence: Honeytoken callbacks depend on token type.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Token access events and attacker IP; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; honeytoken deployment across production systems without user notification.
+Evidence: Deploying honeytokens in production systems without endpoint user awareness raises ethics questions.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; honeytoken breadcrumb deployment ethics directly applicable to HoneySat satellite system deception design.
+Evidence: Breadcrumb-based honeytoken strategy applicable to HoneySat command system deception layer.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

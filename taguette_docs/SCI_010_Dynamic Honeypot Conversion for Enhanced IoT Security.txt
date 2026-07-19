@@ -1,4 +1,4 @@
-ENTRY 010 - SCIENTIFIC
+ENTRY 010 — SCIENTIFIC
 ======================================================================
 NAME / IDENTIFIER: Dynamic Honeypot Conversion for Enhanced IoT Security
 LINK: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5079213
@@ -6,8 +6,11 @@ LINK: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5079213
 ─── ASSESSED VALUES ───
 Domain: IoT
 Interaction Level: Medium
+Threat Model: IoT malware, automated attacks, and opportunistic attackers
 IRB Mentioned: No
 Consent Model: Implicit
+Data Types Collected: Network traffic, Attack payloads, IoT interaction behavior
+Protocols & Ports: UDP, DNS, TCP (SYN), ICMP, and HTTP
 Data Sensitivity: Medium
 Data Minimization: Not discussed
 Data Retention Policy: Not discussed
@@ -17,6 +20,7 @@ Containment & Harm: Isolation and State Management
 Deception Framing: Purely technical
 Researcher Responsibility: Implicit (Technical safety)
 Ethical Gaps: Ethics-by-Design without formal governance
+Relevance to Project: Example of "Ethics-by-Containment"
 Deployment: Experimental / controlled
 
 ─── JUSTIFICATION TEXT (for coding) ───
@@ -26,6 +30,7 @@ Value: IoT
 Evidence: Page 1: The title and abstract focus exclusively on the "Internet of Things (IoT)"
 
 [INTERACTION LEVEL]
+Value: Medium
 Evidence: Page 3: The authors argue that "high-interaction honeypots... are impractical for widespread use in IoT". They advocate for a system that balances "realistic interaction" while controlling risk, which aligns with their definition of Medium-interaction
 
 [THREAT MODEL]
@@ -33,15 +38,19 @@ Value: IoT malware, automated attacks, and opportunistic attackers
 Evidence: Page 5: The model assumes an attacker "capable of launching various attacks targeting IoT nodes," including "volumetric attacks, protocol attacks, and application-layer attacks"
 
 [IRB / ETHICS COMMITTEE]
+Value: No
 Evidence: Pages 1–15: There is no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol" in the entire paper.
 
 [CONSENT MODEL]
+Value: Implicit
 Evidence: Page 5: The attacker operates under the limitation that they "cannot determine whether a node is a honeypot before interaction" and remain "unaware of the system’s dynamic conversion capability," implying data is collected without their knowledge or consent
 
 [DATA TYPES COLLECTED]
+Value: Network traffic, Attack payloads, IoT interaction behavior
 Evidence: Page 7: The system records security events defined by Equation (21) as: "e = (timestamp, event type, node id, data)," where 'data' represents the interaction content
 
 [PROTOCOLS & PORTS]
+Value: UDP, DNS, TCP (SYN), ICMP, and HTTP
 Evidence: Page 8:
 The CICDDoS2019 dataset provides diverse attack patterns
 relevant to IoT environments: volumetric attacks (UDP flood,
@@ -58,21 +67,26 @@ Evidence: Page 5:
 The paper does not mention the "minimization principle" or filtering specific data fields; instead, it focuses on "Evidence Preservation" through immutable logging
 
 [DATA RETENTION POLICY]
+Value: Not discussed
 Evidence: Page 2:
 While the blockchain component ensures "immutable records" of conversion events and attacks, there is no discussion of a deletion timeline or storage expiration policy
 
 [DATA SHARING]
 Value: None mentioned
 Evidence: Page 8:
-The authors provide a GitHub link for the implementation source code, but they do not mention a public release for the raw interaction traces or attacker logs
+"The implementation source code and experimental datasets
+are available at https://github.com/dcommey/BHICS, enabling the reproducibility of our results." raw interaction logs not released
 
 [JURISDICTION / LEGAL]
+Value: Not discussed
 Evidence: There is no analysis of GDPR, legal compliance for node conversion, or jurisdictional considerations for the deployment
 
 [CONTAINMENT & HARM]
+Value: Isolation and State Management
 Evidence: The system initiates a (Page 2) "rapid isolation protocol" and transitions nodes through specific phases (normal→isolating→converting→operational) to (Page 4) "maintain network stability and prevent data loss"
 
 [DECEPTION FRAMING]
+Value: Purely technical
 Evidence: Page 2:
 	
 Deception is treated as a functional requirement to provide "greater flexibility and resource efficiency" and realistic interaction in defense
@@ -87,6 +101,7 @@ Value: Ethics-by-Design without formal governance
 Evidence: Like the vast majority of papers in the study, it relies on technical containment (isolation protocols and state machines) as a substitute for formal ethical discussion or IRB oversight
 
 [RELEVANCE TO PROJECT]
+Value: Example of "Ethics-by-Containment"
 Evidence: BHICS is a primary example of the "technology-driven ethical lag." It uses a sophisticated Digital Twin concept (converting real nodes into high-fidelity decoys) but lacks the IRB oversight found in HoneySat
 
 [DEPLOYMENT]

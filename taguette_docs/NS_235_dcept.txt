@@ -1,0 +1,102 @@
+ENTRY 235 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: dcept
+LINK: https://github.com/secureworks/dcept
+PLATFORM: GitHub
+STARS: 504
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README + external SecureWorks blog post; Active Directory honeytoken deployment tool.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Advanced attackers stealing and using Active Directory credentials in enterprise environments.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, fake Kerberos ticket usage events, authentication attempts with honeytokens
+Protocols & Ports: Kerberos (88), LDAP (389) trigger callbacks via AD
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; Active Directory honeytoken deployment by commercial vendor (SecureWorks) with no ethics documentation.
+Relevance to Project: Moderate relevance; Active Directory honeytoken ethics applicable to satellite ground segment identity/authentication honeypot design.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Active Directory honeytoken deployment tool generating fake Kerberos tickets; SecureWorks.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Deploys fake Active Directory credentials as honeytokens to detect credential theft and lateral movement.
+
+[THREAT MODEL]
+Value: Advanced attackers stealing and using Active Directory credentials in enterprise environments.
+Evidence: README and external SecureWorks blog post document AD honeytoken deployment.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, fake Kerberos ticket usage events, authentication attempts with honeytokens
+Evidence: README describes honeytoken trigger logging via Active Directory monitoring.
+
+[PROTOCOLS & PORTS]
+Value: Kerberos (88), LDAP (389) trigger callbacks via AD
+Evidence: Active Directory authentication protocol ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Active Directory authentication events; enterprise credential usage data; medium sensitivity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; Active Directory honeytoken deployment by commercial vendor (SecureWorks) with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; Active Directory honeytoken ethics applicable to satellite ground segment identity/authentication honeypot design.
+Evidence: AD credential honeytoken strategy applicable to HoneySat ground segment authentication deception.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 061 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: StrutsHoneypot
+LINK: https://github.com/Cymmetria/StrutsHoneypot
+PLATFORM: GitHub
+STARS: 72
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; Struts Apache 2 based honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers exploiting Apache Struts2 RCE vulnerability (CVE-2017-5638).
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, exploit payloads, command injection attempts
+Protocols & Ports: HTTP (80, 8080)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; CVE-specific honeypot with no dual-use discussion.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot exploiting Apache Struts2 CVE-2017-5638 to attract targeted exploit attempts.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates vulnerable Apache Struts2 endpoint; logs CVE-specific exploit payloads.
+
+[THREAT MODEL]
+Value: Attackers exploiting Apache Struts2 RCE vulnerability (CVE-2017-5638).
+Evidence: README describes CVE-specific emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, exploit payloads, command injection attempts
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80, 8080)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Exploit payloads from attackers; no real infrastructure.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; CVE-specific honeypot with no dual-use discussion.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

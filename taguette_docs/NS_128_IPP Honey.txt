@@ -1,0 +1,102 @@
+ENTRY 128 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: IPP Honey
+LINK: https://gitlab.com/bontchev/ipphoney
+PLATFORM: GitLab
+STARS: 3
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README on GitLab; Internet Printing Protocol honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers targeting networked printers for data exfiltration or lateral movement.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, IPP request data, print job contents
+Protocols & Ports: IPP (631)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot for Internet Printing Protocol detecting attacks against networked printers.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates IPP service; logs print job submissions and exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting networked printers for data exfiltration or lateral movement.
+Evidence: README on GitLab describes IPP emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, IPP request data, print job contents
+Evidence: Not documented; print job submissions may contain document content.
+
+[PROTOCOLS & PORTS]
+Value: IPP (631)
+Evidence: Standard IPP port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: IPP request metadata; no real print jobs processed.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 205 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: twisted-honeypots
+LINK: https://github.com/lanjelot/twisted-honeypots
+PLATFORM: GitHub
+STARS: 87
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; SSH, FTP and Telnet honeypots based on Python Twisted framework.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Generic internet automated scanners targeting SSH, FTP, and Telnet.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, credentials across SSH, FTP, Telnet
+Protocols & Ports: SSH (22), FTP (21), Telnet (23)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SSH, FTP, and Telnet honeypots based on Python Twisted framework.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Twisted-based multi-service honeypot covering SSH, FTP, and Telnet.
+
+[THREAT MODEL]
+Value: Generic internet automated scanners targeting SSH, FTP, and Telnet.
+Evidence: README describes Twisted-based implementation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, credentials across SSH, FTP, Telnet
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22), FTP (21), Telnet (23)
+Evidence: Standard ports for all three protocols.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential metadata across three protocols.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

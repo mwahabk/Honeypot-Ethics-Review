@@ -1,0 +1,102 @@
+ENTRY 084 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: ADBHoney
+LINK: https://github.com/huuck/ADBHoney
+PLATFORM: GitHub
+STARS: 178
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; simulates Android ADB server.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Mirai-variant IoT botnets and scanners targeting exposed Android ADB ports.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, ADB commands, malware download payloads
+Protocols & Ports: ADB (5555)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no malware handling guidance.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Captures live malware with no documented containment or safe handling; no IRB.
+Relevance to Project: Moderate relevance; IoT botnet malware capture applicable to space/ground security research.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Low-interaction Android Debug Bridge honeypot capturing IoT botnet attacks targeting ADB.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates ADB server protocol; logs connection and command attempts.
+
+[THREAT MODEL]
+Value: Mirai-variant IoT botnets and scanners targeting exposed Android ADB ports.
+Evidence: README describes ADB protocol emulation and Mirai botnet targeting.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, ADB commands, malware download payloads
+Evidence: README describes capturing malware samples sent via ADB.
+
+[PROTOCOLS & PORTS]
+Value: ADB (5555)
+Evidence: Standard Android ADB port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Malware download payloads captured; medium sensitivity due to live malware.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no malware handling guidance.
+Evidence: Live malware capture without safe handling documentation.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Captures live malware with no documented containment or safe handling; no IRB.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; IoT botnet malware capture applicable to space/ground security research.
+Evidence: IoT botnet targeting methodology relevant to HoneySat threat model.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

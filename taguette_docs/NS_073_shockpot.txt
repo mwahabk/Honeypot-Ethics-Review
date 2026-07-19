@@ -1,0 +1,102 @@
+ENTRY 073 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: shockpot
+LINK: https://github.com/pwnlandia/shockpot
+PLATFORM: GitHub
+STARS: 55
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with setup; Shellshock exploit detection honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers exploiting Shellshock vulnerability in CGI-enabled web servers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, HTTP headers with Shellshock payloads, command injection strings
+Protocols & Ports: HTTP (80)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; CVE-specific honeypot.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot for detecting Shellshock (CVE-2014-6271) exploitation via HTTP.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates vulnerable bash CGI endpoint; logs Shellshock payloads.
+
+[THREAT MODEL]
+Value: Attackers exploiting Shellshock vulnerability in CGI-enabled web servers.
+Evidence: README describes Shellshock emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, HTTP headers with Shellshock payloads, command injection strings
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80)
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Exploit payloads only; no real system access.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; CVE-specific honeypot.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,101 @@
+ENTRY 023 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: A Cyber-Twin Based Honeypot for Gathering Threat Intelligence
+LINK: https://arxiv.org/abs/2509.09222
+
+─── ASSESSED VALUES ───
+Domain: CPS
+Interaction Level: High
+Threat Model: Targeted ICS/Ransomware
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: IPs, traffic, malware, and comms
+Protocols & Ports: RDP (3389), SSH (22), Websocket
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Internal/Management sharing; Findings in paper
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Cyber-twin isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit, with partial self-reflection
+Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: Digital Twin / Ethics framework
+Deployment: Yes (Public Internet)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: CPS
+Evidence: Abstract & Section III: Explicitly targets "Critical Infrastructure (CI)" and utilizes a "cyber twin of an operational Water Treatment Plant"
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Section I: Framed as a "fully functional" and "realistic replica" that includes a Human Machine Interface (HMI) communicating with a backend plant twin
+
+[THREAT MODEL]
+Value: Targeted ICS/Ransomware
+Evidence: Section I & V: Targets attackers interested in "critical infrastructure"; specifically captures a "complete ransomware attack chain" from the Makop family
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A complete review confirms no mention of an Institutional Review Board (IRB) or ethical committee approval.
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Section I & V: Access was "deliberately allowed" via RDP using a "weak password" to attract attackers who unknowingly interacted with the decoy
+
+[DATA TYPES COLLECTED]
+Value: IPs, traffic, malware, and comms
+Evidence: Section I, IV & V: Records "incoming IPs," "network traffic," "host events" via Sysmon, and "one-to-one communication with the attacker"
+
+[PROTOCOLS & PORTS]
+Value: RDP (3389), SSH (22), Websocket
+Evidence: Sections V and VII: The honeypot framework intentionally exposes RDP on "Port 3389" and SSH on "Port 22" with weak credentials to facilitate "brute-force attacks" and "initial access" by adversaries
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section I, II & VI: Collects "real-world attacks," attacker "IPs," and sensitive interaction data including negotiation for "ransom payment"
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section V:
+There is no mention of data minimization techniques, such as selective logging, anonymization, or IP hashing, in the system design. 
+The methodology focuses on maximizing information collection to record "all attack behaviors" and capture a "complete ransomware attack chain,"
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Section VI-A: "workstation (U2) was setup as a backup server to save the incoming network traffic captured in U0, the outgoing network traffic... and Elastic search indices of Sysmon events... only U2 has access to U0 and U1 but not vice versa." A dedicated one-way-access backup workstation is described, but no deletion timeline or data lifecycle policy is stated.
+
+[DATA SHARING]
+Value: Internal/Management sharing; Findings in paper
+Evidence: Abstract and Section V-C: The authors specify that "intelligence so obtained is shared with the management of water treatment plants" to enhance protection systems, rather than the general public. 
+While the paper shares specific "threat intelligence artifacts" such as the Makop ransomware process chain (Fig. 6) and detailed communication transcripts with the attacker, there is no mention of a public dataset or open-source repository for the raw logs or malware samples
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Section V-B: While identifying attacker IPs in the "United States" and other locations, there is no discussion of legal compliance or jurisdictional authority
+
+[CONTAINMENT & HARM]
+Value: Cyber-twin isolation
+Evidence: Section I & IV-A: Uses a "cyber twin" replica to isolate the real plant; "outgoing connections from the Honeypot Network (HPN) are blocked by default" to prevent lateral movement
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Section I & VI-C: Deception is framed as a tool to "attract potential attackers" and "fool the attacker" into believing they reached a real HMI
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit, with partial self-reflection
+Evidence: Section VI-B provides rare explicit risk reflection: "Though one may not recommend communication with a ransomware attacker due to perceived potential risks, we did so as a research study." Researchers also declined a link sent by the attacker "for safety purposes." This is informal risk-awareness, not formal IRB or ethics-board approval.
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Researchers engaged in deliberate counter-deception of the attacker during direct one-to-one communication (Section V-C): "This message was drafted to present the incident as an employee's oversight, with the employee appealing for file decryption to save his employment." Two encrypted files were sent to test the attacker's decryption capability, "No mention of payment was made in this initial communication." This double-layered deception, the honeypot deceiving the attacker technically, then researchers personally deceiving the attacker with a fabricated identity and narrative is not discussed as an ethical consideration anywhere in the paper.
+
+[RELEVANCE TO PROJECT]
+Value: Digital Twin / Ethics framework
+Evidence: Section I & II: A primary example of using a "cyber twin" for high-fidelity deception, highlighting the realism vs safety tradeoff central to your project
+
+[DEPLOYMENT]
+Value: Yes (Public Internet)
+Evidence: Section I: Deployed "in a public environment" for "9-days" using an internet-exposed RDP port

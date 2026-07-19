@@ -1,0 +1,102 @@
+ENTRY 127 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: dicompot
+LINK: https://github.com/nsmfoo/dicompot
+PLATFORM: GitHub
+STARS: 28
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; DICOM medical imaging honeypot.
+
+─── ASSESSED VALUES ───
+Domain: Other
+Interaction Level: Low
+Threat Model: Attackers targeting healthcare PACS for patient data exfiltration or ransomware.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, DICOM query contents, C-FIND requests, patient data queries
+Protocols & Ports: DICOM (104)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; healthcare data requires HIPAA/GDPR consideration not addressed.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGHEST SENSITIVITY: medical imaging honeypot DICOM interactions may involve patient identifiers; no IRB; no HIPAA; no data governance; healthcare domain requires strictest ethics oversight.
+Relevance to Project: HIGH relevance to ethics framework: healthcare domain demonstrates that ethics requirements scale with domain sensitivity key case study for domain-specific governance pillar.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: Other
+Evidence: Medical imaging DICOM honeypot simulating healthcare PACS/DICOM systems highly sensitive domain.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates DICOM medical imaging server; logs unauthorized access and query attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting healthcare PACS for patient data exfiltration or ransomware.
+Evidence: README describes DICOM protocol emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, DICOM query contents, C-FIND requests, patient data queries
+Evidence: Not documented; DICOM queries may reference patient identifiers.
+
+[PROTOCOLS & PORTS]
+Value: DICOM (104)
+Evidence: Standard DICOM port.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Healthcare/medical imaging domain — DICOM queries may reference patient names, IDs, or study data; highest sensitivity domain.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; healthcare data requires HIPAA/GDPR consideration not addressed.
+Evidence: DICOM honeypot in healthcare context without regulatory compliance discussion.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: HIGHEST SENSITIVITY: medical imaging honeypot DICOM interactions may involve patient identifiers; no IRB; no HIPAA; no data governance; healthcare domain requires strictest ethics oversight.
+Evidence: Medical domain honeypot without HIPAA/GDPR compliance framework.
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance to ethics framework: healthcare domain demonstrates that ethics requirements scale with domain sensitivity key case study for domain-specific governance pillar.
+Evidence: Healthcare honeypot provides strongest non-ICS case study for domain-specific governance requirements.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

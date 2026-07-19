@@ -1,0 +1,102 @@
+ENTRY 109 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: RDPy
+LINK: https://github.com/citronneur/rdpy
+PLATFORM: GitHub
+STARS: 1.7k
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with usage; Python RDP honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Attackers using RDP for remote access, lateral movement, or malware deployment.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, RDP session data, credentials, potentially keystrokes
+Protocols & Ports: RDP (3389)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; full RDP implementation with no data governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Python RDP protocol stack implementation and honeypot; captures RDP sessions.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Implements full RDP protocol stack allowing more complete session interaction.
+
+[THREAT MODEL]
+Value: Attackers using RDP for remote access, lateral movement, or malware deployment.
+Evidence: README describes Python RDP implementation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, RDP session data, credentials, potentially keystrokes
+Evidence: Not documented; full RDP protocol implies session logging.
+
+[PROTOCOLS & PORTS]
+Value: RDP (3389)
+Evidence: Standard RDP port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Full RDP session data may include sensitive attacker activity.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; full RDP implementation with no data governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

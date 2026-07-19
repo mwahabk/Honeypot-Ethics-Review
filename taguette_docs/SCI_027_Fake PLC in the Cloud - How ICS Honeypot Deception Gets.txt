@@ -1,0 +1,104 @@
+ENTRY 027 — SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Fake PLC in the Cloud: How ICS Honeypot Deception Gets Impacted by Cloud Deployments
+LINK: https://ieeexplore.ieee.org/document/10144119/
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Medium
+Threat Model: ICS attackers & scanners
+IRB Mentioned: No
+Consent Model: Implicit
+Data Types Collected: IPs, S7Comm traffic, and PLC commands
+Protocols & Ports: HTTP (80), S7Comm (102)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Not mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Technical isolation
+Deception Framing: Purely technical
+Researcher Responsibility: Implicit
+Ethical Gaps: Structural Ethical Vacuum
+Relevance to Project: Realism vs. Detectability Case Study
+Deployment: Yes (Internet-facing)
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Abstract & Section I: Specifically targets "Industrial Control Systems (ICS)" and "Programmable Logic Controllers"
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Section III: The authors explicitly state, "The honeypot selected for this experiment is HoneyPLC, which provides medium interaction"
+
+[THREAT MODEL]
+Value: ICS attackers & scanners
+Evidence: Abstract & Section IV: Targets adversaries performing "Denial of Service and Reconnaissance ICS attacks," specifically those interacting with the "S7Comm protocol"
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: A review of the entire paper confirms there is no mention of an Institutional Review Board (IRB) or ethical committee oversight
+
+[CONSENT MODEL]
+Value: Implicit
+Evidence: Sections III, IV, & V: The researchers exposed HoneyPLC to the public Internet for "65 days" on static residential and cloud IPs, specifically configuring a logging machine to "sniff" all packets transmitted over "TCP ports 80 and 102". 
+This architecture captured high-sensitivity "S7Comm protocol" interactions including PLC memory reads and "Denial of Service" (Stop/Start) commands from over "7,900 unique IPs" who were intentionally "lured" into the decoy to evaluate deployment realism without any disclosure or governance framework
+
+[DATA TYPES COLLECTED]
+Value: IPs, S7Comm traffic, and PLC commands
+Evidence: Section IV: Logs include "unique IP addresses," "S7Comm" protocol interactions, and malicious "PLC memory Read, Stop and Start commands"
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80), S7Comm (102)
+Evidence: Section III: The router explicitly "forwards the ports of the HTTP and S7Comm services... on a static IP and TCP ports 80 and 102"
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Section IV: Collected data includes "exploit interactions" and commands that "potentially impact the availability of the PLC," which are high-sensitivity threat artifacts
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Section III: The logging machine is set to record "all packets from the HoneyPLC" without an explicit policy on filtering or anonymization
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Section III: While it mentions that "This machine logs all packets from the HoneyPLC" on a dedicated machine, it provides no policy on storage duration or data deletion
+
+[DATA SHARING]
+Value: Not mentioned
+Evidence: While results are analyzed, the authors do not provide a public link or repository for the raw datasets or code
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Section III:
+Despite deployments in "Frankfurt, Germany" and "Aarhus, Denmark," there is no discussion of legal compliance or jurisdictional laws
+
+[CONTAINMENT & HARM]
+Value: Technical isolation
+Evidence: Sections III & V: Safety is managed by using HoneyPLC, a "medium-interaction" emulator running on standard Ubuntu virtual and physical machines. This architecture intentionally avoids the "unnecessary complexity" of high-interaction systems (which often require physical hardware) and provides a "safe experimental" environment that is functionally isolated from "genuine systems" and real-world industrial infrastructure
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Abstract & Section III: Deception is framed as a technical requirement to achieve an "ICS consistent deployment" that mimics the native infrastructure of real-world systems.
+ The authors argue that the specific choice of deployment location is critical to "deceive the attacker or public scanners," specifically aiming to evade Shodan’s "HoneyScore" algorithm. 
+By shifting from cloud-based hosting which Shodan often identifies with tags like "cloud" or "honeypot" to a physical machine in a residential building, the research seeks to create a more "convincing" decoy that attracts "ICS-relevant interactions" rather than just generic web background noise.
+
+[RESEARCHER RESPONSIBILITY]
+Value: Implicit
+Evidence: Section V: Responsibility is framed as providing results to "guide future researchers" and practitioners on how to build more "convincing" defensive systems
+
+[ETHICAL GAPS]
+Value: Structural Ethical Vacuum
+Evidence: Thousands of attacker IPs and behaviors are captured without IRB oversight, data governance, or legal framing. Additionally, the on-premise honeypot was hosted in "a physical machine running Ubuntu 18.04 LTS and HoneyPLC server in a residential building in Aarhus, Denmark" (Section III) a researcher's personal residence directly exposing a personal residential IP address and internet connection to ICS-targeting attackers for the full 65-day experiment period ("Both deployments collected data for 65 days, from November 2022 until January 2023," Section IV). No discussion of personal safety, retaliation risk, or operational security for the researcher living at that address appears anywhere in the paper.
+
+[RELEVANCE TO PROJECT]
+Value: Realism vs. Detectability Case Study
+Evidence: Sections III & V: 
+The paper prioritizes deployment realism to evade "Shodan" "HoneyScore". 
+Unlike HoneySat, which includes explicit "IRB considerations" , this research relies on technical isolation as a substitute for normative ethical reasoning. This demonstrates the project's ethics-by-containment finding, where maximizing deception realism occurs within a structural ethical vacuum lacking data governance.
+
+[DEPLOYMENT]
+Value: Yes (Internet-facing)
+Evidence: Section IV: Both the cloud and on-premise deployments collected data for "65 days" under public IP exposure.

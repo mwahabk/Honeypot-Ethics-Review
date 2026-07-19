@@ -1,0 +1,102 @@
+ENTRY 201 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: sshesame
+LINK: https://github.com/jaksi/sshesame
+PLATFORM: GitHub
+STARS: 1.7k
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README only but detailed; fake SSH server with Docker images, config file, and multi-platform binaries.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated SSH brute-force bots and attackers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, SSH credentials, commands attempted
+Protocols & Ports: SSH (22)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; well-documented but no ethics governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Fake SSH server with Docker images, configuration file, and multi-platform binaries; detailed README.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Detailed README documents Docker deployment, configuration, and multi-platform binary usage.
+
+[THREAT MODEL]
+Value: Automated SSH brute-force bots and attackers.
+Evidence: Detailed README documents Docker images, config, and binary usage.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, SSH credentials, commands attempted
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential and command metadata.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; well-documented but no ethics governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

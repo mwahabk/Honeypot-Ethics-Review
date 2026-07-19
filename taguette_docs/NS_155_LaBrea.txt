@@ -1,0 +1,101 @@
+ENTRY 155 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: LaBrea
+LINK: http://labrea.sourceforge.net/labrea-info.html
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge only; abandoned project; takes over unused IP addresses to trap worms and hackers.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Internet worms and automated port scanners targeting unused IP ranges.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Scanner/worm IP addresses, connection metadata
+Protocols & Ports: All ports on claimed IP range
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; abandoned project; actively traps automated scanners without operator notification.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Network tarpit taking over unused IP addresses to trap and slow down worms and port scanners.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Takes over unused IPs and responds slowly to trap automated scanners; SourceForge only.
+
+[THREAT MODEL]
+Value: Internet worms and automated port scanners targeting unused IP ranges.
+Evidence: SourceForge page documents tarpit concept.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Scanner/worm IP addresses, connection metadata
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: All ports on claimed IP range
+Evidence: Responds to all ports on claimed unused IPs.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Scanner metadata; no personal user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; abandoned project; actively traps automated scanners without operator notification.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

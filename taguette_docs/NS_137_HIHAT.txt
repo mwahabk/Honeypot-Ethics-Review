@@ -1,0 +1,101 @@
+ENTRY 137 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: HIHAT
+LINK: https://hihat.sourceforge.net/
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: SourceForge project page only; outdated tool, limited docs.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: High
+Threat Model: Attackers targeting web applications who interact with a fully functional website-turned-honeypot.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, full HTTP interaction logs, all attacker-submitted data (forms, uploads, queries)
+Protocols & Ports: HTTP/HTTPS (80, 443)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; CRITICAL converting real website to honeypot may expose real user data to attackers.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: CRITICAL: converting a real website to honeypot without user notification may expose real user data; no IRB; no ethics; no user consent; abandoned outdated project.
+Relevance to Project: Moderate relevance; HIHAT demonstrates highest-risk website deception deploying honeypots on real user-facing systems without notification.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: SourceForge tool converting existing websites into high-interaction honeypots using PHP wrappers.
+
+[INTERACTION LEVEL]
+Value: High
+Evidence: Converts a real PHP website into a honeypot wrapping all interactions; full web application interaction.
+
+[THREAT MODEL]
+Value: Attackers targeting web applications who interact with a fully functional website-turned-honeypot.
+Evidence: Not documented; SourceForge documentation only.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, full HTTP interaction logs, all attacker-submitted data (forms, uploads, queries)
+Evidence: Not documented; website conversion implies capturing all interactions.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Full website interaction captured — may include form submissions and uploads; if on live site, real user data at risk.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; CRITICAL converting real website to honeypot may expose real user data to attackers.
+Evidence: If deployed on live site, HIHAT captures real user interactions without distinguishing from attacker traffic.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: CRITICAL: converting a real website to honeypot without user notification may expose real user data; no IRB; no ethics; no user consent; abandoned outdated project.
+Evidence: Website-to-honeypot conversion without user consent is a serious ethical concern not addressed.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; HIHAT demonstrates highest-risk website deception deploying honeypots on real user-facing systems without notification.
+Evidence: Real user data exposure risk from website honeypot conversion is a critical case study.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

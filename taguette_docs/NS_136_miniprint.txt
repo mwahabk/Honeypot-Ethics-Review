@@ -1,0 +1,102 @@
+ENTRY 136 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: miniprint
+LINK: https://github.com/sa7mon/miniprint
+PLATFORM: GitHub
+STARS: 202
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: README with setup and usage; medium interaction printer honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Medium
+Threat Model: Attackers targeting network printers for data exfiltration, persistence, or lateral movement.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, print job contents, printer protocol commands
+Protocols & Ports: LPD (515), IPP (631), RAW (9100)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no guidance on handling submitted print content.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; printer honeypot capturing submitted print content without governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Medium-interaction network printer honeypot logging print job submissions and exploitation.
+
+[INTERACTION LEVEL]
+Value: Medium
+Evidence: Accepts print jobs and printer commands with medium interaction; README documents setup.
+
+[THREAT MODEL]
+Value: Attackers targeting network printers for data exfiltration, persistence, or lateral movement.
+Evidence: README with setup documentation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, print job contents, printer protocol commands
+Evidence: Print job submissions may contain document content.
+
+[PROTOCOLS & PORTS]
+Value: LPD (515), IPP (631), RAW (9100)
+Evidence: Standard printer ports.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Print job contents may include sensitive documents.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no guidance on handling submitted print content.
+Evidence: Submitted print jobs may contain sensitive content.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; printer honeypot capturing submitted print content without governance.
+Evidence: Print job content governance not addressed.
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

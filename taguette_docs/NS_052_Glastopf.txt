@@ -1,0 +1,102 @@
+ENTRY 052 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Glastopf
+LINK: https://github.com/mushorg/glastopf
+PLATFORM: GitHub
+STARS: 598
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs + links to external Honeynet wiki; well-established project.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated web scanners, SQL injection bots, RFI/LFI attackers, malware droppers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, HTTP requests, attack payloads, malware download attempts
+Protocols & Ports: HTTP (80, 8080)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; well-documented but no ethics governance; widely deployed Honeynet Project tool.
+Relevance to Project: Moderate relevance; mature Honeynet tool; attack classification methodology applicable to HoneySat threat modeling.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Mature web application honeypot emulating thousands of vulnerabilities; Honeynet Project.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates vulnerable web application with hundreds of vulnerability signatures; logs all interactions.
+
+[THREAT MODEL]
+Value: Automated web scanners, SQL injection bots, RFI/LFI attackers, malware droppers.
+Evidence: README and /docs folder describe vulnerability emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, HTTP requests, attack payloads, malware download attempts
+Evidence: Documentation describes logging all HTTP traffic and payloads.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80, 8080)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Web attack payloads from automated attackers; no real user data.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; well-documented but no ethics governance; widely deployed Honeynet Project tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; mature Honeynet tool; attack classification methodology applicable to HoneySat threat modeling.
+Evidence: Attack classification approach relevant to HoneySat.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

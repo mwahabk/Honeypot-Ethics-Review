@@ -1,0 +1,102 @@
+ENTRY 178 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: DShield docker
+LINK: https://github.com/xme/dshield-docker
+PLATFORM: GitHub
+STARS: 16
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; Docker container wrapping Cowrie with DShield output enabled.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: SSH brute-force bots; same as Cowrie.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Cowrie SSH credentials and logs, submitted to DShield threat intelligence platform
+Protocols & Ports: SSH (22)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: Data submitted to DShield external threat intelligence platform
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: Auto-submission to DShield without documented privacy policy for submitted IP/credential data; no IRB.
+Relevance to Project: Moderate relevance; threat intelligence sharing via external platform raises data governance questions applicable to HoneySat.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Docker container wrapping Cowrie SSH honeypot with DShield output enabled for threat sharing.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Cowrie-based SSH honeypot in Docker configured to submit data to DShield threat intelligence.
+
+[THREAT MODEL]
+Value: SSH brute-force bots; same as Cowrie.
+Evidence: README describes Docker deployment of Cowrie with DShield integration.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Cowrie SSH credentials and logs, submitted to DShield threat intelligence platform
+Evidence: DShield integration automatically submits captured attack data to external platform.
+
+[PROTOCOLS & PORTS]
+Value: SSH (22)
+Evidence: Standard SSH port.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: SSH credentials and session data automatically submitted to external DShield platform.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: Data submitted to DShield external threat intelligence platform
+Evidence: DShield integration automatically shares captured attack data externally.
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: Auto-submission to DShield without documented privacy policy for submitted IP/credential data; no IRB.
+Evidence: Automatic third-party data submission without documented governance.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; threat intelligence sharing via external platform raises data governance questions applicable to HoneySat.
+Evidence: External threat data sharing model relevant to HoneySat intelligence pipeline design.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

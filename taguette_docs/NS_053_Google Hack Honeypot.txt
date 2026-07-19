@@ -1,0 +1,101 @@
+ENTRY 053 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Google Hack Honeypot
+LINK: https://ghh.sourceforge.net/
+PLATFORM: Website
+DOC LEVEL: Moderate
+TOOL DESCRIPTION: SourceForge website with documentation; no GitHub README available.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers using Google search to identify vulnerable web targets.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, HTTP requests, Google dork patterns
+Protocols & Ports: HTTP (80)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; outdated project; no modern ethics governance.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Web honeypot detecting Google-assisted reconnaissance against web applications.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Presents deceptive web pages to detect Google dorking-based attackers.
+
+[THREAT MODEL]
+Value: Attackers using Google search to identify vulnerable web targets.
+Evidence: External SourceForge documentation describes design.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, HTTP requests, Google dork patterns
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP (80)
+Evidence: Standard web port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Web request metadata only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; outdated project; no modern ethics governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

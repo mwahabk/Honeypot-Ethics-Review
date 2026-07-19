@@ -1,0 +1,101 @@
+ENTRY 152 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Honeysink
+LINK: http://www.honeynet.org/node/773
+PLATFORM: Website
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Honeynet Project page only; no GitHub repo; open source network sinkhole.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Malware C2 traffic and infected hosts redirected to the sinkhole.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Malware C2 traffic, infected host IPs, botnet communication payloads
+Protocols & Ports: All protocols (sinkhole accepts all redirected traffic)
+Data Sensitivity: Medium
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; sinkhole receives traffic from victim machines — victim data privacy not addressed.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; receives victim machine traffic without victim notification or consent; Honeynet Project tool with no ethics documentation.
+Relevance to Project: Moderate relevance; sinkhole architecture raises victim data ethics questions applicable to HoneySat ground-segment traffic capture.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Open-source network sinkhole for redirecting and logging malicious traffic; Honeynet Project.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Network sinkhole capturing malicious traffic redirected from infected hosts.
+
+[THREAT MODEL]
+Value: Malware C2 traffic and infected hosts redirected to the sinkhole.
+Evidence: Honeynet Project page documents sinkhole concept.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Malware C2 traffic, infected host IPs, botnet communication payloads
+Evidence: Honeynet Project page describes capturing malicious traffic from infected hosts.
+
+[PROTOCOLS & PORTS]
+Value: All protocols (sinkhole accepts all redirected traffic)
+Evidence: Network-level sinkhole; accepts any redirected traffic.
+
+[DATA SENSITIVITY]
+Value: Medium
+Evidence: Botnet C2 traffic and infected host data; medium sensitivity  may include identifying information from victim machines.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; sinkhole receives traffic from victim machines — victim data privacy not addressed.
+Evidence: Traffic from infected victim machines may include personal data not addressed in documentation.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; receives victim machine traffic without victim notification or consent; Honeynet Project tool with no ethics documentation.
+Evidence: Sinkholing victim traffic without victim awareness raises data privacy concerns not discussed.
+
+[RELEVANCE TO PROJECT]
+Value: Moderate relevance; sinkhole architecture raises victim data ethics questions applicable to HoneySat ground-segment traffic capture.
+Evidence: Victim traffic capture without consent is relevant to HoneySat ethics framework.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

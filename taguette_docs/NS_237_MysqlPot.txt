@@ -1,0 +1,102 @@
+ENTRY 237 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: MysqlPot
+LINK: https://github.com/schmalle/MysqlPot
+PLATFORM: GitHub
+STARS: 22
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README only; MySQL honeypot, very early stage. Missing from original Database section.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Automated MySQL credential brute-force bots.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, MySQL authentication attempts
+Protocols & Ports: MySQL (3306)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; minimal early-stage tool.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Early-stage MySQL honeypot from the database section; minimal README documentation.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Very early stage MySQL honeypot; logs connection and authentication attempts.
+
+[THREAT MODEL]
+Value: Automated MySQL credential brute-force bots.
+Evidence: README only; very early stage tool.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, MySQL authentication attempts
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: MySQL (3306)
+Evidence: Standard MySQL port.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Credential attempt metadata only.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; minimal early-stage tool.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 131 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: medpot
+LINK: https://github.com/schmalle/medpot
+PLATFORM: GitHub
+STARS: 27
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; HL7/FHIR medical honeypot.
+
+─── ASSESSED VALUES ───
+Domain: Other
+Interaction Level: Low
+Threat Model: Attackers targeting healthcare interoperability interfaces for patient data or ransomware.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, HL7/FHIR query contents, patient data queries
+Protocols & Ports: HL7 (2575), FHIR HTTP (80, 443)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; requires HIPAA/GDPR consideration.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: HIGHEST SENSITIVITY: healthcare HL7/FHIR honeypot potential patient data contact; no IRB; no HIPAA; no GDPR; healthcare requires strictest governance.
+Relevance to Project: HIGH relevance; alongside dicompot, medpot demonstrates healthcare honeypots require domain-specific governance key case study for ethics framework.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: Other
+Evidence: Medical honeypot emulating HL7/FHIR healthcare interoperability highly sensitive domain.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates HL7/FHIR protocol endpoints; logs unauthorized access and query attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting healthcare interoperability interfaces for patient data or ransomware.
+Evidence: README describes HL7/FHIR emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, HL7/FHIR query contents, patient data queries
+Evidence: Not documented; HL7/FHIR queries may reference patient identifiers.
+
+[PROTOCOLS & PORTS]
+Value: HL7 (2575), FHIR HTTP (80, 443)
+Evidence: Standard healthcare protocol ports.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: Healthcare domain — HL7/FHIR interactions may reference patient health information; highest sensitivity domain.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; requires HIPAA/GDPR consideration.
+Evidence: HL7/FHIR honeypot without regulatory compliance discussion.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: HIGHEST SENSITIVITY: healthcare HL7/FHIR honeypot potential patient data contact; no IRB; no HIPAA; no GDPR; healthcare requires strictest governance.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: HIGH relevance; alongside dicompot, medpot demonstrates healthcare honeypots require domain-specific governance key case study for ethics framework.
+Evidence: Healthcare domain pair (dicompot + medpot) provides strongest evidence for domain-specific ethics governance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 120 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: Conpot
+LINK: https://github.com/mushorg/conpot
+PLATFORM: GitHub
+STARS: 1.5k
+DOC LEVEL: Extensive
+TOOL DESCRIPTION: README + /docs folder + dedicated readthedocs site. Comprehensive ICS/SCADA honeypot.
+
+─── ASSESSED VALUES ───
+Domain: ICS
+Interaction Level: Low
+Threat Model: Nation-state attackers and APT groups targeting critical industrial infrastructure; ICS vulnerability scanners.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, ICS protocol packets (Modbus, S7comm, DNP3, BACnet), SNMP community strings, attacker command sequences
+Protocols & Ports: Modbus (502), S7comm (102), DNP3 (20000), BACnet (47808), IPMI (623), HTTP (80)
+Data Sensitivity: High
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented; no guidance on safe deployment near real ICS environments.
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; no ethics; emulates critical infrastructure (power plants, water treatment) with no dual-use discussion; widely deployed without governance.
+Relevance to Project: HIGHEST relevance to HoneySat ethics: Conpot is the direct ICS parallel both emulate critical infrastructure. Complete absence of ethics governance is the strongest case study for why our framework is needed.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: ICS
+Evidence: Mature ICS/SCADA honeypot emulating industrial control system protocols; Honeynet Project.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates ICS protocol responses; does not control real physical processes.
+
+[THREAT MODEL]
+Value: Nation-state attackers and APT groups targeting critical industrial infrastructure; ICS vulnerability scanners.
+Evidence: Extensive README, /docs folder, and readthedocs document ICS protocol emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, ICS protocol packets (Modbus, S7comm, DNP3, BACnet), SNMP community strings, attacker command sequences
+Evidence: Documentation describes logging all ICS protocol interactions.
+
+[PROTOCOLS & PORTS]
+Value: Modbus (502), S7comm (102), DNP3 (20000), BACnet (47808), IPMI (623), HTTP (80)
+Evidence: Documented in readthedocs; full ICS protocol port list.
+
+[DATA SENSITIVITY]
+Value: High
+Evidence: ICS interactions reveal infrastructure vulnerabilities; high sensitivity for critical infrastructure context.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented; no guidance on safe deployment near real ICS environments.
+Evidence: No guidance ensuring honeypot is isolated from real industrial control systems.
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; no ethics; emulates critical infrastructure (power plants, water treatment) with no dual-use discussion; widely deployed without governance.
+Evidence: Conpot documentation does not address risks of deploying near real infrastructure.
+
+[RELEVANCE TO PROJECT]
+Value: HIGHEST relevance to HoneySat ethics: Conpot is the direct ICS parallel both emulate critical infrastructure. Complete absence of ethics governance is the strongest case study for why our framework is needed.
+Evidence: Conpot emulating power plant ICS protocols without governance is the most important case study in this sheet.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

@@ -1,0 +1,102 @@
+ENTRY 133 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: OpenFlow Honeypot (OFPot)
+LINK: https://github.com/upa/ofpot
+PLATFORM: GitHub
+STARS: 25
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: Short README; OpenFlow honeypot.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers targeting SDN infrastructure and OpenFlow controllers.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, OpenFlow protocol messages, controller queries
+Protocols & Ports: OpenFlow (6633, 6653)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; SDN honeypot with no ethics documentation.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: OpenFlow/SDN honeypot for detecting attacks against SDN controllers.
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates OpenFlow protocol responses; logs SDN-specific attack attempts.
+
+[THREAT MODEL]
+Value: Attackers targeting SDN infrastructure and OpenFlow controllers.
+Evidence: README describes OpenFlow protocol emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, OpenFlow protocol messages, controller queries
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: OpenFlow (6633, 6653)
+Evidence: Standard OpenFlow ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: SDN protocol metadata; no real network control access.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; SDN honeypot with no ethics documentation.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented

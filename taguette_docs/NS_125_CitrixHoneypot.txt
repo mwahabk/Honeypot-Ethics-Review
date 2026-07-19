@@ -1,0 +1,102 @@
+ENTRY 125 — NON-SCIENTIFIC
+======================================================================
+NAME / IDENTIFIER: CitrixHoneypot
+LINK: https://github.com/MalwareTech/CitrixHoneypot
+PLATFORM: GitHub
+STARS: 119
+DOC LEVEL: Minimal
+TOOL DESCRIPTION: README with setup; detects Citrix ADC CVE-2019-19781 scans.
+
+─── ASSESSED VALUES ───
+Domain: IT
+Interaction Level: Low
+Threat Model: Attackers exploiting CVE-2019-19781 in Citrix NetScaler ADC and Gateway.
+IRB Mentioned: No
+Consent Model: None
+Data Types Collected: Attacker IP addresses, CVE-2019-19781 exploit payloads, path traversal attempts
+Protocols & Ports: HTTP/HTTPS (80, 443)
+Data Sensitivity: Low
+Data Minimization: Not discussed
+Data Retention Policy: Not discussed
+Data Sharing: None mentioned
+Jurisdiction / Legal: Not discussed
+Containment & Harm: Not documented
+Deception Framing: Purely technical
+Researcher Responsibility: Not documented
+Ethical Gaps: No IRB; CVE-specific honeypot.
+Relevance to Project: Low relevance.
+Deployment: Not documented
+
+─── JUSTIFICATION TEXT (for coding) ───
+
+[DOMAIN]
+Value: IT
+Evidence: Honeypot detecting exploitation of Citrix ADC/Gateway CVE-2019-19781 (Shitrix).
+
+[INTERACTION LEVEL]
+Value: Low
+Evidence: Emulates vulnerable Citrix endpoint; logs CVE-specific exploitation attempts.
+
+[THREAT MODEL]
+Value: Attackers exploiting CVE-2019-19781 in Citrix NetScaler ADC and Gateway.
+Evidence: README describes Citrix ADC vulnerability emulation.
+
+[IRB / ETHICS COMMITTEE]
+Value: No
+Evidence: Not available
+
+[CONSENT MODEL]
+Value: None
+Evidence: Not documented
+
+[DATA TYPES COLLECTED]
+Value: Attacker IP addresses, CVE-2019-19781 exploit payloads, path traversal attempts
+Evidence: Not documented.
+
+[PROTOCOLS & PORTS]
+Value: HTTP/HTTPS (80, 443)
+Evidence: Standard web ports.
+
+[DATA SENSITIVITY]
+Value: Low
+Evidence: Exploit payload metadata; no real Citrix access.
+
+[DATA MINIMIZATION]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA RETENTION POLICY]
+Value: Not discussed
+Evidence: Not documented
+
+[DATA SHARING]
+Value: None mentioned
+Evidence: Not documented
+
+[JURISDICTION / LEGAL]
+Value: Not discussed
+Evidence: Not documented
+
+[CONTAINMENT & HARM]
+Value: Not documented
+Evidence: Not documented
+
+[DECEPTION FRAMING]
+Value: Purely technical
+Evidence: Not documented
+
+[RESEARCHER RESPONSIBILITY]
+Value: Not documented
+Evidence: Not documented
+
+[ETHICAL GAPS]
+Value: No IRB; CVE-specific honeypot.
+Evidence: Not documented
+
+[RELEVANCE TO PROJECT]
+Value: Low relevance.
+Evidence: No HoneySat/CPS relevance.
+
+[DEPLOYMENT]
+Value: Not documented
+Evidence: Not documented
