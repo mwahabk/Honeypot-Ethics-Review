@@ -6,15 +6,15 @@ A systematic ethics analysis dataset for honeypot systems, combining peer-review
 
 ## Overview
 
-This repository contains a unified dataset that evaluates **238 honeypot entries** across 18 ethical dimensions including IRB/ethics committee mention, consent model, data sensitivity, jurisdiction awareness, and deception framing.
+This repository contains a unified dataset that evaluates **239 honeypot entries** across 18 ethical dimensions including IRB/ethics committee mention, consent model, data sensitivity, jurisdiction awareness, and deception framing.
 
 The dataset covers two source types:
 
 | Source | Count | Description |
 |---|---|---|
-| **Scientific** | 37 | Peer-reviewed papers proposing actual honeypot systems |
+| **Scientific** | 38 | Peer-reviewed papers proposing actual honeypot systems |
 | **Non-Scientific** | 201 | Open-source honeypot tools from the [awesome-honeypots](https://github.com/paralax/awesome-honeypots) list and [Honeynet Project](https://www.honeynet.org/projects/) |
-| **Total** | **238** | |
+| **Total** | **239** | |
 
 ---
 
@@ -22,13 +22,12 @@ The dataset covers two source types:
 
 ```
 Honeypot-Ethics-Review/
-├── honeypot_ethics_dataset.csv         # Unified dataset (238 rows × 50 columns)
+├── honeypot_ethics_dataset.csv         # Unified dataset (239 rows × 50 columns)
 ├── honeypot_ethics_analysis.ipynb      # Jupyter Notebook — 24-cell step-by-step analysis
-├── honeypot_ethics_analysis_test.ipynb # Test notebook
 ├── taguette_codebook.csv               # Codebook with 71 open codes for qualitative coding
-├── taguette_docs/                      # 238 plain-text documents for Taguette coding
-│   ├── SCI_001 to SCI_037              # Scientific honeypot papers (37 files)
-│   └── NS_038 to NS_238                # Non-scientific open-source tools (201 files)
+├── taguette_docs/                      # 239 plain-text documents for Taguette coding
+│   ├── SCI_001 to SCI_038              # Scientific honeypot papers (38 files)
+│   └── NS_039 to NS_239                # Non-scientific open-source tools (201 files)
 ├── requirements.txt
 └── README.md
 ```
@@ -93,7 +92,7 @@ All `*_justification` columns contain direct quotes or precise references to the
 ---
 ## Qualitative Coding
 
-The `taguette_docs/` folder contains 238 plain-text documents, one per dataset entry, prepared for qualitative open coding in [Taguette](https://www.taguette.org). Each document contains the assessed values for context and the full justification text for each of the 18 ethical dimensions as the coding target.
+The `taguette_docs/` folder contains 239 plain-text documents, one per dataset entry, prepared for qualitative open coding in [Taguette](https://www.taguette.org). Each document contains the assessed values for context and the full justification text for each of the 18 ethical dimensions as the coding target.
 
 The `taguette_codebook.csv` file contains the initial codebook with **71 open codes** identifying recurring ethical concepts across the dataset. The codes are organised around the following concept groups:
 
@@ -188,7 +187,7 @@ The notebook contains **24 self-contained analysis cells** covering:
 
 ## Key Findings
 
-Based on the full dataset of 238 entries:
+Based on the full dataset of 239 entries:
 
 - **IRB / Ethics committee**: mentioned in fewer than 5% of all entries - nearly universally absent across both scientific papers and open-source tools
 - **Consent model**: documented (Explicit or Implicit) in fewer than 10% of scientific papers and 0% of open-source tools
@@ -242,4 +241,3 @@ The dataset supports the development of an ethics framework for honeypot deploym
 
 
 ## Licence
-
