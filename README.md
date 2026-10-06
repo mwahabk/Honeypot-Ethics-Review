@@ -22,14 +22,16 @@ The dataset covers two source types:
 
 ```
 Honeypot-Ethics-Review/
-├── honeypot_ethics_dataset.csv         # Unified dataset (239 rows × 49 columns)
-├── honeypot_ethics_analysis.ipynb      # Jupyter Notebook — 24-cell step-by-step analysis
-├── taguette_codebook.csv               # Codebook with 71 open codes for qualitative coding
-├── taguette_docs/                      # 239 plain-text documents for Taguette coding
-│   ├── SCI_001 to SCI_038              # Scientific honeypot papers (38 files)
-│   └── NS_039 to NS_239                # Non-scientific open-source tools (201 files)
+├── honeypot_ethics_dataset.csv              # Unified dataset (239 rows × 49 columns)
+├── honeypot_ethics_analysis.ipynb          # Jupyter Notebook — 24-cell step-by-step analysis
 ├── requirements.txt
-└── README.md
+├── README.md
+└── taguette/                               # Qualitative open-coding artifacts
+    ├── docs/                               # 239 plain-text documents for Taguette coding
+    │   ├── SCI_001 to SCI_038              # Scientific honeypot papers (38 files)
+    │   └── NS_039 to NS_239                # Non-scientific open-source tools (201 files)
+    ├── codebook.csv                        # Codebook with 71 open codes
+    └── open-coding-2026-08-10.sqlite3      # Taguette project (coding progress)
 ```
 
 ---
@@ -91,9 +93,9 @@ All `*_justification` columns contain direct quotes or precise references to the
 ---
 ## Qualitative Coding
 
-The `taguette_docs/` folder contains 239 plain-text documents, one per dataset entry, prepared for qualitative open coding in [Taguette](https://www.taguette.org). Each document contains the assessed values for context and the full justification text for each of the 18 ethical dimensions as the coding target.
+The `taguette/docs/` folder contains 239 plain-text documents, one per dataset entry, prepared for qualitative open coding in [Taguette](https://www.taguette.org). Each document contains the assessed values for context and the full justification text for each of the 18 ethical dimensions as the coding target.
 
-The `taguette_codebook.csv` file contains the initial codebook with **71 open codes** identifying recurring ethical concepts across the dataset. The codes are organised around the following concept groups:
+The `taguette/codebook.csv` file contains the initial codebook with **71 open codes** identifying recurring ethical concepts across the dataset. The codes are organised around the following concept groups:
 
 | Group | Example Codes |
 |---|---|
