@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: Real-world attackers (IT and ICS)
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, system calls, malware, and PLC registers
 Protocols & Ports: Modbus/TCP (502), S7comm (102), HTTP (8080, 9090)
 Data Sensitivity: High
@@ -47,7 +47,7 @@ Value: No
 Evidence: A review of the manuscript confirms no mention of an "Institutional Review Board," "ethics committee," or human subject protocols
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Page 1: The honeynet was "exposed on the Internet" to "decoy attackers away from the real system," with interaction being attacker-initiated without prior notice
 
 [DATA TYPES COLLECTED]

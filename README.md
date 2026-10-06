@@ -22,7 +22,7 @@ The dataset covers two source types:
 
 ```
 Honeypot-Ethics-Review/
-├── honeypot_ethics_dataset.csv         # Unified dataset (239 rows × 50 columns)
+├── honeypot_ethics_dataset.csv         # Unified dataset (239 rows × 49 columns)
 ├── honeypot_ethics_analysis.ipynb      # Jupyter Notebook — 24-cell step-by-step analysis
 ├── taguette_codebook.csv               # Codebook with 71 open codes for qualitative coding
 ├── taguette_docs/                      # 239 plain-text documents for Taguette coding
@@ -36,7 +36,7 @@ Honeypot-Ethics-Review/
 
 ## Dataset Structure
 
-The CSV file (`honeypot_ethics_dataset.csv`) has **50 columns** organised into three groups:
+The CSV file (`honeypot_ethics_dataset.csv`) has **49 columns** organised into three groups:
 
 ### 1. Identity Columns (all entries)
 
@@ -61,7 +61,7 @@ The CSV file (`honeypot_ethics_dataset.csv`) has **50 columns** organised into t
 | `docs_url` | URL of primary documentation |
 | `tool_notes` | Short factual description of the tool |
 
-### 3. Shared Ethics Columns (both source types — 37 columns)
+### 3. Shared Ethics Columns (both source types — 36 columns)
 
 Each of the 18 dimensions below has a **value column** and a **justification column** containing text evidence directly from the paper or repository.
 
@@ -71,7 +71,7 @@ Each of the 18 dimensions below has a **value column** and a **justification col
 | Interaction level | `interaction_level` | Low / Medium / High / Not available |
 | Threat model | `threat_model` | Textual |
 | IRB / ethics committee | `irb_mentioned` | Yes / No / Not available |
-| Consent model | `consent_model` | Explicit / Implicit / None / Not documented |
+| Consent model | `consent_model` | Explicit / Implicit / None |
 | Data types collected | `data_types_collected` | Textual |
 | Network protocols & ports | `protocols_ports` | Textual |
 | Data sensitivity | `data_sensitivity` | Low / Medium / High / Not available |
@@ -85,7 +85,6 @@ Each of the 18 dimensions below has a **value column** and a **justification col
 | Ethical gaps / red flags | `ethical_gaps` | Textual |
 | Relevance to project | `relevance_to_project` | Textual |
 | Deployment context | `deployment` | Textual |
-| No external deployment | `no_external_deployment` | Yes / No / Not documented |
 
 All `*_justification` columns contain direct quotes or precise references to the source material (page numbers, sections, or README content).
 
@@ -190,7 +189,7 @@ The notebook contains **24 self-contained analysis cells** covering:
 Based on the full dataset of 239 entries:
 
 - **IRB / Ethics committee**: mentioned in fewer than 5% of all entries - nearly universally absent across both scientific papers and open-source tools
-- **Consent model**: documented (Explicit or Implicit) in fewer than 10% of scientific papers and 0% of open-source tools
+- **Consent model**: no honeypot obtains explicit consent (it is infeasible against unknown attackers); only 1 of 38 scientific papers (HoneySat) provides any attacker-facing notice - an "authorized use only" banner, coded Implicit - while the remaining 37 papers and all 201 tools obtain no consent at all (None). IRB approval is tracked as a separate dimension, not as consent
 - **Data minimization**: discussed in fewer than 15% of scientific papers, 0% of tools
 - **Deception ethics**: only a small minority of scientific papers frame deception beyond a purely technical mechanism - no open-source tools do
 - **High data sensitivity** (keystrokes, medical data, ICS protocol data, credentials): present in ~25% of all entries, without corresponding governance documentation

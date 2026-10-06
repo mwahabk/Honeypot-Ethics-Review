@@ -8,7 +8,7 @@ Domain: IT
 Interaction Level: Medium
 Threat Model: Automated attackers sending malware commands; sophisticated attackers capable of fingerprinting traditional static honeypots; multi-protocol attackers spanning SSH, Telnet, HTTP simultaneously.
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Session interaction logs, attacker commands, LLM response quality scores, protocol connection statistics per protocol, returning connection patterns
 Protocols & Ports: SSH (22), Telnet (23), HTTP (80), FTP (21), SMTP (25), SNMP (161), IPP (631)
 Data Sensitivity: Low
@@ -42,7 +42,7 @@ Value: No
 Evidence: No mention of IRB, ethics committee, or institutional approval.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Real-world internet deployment faces real attackers without consent. Controlled evaluation uses pre-defined attacker command sets (implicit researcher awareness but no formal consent from research participants described).
 
 [DATA TYPES COLLECTED]

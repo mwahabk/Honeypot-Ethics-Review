@@ -9,7 +9,7 @@ Domain: IT
 Interaction Level: Medium
 Threat Model: LLM Jailbreak Attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Prompts, responses, and behavioral signatures
 Protocols & Ports: Asynchronous API calls to LLM providers (GPT-4, GPT-3.5-turbo, Gemini-1.5-pro, LLaMa-3.1)
 Data Sensitivity: Medium
@@ -47,7 +47,7 @@ Value: No
 Evidence: no mention of an "Institutional Review Board," "ethics committee," or human subject protocol
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 3.1: The system "misleads the attacker" to " ensuring that attackers waste more resources and time" while the adversary remains unaware of the system’s dynamic conversion.
 
 [DATA TYPES COLLECTED]

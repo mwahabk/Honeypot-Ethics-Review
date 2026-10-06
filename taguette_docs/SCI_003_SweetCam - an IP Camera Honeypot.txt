@@ -8,7 +8,7 @@ Domain: IoT
 Interaction Level: Medium
 Threat Model: IoT malware and attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Malware behavior, attack traffic:
 
 Attacker IPs
@@ -65,7 +65,7 @@ Evidence: No section in the paper mentions IRB, ethics committee, or institution
 The paper is entirely technical.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 4.1:
 
 “ports 554 (RTSP), 80 (HTTP), and 22 (SSH) are open and exposed to the Internet.”

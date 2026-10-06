@@ -8,7 +8,7 @@ Domain: CPS
 Interaction Level: High
 Threat Model: Targeted ICS/Ransomware
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, traffic, malware, and comms
 Protocols & Ports: RDP (3389), SSH (22), Websocket
 Data Sensitivity: High
@@ -42,7 +42,7 @@ Value: No
 Evidence: A complete review confirms no mention of an Institutional Review Board (IRB) or ethical committee approval.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section I & V: Access was "deliberately allowed" via RDP using a "weak password" to attract attackers who unknowingly interacted with the decoy
 
 [DATA TYPES COLLECTED]

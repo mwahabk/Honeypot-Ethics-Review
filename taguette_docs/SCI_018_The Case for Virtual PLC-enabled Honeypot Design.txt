@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: ICS attackers targeting PLCs
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, command interactions, and I/O status
 Protocols & Ports: Modbus/TCP (502) - implemented and tested; S7comm and DNP3 listed only as future/planned protocol support
 Data Sensitivity: High
@@ -43,7 +43,7 @@ Value: No
 Evidence: A review of the entire paper confirms no mention of an "Institutional Review Board," "ethics committee," or human subject protocols
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 3.1 / Page 2: The system is designed to "deceive attackers into believing a real PLC... is behind".
 It was exposed to the Internet to "attract internet requests," assuming interaction is attacker-initiated without disclosure
 

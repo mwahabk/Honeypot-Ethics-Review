@@ -8,7 +8,7 @@ Domain: CPS
 Interaction Level: Medium
 Threat Model: IoT attackers & scanners
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, IoT requests, and exploit code
 Protocols & Ports: HTTP (Port 80)
 Data Sensitivity: High
@@ -44,7 +44,7 @@ Value: No
 Evidence: A complete review of the paper confirms there is no mention of an Institutional Review Board (IRB), ethics committee, or institutional approval for studying attacker interactions.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Sections I& III & IV: The AIIPot system uses an AI-driven "honey-chatbot" (BERT/MDP) to lure attackers into interactions that mimic a "real fashion" and effectively "bypass" their "pre-check attack" steps. 
 To maximize deception depth, it employs a novel "OOV" request technique that broadcasts unknown attacker commands to a local network to retrieve and replay valid responses. This high-fidelity manipulation allowed the researchers to capture exploit code from "987 different IP addresses" on the public Internet without providing any ethical disclosure or obtaining consent.
 

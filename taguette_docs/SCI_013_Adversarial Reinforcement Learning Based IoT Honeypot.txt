@@ -8,7 +8,7 @@ Domain: IoT
 Interaction Level: Medium
 Threat Model: Adaptive and non-stationary IoT attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, TCP requests, payloads (including plaintext passwords), and malware-download command strings
 Protocols & Ports: HTTP (80, 81, 554) - deployed honeypot listening ports; port 8080 used only during pre-deployment response-collection phase (Section III-A), not in the live honeypot
 Data Sensitivity: High
@@ -43,7 +43,7 @@ Value: No
 Evidence: A review of the entire paper confirms no mention of an "Institutional Review Board," "ethics committee," or "human subject protocols"
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section II: The system "aims to attract more attacks".  Attackers interact with a public-facing system without notification or consent
 
 [DATA TYPES COLLECTED]

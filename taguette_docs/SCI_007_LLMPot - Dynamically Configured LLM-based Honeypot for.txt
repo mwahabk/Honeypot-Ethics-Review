@@ -9,7 +9,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: Advanced ICS attackers targeting PLCs and industrial protocols
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: PLC commands / protocol traffic / interaction logs
 Protocols & Ports: Modbus (502), S7comm (102), HTTP (80)
 Data Sensitivity: High
@@ -54,7 +54,7 @@ personal identity
 user accounts
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 9.2:
 "We exposed the developed LLMPot honeypot to the internet to monitor network activities"
 

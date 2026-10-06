@@ -8,7 +8,7 @@ Domain: IoT
 Interaction Level: High
 Threat Model: IoT camera attackers and botnets
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, command interactions, and malware
 Protocols & Ports: HTTP (80/8080), RTSP (554), RTMP (1935), ONVIF (8000)
 Data Sensitivity: High
@@ -43,7 +43,7 @@ Value: No
 Evidence: A review of the manuscript confirms there is no mention of an Institutional Review Board, ethics committee, or human subject protocols
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section I, IV-B, & IV-B-1: The researchers deployed HoneyCam across "Virginia, Tokyo and Paris" on the "public Internet" where it received "unsolicited connections from 24120 distinct remote IP addresses"
 . Because the authors provide no evidence of warning banners or disclosure, they rely on the "unsolicited" nature of the interaction to justify data collection without formal consent.
 

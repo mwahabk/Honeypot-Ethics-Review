@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: Advanced ICS attackers targeting industrial protocols
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, protocol traffic, and injected programs
 Protocols & Ports: HTTP (80, 8000), S7comm (102), SNMP (161), Modbus (502)
 Data Sensitivity: High
@@ -44,7 +44,7 @@ Value: No
 Evidence: A full review of the paper confirms no mention of an Institutional Review Board or ethical committee oversight
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section I:
 The honeypot was exposed via "AWS" and a local "IXP" where attackers interacted unknowingly with the "public IP exposure"
 

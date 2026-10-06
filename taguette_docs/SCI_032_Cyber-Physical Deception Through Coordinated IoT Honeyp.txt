@@ -8,7 +8,7 @@ Domain: CPS
 Interaction Level: Medium
 Threat Model: IoT device attackers operating across both cyber (network exploitation) and physical (device state verification) domains, capable of detecting inconsistencies among honeypots through multi-source attacks.
 IRB Mentioned: Yes
-Consent Model: Mixed
+Consent Model: None
 Data Types Collected: Attack traces, attacker IP addresses, CVE exploit attempts, device interaction logs, physical state queries
 Protocols & Ports: UPnP, device-specific IoT protocols; ports vary by emulated device (smart plug, smart bulb, router, camera)
 Data Sensitivity: Medium
@@ -42,7 +42,7 @@ Value: Yes
 Evidence: Section 8 (Ethics Considerations): "Since the real demo experiment in Section 5.2 involves user participation based on surveys, it has been approved by our Institutional Review Board (IRB). Participants are fully informed about the purpose of the experiments. Apart from this aspect, this research does not involve any personal data, sensitive information, or vulnerability discovery and therefore does not raise specific ethical concerns."
 
 [CONSENT MODEL]
-Value: Mixed
+Value: None
 Evidence: IRB-approved informed consent applies only to the human survey participants (Section 5.2: "Participants are fully informed about the purpose of the experiments"). 
 
 The online honeypot deployment against real internet attackers 

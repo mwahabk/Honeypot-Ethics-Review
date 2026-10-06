@@ -8,7 +8,7 @@ Domain: Industrial IoT (IIoT)
 Interaction Level: Hybrid
 Threat Model: Real-world ICS/IIoT attackers (automated + human)
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Attacker IPs, protocol interactions, attacker commands
 Protocols & Ports: S7comm (Port 102)
 Data Sensitivity: Medium
@@ -50,7 +50,7 @@ Institutional approval
 Human subject protocol
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Page 27:
 Public IP deployment without authentication barriers
 No mention of consent or disclosure anywhere in the paper

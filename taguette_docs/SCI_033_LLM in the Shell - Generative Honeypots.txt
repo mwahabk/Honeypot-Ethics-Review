@@ -8,7 +8,7 @@ Domain: IT
 Interaction Level: Medium
 Threat Model: Human attackers capable of distinguishing real Linux shell from a fake one; SSH brute-force attackers and skilled human penetration testers who can fingerprint traditional honeypots.
 IRB Mentioned: No
-Consent Model: Mixed
+Consent Model: None
 Data Types Collected: SSH session commands, shell interaction logs, command outputs, attacker behaviour during evaluation
 Protocols & Ports: SSH (Port 22)
 Data Sensitivity: Low
@@ -42,7 +42,7 @@ Value: No
 Evidence: No mention of IRB, ethics committee, or institutional approval anywhere in the paper. The paper is entirely technically framed.
 
 [CONSENT MODEL]
-Value: Mixed
+Value: None
 Evidence: The evaluation uses cybersecurity researchers as human participants who knowingly interact with the honeypot. Abstract: "The evaluation was done by asking cybersecurity researchers to use the honeypot and give feedback." This implies informed participation in the evaluation. However, real-world attacker consent is not discussed.
 
 Section 4: The 12 evaluation participants gave explicit informed consent - "We contacted 12 participants by email, gave them unique users and passwords" and were told they were testing a honeypot. However, the honeypot's intended real-world use against actual attackers (Section 7, future work: "deploying it in the wild") involves no attacker consent.

@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: Medium
 Threat Model: ICS attackers & scanners
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, S7Comm traffic, and PLC commands
 Protocols & Ports: HTTP (80), S7Comm (102)
 Data Sensitivity: High
@@ -42,7 +42,7 @@ Value: No
 Evidence: A review of the entire paper confirms there is no mention of an Institutional Review Board (IRB) or ethical committee oversight
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Sections III, IV, & V: The researchers exposed HoneyPLC to the public Internet for "65 days" on static residential and cloud IPs, specifically configuring a logging machine to "sniff" all packets transmitted over "TCP ports 80 and 102". 
 This architecture captured high-sensitivity "S7Comm protocol" interactions including PLC memory reads and "Denial of Service" (Stop/Start) commands from over "7,900 unique IPs" who were intentionally "lured" into the decoy to evaluate deployment realism without any disclosure or governance framework
 

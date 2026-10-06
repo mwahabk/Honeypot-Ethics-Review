@@ -8,7 +8,7 @@ Domain: IT
 Interaction Level: Medium
 Threat Model: Human attackers engaging in dialogue and commands
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Conversational data, commands, attacker responses
 Protocols & Ports: SSH / Telnet
 Data Sensitivity: High
@@ -45,7 +45,7 @@ Value: No
 Evidence: There is no mention of an "Institutional Review Board," "ethics committee," or "human subject protocols" in the entire paper.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Page 2: The authors explicitly "deploy HoneyGPT... on the Internet for three months" to engage with live attackers, capturing "more attack behaviors and longer interactions" without any mention of obtaining consent
 
 [DATA TYPES COLLECTED]

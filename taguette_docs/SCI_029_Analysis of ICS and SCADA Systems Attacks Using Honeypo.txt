@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: Low
 Threat Model: ICS/SCADA attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, protocol logs, and commands
 Protocols & Ports: HTTP (80), SSH (22), SNMP (161), Modbus (502), IPMI/ASF-RMCP (623), S7comm (102); Siemens S7-300 template also opens port 20
 Data Sensitivity: High
@@ -45,7 +45,7 @@ Value: No
 Evidence: A complete review of the text confirms no mention of Institutional Review Board (IRB) or ethical committee oversight
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section I/VI:
 The systems are "assigned public IP addresses" to "luring attackers into a controlled environment" where they are monitored unknowingly
 
@@ -79,7 +79,7 @@ Evidence: Data Availability Statement (Page 15): The authors state that "Data in
 
 [JURISDICTION / LEGAL]
 Value: Not discussed
-Evidence: (no justification text provided)
+Evidence: The paper does not discuss jurisdiction or legal awareness. No mention of GDPR, legal compliance, cross-border data transfer, or applicable regulations appears in any section, despite capturing attacker data from an Internet-exposed ICS/SCADA honeypot.
 
 [CONTAINMENT & HARM]
 Value: Technical isolation

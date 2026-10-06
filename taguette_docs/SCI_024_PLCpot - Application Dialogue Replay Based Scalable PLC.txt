@@ -9,7 +9,7 @@ Domain: ICS
 Interaction Level: Medium
 Threat Model: PLC-targeted attacks
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, protocol dialogues, hashes, and binaries
 Protocols & Ports: Modbus (502)
 Data Sensitivity: Low
@@ -43,7 +43,7 @@ Value: No
 Evidence: There is no mention of an Institutional Review Board or ethical committee approval, despite federal funding from the "National Science Foundation"
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Sections 3.3.2 & 4.3: The system uses a "Data Storage" module to capture all interactions from adversaries who are "deceive attacker" without being notified of the decoy
 
 [DATA TYPES COLLECTED]

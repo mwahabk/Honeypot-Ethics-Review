@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: Advanced ICS attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Traffic, system calls, and physical state data
 Protocols & Ports: Modbus (502), HTTP (9090), DNP3
 Data Sensitivity: High
@@ -44,7 +44,7 @@ Evidence: Pages 1–10: A review of the entire paper
  reveals no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol."
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 5.2: Data is collected from "external actors" on the Internet without notification or consent
 
 [DATA TYPES COLLECTED]

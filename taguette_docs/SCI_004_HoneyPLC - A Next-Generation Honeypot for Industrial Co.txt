@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: ICS attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: ICS command interactions, protocol traffic
 Protocols & Ports: S7comm (102), HTTP (80), SNMP (161)
 Data Sensitivity: High
@@ -49,7 +49,7 @@ Value: No
 Evidence: No IRB, no ethics board, no human subjects discussion appears anywhere in the paper.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: There is no consent statement, just Internet-facing honeypots.
 
 There is no phrase like:

@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: Low
 Threat Model: OPC UA-targeted attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: OPC UA requests & behavioral patterns
 Protocols & Ports: OPC UA (Port 4840)
 Data Sensitivity: Low
@@ -44,7 +44,7 @@ Value: No
 Evidence: A complete review of the text confirms there is no mention of an Institutional Review Board (IRB) or ethical committee oversight regarding the study of attacker behavior .
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 2:
 One proposed deployment (Variant 1) is to "lure the attacker into interaction" by making the honeypot "easily noticeable" (e.g., by reducing security measures) so that any interaction triggers an alarm without the attacker's knowledge or consent
 

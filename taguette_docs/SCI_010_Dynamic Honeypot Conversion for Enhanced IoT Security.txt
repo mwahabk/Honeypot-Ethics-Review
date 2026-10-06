@@ -8,7 +8,7 @@ Domain: IoT
 Interaction Level: Medium
 Threat Model: IoT malware, automated attacks, and opportunistic attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Network traffic, Attack payloads, IoT interaction behavior
 Protocols & Ports: UDP, DNS, TCP (SYN), ICMP, and HTTP
 Data Sensitivity: Medium
@@ -42,7 +42,7 @@ Value: No
 Evidence: Pages 1–15: There is no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol" in the entire paper.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Page 5: The attacker operates under the limitation that they "cannot determine whether a node is a honeypot before interaction" and remain "unaware of the system’s dynamic conversion capability," implying data is collected without their knowledge or consent
 
 [DATA TYPES COLLECTED]

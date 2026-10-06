@@ -8,7 +8,7 @@ Domain: IT
 Interaction Level: High
 Threat Model: Enterprise-focused attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: Traffic, host logs, and deceptive tokens
 Protocols & Ports: RDP (3389), SSH (22), HTTPS (443), and SMTP
 Data Sensitivity: High
@@ -42,7 +42,7 @@ Value: No
 Evidence: Pages 1–13: A review of the entire paper confirms no mention of an "Institutional Review Board," "ethics committee," or "human subject protocol"
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section 4: The system was "deployed... live in the wild for 34 days" where it received "5.79 million unsolicited connections". Attackers interact without any notification or consent mechanism
 
 [DATA TYPES COLLECTED]

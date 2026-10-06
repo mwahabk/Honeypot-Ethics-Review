@@ -8,7 +8,7 @@ Domain: IoT
 Interaction Level: High
 Threat Model: IoT malware and attackers
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IP addresses, request packets, session logs, exploit traces, malware samples
 Protocols & Ports: HTTP (80), HTTPS (443), RTSP (554), RTMP (1935)
 Data Sensitivity: High
@@ -44,7 +44,7 @@ Value: No
 Evidence: No mention of: IRB, Ethics committee, Institutional review, Consent approval
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Abstract: "HoneyIoT can effectively bypass the pre-attack checks and mislead the attackers into uploading malware."
 Page 6: "If the attacker uploads malware, we assign a large positive reward."
 

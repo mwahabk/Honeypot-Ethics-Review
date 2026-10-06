@@ -9,7 +9,7 @@ Domain: ICS
 Interaction Level: Medium
 Threat Model: ICS attackers and anomaly-based threats
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: IPs, attack traffic, and metadata
 Protocols & Ports: Modbus/TCP (502)
 Data Sensitivity: High
@@ -43,7 +43,7 @@ Value: No
 Evidence: A review of the manuscript confirms there is "no mention of an 'Institutional Review Board,' 'ethics committee,' or human subject protocols"
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: Section III-A: The honeypot "can reply to all request messages using the Modbus protocol" and is exposed to the public to lure and interact with attackers without prior consent
 
 [DATA TYPES COLLECTED]

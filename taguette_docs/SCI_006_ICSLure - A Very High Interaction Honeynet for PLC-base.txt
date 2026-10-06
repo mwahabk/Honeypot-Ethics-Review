@@ -8,7 +8,7 @@ Domain: ICS
 Interaction Level: High
 Threat Model: Advanced ICS attackers targeting PLCs and industrial protocols
 IRB Mentioned: No
-Consent Model: Implicit
+Consent Model: None
 Data Types Collected: PLC commands, industrial protocol traffic, attacker interaction logs
 Protocols & Ports: Modbus (502), S7comm (102), HTTP (80), noVNC (5900)
 Data Sensitivity: High
@@ -49,7 +49,7 @@ Value: No
 Evidence: No terms such as “IRB”, “human subject protocol”, “ethics committee” appear in any section.
 
 [CONSENT MODEL]
-Value: Implicit
+Value: None
 Evidence: The paper describes attacker interactions without any mention of notification or consent: “attackers could take the control…” (Section 6).
 
 [DATA TYPES COLLECTED]
