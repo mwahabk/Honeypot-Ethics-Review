@@ -32,7 +32,7 @@ Honeypot-Ethics-Review/
     │   └── NS_039 to NS_239                # Non-scientific open-source tools (201 files)
     ├── codebook.csv                        # Codebook with 71 open codes
     ├── scientific-open-coding-2026-10-13.sqlite3       # Taguette project - 38 scientific papers (coded)
-    └── non-scientific-open-coding-2026-10-13.sqlite3   # Taguette project - 201 tools (ready for coding)
+    └── non-scientific-open-coding-2026-10-13.sqlite3   # Taguette project - 201 tools (coded)
 ```
 
 ---
