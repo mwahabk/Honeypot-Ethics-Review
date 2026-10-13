@@ -31,7 +31,7 @@ Honeypot-Ethics-Review/
     │   ├── SCI_001 to SCI_038              # Scientific honeypot papers (38 files)
     │   └── NS_039 to NS_239                # Non-scientific open-source tools (201 files)
     ├── codebook.csv                        # Codebook with 71 open codes
-    └── open-coding-2026-10-13.sqlite3      # Taguette open-coding project (38 scientific papers coded - coding progress)
+    └── scientific-open-coding-2026-10-13.sqlite3      # Taguette open-coding project (38 scientific papers coded - coding progress)
 ```
 
 ---
