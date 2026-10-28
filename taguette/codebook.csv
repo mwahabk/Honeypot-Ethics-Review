@@ -1,72 +1,70 @@
-tag,description
-IRB-Absent,"No ethics committee, IRB, or institutional approval is mentioned. The study or tool proceeds without documented ethics oversight."
-IRB-Present,"An ethics committee, IRB process, or institutional approval is explicitly mentioned or obtained."
-Ethics-Committee,A specific ethics committee or review board is named or referenced.
-Consent-None,No consent mechanism exists. Attackers or affected parties are not informed or given any form of consent.
-Consent-Implicit,Attackers are treated as implicitly consenting adversaries with no active consent mechanism; assumes hostile intent.
-Consent-Explicit,Explicit informed consent is obtained from participants or parties interacting with the honeypot.
-Attacker-Notification,The system includes or discusses notifying attackers that they are interacting with a honeypot.
-User-Notification-Absent,Users or operators of the monitored network are not notified about honeypot deployment.
-Credential-Collection,The honeypot captures attacker usernames and/or passwords in plaintext or encoded form.
-Session-Recording,"Full attacker sessions are recorded, including keystrokes, commands, screenshots, or terminal activity."
-Malware-Capture,Malware binaries or exploit payloads are captured and stored by the honeypot.
-Network-Traffic-Capture,Full or partial network traffic (pcap) is captured from attacker interactions.
-Attacker-IP-Logging,Attacker IP addresses are systematically logged and retained as identifiers.
-Personal-Data-Collection,"Data collected may constitute personal data under privacy regulations (e.g., email addresses, device identifiers, Bluetooth MACs)."
-ICS-Data-Capture,"ICS/SCADA-specific protocol data (Modbus, S7comm, DNP3, BACnet, etc.) is captured from attacker interactions."
-Medical-Data-Risk,"Interaction data may include or reference medical identifiers (DICOM patient IDs, HL7/FHIR patient records)."
-Behavioral-Data,"Attacker behavioral patterns, command sequences, or interaction profiles are collected and analyzed."
-Data-Retention-Absent,"No data retention policy, deletion timeline, or archival strategy is documented."
-Data-Retention-Present,A data retention policy or deletion schedule is explicitly mentioned.
-Data-Minimization-Absent,"No discussion of data minimization, selective logging, or privacy filtering is present."
-Data-Minimization-Present,Data minimization principles are explicitly applied or discussed.
-Data-Sharing-Public,Captured attack data or datasets are publicly released without restrictions.
-Data-Sharing-Controlled,"Captured data is shared in a controlled manner (e.g., requires application, institutional affiliation, or review)."
-Data-Sharing-Third-Party,Attack data is automatically or semi-automatically submitted to a third-party platform or service.
-No-Data-Sharing,"No dataset, logs, or attack data are shared beyond the immediate research team."
-Privacy-Risk,The honeypot deployment creates a risk of capturing or exposing personal or sensitive private data.
-GDPR-Concern,"The data collection practices may trigger GDPR or similar data protection regulation obligations, not discussed."
-IP-Address-Privacy,"Attacker IP addresses are collected without anonymization, raising privacy concerns under data protection law."
-Consumer-Privacy,"The honeypot is deployed on or distributed to consumer-facing devices (e.g., mobile apps, Play Store), raising end-user privacy concerns."
-Jurisdiction-Absent,"No legal framework, jurisdiction analysis, or regulatory compliance is discussed."
-Jurisdiction-Present,"Legal jurisdiction, applicable laws, or regulatory compliance is explicitly addressed."
-Radio-Frequency-Regulation,"The honeypot operates on regulated radio frequencies, raising spectrum regulatory compliance concerns not discussed."
-Legal-Entrapment-Risk,The honeypot design or deployment may raise questions about legal entrapment of attackers.
-Terms-of-Service,"Terms of service, copyright, or acceptable use policy concerns arise from the honeypot design (e.g., website cloning)."
-Containment-Passive,Containment is achieved passively through logging only; the honeypot does not actively engage or respond to attacker infrastructure.
-Containment-Active,"Active containment measures are implemented (e.g., containerization, network isolation, VM sandboxing, namespace isolation)."
-Containment-Absent,No containment or harm prevention measures are documented.
-Containment-Gap,"A specific containment gap or risk is identified (e.g., proxy to real backend, malware escape risk, real device exposure)."
-Real-Backend-Risk,"The honeypot proxies to or connects with a real backend system, creating risk of real data exposure to attackers."
-Third-Party-Harm,A compromised or weaponized honeypot could be used to attack third parties; this risk is not addressed.
-Physical-Domain-Risk,"Honeypot deployment in or near physical systems (ICS, medical devices, spacecraft, radio) creates risk of physical harm."
-Deception-Technical-Only,Deception is framed purely as an engineering or security mechanism with no ethical analysis or moral reasoning.
-Deception-Ethical-Discussion,The ethical dimensions of using deception against attackers are explicitly discussed or reasoned about.
-Active-Deception,"The honeypot actively transmits deceptive signals, responses, or content (beyond passive emulation)."
-Physical-World-Deception,"Deception extends beyond cyber into the physical world (fake video feeds, simulated physical processes, radio signals)."
-LLM-Deception,"Large Language Models (LLMs) are used to generate dynamic, realistic deceptive responses to attackers."
-Dual-Use-Risk,"The honeypot design, code, or data could be misused by attackers to evade detection, test attack tools, or cause harm."
-Researcher-Responsibility-Absent,"No statements about researcher responsibility, ethical guidelines, or professional conduct are present."
-Researcher-Responsibility-Present,"Researcher responsibility, ethical obligations, or professional guidelines are explicitly stated."
-Responsible-Disclosure,"Responsible disclosure of vulnerabilities, attacker identities, or threat intelligence is discussed."
-Dual-Use-Acknowledgement,The authors acknowledge the dual-use potential of the honeypot design or published findings.
-LLM-Third-Party-API,"Attacker interaction data is transmitted to a third-party LLM API (e.g., OpenAI, Anthropic) for processing, without documented governance."
-AI-Governance-Absent,"AI-powered honeypot components operate without any documented AI-specific governance, bias assessment, or accountability framework."
-Automated-Response,The honeypot generates automated responses to attackers (scripted or AI-driven) without human review of each response.
-Technology-Driven-Ethical-Lag,"Technical capabilities (AI, digital twins, high-fidelity simulation) advance faster than the accompanying ethical governance framework."
-Internet-Facing-Deployment,The honeypot is deployed on publicly accessible infrastructure facing real internet attackers.
-Controlled-Deployment,"The honeypot is deployed in a controlled lab, testbed, or experimental environment rather than against live attacker traffic."
-Simulation-Only,The honeypot operates in a simulated environment with no real-world attacker exposure.
-Critical-Infrastructure-Deployment,"The honeypot is deployed in or adjacent to critical infrastructure (power grid, water treatment, transportation, telecommunications, space)."
-Consumer-Distribution,"The honeypot or sensor is distributed directly to general consumers (e.g., via app stores, public downloads)."
-Mobile-Deployment,The honeypot is deployed on mobile devices carried into real-world environments.
-Threat-Intel-Sharing,Captured attack data is contributed to a threat intelligence platform or community feed.
-Threat-Intel-No-Governance,"Threat intelligence is shared without documented anonymization, access control, or privacy policy."
-Victim-Data-Risk,"Data collected from or about non-attacker parties (victims, legitimate users, infrastructure operators) is captured without consent."
-Ethics-by-Containment,"Ethical compliance is implicitly assumed to be achieved through technical containment (isolation, sandboxing) rather than normative ethical reasoning."
-No-Ethical-Framing,"No ethical framing, discussion, or reasoning is present in the document at all."
-Partial-Ethical-Framing,Some ethical concepts are mentioned but not developed into a full ethical analysis or governance framework.
-ICS-Ethics,"Specific ethical concerns arising from honeypot deployment in Industrial Control System environments (safety, critical infrastructure, cascading failure risk)."
-Healthcare-Ethics,"Specific ethical concerns arising from honeypot deployment involving healthcare data or medical infrastructure (HIPAA, patient privacy, safety)."
-Space-Ethics,Specific ethical concerns arising from honeypot deployment in space or satellite system contexts.
-IoT-Ethics,Specific ethical concerns arising from honeypot deployment targeting IoT devices or embedded systems at scale.
+tag,description,example
+IRB-Absent,"No ethics committee, IRB, or institutional approval is mentioned. The study or tool proceeds without documented ethics oversight.","A 5-month internet deployment is reported, but the paper never mentions IRB or ethics approval."
+IRB-Present,"An ethics committee, IRB process, or institutional approval is explicitly mentioned or obtained.",The authors state the study was reviewed and approved by their institutional review board.
+Ethics-Committee,A specific ethics committee or review board is named or referenced.,Data handling was overseen by the university's named ethics review board.
+Consent-None,No consent mechanism exists. Attackers or affected parties are not informed or given any form of consent.,Attackers interact with the decoy unknowingly; no notice or consent mechanism exists.
+Consent-Implicit,Attackers are treated as implicitly consenting adversaries with no active consent mechanism; assumes hostile intent.,"A login banner states access is monitored and for authorized use only, implying notice to intruders."
+Consent-Explicit,Explicit informed consent is obtained from participants or parties interacting with the honeypot.,Participants sign an informed-consent form before interacting with the system.
+User-Notification-Absent,Users or operators of the monitored network are not notified about honeypot deployment.,The honeypot is placed on the production network without notifying its legitimate operators.
+Credential-Collection,The honeypot captures attacker usernames and/or passwords in plaintext or encoded form.,The honeypot records the usernames and passwords attackers submit during login attempts.
+Session-Recording,"Full attacker sessions are recorded, including keystrokes, commands, screenshots, or terminal activity.",Every command and keystroke of each attacker session is logged for later analysis.
+Malware-Capture,Malware binaries or exploit payloads are captured and stored by the honeypot.,Malware binaries dropped by attackers are collected and stored by the honeypot.
+Network-Traffic-Capture,Full or partial network traffic (pcap) is captured from attacker interactions.,Full packet captures (pcap) of attacker traffic are recorded.
+Attacker-IP-Logging,Attacker IP addresses are systematically logged and retained as identifiers.,The source IP of every incoming connection is logged and retained.
+Personal-Data-Collection,"Data collected may constitute personal data under privacy regulations (e.g., email addresses, device identifiers, Bluetooth MACs).",Collected data includes email addresses and device identifiers that may count as personal data.
+ICS-Data-Capture,"ICS/SCADA-specific protocol data (Modbus, S7comm, DNP3, BACnet, etc.) is captured from attacker interactions.",Modbus and S7comm protocol exchanges are captured from the emulated PLC.
+Medical-Data-Risk,"Interaction data may include or reference medical identifiers (DICOM patient IDs, HL7/FHIR patient records).",The honeypot emulates a DICOM service and may capture patient-record identifiers.
+Behavioral-Data,"Attacker behavioral patterns, command sequences, or interaction profiles are collected and analyzed.",Attacker command sequences and interaction patterns are profiled.
+Data-Collection-Ethics,The authors discuss or not the ethical implications of collecting different types of data,"For example, for one experiment a particular type of data might not be necessary and as such there is not justification on why it should be collected."
+Data-Retention-Absent,"No data retention policy, deletion timeline, or archival strategy is documented.","No retention period, deletion schedule, or archival policy is stated for the collected logs."
+Data-Retention-Present,A data retention policy or deletion schedule is explicitly mentioned.,Logs are automatically deleted after a stated retention period.
+Data-Minimization-Absent,"No discussion of data minimization, selective logging, or privacy filtering is present.",The system collects a rich set of data with no discussion of minimizing or filtering it.
+Data-Minimization-Present,Data minimization principles are explicitly applied or discussed.,Only fields needed for analysis are logged; a pre-recorded video stands in for a real camera feed.
+Data-Sharing-Public,Captured attack data or datasets are publicly released without restrictions.,The captured attack dataset is released publicly alongside the paper.
+Data-Sharing-Controlled,"Captured data is shared in a controlled manner (e.g., requires application, institutional affiliation, or review). Share data on demand to other researchers but not necessarily to the public",The dataset is available only upon request and institutional affiliation.
+Data-Sharing-Third-Party,Attack data is automatically or semi-automatically submitted to a third-party platform or service.,Captured samples are automatically submitted to VirusTotal.
+Data-Sharing-Absent,The authors explicitely mention that they will not share the data for whatever reason,Neither the logs nor any dataset are released beyond the research team.
+Privacy-Risk,The honeypot deployment creates a risk of capturing or exposing personal or sensitive private data.,"While capturing attacker IDs and IPs, the data collected could identify individuals."
+GDPR-Concern,"The data collection practices may trigger GDPR or similar data protection regulation obligations, not discussed.","Attacker IP addresses are logged, which may trigger GDPR obligations the paper does not discuss."
+IP-Address-Privacy,"Attacker IP addresses are collected without anonymization, raising privacy concerns under data protection law.",Attacker IPs are stored without anonymization or hashing.
+Consumer-Privacy,"The honeypot is deployed on or distributed to consumer-facing devices (e.g., mobile apps, Play Store), raising end-user privacy concerns.","The sensor ships as a consumer mobile app, raising end-user privacy concerns."
+Victim-Data-Risk,"Data collected from or about non-attacker parties (victims, legitimate users, infrastructure operators) is captured without consent.",Data about legitimate users or operators is captured without their consent.
+Honeypot-Owner-Privacy-Risk,Data included in the honeypot deployment could be a privacy risk for the honeypot owner,"For example, if a company deploys a database honeypot and the honeypot includes a fake database, they database could reveal private company information"
+Jurisdiction-Absent,"No legal framework, jurisdiction analysis, or regulatory compliance is discussed.","No legal, jurisdictional, or regulatory analysis of the deployment is provided."
+Jurisdiction-Present,"Legal jurisdiction, applicable laws, or regulatory compliance is explicitly addressed.",The authors note the deployment's jurisdiction and the privacy law that applies to the data.
+Radio-Frequency-Regulation,"The honeypot operates on regulated radio frequencies, raising spectrum regulatory compliance concerns not discussed.","The decoy transmits on regulated spectrum, a compliance issue left undiscussed."
+Containment-Passive,Containment is achieved passively through logging only; the honeypot does not actively engage or respond to attacker infrastructure.,Documentation says the tool only logs and should not be actively exposed; containment is monitoring-only.
+Containment-Active,"Active containment measures are implemented (e.g., containerization, network isolation, VM sandboxing, namespace isolation).",The honeypot runs in an isolated Docker/VLAN sandbox with egress filtering.
+Containment-Absent,No containment or harm prevention measures are documented.,No isolation or harm-prevention measures are described.
+Containment-Gap,"A specific containment gap or risk is identified (e.g., proxy to real backend, malware escape risk, real device exposure).","The emulator proxies to a real PLC, a containment gap that could expose the live device."
+Real-Backend-Risk,"The honeypot proxies to or connects with a real backend system, creating risk of real data exposure to attackers.",The front end forwards requests to a real backend system reachable by attackers.
+Third-Party-Harm,A compromised or weaponized honeypot could be used to attack third parties; this risk is not addressed.,A compromised node could enable lateral movement to attack third parties; the risk is unaddressed.
+Physical-Domain-Risk,"Honeypot deployment in or near physical systems (ICS, medical devices, spacecraft, radio) creates risk of physical harm.","Because it emulates physical processes on a real PLC, a failure could affect physical equipment."
+Deception-Technical-Only,Deception is framed purely as an engineering or security mechanism with no ethical analysis or moral reasoning.,"Deception is presented purely as an engineering technique, with no ethical reasoning."
+Deception-Ethical-Discussion,The ethical dimensions of using deception against attackers are explicitly discussed or reasoned about.,The authors reason about whether deceiving attackers is ethically justified.
+Active-Deception,"The honeypot actively transmits deceptive signals, responses, or content (beyond passive emulation).",The decoy actively sends fabricated responses rather than merely emulating a service.
+Physical-World-Deception,"Deception extends beyond cyber into the physical world (fake video feeds, simulated physical processes, radio signals).",Deception extends to a fabricated 360-degree video feed standing in for a real camera.
+LLM-Deception,"Large Language Models (LLMs) are used to generate dynamic, realistic deceptive responses to attackers.","A large language model generates realistic, dynamic replies to attacker commands."
+Researcher-Responsibility-Absent,"No statements about researcher responsibility, ethical guidelines, or professional conduct are present.",The paper makes no statement about researcher responsibility or ethical conduct.
+Researcher-Responsibility-Present,"Researcher responsibility, ethical obligations, or professional guidelines are explicitly stated.","Responsibility is framed as defensive intent, with the authors committing to avoid harm."
+Responsible-Disclosure,"Responsible disclosure of vulnerabilities, attacker identities, or threat intelligence is discussed.",Discovered vulnerabilities are handled through responsible disclosure.
+Dual-Use-Acknowledgement,The authors acknowledge the dual-use potential of the honeypot design or published findings.,The authors acknowledge the dual-use nature of publishing the design.
+LLM-Third-Party-API,"Attacker interaction data is transmitted to a third-party LLM API (e.g., OpenAI, Anthropic) for processing, without documented governance.",Attacker inputs are sent to a hosted LLM API with no stated data-governance controls.
+AI-Governance-Absent,"AI-powered honeypot components operate without any documented AI-specific governance, bias assessment, or accountability framework.",The AI-driven honeypot operates with no AI-specific governance or accountability for its generated output.
+Automated-Response,The honeypot generates automated responses to attackers (scripted or AI-driven) without human review of each response.,The system auto-generates replies to attackers without human review of each one.
+Internet-Facing-Deployment,The honeypot is deployed on publicly accessible infrastructure facing real internet attackers.,Five instances were deployed on public IPs facing real internet attackers.
+Controlled-Deployment,"The honeypot is deployed in a controlled lab, testbed, or experimental environment rather than against live attacker traffic.",Evaluation ran in a closed lab testbed rather than against live traffic.
+Simulation-Only,The honeypot operates in a simulated environment with no real-world attacker exposure.,The system is exercised entirely in a virtual testbed with no real-world exposure.
+Critical-Infrastructure-Deployment,"The honeypot is deployed in or adjacent to critical infrastructure (power grid, water treatment, transportation, telecommunications, space).",The decoy sits adjacent to a power-grid control network.
+Consumer-Distribution,"The honeypot or sensor is distributed directly to general consumers (e.g., via app stores, public downloads).","The sensor is distributed to the public through an app store (e.g., Play Store)."
+Mobile-Deployment,The honeypot is deployed on mobile devices carried into real-world environments.,The honeypot runs on mobile devices carried into real environments.
+ICS-Ethics-Present,"Deployed in an Industrial Control System context and explicitly discusses ICS-specific ethical concerns (safety, physical consequences, critical-infrastructure or cascading-failure risk).","Being an ICS honeypot, the paper explicitly weighs physical-safety and critical-infrastructure consequences."
+ICS-Ethics-Absent,"Deployed in an Industrial Control System context, where physical consequences raise distinct ethical stakes, but the source does not explicitly address ICS-specific ethics; any ethics is implicit (e.g., via containment or safety isolation).",An ICS/PLC honeypot captures industrial commands without IRB oversight or any ICS-specific ethical discussion.
+IoT-Ethics-Present,Deployed against IoT or embedded devices and explicitly discusses IoT-specific ethical concerns (scale,An IoT camera honeypot explicitly discusses device-owner privacy and scale-related harms.
+IoT-Ethics-Absent,Deployed against IoT or embedded devices but does not explicitly address IoT-specific ethical concerns; any ethics is implicit.,An IoT honeypot logs attacker data with no data governance or IoT-specific ethical discussion.
+Space-Ethics-Present,Deployed in a space or satellite context and explicitly discusses domain-specific ethical concerns (harm to space assets,"The satellite honeypot reasons explicitly about avoiding harm to space assets (e.g., HoneySat)."
+Space-Ethics-Absent,Deployed in a space or satellite context but does not explicitly address domain-specific ethics; any ethics is implicit.,A satellite/space honeypot deploys with no explicit domain-specific ethical discussion.
+Healthcare-Ethics-Present,"Involves healthcare data or medical infrastructure and explicitly discusses domain-specific ethics (patient privacy, HIPAA, patient safety).",A medical-device honeypot explicitly addresses patient privacy and HIPAA obligations.
+Healthcare-Ethics-Absent,Involves healthcare data or medical infrastructure but does not explicitly address domain-specific ethics; any ethics is implicit.,A healthcare-adjacent honeypot handles patient-adjacent data with no domain-specific ethics discussion.
+Web Apps,"Honeypot deployed as or emulating a web application / HTTP service, raising web-application-specific ethical considerations (e.g., cloning real sites, handling submitted web form or credential data).",A honeypot mimicking a vulnerable web app or CMS login that logs attacker web requests.
+Mobile Apps,"Honeypot deployed on or emulating a mobile application / mobile device, raising mobile-specific ethical considerations (e.g., device-owner data, app-store distribution, carrying the sensor into real-world environments).","A low-interaction honeypot app running on phones carried into real networks (e.g., HosTaGe)."
