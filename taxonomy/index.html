@@ -32,8 +32,11 @@ body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--f-body); }
 .wrap { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
 h1, h2, h3 { font-family: var(--f-head); font-weight: 600; text-wrap: balance; margin: 0; }
 h1 { font-size: 1.85rem; letter-spacing: -0.01em; }
-.lede { color: var(--muted); max-width: 68ch; margin: 6px 0 0; }
-.stats { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; color: var(--muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+header { text-align: center; }
+.lede { color: var(--muted); max-width: 70ch; margin: 10px auto 0; text-align: justify; text-align-last: center; hyphens: auto; -webkit-hyphens: auto; }
+.just, .detail p, ul.mit li, .q, footer, .gdesc { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.gdesc { text-align-last: left; }
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin: 14px 0 0; color: var(--muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; }
 .stats b { color: var(--fg); font-weight: 600; }
 .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0 14px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 10px; z-index: 5; border-bottom: 1px solid var(--line); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
@@ -103,12 +106,12 @@ ul.mit li { margin: 2px 0; }
 .empty { color: var(--muted); font-size: 0.88rem; }
 .status { padding: 22px; text-align: center; color: var(--muted); }
 .status .err { color: var(--warn); }
-footer { margin-top: 28px; color: var(--muted); font-size: 0.8rem; }
+footer { margin: 28px auto 0; max-width: 80ch; color: var(--muted); font-size: 0.8rem; text-align-last: center; }
 mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: inherit; border-radius: 2px; }
 @media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
 </style>
 
-<div class="wrap">
+<div class="wrap" lang="en">
   <header>
     <h1>Honeypot Ethics Taxonomy</h1>
     <p class="lede">Ethical risks of honeypot research and open-source honeypot tools, organized by lifecycle stage and by risk category. Each risk links to the open-coding evidence from 38 scientific papers and 201 tools, with mitigations and trade-offs.</p>
