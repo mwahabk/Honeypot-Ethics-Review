@@ -74,7 +74,7 @@ RISKS = [
       manifestation='Almost every honeypot logs source IPs; papers publish top-IP tables, maps and IP lists without discussing their legal status.',
       mitigations=['Aggregate or truncate IPs in publications.', 'Treat IP logs as personal data: access control, retention limit, legal basis.'],
       tradeoff='Blocklists and threat intelligence need exact IPs.',
-      indicator=('Logs attacker identifiers or sessions', "bool(__import__('re').search(r'\\bips?\\b|ip address|session|command|traffic|pcap|payload', r['data_types_collected']))")),
+      indicator=('Logs attacker identifiers or sessions', "'attacker identifiers' in r['sens_head'] or bool(__import__('re').search(r'\\bips?\\b|ip address|session|command|traffic|pcap|payload', r['data_types_collected']))")),
  dict(id='R08', cat='C2', stages=['S2', 'S4'], name='Personal and third-party data capture',
       codes=['Personal-Data-Collection', 'Victim-Data-Risk', 'Consumer-Privacy', 'Medical-Data-Risk'],
       definition='The honeypot captures data about people who are not the attacker: victims, subscribers, nearby devices or patients.',
