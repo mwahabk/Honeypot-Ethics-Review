@@ -28,7 +28,7 @@ Then open http://localhost:8000 (list view) or http://localhost:8000/tree.html (
 ## Rebuild the database
 
 ```
-python build_taxonomy.py --codebook ../taguette/codebook.csv --dataset ../data/honeypot_ethics_dataset.csv \
+python build_taxonomy.py --codebook ../taguette/codebook.csv --dataset ../dataset/honeypot_ethics_dataset.csv \
   --papers ../taguette/scientific-pdf-coding-final-2026-11-16.sqlite3 \
   --tools ../taguette/ns-tool-documentation-final-2026-11-16.sqlite3 --out taxonomy.sqlite
 ```
