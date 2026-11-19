@@ -38,6 +38,10 @@ header { text-align: center; }
 .gdesc { text-align-last: left; }
 .stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin: 14px 0 0; color: var(--muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; }
 .stats b { color: var(--fg); font-weight: 600; }
+.pages { display: inline-flex; gap: 4px; margin-top: 14px; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); }
+.pages a { font: 500 0.84rem var(--f-body); text-decoration: none; color: var(--muted); padding: 5px 14px; border-radius: 999px; }
+.pages a[aria-current="page"] { background: var(--accent); color: var(--on-accent); }
+.pages a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0 14px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 10px; z-index: 5; border-bottom: 1px solid var(--line); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
@@ -116,6 +120,7 @@ mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: in
     <h1>Honeypot Ethics Taxonomy</h1>
     <p class="lede">Ethical risks of honeypot research and open-source honeypot tools, organized by lifecycle stage and by risk category. Each risk links to the open-coding evidence from 38 scientific papers and 201 tools, with mitigations and trade-offs.</p>
     <div class="stats" id="stats"></div>
+    <nav class="pages" aria-label="Taxonomy pages"><a href="./" aria-current="page">List view</a><a href="tree.html">Tree view</a></nav>
   </header>
 
   <div class="bar" role="toolbar" aria-label="Taxonomy view">
