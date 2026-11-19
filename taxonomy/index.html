@@ -3,145 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-</head>
-<body>
 <title>Honeypot Ethics Taxonomy</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column; header with view switch and search, then expandable groups -> risks -> detail */
+/* Tree view: root -> categories (or stages) -> risks -> mitigations, drawn as boxes with elbow connectors.
+   Colour marks the risk category only; every box also carries its id and name, so colour is never the only cue. */
 :root[data-theme="light"] { color-scheme: light; }
 :root {
-  --bg: #f7f8f7; --surface: #ffffff; --fg: #1b2321; --muted: #5d6a66; --line: #dfe4e2; --soft: #eef2f1;
-  --accent: #0f6e63; --on-accent: #ffffff; --accent-soft: #e2f0ed; --papers: #2a78d6; --tools: #eb6834; --warn: #a3471a;
+  --bg: #f7f8f7; --surface: #ffffff; --fg: #1b2321; --muted: #5d6a66; --line: #c9d1ce; --soft: #eef2f1;
+  --accent: #0f6e63; --on-accent: #ffffff; --papers: #2a78d6; --tools: #eb6834; --warn: #a3471a;
+  --c1: #1baf7a; --c2: #6250d6; --c3: #eda100; --c4: #e87ba4; --c5: #008300; --c6: #e34948;
   --f-head: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
   --f-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --f-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #121615; --surface: #1a201e; --fg: #e6ecea; --muted: #a0aeaa; --line: #2c3532; --soft: #222a28;
-  --accent: #4fc2b1; --on-accent: #0b1f1c; --accent-soft: #1d3330; --papers: #3987e5; --tools: #d95926; --warn: #f0a07a; color-scheme: dark; } }
+  --bg: #121615; --surface: #1a201e; --fg: #e6ecea; --muted: #a0aeaa; --line: #3a4542; --soft: #222a28;
+  --accent: #4fc2b1; --on-accent: #0b1f1c; --papers: #3987e5; --tools: #d95926; --warn: #f0a07a;
+  --c1: #199e70; --c2: #9085e9; --c3: #c98500; --c4: #d55181; --c5: #0ca30c; --c6: #e66767; color-scheme: dark; } }
 :root[data-theme="dark"] {
-  --bg: #121615; --surface: #1a201e; --fg: #e6ecea; --muted: #a0aeaa; --line: #2c3532; --soft: #222a28;
-  --accent: #4fc2b1; --on-accent: #0b1f1c; --accent-soft: #1d3330; --papers: #3987e5; --tools: #d95926; --warn: #f0a07a; color-scheme: dark; }
+  --bg: #121615; --surface: #1a201e; --fg: #e6ecea; --muted: #a0aeaa; --line: #3a4542; --soft: #222a28;
+  --accent: #4fc2b1; --on-accent: #0b1f1c; --papers: #3987e5; --tools: #d95926; --warn: #f0a07a;
+  --c1: #199e70; --c2: #9085e9; --c3: #c98500; --c4: #d55181; --c5: #0ca30c; --c6: #e66767; color-scheme: dark; }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--f-body); }
-.wrap { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
-h1, h2, h3 { font-family: var(--f-head); font-weight: 600; text-wrap: balance; margin: 0; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 var(--f-body); }
+.wrap { max-width: 1320px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
+h1, h2 { font-family: var(--f-head); font-weight: 600; text-wrap: balance; margin: 0; }
 h1 { font-size: 1.85rem; letter-spacing: -0.01em; }
 header { text-align: center; }
-.lede { color: var(--muted); max-width: 70ch; margin: 10px auto 0; text-align: justify; text-align-last: center; hyphens: auto; -webkit-hyphens: auto; }
-.just, .detail p, ul.mit li, .q, footer, .gdesc { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
-.gdesc { text-align-last: left; }
-.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin: 14px 0 0; color: var(--muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; }
-.stats b { color: var(--fg); font-weight: 600; }
+.lede { color: var(--muted); max-width: 72ch; margin: 10px auto 0; text-align: justify; text-align-last: center; hyphens: auto; -webkit-hyphens: auto; }
 .pages { display: inline-flex; gap: 4px; margin-top: 14px; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); }
 .pages a { font: 500 0.84rem var(--f-body); text-decoration: none; color: var(--muted); padding: 5px 14px; border-radius: 999px; }
 .pages a[aria-current="page"] { background: var(--accent); color: var(--on-accent); }
-.pages a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0 14px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 10px; z-index: 5; border-bottom: 1px solid var(--line); }
+
+.bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; margin: 20px 0 10px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 10px; z-index: 5; border-bottom: 1px solid var(--line); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
-.seg button { font: 500 0.88rem var(--f-body); border: 0; background: transparent; color: var(--muted); padding: 7px 12px; cursor: pointer; }
+.seg button { font: 500 0.86rem var(--f-body); border: 0; background: transparent; color: var(--muted); padding: 7px 12px; cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
-.search { flex: 1 1 220px; min-width: 0; }
-.search input { width: 100%; font: 0.92rem var(--f-body); padding: 8px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--fg); }
-.theme-btn { display: inline-flex; align-items: center; gap: 6px; }
-.tools-btn { font: 500 0.85rem var(--f-body); border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 7px 11px; border-radius: 8px; cursor: pointer; }
-button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.search { flex: 0 1 260px; min-width: 0; }
+.search input { width: 100%; font: 0.9rem var(--f-body); padding: 7px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--fg); }
+.btn { font: 500 0.85rem var(--f-body); border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 7px 11px; border-radius: 8px; cursor: pointer; }
+.btn[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-.flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; margin: 4px 0 18px; }
-.flow a { display: block; text-decoration: none; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 9px; font-size: 0.82rem; line-height: 1.25; }
-.flow a span { display: block; font: 500 0.7rem var(--f-mono); color: var(--accent); letter-spacing: 0.04em; }
-.flow a:hover { border-color: var(--accent); }
-@media (max-width: 640px) { .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; font-size: 0.8rem; color: var(--muted); margin: 4px 0 18px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
 
-.group { margin: 0 0 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
-.group > summary { list-style: none; cursor: pointer; padding: 13px 16px; display: flex; gap: 12px; align-items: baseline; }
-.group > summary::-webkit-details-marker, .risk > summary::-webkit-details-marker { display: none; }
-.group > summary .gid { font: 500 0.75rem var(--f-mono); color: var(--accent); min-width: 2.2em; }
-.group > summary h2 { font-size: 1.12rem; }
-.group > summary .gdesc { display: block; font-family: var(--f-body); font-weight: 400; color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
-.group > summary .count { margin-left: auto; color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
-.chev { transition: transform 0.15s; color: var(--muted); font-size: 0.8rem; }
-details[open] > summary .chev { transform: rotate(90deg); }
-.risks { border-top: 1px solid var(--line); }
+/* ---------- the tree ---------- */
+.stage-area { overflow-x: auto; padding-bottom: 8px; }
+.tree { --gap: 12px; --drop: 18px; min-width: 980px; }
+.root { display: flex; justify-content: center; position: relative; padding-bottom: var(--drop); }
+.root::after { content: ""; position: absolute; left: 50%; bottom: 0; height: var(--drop); border-left: 2px solid var(--line); }
+.node { font: inherit; text-align: left; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.root .node { font: 600 1.02rem var(--f-head); padding: 10px 22px; border: 2px solid var(--fg); text-align: center; }
+.root .node small { display: block; font: 400 0.76rem var(--f-body); color: var(--muted); margin-top: 2px; }
 
-.risk { border-bottom: 1px solid var(--line); }
-.risk:last-child { border-bottom: 0; }
-.risk > summary { list-style: none; cursor: pointer; padding: 10px 16px 10px 20px; display: grid; grid-template-columns: auto 1fr auto; gap: 4px 12px; align-items: center; }
-.risk > summary:hover { background: var(--soft); }
-.rid { font: 500 0.78rem var(--f-mono); color: var(--muted); }
-.rname { font-weight: 500; min-width: 0; }
-.rmeta { grid-column: 2 / 4; display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-.prev { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
-.dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
-.dot.p { background: var(--papers); } .dot.t { background: var(--tools); }
-.chip { font-size: 0.72rem; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
-.gap-chip { background: transparent; border: 1px solid var(--warn); color: var(--warn); }
+.cols { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--gap); position: relative; padding-top: var(--drop); }
+.cols::before { content: ""; position: absolute; top: 0; height: 0; border-top: 2px solid var(--line);
+  left: calc((100% - 5 * var(--gap)) / 12); right: calc((100% - 5 * var(--gap)) / 12); }
+.col { position: relative; min-width: 0; }
+.col::before { content: ""; position: absolute; left: 50%; top: calc(-1 * var(--drop)); height: var(--drop); border-left: 2px solid var(--line); }
+.head { width: 100%; padding: 9px 10px 9px; border-top: 5px solid var(--k); background: color-mix(in srgb, var(--k) 13%, var(--surface)); cursor: default; }
+.head .hid { font: 500 0.7rem var(--f-mono); color: var(--muted); letter-spacing: 0.04em; }
+.head h2 { font-size: 0.95rem; line-height: 1.25; margin-top: 1px; }
+.head .hn { font-size: 0.74rem; color: var(--muted); margin-top: 3px; }
 
-.detail { padding: 4px 20px 18px 20px; display: grid; gap: 14px; }
-.detail p { margin: 0; max-width: 72ch; }
-.lab { font: 600 0.72rem var(--f-body); text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 3px; }
-.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-@media (max-width: 680px) { .two { grid-template-columns: 1fr; } }
-.meter { display: grid; grid-template-columns: 4.2em 1fr 7.2em; gap: 8px; align-items: center; font-size: 0.82rem; font-variant-numeric: tabular-nums; }
-.meter > span:last-child { white-space: nowrap; }
+ul.branch { list-style: none; margin: 0; padding: 8px 0 0 16px; position: relative; }
+ul.branch > li { position: relative; margin-top: 7px; }
+ul.branch > li:first-child { margin-top: 0; }
+/* elbow connectors: a spine on the left and a tick into each box */
+ul.branch > li::before { content: ""; position: absolute; left: -10px; top: 1.15em; width: 10px; border-top: 2px solid var(--line); }
+ul.branch > li::after { content: ""; position: absolute; left: -10px; top: -8px; bottom: 0; border-left: 2px solid var(--line); }
+ul.branch > li:first-child::after { top: -8px; }
+ul.branch > li:last-child::after { bottom: auto; height: calc(1.15em + 8px); }
+ul.branch > li:first-child:last-child::after { height: calc(1.15em + 8px); }
+
+.risk { width: 100%; display: block; padding: 6px 8px 6px 9px; border-left: 4px solid var(--k); cursor: pointer; font-size: 0.82rem; line-height: 1.3; transition: border-color .12s, background .12s; }
+.risk:hover { background: var(--soft); }
+.risk[aria-pressed="true"] { outline: 2px solid var(--accent); outline-offset: 1px; }
+.risk .rid { font: 500 0.68rem var(--f-mono); color: var(--muted); margin-right: 4px; }
+.risk.dim { opacity: 0.28; }
+.risk.hit { box-shadow: 0 0 0 2px var(--accent) inset; }
+ul.mits { padding-top: 6px; padding-left: 14px; }
+ul.mits > li::before { top: 0.9em; width: 8px; left: -9px; }
+ul.mits > li::after { left: -9px; top: -6px; }
+ul.mits > li:last-child::after { height: calc(0.9em + 6px); }
+ul.mits > li { margin-top: 5px; }
+.mit { font-size: 0.72rem; line-height: 1.3; padding: 4px 7px; background: var(--bg); border-style: dashed; color: var(--fg); }
+.mit .rid { font: 0.64rem var(--f-mono); color: var(--muted); display: block; }
+
+/* phones: the six columns stack into one indented outline (no sideways scrolling) */
+@media (max-width: 760px) {
+  .tree { min-width: 0; }
+  .root { justify-content: flex-start; }
+  .root::after { left: 22px; }
+  .cols { grid-template-columns: 1fr; padding: 0 0 0 22px; gap: 14px; }
+  .cols::before { display: none; }
+  .col::before { left: -20px; top: 0; height: 1.6em; width: 20px; border-left: 0; border-top: 2px solid var(--line); top: 1.4em; }
+  .col::after { content: ""; position: absolute; left: -20px; top: -14px; bottom: 0; border-left: 2px solid var(--line); }
+  .col:first-child::after { top: 0; }
+  .col:last-child::after { bottom: auto; height: calc(1.4em + 14px); }
+  .col:first-child:last-child::after { height: 1.4em; }
+}
+
+/* ---------- detail panel ---------- */
+.panel { position: fixed; z-index: 20; top: 12px; right: 12px; bottom: 12px; width: min(420px, calc(100vw - 24px)); background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.18); display: flex; flex-direction: column; }
+.panel header { text-align: left; padding: 14px 16px 10px; border-bottom: 1px solid var(--line); border-top: 5px solid var(--k); border-radius: 12px 12px 0 0; display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; }
+.panel h2 { font-size: 1.12rem; }
+.panel .pid { font: 500 0.75rem var(--f-mono); color: var(--muted); }
+.panel .x { font-size: 1.1rem; line-height: 1; padding: 6px 9px; grid-row: 1 / 3; grid-column: 2; align-self: start; }
+.pbody { overflow-y: auto; padding: 12px 16px 18px; display: grid; gap: 14px; font-size: 0.88rem; }
+.pbody p { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.lab { font: 600 0.7rem var(--f-body); text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 3px; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip { font-size: 0.74rem; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); white-space: nowrap; }
+.meter { display: grid; grid-template-columns: 4em 1fr 7.4em; gap: 8px; align-items: center; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 .meter .track { display: block; height: 8px; background: var(--soft); border-radius: 4px; overflow: hidden; }
 .meter .fill { display: block; height: 100%; border-radius: 4px; }
-.meter .fill.p { background: var(--papers); } .meter .fill.t { background: var(--tools); }
-ul.mit { margin: 0; padding-left: 1.1em; }
-ul.mit li { margin: 2px 0; }
-.mid { font: 0.72rem var(--f-mono); color: var(--muted); margin-right: 4px; }
-.codes { display: flex; flex-wrap: wrap; gap: 6px; }
-.code { font: 0.74rem var(--f-mono); padding: 2px 7px; border: 1px solid var(--line); border-radius: 5px; background: var(--bg); cursor: help; }
-.code b { font-weight: 500; color: var(--muted); }
-.ev-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.ev-head .seg button { font-size: 0.78rem; padding: 4px 9px; }
-.quotes { display: grid; gap: 8px; margin-top: 8px; }
-.q { border-left: 3px solid var(--line); padding: 4px 0 4px 11px; font-size: 0.88rem; }
-.q.p { border-color: var(--papers); } .q.t { border-color: var(--tools); }
-.q .src { font-size: 0.76rem; color: var(--muted); margin-bottom: 2px; }
-.q .src .tag { font-family: var(--f-mono); }
-.more { font: 500 0.82rem var(--f-body); background: none; border: 0; color: var(--accent); cursor: pointer; padding: 4px 0; }
-.empty { color: var(--muted); font-size: 0.88rem; }
+.fill.p { background: var(--papers); } .fill.t { background: var(--tools); }
+.pbody ul { margin: 0; padding-left: 1.1em; } .pbody li { margin: 3px 0; text-align: justify; }
+.mid { font: 0.7rem var(--f-mono); color: var(--muted); margin-right: 4px; }
+.code { font: 0.72rem var(--f-mono); padding: 1px 6px; border: 1px solid var(--line); border-radius: 5px; background: var(--bg); }
+.go { font: 500 0.86rem var(--f-body); color: var(--accent); text-decoration: none; }
+.go:hover { text-decoration: underline; }
+.gap-note { color: var(--warn); font-size: 0.82rem; }
+@media (max-width: 760px) { .panel { top: auto; left: 8px; right: 8px; bottom: 8px; width: auto; max-height: 72vh; } }
+
 .status { padding: 22px; text-align: center; color: var(--muted); }
 .status .err { color: var(--warn); }
-footer { margin: 28px auto 0; max-width: 80ch; color: var(--muted); font-size: 0.8rem; text-align-last: center; }
-mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: inherit; border-radius: 2px; }
-@media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
-</style>
+footer { margin: 26px auto 0; max-width: 80ch; color: var(--muted); font-size: 0.8rem; text-align: justify; text-align-last: center; }
 
-<div class="wrap" lang="en">
+@media print {
+  @page { size: landscape; margin: 10mm; }
+  body { background: #fff; }
+  .bar, .panel, .pages, footer, body::before { display: none !important; }
+  .stage-area { overflow: visible; }
+  .tree { min-width: 0; }
+  .risk.dim { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .risk { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
   <header>
     <h1>Honeypot Ethics Taxonomy</h1>
-    <p class="lede">Ethical risks of honeypot research and open-source honeypot tools, organized by lifecycle stage and by risk category. Each risk links to the open-coding evidence from 38 scientific papers and 201 tools, with mitigations and trade-offs.</p>
-    <div class="stats" id="stats"></div>
-    <nav class="pages" aria-label="Taxonomy pages"><a href="./" aria-current="page">List view</a><a href="tree.html">Tree view</a></nav>
+    <p class="lede">The taxonomy as a tree: the root branches into six risk categories (or six lifecycle stages), each category into its ethical risks, and each risk into its mitigations. Select a risk to see its definition, prevalence in the corpus and mitigations.</p>
+    <nav class="pages" aria-label="Taxonomy pages"><a href="./" aria-current="page">Tree view</a><a href="list.html">List view</a></nav>
   </header>
 
-  <div class="bar" role="toolbar" aria-label="Taxonomy view">
-    <div class="seg" id="viewSeg">
-      <button type="button" id="vStage" aria-pressed="true">By lifecycle stage</button>
-      <button type="button" id="vCat" aria-pressed="false">By risk category</button>
-    </div>
-    <div class="search"><input id="q" type="search" placeholder="Search risks, mitigations, codes" aria-label="Search the taxonomy"></div>
-    <button type="button" class="tools-btn" id="expandAll">Expand all</button>
-    <button type="button" class="tools-btn theme-btn" id="themeBtn" aria-label="Switch to dark mode"><span aria-hidden="true" id="themeIcon">&#9790;</span> <span id="themeLabel">Dark</span></button>
+  <div class="bar" role="toolbar" aria-label="Tree options">
+    <div class="seg"><button type="button" id="gCat" aria-pressed="true">By risk category</button><button type="button" id="gStage" aria-pressed="false">By lifecycle stage</button></div>
+    <button type="button" class="btn" id="mitBtn" aria-pressed="false">Show mitigations</button>
+    <div class="search"><input id="q" type="search" placeholder="Highlight risks, e.g. retention" aria-label="Highlight matching risks"></div>
+    <button type="button" class="btn" id="printBtn">Print / PDF</button>
+    <button type="button" class="btn" id="themeBtn" aria-label="Switch to dark mode"><span aria-hidden="true" id="themeIcon">&#9790;</span> <span id="themeLabel">Dark</span></button>
   </div>
 
-  <nav class="flow" id="flow" aria-label="Lifecycle stages"></nav>
-  <main id="tree"><div class="status">Loading taxonomy database...</div></main>
-
+  <div class="legend" id="legend"></div>
+  <div class="stage-area"><div class="tree" id="tree"><div class="status">Loading taxonomy database...</div></div></div>
   <footer id="foot"></footer>
 </div>
 
+<aside class="panel" id="panel" hidden aria-labelledby="pTitle"></aside>
+
 <script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-asm.js"></script>
 <script>
-// Light / dark switch: sets data-theme on the root, which the CSS tokens follow; remembered per browser
+// Light / dark switch, shared with the list view (same storage key)
 (function () {
   const root = document.documentElement, btn = document.getElementById('themeBtn');
   const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
@@ -151,19 +185,15 @@ mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: in
     document.getElementById('themeLabel').textContent = dark ? 'Light' : 'Dark';
     btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
   }
-  try { const saved = localStorage.getItem('hpt-theme'); if (saved === 'light' || saved === 'dark') root.dataset.theme = saved; } catch (e) {}
-  btn.addEventListener('click', () => {
-    root.dataset.theme = isDark() ? 'light' : 'dark';
-    try { localStorage.setItem('hpt-theme', root.dataset.theme); } catch (e) {}
-    paint();
-  });
+  try { const s = localStorage.getItem('hpt-theme'); if (s === 'light' || s === 'dark') root.dataset.theme = s; } catch (e) {}
+  btn.addEventListener('click', () => { root.dataset.theme = isDark() ? 'light' : 'dark'; try { localStorage.setItem('hpt-theme', root.dataset.theme); } catch (e) {} paint(); });
   matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', paint);
   paint();
 })();
 </script>
 <script>
 (async function () {
-  const tree = document.getElementById('tree');
+  const tree = document.getElementById('tree'), panel = document.getElementById('panel');
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   let db;
   try {
@@ -180,7 +210,7 @@ mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: in
     db = new SQL.Database(bytes);
   } catch (e) {
     tree.innerHTML = `<div class="status"><p class="err">Could not load the taxonomy database (${esc(e.message)}).</p>
-      <p>If you opened this page from your computer, run <code>python -m http.server</code> in this folder and open <code>http://localhost:8000</code>, or choose the file here:</p>
+      <p>Run <code>python -m http.server</code> in the taxonomy folder and open <code>http://localhost:8000</code>, or choose the file here:</p>
       <input type="file" id="pick" accept=".sqlite,.sqlite3,.db" aria-label="Choose taxonomy.sqlite"></div>`;
     document.getElementById('pick')?.addEventListener('change', async ev => {
       const f = ev.target.files[0]; if (!f) return;
@@ -194,128 +224,104 @@ mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: in
 
   function start() {
     const meta = Object.fromEntries(rows('select key, value from meta').map(r => [r.key, r.value]));
-    const stages = rows('select * from stage order by ord');
-    const cats = rows('select * from category order by ord');
-    const risks = rows('select * from risk order by ord');
+    const stages = rows('select * from stage order by ord'), cats = rows('select * from category order by ord'), risks = rows('select * from risk order by ord');
     const rs = rows('select * from risk_stage'), rc = rows('select * from risk_code'), mit = rows('select * from mitigation order by risk_id, ord');
-    const codes = Object.fromEntries(rows('select * from code').map(c => [c.name, c]));
-    const N = Object.fromEntries(rows("select source_type, count(*) n from entry group by source_type").map(r => [r.source_type, r.n]));
-    const evCount = Object.fromEntries(rows("select code, count(*) n from evidence group by code").map(r => [r.code, r.n]));
-    const nEv = rows('select count(*) n from evidence')[0].n;
+    const N = Object.fromEntries(rows('select source_type, count(*) n from entry group by source_type').map(r => [r.source_type, r.n]));
+    const catIdx = Object.fromEntries(cats.map((c, i) => [c.id, i + 1]));
+    const catOf = Object.fromEntries(cats.map(c => [c.id, c]));
+    const stageName = Object.fromEntries(stages.map(s => [s.id, s.name]));
     for (const r of risks) {
       r.stages = rs.filter(x => x.risk_id === r.id).map(x => x.stage_id);
       r.codes = rc.filter(x => x.risk_id === r.id).map(x => x.code);
       r.mits = mit.filter(x => x.risk_id === r.id);
+      r.k = `var(--c${catIdx[r.category_id]})`;
       r.hay = [r.id, r.name, r.definition, r.manifestation, r.tradeoff, ...r.codes, ...r.mits.map(m => m.text)].join(' ').toLowerCase();
     }
-    const stageName = Object.fromEntries(stages.map(s => [s.id, s.name]));
-    document.getElementById('stats').innerHTML =
-      `<span><b>${stages.length}</b> lifecycle stages</span><span><b>${cats.length}</b> categories</span><span><b>${risks.length}</b> risks</span>` +
-      `<span><b>${mit.length}</b> mitigations</span><span><b>${nEv.toLocaleString()}</b> evidence quotes</span>` +
-      `<span><span class="dot p"></span> ${N['Scientific']} papers &nbsp;<span class="dot t"></span> ${N['Non-Scientific']} tools</span>`;
-    document.getElementById('foot').textContent = `Taxonomy version ${meta.version}, built ${meta.built}. Sources: ${meta.sources}. Counts describe what the papers and documentation report, not what the authors did in practice.`;
-    document.getElementById('flow').innerHTML = stages.map((s, i) => `<a href="#${s.id}"><span>${String(i + 1).padStart(2, '0')}</span>${esc(s.name)}</a>`).join('');
+    document.getElementById('legend').innerHTML = cats.map(c => `<span><span class="sw" style="background:var(--c${catIdx[c.id]})"></span>${esc(c.id)} ${esc(c.name)}</span>`).join('');
+    document.getElementById('foot').textContent = `Taxonomy version ${meta.version}, built ${meta.built}: ${cats.length} categories, ${stages.length} lifecycle stages, ${risks.length} risks, ${mit.length} mitigations. Sources: ${meta.sources}. Counts describe what the papers and documentation report, not what the authors did in practice.`;
 
-    let view = 'stage', query = '';
-    try { view = localStorage.getItem('hpt-view') || 'stage'; } catch (e) {}
+    let group = 'cat', showMits = false, query = '', selected = null;
+    try { group = localStorage.getItem('hpt-tree-group') || 'cat'; showMits = localStorage.getItem('hpt-tree-mits') === '1'; } catch (e) {}
 
-    function prevalence(r) {
-      if (r.papers_affected != null) {
-        const tag = r.indicator;
-        return `<span class="prev" title="${esc(tag)}"><span class="dot p"></span>${r.papers_affected}/${N['Scientific']}</span>
-                <span class="prev" title="${esc(tag)}"><span class="dot t"></span>${r.tools_affected}/${N['Non-Scientific']}</span>`;
-      }
-      if (!r.papers_evidence && !r.tools_evidence) return `<span class="chip gap-chip">No entry addresses this</span>`;
-      return `<span class="prev">evidence in <span class="dot p"></span>${r.papers_evidence} papers <span class="dot t"></span>${r.tools_evidence} tools</span>`;
+    function riskNode(r) {
+      const mits = showMits ? `<ul class="branch mits">${r.mits.map(m => `<li><div class="node mit"><span class="rid">${m.id}</span>${esc(m.text)}</div></li>`).join('')}</ul>` : '';
+      return `<li><button type="button" class="node risk" data-id="${r.id}" style="--k:${r.k}" aria-pressed="${selected === r.id}"><span class="rid">${r.id}</span>${esc(r.name)}</button>${mits}</li>`;
+    }
+    function render() {
+      document.getElementById('gCat').setAttribute('aria-pressed', group === 'cat');
+      document.getElementById('gStage').setAttribute('aria-pressed', group === 'stage');
+      const mb = document.getElementById('mitBtn'); mb.setAttribute('aria-pressed', showMits); mb.textContent = showMits ? 'Hide mitigations' : 'Show mitigations';
+      const cols = group === 'cat'
+        ? cats.map(c => ({ id: c.id, name: c.name, k: `var(--c${catIdx[c.id]})`, items: risks.filter(r => r.category_id === c.id) }))
+        : stages.map((s, i) => ({ id: `S${i + 1}`, name: s.name, k: 'var(--fg)', items: risks.filter(r => r.stages.includes(s.id)) }));
+      const unit = group === 'cat' ? 'risk categories' : 'lifecycle stages';
+      tree.innerHTML = `
+        <div class="root"><div class="node">Honeypot Ethics Taxonomy<small>${cols.length} ${unit} &middot; ${risks.length} risks${showMits ? ` &middot; ${mit.length} mitigations` : ''}</small></div></div>
+        <div class="cols">${cols.map(c => `
+          <section class="col" aria-label="${esc(c.name)}">
+            <div class="node head" style="--k:${c.k}"><div class="hid">${esc(c.id)}</div><h2>${esc(c.name)}</h2><div class="hn">${c.items.length} risks</div></div>
+            <ul class="branch">${c.items.map(riskNode).join('')}</ul>
+          </section>`).join('')}</div>`;
+      tree.querySelectorAll('.risk').forEach(b => b.onclick = () => open(b.dataset.id));
+      mark();
+    }
+    function mark() {
+      const q = query.toLowerCase();
+      tree.querySelectorAll('.risk').forEach(b => {
+        const r = risks.find(x => x.id === b.dataset.id), hit = q && r.hay.includes(q);
+        b.classList.toggle('dim', !!q && !hit); b.classList.toggle('hit', !!hit);
+      });
     }
     function meter(label, cls, n, d) {
       const pct = d ? Math.round(100 * n / d) : 0;
       return `<div class="meter"><span>${label}</span><span class="track"><span class="fill ${cls}" style="width:${pct}%"></span></span><span>${n}/${d} (${pct}%)</span></div>`;
     }
-    function riskRow(r) {
-      return `<details class="risk" id="${r.id}" data-id="${r.id}">
-        <summary><span class="rid">${r.id}</span><span class="rname">${esc(r.name)}</span><span class="chev" aria-hidden="true">&#9654;</span>
-          <span class="rmeta">${prevalence(r)} ${(view === 'stage' ? [cats.find(c => c.id === r.category_id).name] : r.stages.map(s => stageName[s])).map(x => `<span class="chip">${esc(x)}</span>`).join(' ')}</span>
-        </summary><div class="detail"></div></details>`;
-    }
-    function detail(r) {
-      const prevBlock = r.papers_affected != null
+    function open(id) {
+      const r = risks.find(x => x.id === id); if (!r) return;
+      selected = id;
+      tree.querySelectorAll('.risk').forEach(b => b.setAttribute('aria-pressed', b.dataset.id === id));
+      const prev = r.papers_affected != null
         ? `<div><div class="lab">${esc(r.indicator)}</div>${meter('Papers', 'p', r.papers_affected, N['Scientific'])}${meter('Tools', 't', r.tools_affected, N['Non-Scientific'])}</div>`
-        : `<div><div class="lab">Entries with coded evidence</div>${meter('Papers', 'p', r.papers_evidence, N['Scientific'])}${meter('Tools', 't', r.tools_evidence, N['Non-Scientific'])}</div>`;
-      return `
-        <div class="two"><div><div class="lab">Definition</div><p>${esc(r.definition)}</p></div>
-        <div><div class="lab">How it appears in honeypots</div><p>${esc(r.manifestation)}</p></div></div>
-        <div class="two">${prevBlock}
-          <div><div class="lab">Lifecycle stages</div><div class="codes">${r.stages.map(s => `<span class="chip">${esc(stageName[s])}</span>`).join('')}</div>
-          <div class="lab" style="margin-top:10px">Category</div><span class="chip">${esc(cats.find(c => c.id === r.category_id).name)}</span></div></div>
-        <div class="two"><div><div class="lab">Mitigations</div><ul class="mit">${r.mits.map(m => `<li><span class="mid">${m.id}</span>${esc(m.text)}</li>`).join('')}</ul></div>
-        <div><div class="lab">Trade-off</div><p>${esc(r.tradeoff)}</p></div></div>
-        <div><div class="lab">Linked codes (open coding)</div><div class="codes">${r.codes.map(c => `<span class="code" title="${esc(codes[c]?.description)}">${esc(c)} <b>${evCount[c] || 0}</b></span>`).join('')}</div></div>
-        <div class="ev" data-id="${r.id}"></div>`;
+        : (!r.papers_evidence && !r.tools_evidence
+          ? `<div><div class="lab">Prevalence</div><p class="gap-note">No paper or tool documentation in the corpus addresses this risk.</p></div>`
+          : `<div><div class="lab">Entries with coded evidence</div>${meter('Papers', 'p', r.papers_evidence, N['Scientific'])}${meter('Tools', 't', r.tools_evidence, N['Non-Scientific'])}</div>`);
+      panel.style.setProperty('--k', r.k);
+      panel.innerHTML = `
+        <header><span class="pid">${r.id} &middot; ${esc(catOf[r.category_id].name)}</span><h2 id="pTitle">${esc(r.name)}</h2>
+          <button type="button" class="btn x" id="closeP" aria-label="Close details">&times;</button></header>
+        <div class="pbody">
+          <div><div class="lab">Definition</div><p>${esc(r.definition)}</p></div>
+          <div><div class="lab">How it appears in honeypots</div><p>${esc(r.manifestation)}</p></div>
+          ${prev}
+          <div><div class="lab">Lifecycle stages</div><div class="chips">${r.stages.map(s => `<span class="chip">${esc(stageName[s])}</span>`).join('')}</div></div>
+          <div><div class="lab">Mitigations</div><ul>${r.mits.map(m => `<li><span class="mid">${m.id}</span>${esc(m.text)}</li>`).join('')}</ul></div>
+          <div><div class="lab">Trade-off</div><p>${esc(r.tradeoff)}</p></div>
+          <div><div class="lab">Linked codes</div><div class="chips">${r.codes.map(c => `<span class="code">${esc(c)}</span>`).join('')}</div></div>
+          <a class="go" href="list.html#${r.id}">Evidence quotes and full entry in the list view &rarr;</a>
+        </div>`;
+      panel.hidden = false;
+      document.getElementById('closeP').onclick = close;
+      document.getElementById('closeP').focus({ preventScroll: true });
+      if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
     }
-    function evidence(box, r, src, limit) {
-      const qm = r.codes.map(() => '?').join(',');
-      const where = src === 'all' ? '' : src === 'p' ? "and e.source_type='Scientific'" : "and e.source_type!='Scientific'";
-      const all = rows(`select v.quote, v.code, e.identifier, e.source_type from evidence v join entry e on e.id=v.entry_id where v.code in (${qm}) ${where} order by e.source_type desc, e.identifier`, r.codes);
-      const seen = new Set(), list = all.filter(x => { const k = x.identifier + '|' + x.quote; if (seen.has(k)) return false; seen.add(k); return true; });
-      const head = `<div class="ev-head"><div class="lab" style="margin:0">Evidence quotes (${list.length})</div>
-        <div class="seg">${[['all', 'All'], ['p', 'Papers'], ['t', 'Tools']].map(([k, l]) => `<button type="button" data-src="${k}" aria-pressed="${k === src}">${l}</button>`).join('')}</div></div>`;
-      const body = list.length ? `<div class="quotes">${list.slice(0, limit).map(x => `<div class="q ${x.source_type === 'Scientific' ? 'p' : 't'}">
-          <div class="src">${esc(x.identifier.split(':')[0])} &middot; <span class="tag">${esc(x.code)}</span></div>${hl(esc(x.quote.length > 420 ? x.quote.slice(0, 420) + '...' : x.quote))}</div>`).join('')}</div>
-          ${list.length > limit ? `<button type="button" class="more" data-more="${limit + 8}">Show ${Math.min(8, list.length - limit)} more of ${list.length - limit}</button>` : ''}`
-        : `<p class="empty">No paper or tool documentation in the corpus addresses this risk. That gap is itself a finding.</p>`;
-      box.innerHTML = head + body;
-      box.querySelectorAll('[data-src]').forEach(b => b.onclick = () => evidence(box, r, b.dataset.src, 6));
-      const m = box.querySelector('[data-more]'); if (m) m.onclick = () => evidence(box, r, src, +m.dataset.more);
+    function close() {
+      const back = selected && tree.querySelector(`.risk[data-id="${selected}"]`);
+      panel.hidden = true; selected = null;
+      tree.querySelectorAll('.risk').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      history.replaceState(null, '', location.pathname + location.search);
+      back?.focus({ preventScroll: true });
     }
-    function hl(s) { if (!query) return s; const re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'); return s.replace(re, '<mark>$1</mark>'); }
-
-    function render() {
-      document.getElementById('vStage').setAttribute('aria-pressed', view === 'stage');
-      document.getElementById('vCat').setAttribute('aria-pressed', view === 'cat');
-      document.getElementById('flow').hidden = view !== 'stage';
-      const groups = view === 'stage' ? stages.map((s, i) => ({ id: s.id, label: String(i + 1).padStart(2, '0'), name: s.name, desc: s.description, items: risks.filter(r => r.stages.includes(s.id)) }))
-                                      : cats.map(c => ({ id: c.id, label: c.id, name: c.name, desc: c.description, items: risks.filter(r => r.category_id === c.id) }));
-      const q = query.toLowerCase();
-      let html = '', shown = 0;
-      for (const g of groups) {
-        const items = q ? g.items.filter(r => r.hay.includes(q)) : g.items;
-        if (q && !items.length) continue;
-        shown += items.length;
-        html += `<details class="group" id="g-${g.id}" ${q ? 'open' : ''}><summary><span class="gid">${g.label}</span>
-          <h2>${esc(g.name)}<span class="gdesc">${esc(g.desc)}</span></h2><span class="count">${items.length} ${items.length === 1 ? 'risk' : 'risks'}</span><span class="chev" aria-hidden="true">&#9654;</span></summary>
-          <div class="risks">${items.map(riskRow).join('')}</div></details>`;
-      }
-      tree.innerHTML = html || `<div class="status">No risk matches "${esc(query)}". Try a code name such as Credential-Collection, or a word such as retention.</div>`;
-      tree.querySelectorAll('details.risk').forEach(d => d.addEventListener('toggle', () => {
-        if (d.open && !d.querySelector('.detail').innerHTML) {
-          const r = risks.find(x => x.id === d.dataset.id);
-          d.querySelector('.detail').innerHTML = detail(r);
-          evidence(d.querySelector('.ev'), r, 'all', 6);
-        }
-        if (d.open && location.hash !== '#' + d.dataset.id) history.replaceState(null, '', '#' + d.dataset.id);
-      }));
-      openFromHash();
-    }
-    function openFromHash() {
-      const h = location.hash.slice(1); if (!h) return;
-      if (/^S\d$/.test(h) && view !== 'stage') { view = 'stage'; render(); return; }
-      if (/^S\d$/.test(h) || /^C\d$/.test(h)) { const g = document.getElementById('g-' + h); if (g) { g.open = true; g.scrollIntoView({ block: 'start' }); } return; }
-      const r = tree.querySelector(`details.risk[data-id="${CSS.escape(h)}"]`);
-      if (r) { r.closest('details.group').open = true; r.open = true; r.scrollIntoView({ block: 'center' }); }
-    }
-    const setView = v => { view = v; try { localStorage.setItem('hpt-view', v); } catch (e) {} render(); };
-    document.getElementById('vStage').onclick = () => setView('stage');
-    document.getElementById('vCat').onclick = () => setView('cat');
-    let t; document.getElementById('q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => { query = e.target.value.trim(); render(); }, 150); });
-    const ex = document.getElementById('expandAll');
-    ex.onclick = () => { const open = ex.textContent === 'Expand all'; tree.querySelectorAll('details.group').forEach(g => g.open = open); ex.textContent = open ? 'Collapse all' : 'Expand all'; };
-    window.addEventListener('hashchange', openFromHash);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
+    const save = () => { try { localStorage.setItem('hpt-tree-group', group); localStorage.setItem('hpt-tree-mits', showMits ? '1' : '0'); } catch (e) {} };
+    document.getElementById('gCat').onclick = () => { group = 'cat'; save(); render(); };
+    document.getElementById('gStage').onclick = () => { group = 'stage'; save(); render(); };
+    document.getElementById('mitBtn').onclick = () => { showMits = !showMits; save(); render(); };
+    document.getElementById('printBtn').onclick = () => window.print();
+    let t; document.getElementById('q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => { query = e.target.value.trim(); mark(); }, 120); });
     render();
-    if (!location.hash) tree.querySelector('details.group')?.setAttribute('open', '');
+    const h = location.hash.slice(1); if (/^R\d\d$/.test(h)) open(h);
   }
 })();
 </script>
-
 </body>
 </html>

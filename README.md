@@ -36,8 +36,8 @@ Honeypot-Ethics-Review/
 │   └── non-scientific-open-coding-2026-10-25.sqlite3      # Earlier round (dataset justifications), tools
 ├── taxonomy/                                # Ethics taxonomy v0.1: SQLite database + browser GUI
 │   ├── taxonomy.sqlite
-│   ├── index.html                           # List view
-│   ├── tree.html                            # Tree view
+│   ├── index.html                           # Tree view (landing page)
+│   ├── list.html                            # List view with evidence quotes
 │   ├── taxonomy_content.py
 │   ├── build_taxonomy.py
 │   └── README.md
@@ -211,7 +211,7 @@ cd taxonomy
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000. See [taxonomy/README.md](taxonomy/README.md) for the database tables and how to rebuild it.
+Then open http://localhost:8000 for the tree view; the List view button opens the list with evidence quotes. See [taxonomy/README.md](taxonomy/README.md) for the database tables and how to rebuild it.
 
 ---
 

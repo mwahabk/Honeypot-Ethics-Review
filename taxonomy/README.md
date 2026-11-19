@@ -9,8 +9,8 @@ Pipeline: literature -> dataset -> coding -> taxonomy.
 | File | What it is |
 |---|---|
 | `taxonomy.sqlite` | The taxonomy database (6 stages, 6 categories, 31 risks, 62 mitigations, 69 codes, 239 entries, 1,145 evidence quotes) |
-| `index.html` | List view: reads `taxonomy.sqlite` in the browser; lifecycle-stage and risk-category views; click any item to expand |
-| `tree.html` | Tree view (Meeting 13): root -> 6 risk categories (or 6 lifecycle stages) -> 31 risks -> 62 mitigations, drawn as connected boxes; click a risk for its details; print or save as PDF |
+| `index.html` | Tree view, the landing page: root -> 6 risk categories (or 6 lifecycle stages) -> 31 risks -> 62 mitigations, drawn as connected boxes; click a risk for its details; print or save as PDF |
+| `list.html` | List view: every risk with its evidence quotes, by risk category (default) or by lifecycle stage; click any item to expand |
 | `taxonomy_content.py` | The taxonomy itself: stages, categories and risks (definition, how it appears, mitigations, trade-off, linked codes, dataset indicator) |
 | `build_taxonomy.py` | Rebuilds `taxonomy.sqlite` from the content file, the codebook, the final open coding and the dataset |
 
@@ -23,7 +23,7 @@ cd taxonomy
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000 (list view) or http://localhost:8000/tree.html (tree view). The two pages link to each other. (Opened directly, the page offers a file picker for `taxonomy.sqlite` instead.)
+Then open http://localhost:8000 (tree view) or http://localhost:8000/list.html (list view). The two pages link to each other. (Opened directly, the page offers a file picker for `taxonomy.sqlite` instead.)
 
 ## Rebuild the database
 
